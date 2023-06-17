@@ -56,4 +56,23 @@ public class RegularMachine
         return check;
    }
 
+   public void printTransactionSummary()
+   {
+    for( int i=0;i < transactions.size();i++)
+    {
+        System.out.println(transactions.get(i));
+    }
+   }
+   // Hindi pa tapos ung setTransaction :)
+   public boolean setTransaction(int itemIndex, int quantity)
+   {
+    boolean result = false;
+    double totalprice;
+
+    if(itemIndex<= items.size() && quantity<=items.get(itemIndex).getItemQuantity())
+    {
+        transactions.add(itemIndex, );
+    }
+    return result;
+   }
 }
