@@ -3,13 +3,13 @@ import java.util.ArrayList;
 public class RegularMachine 
 {
    private ArrayList<Items> items;
-   private double machineCash;
+   private double MachineCash;
    private ArrayList<Transactions> transactions;
 
    public RegularMachine(ArrayList<Items> items, double machineCash)
    {
         this.items = items;
-        this.machineCash = machineCash;
+        this.MachineCash = machineCash;
         this.transactions = new ArrayList<Transactions>();
    }
 
@@ -50,7 +50,7 @@ public class RegularMachine
         boolean check = false;
         if (balance > 0)
         {
-            this.machineCash += balance;
+            this.MachineCash += balance;
             check = true;
         }
         return check;
@@ -67,11 +67,12 @@ public class RegularMachine
    public boolean setTransaction(int itemIndex, int quantity)
    {
     boolean result = false;
-    double totalprice;
-
+    double TotalPrice;
     if(itemIndex<= items.size() && quantity<=items.get(itemIndex).getItemQuantity())
     {
-        transactions.add(itemIndex, );
+        items.get(itemIndex).setItemQuantity(items.get(itemIndex).getItemQuantity()-quantity);
+        TotalPrice= items.get(itemIndex).getItemPrice()*quantity;
+        
     }
     return result;
    }
