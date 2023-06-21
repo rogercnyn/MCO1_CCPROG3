@@ -76,4 +76,24 @@ public class RegularMachine
     }
     return result;
    }
+   //I am not sure if this is right idk what to put on what index doon sa list lalagay ko
+   public boolean askPayment (double payment)
+   {
+    boolean result = false;
+    if(transactions.get(0).getTotalPrice()==payment)
+        result=true;
+    return result;
+   }
+
+   public boolean produceChange()
+   {
+    return false;
+   }
+   // Working in progress palang 
+   public boolean dispenseItem(boolean validTransact)
+   {
+    boolean result = false;
+    if(transactions.get(0).)
+    return result;
+   }
 }
