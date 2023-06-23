@@ -100,8 +100,8 @@ public class RegularMachine
         double TotalPrice;
         if (checkQuantity(itemIndex, quantity))
         {
+          
           result = true;
-          deductItem(itemIndex, quantity);
         }
 
         return result;
@@ -111,11 +111,9 @@ public class RegularMachine
    public boolean askPayment (double payment, double total)
    {
         boolean result = false;
-
+     
         if(payment >= total)
-            result=true;
-
-            
+            result=true;            
         return result;
    }
 
@@ -138,15 +136,14 @@ public class RegularMachine
    }
 
    // Working in progress palang 
-   public boolean dispenseItem(boolean validTransact)
+   public boolean dispenseItem(boolean validTransact, int itemIndex, int quantity)
    {
         boolean result = false;
         if(validTransact)
         {
             System.out.println("Dispensing Item...");
             // I suggest creating a method for deducting of quantity para mas easier to ready
-            dispenseItem(validTransact);
-
+            deductItem(itemIndex, quantity);
             System.out.println("Thank you for buying!");
             result = true;
         }
@@ -157,7 +154,7 @@ public class RegularMachine
    public boolean deductItem(int itemIndex, int quantity)
    {
      boolean result = false;
-     if (items.get(itemIndex).getItemQuantity()>=quantity)
+     if (checkQuantity(itemIndex, quantity))
      {
           items.get(itemIndex).setItemQuantity(items.get(itemIndex).getItemQuantity()-quantity);
           result = true;
