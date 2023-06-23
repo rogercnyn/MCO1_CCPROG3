@@ -11,7 +11,7 @@ public class Transactions
         this.itemName = itemName;
         this.quantity = quantity;
         this.totalPrice = totalPrice;
-        this.payment = payment
+        this.payment = payment;
         this.date = date;
     }
 

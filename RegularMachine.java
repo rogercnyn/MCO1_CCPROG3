@@ -131,6 +131,27 @@ public class RegularMachine
 
         return result;
    }
+   //This method simply deducts the Bought item at the vending machine - Kintanar
+   public boolean deductItem(int itemIndex, int quantity)
+   {
+     boolean result = false;
+     if (items.get(itemIndex).getItemQuantity()>=quantity)
+     {
+          items.get(itemIndex).setItemQuantity(items.get(itemIndex).getItemQuantity()-quantity);
+          result = true;
+     }
+     return result;
+   }
+   // This method checks if the quantity entered is valid - Kintanar
+   public boolean checkQuantity(int itemIndex, int quantity)
+   {
+     boolean result = false;
+     if (items.get(itemIndex).getItemQuantity()>=quantity)
+     {
+          result = true;
+     }
+     return result;
+   } 
 
    public void saveTransaction(String itemName, int quantity, double totalPrice, double payment, String date)
    {
