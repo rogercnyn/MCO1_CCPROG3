@@ -62,12 +62,34 @@ public class RegularMachine
         return check;
    }
 
-   // This shall include the printing format
+   /* 
+   This shall include the printing format
+   Format :
+   ~~~~~~~~~~~~~~~~~~~~
+   Date : 
+   ItemName :
+   Quantity :
+   Payment : 
+   ~~~~~~~~~~~~~~~~~~~~
+   */ 
    public void printTransactionSummary()
    {
         for(int i=0;i < transactions.size();i++)
         {
-            System.out.println(transactions.get(i));
+          for(int j=0;j<19;j++)
+          {
+               System.out.print("~");
+          }
+          System.out.print("~\n");
+          System.out.println("Date :\t"+transactions.get(i).getDate());
+          System.out.println("ItemName :\t"+transactions.get(i).getItemName());
+          System.out.println("Quantity :\t"+transactions.get(i).getQuantity());
+          System.out.println("Payment :\t"+transactions.get(i).getPayment());
+          for(int j=0;j<19;j++)
+          {
+               System.out.print("~");
+            }
+          System.out.print("~\n");
         }
    }
 
