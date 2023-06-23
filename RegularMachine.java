@@ -79,7 +79,6 @@ public class RegularMachine
         if (checkQuantity(itemIndex, quantity))
         {
           result = true;
-          dispenseItem(result);
           deductItem(itemIndex, quantity);
         }
 
@@ -124,7 +123,7 @@ public class RegularMachine
         {
             System.out.println("Dispensing Item...");
             // I suggest creating a method for deducting of quantity para mas easier to ready
-            items.get(itemIndex).setItemQuantity(items.get(itemIndex).getItemQuantity()-quantity);
+            dispenseItem(validTransact);
 
             System.out.println("Thank you for buying!");
             result = true;
