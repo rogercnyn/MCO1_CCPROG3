@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class RegularMachine 
 {
    private ArrayList<Items> items;
-   private double MachineCash;
+   private double MachineCash;     // is this the income or the change that is in the machine ???
    private ArrayList<Transactions> transactions;
 
    public RegularMachine(ArrayList<Items> items, double machineCash)
@@ -71,15 +71,16 @@ public class RegularMachine
         }
    }
 
-   // Hindi pa tapos ung setTransaction :)
+   // Hindi pa tapos ung setTransaction :) 
    public boolean setTransaction(int itemIndex, int quantity)
    {
         boolean result = false;
         double TotalPrice;
-        
-        if(quantity <= items.get(itemIndex).getItemQuantity())
+        if (checkQuantity(itemIndex, quantity))
         {
-            result = true;
+          result = true;
+          dispenseItem(result);
+          deductItem(itemIndex, quantity);
         }
 
         return result;
