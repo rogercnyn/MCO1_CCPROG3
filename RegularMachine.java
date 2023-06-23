@@ -13,6 +13,12 @@ public class RegularMachine
         this.transactions = new ArrayList<Transactions>();
    }
 
+   public void addItem(String name, double price, double calories, int quantity)
+   {
+        Items item = new Items(name, price, calories, quantity);
+        items.add(item);
+   }
+
    public boolean restockItem(String itemName, int quantity)
    {
         boolean check = false;
@@ -56,44 +62,79 @@ public class RegularMachine
         return check;
    }
 
+   // This shall include the printing format
    public void printTransactionSummary()
    {
-    for( int i=0;i < transactions.size();i++)
-    {
-        System.out.println(transactions.get(i));
-    }
+        for(int i=0;i < transactions.size();i++)
+        {
+            System.out.println(transactions.get(i));
+        }
    }
+
    // Hindi pa tapos ung setTransaction :)
    public boolean setTransaction(int itemIndex, int quantity)
    {
-    boolean result = false;
-    double TotalPrice;
-    if(itemIndex<= items.size() && quantity<=items.get(itemIndex).getItemQuantity())
-    {
-        items.get(itemIndex).setItemQuantity(items.get(itemIndex).getItemQuantity()-quantity);
-        TotalPrice= items.get(itemIndex).getItemPrice()*quantity;
+        boolean result = false;
+        double TotalPrice;
         
-    }
-    return result;
-   }
-   //I am not sure if this is right idk what to put on what index doon sa list lalagay ko
-   public boolean askPayment (double payment)
-   {
-    boolean result = false;
-    if(transactions.get(0).getTotalPrice()==payment)
-        result=true;
-    return result;
+        if(quantity <= items.get(itemIndex).getItemQuantity())
+        {
+            result = true;
+        }
+
+        return result;
    }
 
-   public boolean produceChange()
+   //I am not sure if this is right idk what to put on what index doon sa list lalagay ko
+   public boolean askPayment (double payment, double total)
    {
-    return false;
+        boolean result = false;
+
+        if(payment >= total)
+            result=true;
+
+            
+        return result;
    }
+
+   public boolean produceChange(boolean validPayment, double payment, double total)
+   {
+        boolean result = false;
+        double changeAmount = payment - total;
+        
+        if (validPayment)
+        {
+            this.MachineCash += payment;
+            this.MachineCash -= changeAmount;
+            System.out.println("Your change is: " + changeAmount);
+            System.out.println("Dispensing change...");
+            System.out.println("Please get your change. Thank you!");
+            result = true;
+        }
+
+        return result;
+   }
+
    // Working in progress palang 
    public boolean dispenseItem(boolean validTransact)
    {
-    boolean result = false;
-    if(transactions.get(0).)
-    return result;
+        boolean result = false;
+        if(validTransact)
+        {
+            System.out.println("Dispensing Item...");
+            // I suggest creating a method for deducting of quantity para mas easier to ready
+            items.get(itemIndex).setItemQuantity(items.get(itemIndex).getItemQuantity()-quantity);
+
+            System.out.println("Thank you for buying!");
+            result = true;
+        }
+
+        return result;
+   }
+
+   public void saveTransaction(String itemName, int quantity, double totalPrice, double payment, String date)
+   {
+        Transactions transact = new Transactions(itemName, quantity, totalPrice, payment, date);
+        transactions.add(transact);
    }
 }
