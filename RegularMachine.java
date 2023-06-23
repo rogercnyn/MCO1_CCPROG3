@@ -93,11 +93,12 @@ public class RegularMachine
         }
    }
 
-   // Hindi pa tapos ung setTransaction :) 
+   // Hindi pa tapos ung setTransaction :) i have no idea what to do hear
    public boolean setTransaction(int itemIndex, int quantity)
    {
         boolean result = false;
-        double TotalPrice;
+        double TotalPrice = items.get(itemIndex).getItemPrice()*quantity;
+        
         if (checkQuantity(itemIndex, quantity))
         {
           
