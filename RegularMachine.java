@@ -6,6 +6,8 @@ public class RegularMachine
    private double MachineCash;     // is this the income or the change that is in the machine ???
    private ArrayList<Transactions> transactions;
 
+   
+
    public RegularMachine(ArrayList<Items> items, double machineCash)
    {
         this.items = items;
@@ -152,7 +154,13 @@ public class RegularMachine
         return result;
    }
    //This method simply deducts the Bought item at the vending machine - Kintanar
-   public boolean deductItem(int itemIndex, int quantity)
+   /*
+    *  This is a helper method. 
+    *  We should only make it private so that it can only be accessible by this class.
+    *  Main explanation for this is that, other class does not need to access this method. Only this class needs to access it.
+    */
+
+   private boolean deductItem(int itemIndex, int quantity)
    {
      boolean result = false;
      if (checkQuantity(itemIndex, quantity))

@@ -1,8 +1,11 @@
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import javax.print.attribute.standard.MediaName;
 
 public class Driver 
 {
-    public static void mainMenu()
+    private void mainMenu()
     {
         int choice;
         Scanner sc = new Scanner(System.in);
@@ -39,7 +42,7 @@ public class Driver
         }
     }
 
-    public static void createMachine()
+    private void createMachine()
     {
         int choice;
         Scanner sc = new Scanner(System.in);
@@ -61,11 +64,11 @@ public class Driver
 
         switch (choice) {
             case 1:
-                //REGULAR VENDING MACHINE
+                createRegularMachine();
                 break;
 
             case 2:
-                //SPECIAL VENDING MACHINE
+                System.out.println("This feature is not yet available.");
                 break;
             
             case 3:
@@ -74,8 +77,123 @@ public class Driver
         }
     }
 
+    private void createRegularMachine()
+    {
+        Scanner scan = new Scanner(System.in);
+        ArrayList<Items> items = new ArrayList<Items>();
+        String itemName;
+        double itemPrice, itemCalories;
+        int itemQuantity;
+        int counter = 0;
+        int addMoreItem;
+        double machineCash;
+        for (counter = 1; counter < 9; counter++)
+        {
+            System.out.println("Product #" + counter);
+            System.out.print("Enter item name: ");
+            itemName = scan.nextLine();
+            do 
+            {
+                System.out.print("Enter item price: ");
+                itemPrice = scan.nextDouble();
+                if (itemPrice <= 0)
+                {
+                    System.out.println("The price must be a non-negative and non-zero value.");
+                }
+            } while (itemPrice <= 0);
+
+            do 
+            {
+                System.out.print("Enter item calories: ");
+                itemCalories = scan.nextDouble();
+                if (itemCalories <= 0)
+                {
+                    System.out.println("The calories must be a non-negative and non-zero value.");
+                }
+            } while (itemCalories <= 0);
+
+            do 
+            {
+                System.out.print("Enter item quantity: ");
+                itemQuantity = scan.nextInt();
+                if (itemQuantity < 10)
+                {
+                    System.out.println("Minimum quantity for a product is 10 items.");
+                }
+            } while (itemQuantity < 10);
+            scan.nextLine();
+            Items newitem = new Items(itemName, itemPrice, itemCalories, itemQuantity);
+            items.add(newitem);
+        }
+
+        do 
+        {
+            System.out.println("Do you have more items to add?");
+            System.out.println("[1] Yes or [2] No: ");
+            addMoreItem = scan.nextInt();
+            switch (addMoreItem) {
+                case 1:
+                    scan.nextLine();
+                    System.out.println("Product #" + counter);
+                    System.out.print("Enter item name: ");
+                    itemName = scan.nextLine();
+                    do 
+                    {
+                        System.out.print("Enter item price: ");
+                        itemPrice = scan.nextDouble();
+                        if (itemPrice <= 0)
+                        {
+                            System.out.println("The price must be a non-negative and non-zero value.");
+                        }
+                    } while (itemPrice <= 0);
+
+                    do 
+                    {
+                        System.out.print("Enter item calories: ");
+                        itemCalories = scan.nextDouble();
+                        if (itemCalories <= 0)
+                        {
+                            System.out.println("The calories must be a non-negative and non-zero value.");
+                        }
+                    } while (itemCalories <= 0);
+                
+                    do 
+                    {
+                        System.out.print("Enter item quantity: ");
+                        itemQuantity = scan.nextInt();
+                        if (itemQuantity < 10)
+                        {
+                            System.out.println("Minimum quantity for a product is 10 items.");
+                        }
+                    } while (itemQuantity < 10);
+                    scan.nextLine();
+                    Items newitem = new Items(itemName, itemPrice, itemCalories, itemQuantity);
+                    items.add(newitem);
+                    counter++;
+                    break;
+            
+                default:
+                    break;
+            }
+        } while (addMoreItem != 2);
+
+        do 
+        {
+            System.out.print("Enter machine cash balance: ");
+            machineCash = scan.nextDouble(); 
+            if(machineCash <= 0)
+            {
+                System.out.println("The balance must be a non-negative and non-zero value.");
+            } 
+        } while (machineCash <= 0);
+
+        System.out.println("Congratulations! Your Regular Vending Machine is now ready!");
+        mainMenu();
+    }
+
     public static void main(String[] args)
     {
-        mainMenu();
+        Driver driver = new Driver();
+        driver.mainMenu();
     }
 }
