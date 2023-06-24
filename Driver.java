@@ -192,6 +192,73 @@ public class Driver
         System.out.println("Congratulations! Your Regular Vending Machine is now ready!");
         mainMenu();
     }
+    private void testVendingMachine(int vendingType)
+    {
+        int choice;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("----------------------------------------");
+        System.out.println("|               [FEATURES]             |");
+        System.out.println("|      [1]   Vending Features          |");
+        System.out.println("|      [2] Maintenance Features        |");
+        System.out.println("|               [3] Exit               |");
+        System.out.println("----------------------------------------");
+        System.out.print("Enter choice: ");
+
+        do {
+            choice = sc.nextInt();
+            if (choice < 1 || choice > 3)
+            {
+                mainMenu();
+            }
+        } while (choice < 1 || choice > 3);
+
+        switch (choice) {
+            case 1:
+                //Vending Features
+                break;
+            
+            case 2:
+                // Maintenance Features
+                break;
+          
+            default:
+                break;
+        }
+    }
+
+    private void selectingType()
+    {
+        int choice;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("----------------------------------------");
+        System.out.println("|            [VENDING MACHINE]         |");
+        System.out.println("|     [1] Regular Vending Machine      |");
+        System.out.println("|     [2] Special Vending Machine      |");
+        System.out.println("|               [3] Exit               |");
+        System.out.println("----------------------------------------");
+        System.out.print("Enter choice: ");
+
+        do {
+            choice = sc.nextInt();
+            if (choice < 1 || choice > 3)
+            {
+                mainMenu();
+            }
+        } while (choice < 1 || choice > 3);
+
+        switch (choice) {
+            case 1:
+                testVendingMachine(choice);
+                break;
+            
+            case 2:
+                testVendingMachine(choice);
+                break;
+          
+            default:
+                break;
+        }
+    }
 
     public static void main(String[] args)
     {
