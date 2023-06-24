@@ -187,6 +187,8 @@ public class Driver
             } 
         } while (machineCash <= 0);
 
+        RegularMachine regularMachine = new RegularMachine(items, machineCash);
+
         System.out.println("Congratulations! Your Regular Vending Machine is now ready!");
         mainMenu();
     }
