@@ -6,8 +6,6 @@ public class RegularMachine
    private double MachineCash;     // is this the income or the change that is in the machine ???
    private ArrayList<Transactions> transactions;
 
-   
-
    public RegularMachine(ArrayList<Items> items, double machineCash)
    {
         this.items = items;
