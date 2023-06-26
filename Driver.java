@@ -5,14 +5,7 @@ import javax.print.attribute.standard.MediaName;
 
 public class Driver 
 {
-    private ArrayList<RegularMachine> regularmachines;
-
-    public Driver()
-    {
-        this.regularmachines = new ArrayList<RegularMachine>();
-    }
-
-    private void mainMenu()
+    private void mainMenu(ArrayList<RegularMachine> regular)
     {
         int choice;
         Scanner sc = new Scanner(System.in);
@@ -28,17 +21,17 @@ public class Driver
             choice = sc.nextInt();
             if (choice < 1 || choice > 3)
             {
-                mainMenu();
+                mainMenu(regular);
             }
         } while (choice < 1 || choice > 3);
 
         switch (choice) {
             case 1:
-                createMachine();
+                createMachine(regular);
                 break;
             
             case 2:
-                // TEST VENDING MACHINE
+                testMachine(regular);
                 break;
             
             case 3:
@@ -49,7 +42,7 @@ public class Driver
         }
     }
 
-    private void createMachine()
+    private void createMachine(ArrayList<RegularMachine> regular)
     {
         int choice;
         Scanner sc = new Scanner(System.in);
@@ -65,26 +58,27 @@ public class Driver
             choice = sc.nextInt();
             if (choice < 1 || choice > 3)
             {
-                createMachine();
+                createMachine(regular);
             }
         } while (choice < 1 || choice > 3);
 
         switch (choice) {
             case 1:
-                createRegularMachine();
+                createRegularMachine(regular);
                 break;
 
             case 2:
                 System.out.println("This feature is not yet available.");
+                mainMenu(regular);
                 break;
             
             case 3:
-                mainMenu();
+                mainMenu(regular);
                 break;
         }
     }
 
-    private void createRegularMachine()
+    private void createRegularMachine(ArrayList<RegularMachine> regular)
     {
         Scanner scan = new Scanner(System.in);
         ArrayList<Items> items = new ArrayList<Items>();
@@ -136,7 +130,7 @@ public class Driver
         do 
         {
             System.out.println("Do you have more items to add?");
-            System.out.println("[1] Yes or [2] No: ");
+            System.out.print("[1] Yes or [2] No: ");
             addMoreItem = scan.nextInt();
             switch (addMoreItem) {
                 case 1:
@@ -194,24 +188,28 @@ public class Driver
             } 
         } while (machineCash <= 0);
 
-        RegularMachine regular = new RegularMachine(items, machineCash);
-        regularmachines.add(regular);
+        RegularMachine newReg = new RegularMachine(items, machineCash);
+        regular.add(newReg);
 
         System.out.println("Congratulations! Your Regular Vending Machine is now ready!");
-        mainMenu();
+        mainMenu(regular);
     }
     
-    private void testVendingMachine(int vendingType)
+    private void testMachine(ArrayList<RegularMachine> regular)
     {
-        int choice, index;
-        ArrayList<Items> item;
-        boolean flag;
+        if (regular.size() == 0)
+        {
+            System.out.println("No available vending machine to test.");
+            mainMenu(regular);
+        }
+
+        int choice;
 
         Scanner sc = new Scanner(System.in);
         System.out.println("----------------------------------------");
         System.out.println("|               [FEATURES]             |");
-        System.out.println("|      [1]   Vending Features          |");
-        System.out.println("|      [2] Maintenance Features        |");
+        System.out.println("|         [1] Vending Features         |");
+        System.out.println("|       [2] Maintenance Features       |");
         System.out.println("|               [3] Exit               |");
         System.out.println("----------------------------------------");
         System.out.print("Enter choice: ");
@@ -220,14 +218,13 @@ public class Driver
             choice = sc.nextInt();
             if (choice < 1 || choice > 3)
             {
-                mainMenu();
+                testMachine(regular);
             }
         } while (choice < 1 || choice > 3);
 
         switch (choice) {
             case 1:
-                if(vendingType==1)
-                RegularMachine.displayMachine();
+                testVendingFeatures(regular);
                 break;
             
             case 2:
@@ -235,73 +232,77 @@ public class Driver
                 break;
           
             default:
-                selectingType();
+                mainMenu(regular);
                 break;
         }
-        
-
-        do{
-            flag =  true;
-            System.out.println("Enter the index of the item that you will buy: ");
-            index = sc.nextInt();
-            if(index < 0 || index > 9)
-            {
-                System.out.println("Enter a value within the specified index !");
-                item = regularmachines.get(index).getItem();
-                if(item.get(index).getItemQuantity()==0)
-                {
-                    System.out.println("This item is un available");
-                    flag = false;
-                }
-            }
-        }while(index < 0 || index > 9 || !flag);
-
-        regularmachines.get(index).dispenseItem(flag, index, 1);
-        
     }
 
-    private void selectingType()
+    private void testVendingFeatures(ArrayList<RegularMachine> regular)
     {
-        int choice;
         Scanner sc = new Scanner(System.in);
-        System.out.println("----------------------------------------");
-        System.out.println("|            [VENDING MACHINE]         |");
-        System.out.println("|     [1] Regular Vending Machine      |");
-        System.out.println("|     [2] Special Vending Machine      |");
-        System.out.println("|               [3] Exit               |");
-        System.out.println("----------------------------------------");
-        System.out.print("Enter choice: ");
+        int choice, itemIndex;
+        double payment;
+        boolean checkPayment;
+        RegularMachine testMachine = regular.get(regular.size() - 1);
+
+        if (testMachine.getMachineCash() == 0)
+        {
+            System.out.println("Sorry, this machine has no balance for your change.");
+        }
 
         do {
+            testMachine.displayMachine();
+            System.out.print("[1] Buy | [2] Exit Test Mode: ");
             choice = sc.nextInt();
-            if (choice < 1 || choice > 3)
+            if (choice < 1 || choice > 2)
             {
-                mainMenu();
+                System.out.println("Enter valid choice.");
             }
-        } while (choice < 1 || choice > 3);
-
-        switch (choice) {
-            case 1:
-                if(regularmachines!=null)
+            if (choice == 1)
+            {
+                do
                 {
-                    testVendingMachine(choice);
+                    System.out.print("Enter the number you want to buy: ");
+                    itemIndex = sc.nextInt();
+                    if (itemIndex < 1 || itemIndex > testMachine.countItems())
+                    {
+                        System.out.println("Enter valid number.");
+                    }
+                } while(itemIndex < 1 || itemIndex > testMachine.countItems());
+
+                itemIndex--; // get the real index of the item in the array
+
+                if(testMachine.checkQuantity(itemIndex))
+                {
+                    do {
+                        System.out.print("Enter payment: Php ");
+                        payment = sc.nextDouble();
+                        if (!testMachine.verifyPayment(itemIndex, payment))
+                        {
+                            System.out.println("Enter sufficient amount.");
+                        }
+                    } while (!testMachine.verifyPayment(itemIndex, payment));
+                    checkPayment = true;
+                    testMachine.produceChange(checkPayment, payment, itemIndex);
+                    testMachine.dispenseItem(checkPayment, itemIndex);
+                    testMachine.saveTransaction(itemIndex, payment);
                 }
-                break;
-            
-            case 2:
-                System.out.println("This feature is not available");
-                selectingType();
-                break;
-          
-            default:
-                mainMenu();
-                break;
-        }
+
+                else
+                {
+                    System.out.println("This product is currently unavailable.");
+                }
+            }
+        } while (choice != 2);
+
+        testMachine(regular);
     }
 
     public static void main(String[] args)
     {
+        ArrayList<RegularMachine> regular = new ArrayList<RegularMachine>();
+
         Driver driver = new Driver();
-        driver.mainMenu();
+        driver.mainMenu(regular);
     }
 }

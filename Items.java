@@ -4,6 +4,14 @@ public class Items
     private double itemPrice, itemCalories;
     private int itemQuantity;
 
+    public Items()
+    {
+        this.itemName = "";
+        this.itemPrice = 0;
+        this.itemCalories = 0;
+        this.itemQuantity = 0;
+    }
+
     public Items(String name, double price, double calories, int quantity)
     {
         this.itemName = name;

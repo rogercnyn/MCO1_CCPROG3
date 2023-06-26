@@ -1,28 +1,24 @@
+import java.time.format.DateTimeFormatter;  
+import java.time.LocalDateTime;    
+
 public class Transactions 
 {
     private String itemName;
-    private int quantity;
     private double totalPrice;
     private double payment;
-    private String date;
+    private LocalDateTime date;
 
-    public Transactions(String itemName, int quantity, double totalPrice, double payment, String date)
+    public Transactions(String itemName, double totalPrice, double payment)
     {
         this.itemName = itemName;
-        this.quantity = quantity;
         this.totalPrice = totalPrice;
         this.payment = payment;
-        this.date = date;
+        this.date = LocalDateTime.now();
     }
 
     public String getItemName() 
     {
         return itemName;
-    }
-
-    public int getQuantity() 
-    {
-        return quantity;
     }
 
     public double getTotalPrice() 
@@ -35,7 +31,7 @@ public class Transactions
         return payment;
     }
 
-    public String getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 }

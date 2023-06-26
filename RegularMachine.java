@@ -3,13 +3,13 @@ import java.util.ArrayList;
 public class RegularMachine 
 {
    private static ArrayList<Items> items;
-   private double MachineCash;     // is this the income or the change that is in the machine ???
+   private double machineCash; 
    private ArrayList<Transactions> transactions;
 
    public RegularMachine(ArrayList<Items> items, double machineCash)
    {
         this.items = items;
-        this.MachineCash = machineCash;
+        this.machineCash = machineCash;
         this.transactions = new ArrayList<Transactions>();
    }
 
@@ -56,10 +56,22 @@ public class RegularMachine
         boolean check = false;
         if (balance > 0)
         {
-            this.MachineCash += balance;
+            this.machineCash += balance;
             check = true;
         }
         return check;
+   }
+
+   public void collectMachineBalance()
+   {
+          System.out.println("Collecting money...");
+          System.out.println("Collecting a total of " + this.machineCash);
+          this.machineCash = 0;
+   }
+
+   public int countItems()
+   {
+          return items.size();
    }
 
    /* 
@@ -72,7 +84,7 @@ public class RegularMachine
    Payment : 
    ~~~~~~~~~~~~~~~~~~~~
    */ 
-   public void printTransactionSummary()
+   /*public void printTransactionSummary()
    {
         for(int i=0;i < transactions.size();i++)
         {
@@ -80,129 +92,107 @@ public class RegularMachine
           {
                System.out.print("~");
           }
-          System.out.print("~\n");
-          System.out.println("Date :\t"+transactions.get(i).getDate());
-          System.out.println("ItemName :\t"+transactions.get(i).getItemName());
-          System.out.println("Quantity :\t"+transactions.get(i).getQuantity());
-          System.out.println("Payment :\t"+transactions.get(i).getPayment());
+               System.out.print("~\n");
+               System.out.println("Date :\t"+transactions.get(i).getDate());
+               System.out.println("ItemName :\t"+transactions.get(i).getItemName());
+               System.out.println("Quantity :\t"+transactions.get(i).getQuantity());
+               System.out.println("Payment :\t"+transactions.get(i).getPayment());
           for(int j=0;j<19;j++)
           {
                System.out.print("~");
             }
           System.out.print("~\n");
         }
-   }
+   }*/
 
-   // Hindi pa tapos ung setTransaction :) i have no idea what to do hear
-   public boolean setTransaction(int itemIndex, int quantity)
+   public boolean checkQuantity(int itemIndex)
    {
         boolean result = false;
-        double TotalPrice = items.get(itemIndex).getItemPrice()*quantity;
         
-        if (checkQuantity(itemIndex, quantity))
+        if (items.get(itemIndex).getItemQuantity() > 0)
         {
-          
-          result = true;
+               result = true;
         }
 
         return result;
    }
 
    //I am not sure if this is right idk what to put on what index doon sa list lalagay ko
-   public boolean askPayment (double payment, double total)
+   public boolean verifyPayment(int itemIndex, double payment)
    {
         boolean result = false;
      
-        if(payment >= total)
-            result=true;            
+        if(payment >= items.get(itemIndex).getItemPrice())
+            result=true;    
+
         return result;
    }
 
-   public boolean produceChange(boolean validPayment, double payment, double total)
+   public void produceChange(boolean validPayment, double payment, int itemIndex)
    {
-        boolean result = false;
-        double changeAmount = payment - total;
+        double changeAmount = payment - items.get(itemIndex).getItemPrice();
         
         if (validPayment)
         {
-            this.MachineCash += payment;
-            this.MachineCash -= changeAmount;
+            this.machineCash += payment;
+            this.machineCash -= changeAmount;
             System.out.println("Your change is: " + changeAmount);
             System.out.println("Dispensing change...");
             System.out.println("Please get your change. Thank you!");
-            result = true;
         }
-
-        return result;
    }
 
    // Working in progress palang 
-   public boolean dispenseItem(boolean validTransact, int itemIndex, int quantity)
+   public void dispenseItem(boolean validTransact, int itemIndex)
    {
-        boolean result = false;
         if(validTransact)
         {
             System.out.println("Dispensing Item...");
             // I suggest creating a method for deducting of quantity para mas easier to ready
-            deductItem(itemIndex, quantity);
+            items.get(itemIndex).setItemQuantity(items.get(itemIndex).getItemQuantity() - 1);
             System.out.println("Thank you for buying!");
-            result = true;
         }
-
-        return result;
    }
-   //This method simply deducts the Bought item at the vending machine - Kintanar
-   /*
-    *  This is a helper method. 
-    *  We should only make it private so that it can only be accessible by this class.
-    *  Main explanation for this is that, other class does not need to access this method. Only this class needs to access it.
-    */
 
-   private boolean deductItem(int itemIndex, int quantity)
-   {
-     boolean result = false;
-     if (checkQuantity(itemIndex, quantity))
-     {
-          items.get(itemIndex).setItemQuantity(items.get(itemIndex).getItemQuantity()-quantity);
-          result = true;
-     }
-     return result;
-   }
-   // This method checks if the quantity entered is valid - Kintanar
-   private boolean checkQuantity(int itemIndex, int quantity)
-   {
-     boolean result = false;
-     if (items.get(itemIndex).getItemQuantity()>=quantity)
-     {
-          result = true;
-     }
-     return result;
-   } 
    //This function displays the vending machines inventory & its information
    public static void displayMachine()
    {
-     System.out.println("----------------------------------------");
-     for(int i=0;i<items.size();i++)
-     {
-          System.out.println(i+" "+items.get(i).getItemName()+ "("+items.get(i).getItemQuantity()+")");
-          System.out.println(items.get(i).getItemPrice()+" | "+ items.get(i).getItemCalories());
-     }
-     System.out.println("----------------------------------------");
+          System.out.println("------------------------------------------------------------");
+          /* Format:
+           * [1] Cup Noodles (10 available)
+           * Php 50 | 150 calories
+           */
+          for(int i = 0; i < items.size(); i++)
+          {
+               int j = i + 1; // Only to make the numbering start at 1. Must only be used on the [j] part
+               System.out.println("[" + j + "] " + items.get(i).getItemName() + " (" + items.get(i).getItemQuantity() 
+                              + " available)");
+               System.out.println("Php " + items.get(i).getItemPrice() + " | " + items.get(i).getItemCalories() + " calories");
+               
+               if (i != items.size() - 1)
+               {
+                    System.out.println();
+               }
+          }
+          System.out.println("------------------------------------------------------------");
    }
-   public void saveTransaction(String itemName, int quantity, double totalPrice, double payment, String date)
+
+   public void saveTransaction(int itemIndex, double payment)
    {
-        Transactions transact = new Transactions(itemName, quantity, totalPrice, payment, date);
-        transactions.add(transact);
+          String itemName = items.get(itemIndex).getItemName();
+          double totalPrice = items.get(itemIndex).getItemPrice();
+          Transactions transact = new Transactions(itemName, totalPrice, payment);
+          transactions.add(transact);
    }
 
    public ArrayList<Items> getItem()
    {
-     return items;
+          return items;
    }
 
    public double getMachineCash()
    {
-     return MachineCash;
+          return machineCash;
    }
 
 
