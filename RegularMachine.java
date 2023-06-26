@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class RegularMachine 
 {
-   private ArrayList<Items> items;
+   private static ArrayList<Items> items;
    private double MachineCash;     // is this the income or the change that is in the machine ???
    private ArrayList<Transactions> transactions;
 
@@ -178,14 +178,14 @@ public class RegularMachine
      }
      return result;
    } 
-
-   public void displayMachine()
+   //This function displays the vending machines inventory & its information
+   public static void displayMachine()
    {
      System.out.println("----------------------------------------");
      System.out.println("Name\t|Price\t|Quantity\t|Calories");
      for(int i=0;i<items.size();i++)
      {
-          System.out.print(items.get(i).getItemName()+"\t|\t"+items.get(i).getItemPrice()+"\t|\t"+items.get(i).getItemQuantity()+"\t|\t"+items.get(i).getItemCalories());
+          System.out.print(i+items.get(i).getItemName()+"\t|\t"+items.get(i).getItemPrice()+"\t|\t"+items.get(i).getItemQuantity()+"\t|\t"+items.get(i).getItemCalories());
      }
      System.out.println("----------------------------------------");
    }

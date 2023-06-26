@@ -214,7 +214,7 @@ public class Driver
 
         switch (choice) {
             case 1:
-                //Vending Features
+                RegularMachine.displayMachine();
                 break;
             
             case 2:
