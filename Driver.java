@@ -5,6 +5,13 @@ import javax.print.attribute.standard.MediaName;
 
 public class Driver 
 {
+    private ArrayList<RegularMachine> regularmachines;
+
+    public Driver()
+    {
+        this.regularmachines = new ArrayList<RegularMachine>();
+    }
+
     private void mainMenu()
     {
         int choice;
@@ -187,11 +194,13 @@ public class Driver
             } 
         } while (machineCash <= 0);
 
-        RegularMachine regularMachine = new RegularMachine(items, machineCash);
+        RegularMachine regular = new RegularMachine(items, machineCash);
+        regularmachines.add(regular);
 
         System.out.println("Congratulations! Your Regular Vending Machine is now ready!");
         mainMenu();
     }
+    
     private void testVendingMachine(int vendingType)
     {
         int choice;
