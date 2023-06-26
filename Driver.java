@@ -203,7 +203,10 @@ public class Driver
     
     private void testVendingMachine(int vendingType)
     {
-        int choice;
+        int choice, index;
+        ArrayList<Items> item;
+        boolean flag;
+
         Scanner sc = new Scanner(System.in);
         System.out.println("----------------------------------------");
         System.out.println("|               [FEATURES]             |");
@@ -223,6 +226,7 @@ public class Driver
 
         switch (choice) {
             case 1:
+                if(vendingType==1)
                 RegularMachine.displayMachine();
                 break;
             
@@ -231,8 +235,29 @@ public class Driver
                 break;
           
             default:
+                selectingType();
                 break;
         }
+        
+
+        do{
+            flag =  true;
+            System.out.println("Enter the index of the item that you will buy: ");
+            index = sc.nextInt();
+            if(index < 0 || index > 9)
+            {
+                System.out.println("Enter a value within the specified index !");
+                item = regularmachines.get(index).getItem();
+                if(item.get(index).getItemQuantity()==0)
+                {
+                    System.out.println("This item is un available");
+                    flag = false;
+                }
+            }
+        }while(index < 0 || index > 9 || !flag);
+
+        regularmachines.get(index).dispenseItem(flag, index, 1);
+        
     }
 
     private void selectingType()
@@ -257,7 +282,10 @@ public class Driver
 
         switch (choice) {
             case 1:
-                testVendingMachine(choice);
+                if(regularmachines!=null)
+                {
+                    testVendingMachine(choice);
+                }
                 break;
             
             case 2:

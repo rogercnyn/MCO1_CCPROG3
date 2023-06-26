@@ -182,10 +182,10 @@ public class RegularMachine
    public static void displayMachine()
    {
      System.out.println("----------------------------------------");
-     System.out.println("Name\t|Price\t|Quantity\t|Calories");
      for(int i=0;i<items.size();i++)
      {
-          System.out.print(i+items.get(i).getItemName()+"\t|\t"+items.get(i).getItemPrice()+"\t|\t"+items.get(i).getItemQuantity()+"\t|\t"+items.get(i).getItemCalories());
+          System.out.println(i+" "+items.get(i).getItemName()+ "("+items.get(i).getItemQuantity()+")");
+          System.out.println(items.get(i).getItemPrice()+" | "+ items.get(i).getItemCalories());
      }
      System.out.println("----------------------------------------");
    }
@@ -194,4 +194,17 @@ public class RegularMachine
         Transactions transact = new Transactions(itemName, quantity, totalPrice, payment, date);
         transactions.add(transact);
    }
+
+   public ArrayList<Items> getItem()
+   {
+     return items;
+   }
+
+   public double getMachineCash()
+   {
+     return MachineCash;
+   }
+
+
+
 }
