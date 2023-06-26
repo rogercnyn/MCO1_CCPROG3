@@ -252,10 +252,12 @@ public class Driver
                 break;
             
             case 2:
-                testVendingMachine(choice);
+                System.out.println("This feature is not available");
+                selectingType();
                 break;
           
             default:
+                mainMenu();
                 break;
         }
     }

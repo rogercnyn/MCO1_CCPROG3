@@ -169,7 +169,7 @@ public class RegularMachine
      return result;
    }
    // This method checks if the quantity entered is valid - Kintanar
-   public boolean checkQuantity(int itemIndex, int quantity)
+   private boolean checkQuantity(int itemIndex, int quantity)
    {
      boolean result = false;
      if (items.get(itemIndex).getItemQuantity()>=quantity)
@@ -179,6 +179,16 @@ public class RegularMachine
      return result;
    } 
 
+   public void displayMachine()
+   {
+     System.out.println("----------------------------------------");
+     System.out.println("Name\t|Price\t|Quantity\t|Calories");
+     for(int i=0;i<items.size();i++)
+     {
+          System.out.print(items.get(i).getItemName()+"\t|\t"+items.get(i).getItemPrice()+"\t|\t"+items.get(i).getItemQuantity()+"\t|\t"+items.get(i).getItemCalories());
+     }
+     System.out.println("----------------------------------------");
+   }
    public void saveTransaction(String itemName, int quantity, double totalPrice, double payment, String date)
    {
         Transactions transact = new Transactions(itemName, quantity, totalPrice, payment, date);
