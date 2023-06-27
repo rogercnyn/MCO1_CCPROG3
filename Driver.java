@@ -84,14 +84,14 @@ public class Driver
         return itemName;
     }
 
-    private double askItemPrice()
+    private int askItemPrice()
     {
         Scanner scan = new Scanner(System.in);
-        double itemPrice;
+        int itemPrice;
         do 
         {
             System.out.print("Enter item price: ");
-            itemPrice = scan.nextDouble();
+            itemPrice = scan.nextInt();
             if (itemPrice <= 0)
             {
                 System.out.println("The price must be a non-negative and non-zero value.");
@@ -101,14 +101,14 @@ public class Driver
         return itemPrice;
     }
 
-    private double askItemCalories()
+    private int askItemCalories()
     {
         Scanner scan = new Scanner(System.in);
-        double itemCalories;
+        int itemCalories;
         do 
         {
             System.out.print("Enter item calories: ");
-            itemCalories = scan.nextDouble();
+            itemCalories = scan.nextInt();
             if (itemCalories <= 0)
             {
                 System.out.println("The calories must be a non-negative and non-zero value.");
@@ -120,7 +120,7 @@ public class Driver
     private int askItemQuantity()
     {
         Scanner scan = new Scanner(System.in);
-        double itemQuantity;
+        int itemQuantity;
         do 
         {
             System.out.print("Enter item quantity: ");
@@ -139,11 +139,11 @@ public class Driver
         Scanner scan = new Scanner(System.in);
         ArrayList<Items> items = new ArrayList<Items>();
         String itemName;
-        double itemPrice, itemCalories;
+        int itemPrice, itemCalories;
         int itemQuantity;
         int counter = 0;
         int addMoreItem;
-        double machineCash;
+        int machineCash;
         for (counter = 1; counter < 9; counter++)
         {
             System.out.println("Product #" + counter);
@@ -151,7 +151,7 @@ public class Driver
             itemPrice = askItemPrice();
             itemCalories = askItemCalories();
             itemQuantity = askItemQuantity();
-            scan.nextLine();
+            //scan.nextLine();
             Items newitem = new Items(itemName, itemPrice, itemCalories, itemQuantity);
             items.add(newitem);
         }
@@ -169,7 +169,7 @@ public class Driver
                     itemPrice = askItemPrice();
                     itemCalories = askItemCalories();
                     itemQuantity = askItemQuantity();
-                    scan.nextLine();
+                    //scan.nextLine();
                     Items newitem = new Items(itemName, itemPrice, itemCalories, itemQuantity);
                     items.add(newitem);
                     counter++;
@@ -183,7 +183,7 @@ public class Driver
         do 
         {
             System.out.print("Enter machine cash balance: ");
-            machineCash = scan.nextDouble(); 
+            machineCash = scan.nextInt(); 
             if(machineCash <= 0)
             {
                 System.out.println("The balance must be a non-negative and non-zero value.");
@@ -250,7 +250,7 @@ public class Driver
     {
         Scanner sc = new Scanner(System.in);
         int choice, itemIndex;
-        double payment;
+        int payment;
         boolean checkPayment;
         RegularMachine testMachine = regular.get(regular.size() - 1);
 
@@ -288,7 +288,7 @@ public class Driver
                         /*do {
                             
                         } while (payment );*/
-                        payment = sc.nextDouble();
+                        payment = sc.nextInt();
                         if (!testMachine.verifyPayment(itemIndex, payment))
                         {
                             System.out.println("Enter sufficient amount.");
@@ -315,6 +315,34 @@ public class Driver
     public static void main(String[] args)
     {
         ArrayList<RegularMachine> regular = new ArrayList<RegularMachine>();
+        ArrayList<Items> itemlist = new ArrayList<Items>();
+
+        Items item1 = new Items("Cup Noodle", 150, 385, 10);
+        itemlist.add(item1);
+
+        Items item2 = new Items("Soda", 50, 100, 10);
+        itemlist.add(item2);
+
+        Items item3 = new Items("Water", 50, 1, 10);
+        itemlist.add(item3);
+
+        Items item4 = new Items("Juice", 60, 85, 12);
+        itemlist.add(item4);
+
+        Items item5 = new Items("Coffee", 75, 50, 15);
+        itemlist.add(item5);
+
+        Items item6 = new Items("Oreo", 30, 125, 15);
+        itemlist.add(item6);
+
+        Items item7 = new Items("Bread", 45, 70, 11);
+        itemlist.add(item7);
+
+        Items item8 = new Items("Cookies", 50, 150, 10);
+        itemlist.add(item8);
+
+        RegularMachine sampleMachine = new RegularMachine(itemlist, 1500);
+        regular.add(sampleMachine);
 
         Driver driver = new Driver();
         driver.mainMenu(regular);

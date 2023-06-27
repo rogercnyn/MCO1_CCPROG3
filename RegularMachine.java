@@ -6,7 +6,7 @@ public class RegularMachine
    private int machineCash; 
    private ArrayList<Transactions> transactions;
 
-   public RegularMachine(ArrayList<Items> items, double machineCash)
+   public RegularMachine(ArrayList<Items> items, int machineCash)
    {
         this.items = items;
         this.machineCash = machineCash;
@@ -30,7 +30,7 @@ public class RegularMachine
         return check;
    }
 
-   public boolean setPrice(String itemName, double price)
+   public boolean setPrice(String itemName, int price)
    {
         boolean check = false;
         int i;
@@ -45,7 +45,7 @@ public class RegularMachine
         return check;
    }
 
-   public boolean replenishMachineBal(double balance)
+   public boolean replenishMachineBal(int balance)
    {
         boolean check = false;
         if (balance > 0)
@@ -112,7 +112,7 @@ public class RegularMachine
    }
 
    //I am not sure if this is right idk what to put on what index doon sa list lalagay ko
-   public boolean verifyPayment(int itemIndex, double payment)
+   public boolean verifyPayment(int itemIndex, int payment)
    {
         boolean result = false;
      
@@ -122,7 +122,7 @@ public class RegularMachine
         return result;
    }
 
-   public void produceChange(boolean validPayment, double payment, int itemIndex)
+   public void produceChange(boolean validPayment, int payment, int itemIndex)
    {
         double changeAmount = payment - items.get(itemIndex).getItemPrice();
         
@@ -132,7 +132,7 @@ public class RegularMachine
             this.machineCash -= changeAmount;
             System.out.println("Your change is: " + changeAmount);
             System.out.println("Dispensing change...");
-            System.out.println("Please get your change. Thank you!");
+            System.out.println("Change dispensed.");
         }
    }
 
@@ -144,6 +144,8 @@ public class RegularMachine
             System.out.println("Dispensing Item...");
             // I suggest creating a method for deducting of quantity para mas easier to ready
             items.get(itemIndex).setItemQuantity(items.get(itemIndex).getItemQuantity() - 1);
+            String name = items.get(itemIndex).getItemName();
+            System.out.println("1 " + name + " dispensed.");
             System.out.println("Thank you for buying!");
         }
    }
@@ -171,10 +173,10 @@ public class RegularMachine
           System.out.println("------------------------------------------------------------");
    }
 
-   public void saveTransaction(int itemIndex, double payment)
+   public void saveTransaction(int itemIndex, int payment)
    {
           String itemName = items.get(itemIndex).getItemName();
-          double totalPrice = items.get(itemIndex).getItemPrice();
+          int totalPrice = items.get(itemIndex).getItemPrice();
           Transactions transact = new Transactions(itemName, totalPrice, payment);
           transactions.add(transact);
    }

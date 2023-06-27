@@ -12,7 +12,7 @@ public class Items
         this.itemQuantity = 0;
     }
 
-    public Items(String name, double price, double calories, int quantity)
+    public Items(String name, int price, int calories, int quantity)
     {
         this.itemName = name;
         this.itemPrice = price;
@@ -45,12 +45,12 @@ public class Items
         this.itemName = itemName;
     }
 
-    public void setItemPrice(double itemPrice) 
+    public void setItemPrice(int itemPrice) 
     {
         this.itemPrice = itemPrice;
     }
 
-    public void setItemCalories(double itemCalories) 
+    public void setItemCalories(int itemCalories) 
     {
         this.itemCalories = itemCalories;
     }

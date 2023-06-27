@@ -8,7 +8,7 @@ public class Transactions
     private int payment;
     private LocalDateTime date;
 
-    public Transactions(String itemName, double totalPrice, double payment)
+    public Transactions(String itemName, int totalPrice, int payment)
     {
         this.itemName = itemName;
         this.totalPrice = totalPrice;
