@@ -194,7 +194,4 @@ public class RegularMachine
    {
           return machineCash;
    }
-
-
-
 }

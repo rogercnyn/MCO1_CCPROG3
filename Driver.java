@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.print.attribute.standard.MediaName;
-
 public class Driver 
 {
     private void mainMenu(ArrayList<RegularMachine> regular)
@@ -78,6 +76,64 @@ public class Driver
         }
     }
 
+    private String askItemName()
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter item name: ");
+        String itemName = scan.nextLine();
+        return itemName;
+    }
+
+    private double askItemPrice()
+    {
+        Scanner scan = new Scanner(System.in);
+        double itemPrice;
+        do 
+        {
+            System.out.print("Enter item price: ");
+            itemPrice = scan.nextDouble();
+            if (itemPrice <= 0)
+            {
+                System.out.println("The price must be a non-negative and non-zero value.");
+            }
+        } while (itemPrice <= 0);
+
+        return itemPrice;
+    }
+
+    private double askItemCalories()
+    {
+        Scanner scan = new Scanner(System.in);
+        double itemCalories;
+        do 
+        {
+            System.out.print("Enter item calories: ");
+            itemCalories = scan.nextDouble();
+            if (itemCalories <= 0)
+            {
+                System.out.println("The calories must be a non-negative and non-zero value.");
+            }
+        } while (itemCalories <= 0);
+        return itemCalories;
+    }
+
+    private int askItemQuantity()
+    {
+        Scanner scan = new Scanner(System.in);
+        double itemQuantity;
+        do 
+        {
+            System.out.print("Enter item quantity: ");
+            itemQuantity = scan.nextInt();
+            if (itemQuantity < 10)
+            {
+                System.out.println("Minimum quantity for a product is 10 items.");
+            }
+        } while (itemQuantity < 10);
+
+        return itemQuantity;
+    }
+
     private void createRegularMachine(ArrayList<RegularMachine> regular)
     {
         Scanner scan = new Scanner(System.in);
@@ -91,37 +147,10 @@ public class Driver
         for (counter = 1; counter < 9; counter++)
         {
             System.out.println("Product #" + counter);
-            System.out.print("Enter item name: ");
-            itemName = scan.nextLine();
-            do 
-            {
-                System.out.print("Enter item price: ");
-                itemPrice = scan.nextDouble();
-                if (itemPrice <= 0)
-                {
-                    System.out.println("The price must be a non-negative and non-zero value.");
-                }
-            } while (itemPrice <= 0);
-
-            do 
-            {
-                System.out.print("Enter item calories: ");
-                itemCalories = scan.nextDouble();
-                if (itemCalories <= 0)
-                {
-                    System.out.println("The calories must be a non-negative and non-zero value.");
-                }
-            } while (itemCalories <= 0);
-
-            do 
-            {
-                System.out.print("Enter item quantity: ");
-                itemQuantity = scan.nextInt();
-                if (itemQuantity < 10)
-                {
-                    System.out.println("Minimum quantity for a product is 10 items.");
-                }
-            } while (itemQuantity < 10);
+            itemName = askItemName();
+            itemPrice = askItemPrice();
+            itemCalories = askItemCalories();
+            itemQuantity = askItemQuantity();
             scan.nextLine();
             Items newitem = new Items(itemName, itemPrice, itemCalories, itemQuantity);
             items.add(newitem);
@@ -136,37 +165,10 @@ public class Driver
                 case 1:
                     scan.nextLine();
                     System.out.println("Product #" + counter);
-                    System.out.print("Enter item name: ");
-                    itemName = scan.nextLine();
-                    do 
-                    {
-                        System.out.print("Enter item price: ");
-                        itemPrice = scan.nextDouble();
-                        if (itemPrice <= 0)
-                        {
-                            System.out.println("The price must be a non-negative and non-zero value.");
-                        }
-                    } while (itemPrice <= 0);
-
-                    do 
-                    {
-                        System.out.print("Enter item calories: ");
-                        itemCalories = scan.nextDouble();
-                        if (itemCalories <= 0)
-                        {
-                            System.out.println("The calories must be a non-negative and non-zero value.");
-                        }
-                    } while (itemCalories <= 0);
-                
-                    do 
-                    {
-                        System.out.print("Enter item quantity: ");
-                        itemQuantity = scan.nextInt();
-                        if (itemQuantity < 10)
-                        {
-                            System.out.println("Minimum quantity for a product is 10 items.");
-                        }
-                    } while (itemQuantity < 10);
+                    itemName = askItemName();
+                    itemPrice = askItemPrice();
+                    itemCalories = askItemCalories();
+                    itemQuantity = askItemQuantity();
                     scan.nextLine();
                     Items newitem = new Items(itemName, itemPrice, itemCalories, itemQuantity);
                     items.add(newitem);
@@ -203,37 +205,44 @@ public class Driver
             mainMenu(regular);
         }
 
-        int choice;
+        else
+        {
+            int choice;
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("----------------------------------------");
-        System.out.println("|               [FEATURES]             |");
-        System.out.println("|         [1] Vending Features         |");
-        System.out.println("|       [2] Maintenance Features       |");
-        System.out.println("|               [3] Exit               |");
-        System.out.println("----------------------------------------");
-        System.out.print("Enter choice: ");
+            Scanner sc = new Scanner(System.in);
+            System.out.println("----------------------------------------");
+            System.out.println("|               [FEATURES]             |");
+            System.out.println("|         [1] Vending Features         |");
+            System.out.println("|       [2] Maintenance Features       |");
+            System.out.println("|               [3] Back               |");
+            System.out.println("----------------------------------------");
+            System.out.print("Enter choice: ");
 
-        do {
-            choice = sc.nextInt();
-            if (choice < 1 || choice > 3)
-            {
-                testMachine(regular);
-            }
-        } while (choice < 1 || choice > 3);
+            do {
+                choice = sc.nextInt();
+                if (choice < 1 || choice > 3)
+                {
+                    testMachine(regular);
+                }
+            } while (choice < 1 || choice > 3);
 
-        switch (choice) {
-            case 1:
-                testVendingFeatures(regular);
-                break;
+            switch (choice) {
+                case 1:
+                    testVendingFeatures(regular);
+                    break;
+                
+                case 2:
+                    // Maintenance Features
+                    break;
+                
+                case 3:
+                    mainMenu(regular);
+                    break;
             
-            case 2:
-                // Maintenance Features
-                break;
-          
-            default:
-                mainMenu(regular);
-                break;
+                default:
+                    mainMenu(regular);
+                    break;
+            }
         }
     }
 
@@ -275,7 +284,11 @@ public class Driver
                 if(testMachine.checkQuantity(itemIndex))
                 {
                     do {
-                        System.out.print("Enter payment: Php ");
+                        System.out.print("Enter payment in Php");
+                        /*do {
+                            
+                        } while (payment );*/
+
                         payment = sc.nextDouble();
                         if (!testMachine.verifyPayment(itemIndex, payment))
                         {
@@ -283,6 +296,8 @@ public class Driver
                         }
                     } while (!testMachine.verifyPayment(itemIndex, payment));
                     checkPayment = true;
+
+                    // Recheck the necessity of calling the callPayment
                     testMachine.produceChange(checkPayment, payment, itemIndex);
                     testMachine.dispenseItem(checkPayment, itemIndex);
                     testMachine.saveTransaction(itemIndex, payment);
