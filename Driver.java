@@ -284,11 +284,10 @@ public class Driver
                 if(testMachine.checkQuantity(itemIndex))
                 {
                     do {
-                        System.out.print("Enter payment in Php");
+                        System.out.print("[PAYMENT]");
                         /*do {
                             
                         } while (payment );*/
-
                         payment = sc.nextDouble();
                         if (!testMachine.verifyPayment(itemIndex, payment))
                         {

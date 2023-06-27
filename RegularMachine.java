@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class RegularMachine 
 {
    private static ArrayList<Items> items;
-   private double machineCash; 
+   private int machineCash; 
    private ArrayList<Transactions> transactions;
 
    public RegularMachine(ArrayList<Items> items, double machineCash)
@@ -11,12 +11,6 @@ public class RegularMachine
         this.items = items;
         this.machineCash = machineCash;
         this.transactions = new ArrayList<Transactions>();
-   }
-
-   public void addItem(String name, double price, double calories, int quantity)
-   {
-        Items item = new Items(name, price, calories, quantity);
-        items.add(item);
    }
 
    public boolean restockItem(String itemName, int quantity)
@@ -190,7 +184,7 @@ public class RegularMachine
           return items;
    }
 
-   public double getMachineCash()
+   public int getMachineCash()
    {
           return machineCash;
    }

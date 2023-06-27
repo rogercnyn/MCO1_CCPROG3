@@ -1,7 +1,7 @@
 public class Items 
 {
     private String itemName;
-    private double itemPrice, itemCalories;
+    private int itemPrice, itemCalories;
     private int itemQuantity;
 
     public Items()
@@ -25,12 +25,12 @@ public class Items
         return itemName;
     }
 
-    public double getItemPrice() 
+    public int getItemPrice() 
     {
         return itemPrice;
     }
 
-    public double getItemCalories() 
+    public int getItemCalories() 
     {
         return itemCalories;
     }

@@ -4,8 +4,8 @@ import java.time.LocalDateTime;
 public class Transactions 
 {
     private String itemName;
-    private double totalPrice;
-    private double payment;
+    private int totalPrice;
+    private int payment;
     private LocalDateTime date;
 
     public Transactions(String itemName, double totalPrice, double payment)
@@ -21,12 +21,12 @@ public class Transactions
         return itemName;
     }
 
-    public double getTotalPrice() 
+    public int getTotalPrice() 
     {
         return totalPrice;
     }
 
-    public double getPayment() 
+    public int getPayment() 
     {
         return payment;
     }
