@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class sample {
     public static void main(String[] args)
     {
-        int input;
+        System.out.println(40%20);
+        /*int input;
         System.out.println("[FOR MACHINE BALANCE]");
         Scanner scan = new Scanner(System.in);
         int[][] balance = { {1, 0},
@@ -86,6 +87,6 @@ public class sample {
             {
                 System.out.println(balance[i][j] + " " + balance [i][j + 1]);
             }
-        }
+        }*/
     }
 }

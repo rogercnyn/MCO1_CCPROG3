@@ -38,7 +38,6 @@ public class Driver
             default:
                 break;
         }
-        sc.close();
     }
 
     private void createMachine(ArrayList<RegularMachine> regular)
@@ -75,7 +74,6 @@ public class Driver
                 mainMenu(regular);
                 break;
         }
-        sc.close();
     }
 
     private String askItemName()
@@ -83,7 +81,6 @@ public class Driver
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter item name: ");
         String itemName = scan.nextLine();
-        scan.close();
         return itemName;
     }
 
@@ -100,8 +97,6 @@ public class Driver
                 System.out.println("The price must be a non-negative and non-zero value.");
             }
         } while (itemPrice <= 0);
-
-        scan.close();;
         return itemPrice;
     }
 
@@ -118,7 +113,6 @@ public class Driver
                 System.out.println("The calories must be a non-negative and non-zero value.");
             }
         } while (itemCalories <= 0);
-        scan.close();
         return itemCalories;
     }
 
@@ -135,7 +129,6 @@ public class Driver
                 System.out.println("Minimum quantity for a product is 10 items.");
             }
         } while (itemQuantity < 10);
-        scan.close();
         return itemQuantity;
     }
 
@@ -172,7 +165,6 @@ public class Driver
             }
             
         }
-        scan.close();
         return balance;
     }
 
@@ -222,8 +214,6 @@ public class Driver
         } while (addMoreItem != 2);
 
         balance = askMachineBal();
-
-        scan.close();
         RegularMachine newReg = new RegularMachine(items, balance);
         regular.add(newReg);
 
@@ -260,7 +250,6 @@ public class Driver
                 }
             } while (choice < 1 || choice > 3);
             
-            sc.close();
 
             switch (choice) {
                 case 1:
@@ -287,11 +276,9 @@ public class Driver
     {
         Scanner sc = new Scanner(System.in);
         int choice, itemIndex;
-        int payment;
-        boolean checkPayment;
         RegularMachine testMachine = regular.get(regular.size() - 1);
 
-        if (testMachine.getMachineCash() == 0)
+        if (!testMachine.hasEnoughDenom()) // has errors
         {
             System.out.println("Sorry, this machine has no balance for your change.");
             testMachine(regular);
@@ -299,7 +286,8 @@ public class Driver
 
         else
         {
-            do {
+            do 
+            {
                 testMachine.displayMachine();
                 System.out.print("[1] Buy | [2] Exit Test Mode: ");
                 choice = sc.nextInt();
@@ -323,23 +311,11 @@ public class Driver
 
                     if(testMachine.checkQuantity(itemIndex))
                     {
-                        do {
-                            System.out.print("[PAYMENT] ");
-                            /*do {
-                                
-                            } while (payment );*/
-                            payment = sc.nextInt();
-                            if (!testMachine.verifyPayment(itemIndex, payment))
-                            {
-                                System.out.println("Enter sufficient amount.");
-                            }
-                        } while (!testMachine.verifyPayment(itemIndex, payment));
-                        checkPayment = true;
-
-                        // Recheck the necessity of calling the callPayment
-                        testMachine.produceChange(checkPayment, payment, itemIndex);
-                        testMachine.dispenseItem(checkPayment, itemIndex);
-                        testMachine.saveTransaction(itemIndex, payment);
+                        if (testMachine.processPayment(itemIndex) > 0)
+                        {
+                            testMachine.dispenseItem(itemIndex);
+                            testMachine.saveTransaction(itemIndex, testMachine.processPayment(itemIndex));
+                        }
                     }
 
                     else
@@ -348,7 +324,6 @@ public class Driver
                     }
                 }
             } while (choice != 2);
-            sc.close();
             testMachine(regular);
         }
     }

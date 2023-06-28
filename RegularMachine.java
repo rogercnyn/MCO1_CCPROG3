@@ -8,6 +8,7 @@ public class RegularMachine
    private ArrayList<Transactions> transactions;
    private int[] acceptedDenom = {1, 5, 10, 20, 50, 100, 200, 500, 1000};
    private Stack<Integer> payment = new Stack<Integer>();
+   private Stack<Integer> change = new Stack<Integer>();
    private int[][] machineBalance;
 
    public RegularMachine(ArrayList<Items> items, int[][] machineBalance)
@@ -140,14 +141,28 @@ public class RegularMachine
         return result;
    }
 
-   public boolean processPayment(int itemIndex)
+   private boolean isDenomAccepted(int input)
    {
-     // return true if the transaction is successful, false if the user cancelled the transaction
+          boolean check = false;
+          for (int i = 0; i < this.acceptedDenom.length; i++)
+          {
+               if (input == this.acceptedDenom[i])
+               {
+                    return true;
+               }
+          }
+          return check;
+   }
+
+   public int processPayment(int itemIndex)
+   {
           Scanner scan = new Scanner(System.in);
           int i;
           int input = 0;
+          int totalPrice = items.get(itemIndex).getItemPrice();
           int totalPayable = items.get(itemIndex).getItemPrice();
-          boolean isDenomAccepted = false;
+          boolean isDenomAccepted;
+          int stackReturn;
           System.out.println("[PAYMENT]");
           System.out.println("Insert any of the available denomination: [1, 5, 10, 20, 50, 100, 200, 500, 1000]");
           System.out.println("If you want to cancel the transaction, enter 0.");
@@ -155,78 +170,194 @@ public class RegularMachine
           boolean check = false;
           do 
           {
+               isDenomAccepted = false;
                System.out.println("Total amount payable: Php " + totalPayable);
                System.out.print("Insert coin / bill: ");
                input = scan.nextInt();
                if (input == 0)
                {
                     System.out.println("Transaction cancelled.");
-               }
-               for (i = 0; i < this.acceptedDenom.length; i++)
-               {
-                    if (input == this.acceptedDenom[i])
+                    System.out.println("Dispensing your payment");
+                    while(!payment.empty())
                     {
-                         isDenomAccepted = true;
+                         System.out.println("Php " + payment.pop() + " ");
                     }
+                    totalInserted = 0;
                }
 
-               if(isDenomAccepted)
+               if(isDenomAccepted(input))
                {
+                    totalInserted += input;
                     this.payment.push(input);
                     totalPayable -= input;
-                    totalInserted += input;
                }
 
-               if (!isDenomAccepted)
+               else if (!isDenomAccepted(input))
                {
                     System.out.println("Denomination inserted is not accepted.");
                }
-          } while (totalPayable != 0 || totalInserted < totalPayable || input != 0);
-          if (totalPayable == 0 && totalInserted >= totalPayable)
+
+          } while (totalPayable > 0 && totalInserted < totalPrice && input != 0);
+
+          while(!payment.empty())
           {
-               check = true;
+               stackReturn = payment.pop();
+               addQuantityToDenom(stackReturn);
           }
-          scan.close();
+
+          if (totalPayable == 0) // This condition is for only when the payment inserted is exactly the same as the total payment
+          {
+               System.out.println("Thank you for paying exact amount.");
+          }
+
+          if (totalInserted >= totalPrice) // Will only run if there is a change
+          {
+               check = produceChange(totalInserted, totalPrice);
+          }
+
+          return totalInserted;
+   }
+
+   private void addQuantityToDenom(int denom)
+   {
+          int i, j;
+          for (i = 0; i < this.machineBalance.length; i++)
+          {
+               for (j = 0; j < this.machineBalance[i].length - 1; j++)
+               {
+                    if (denom == this.machineBalance[i][j])
+                    {
+                         this.machineBalance[i][j+1] += 1;
+                    }
+               }
+          }
+   }
+
+   private void deductQuantityToDenom(int denom)
+   {
+          int i, j;
+          for (i = 0; i < this.machineBalance.length; i++)
+          {
+               for (j = 0; j < this.machineBalance[i].length - 1; j++)
+               {
+                    if (denom == this.machineBalance[i][j])
+                    {
+                         this.machineBalance[i][j+1] -= 1;
+                    }
+               }
+          }
+   }
+
+   private boolean hasDenomStock(int denom)
+   {
+          boolean check = false;
+          int i, j;
+          for (i = 0; i < this.machineBalance.length; i++)
+          {
+               for (j = 0; j < this.machineBalance[i].length - 1; j++)
+               {
+                    if (denom == this.machineBalance[i][j])
+                    {
+                         if (this.machineBalance[i][j+1] > 0)
+                              return true;
+                    }
+               }
+          }
           return check;
    }
 
-   //I am not sure if this is right idk what to put on what index doon sa list lalagay ko
-   public boolean verifyPayment(int itemIndex, int payment)
+   public boolean hasEnoughDenom()
    {
-        boolean result = false;
-     
-        if(payment >= items.get(itemIndex).getItemPrice())
-            result=true;    
+          boolean check = true;
+          int i, j;
+          for (i = 0; i < this.machineBalance.length; i++)
+          {
+               if (this.machineBalance[i][1] <= 0)
+               {
+                    check = false;
+               }
+          }
 
-        return result;
+          for (i = 0; i < this.machineBalance.length; i++)
+          {
+               for (j = 0; j < this.machineBalance[i].length - 1; j++)
+               {
+                    System.out.println(this.machineBalance[i][j] + " " + this.machineBalance[i][j+1]);
+               }
+          }
+          return check;
    }
 
-   public void produceChange(boolean validPayment, int payment, int itemIndex)
+   public boolean produceChange(int totalInserted, int totalPayable)
    {
-        double changeAmount = payment - items.get(itemIndex).getItemPrice();
-        
-        if (validPayment)
-        {
-            this.machineCash += payment;
-            this.machineCash -= changeAmount;
-            System.out.println("Your change is: " + changeAmount);
-            System.out.println("Dispensing change...");
-            System.out.println("Change dispensed.");
-        }
+          boolean check = false;
+          int i;
+          int changeAmount = totalInserted - totalPayable;
+          int dispensedChange = 0;
+          boolean isEqualToDenom = false;
+
+          do
+          {
+               isEqualToDenom = isDenomAccepted(changeAmount);
+
+               if(isEqualToDenom && hasDenomStock(changeAmount))
+               {
+                    change.push(changeAmount);
+                    deductQuantityToDenom(changeAmount);
+                    changeAmount -= changeAmount;
+               }
+
+               if (!isEqualToDenom)
+               {
+                    for (i = this.acceptedDenom.length - 1; i >= 0; --i)
+                    {
+                         if (changeAmount > 0)
+                         {
+                              if (changeAmount > this.acceptedDenom[i] && hasDenomStock(this.acceptedDenom[i]))
+                              {
+                                   deductQuantityToDenom(this.acceptedDenom[i]);
+                                   change.push(acceptedDenom[i]);
+                                   changeAmount -= acceptedDenom[i];
+                              }
+
+                              else if (changeAmount % this.acceptedDenom[i] == 0 && hasDenomStock(this.acceptedDenom[i]))
+                              {
+                                   deductQuantityToDenom(this.acceptedDenom[i]);
+                                   change.push(acceptedDenom[i]);
+                                   changeAmount -= acceptedDenom[i];
+                              }
+                         }
+                    }
+               }
+
+          }while(changeAmount > 0);
+
+          System.out.println("Dispensing change: ");
+
+          while (!change.isEmpty())
+          {
+               int poppedValue = change.pop();
+               System.out.println("Php " + poppedValue);
+               dispensedChange += poppedValue;
+          }
+
+          System.out.println("Total dispensed change: Php " + dispensedChange);
+
+          if (changeAmount == 0)
+          {
+               check = true;
+          }
+
+          return check;
    }
 
-   // Working in progress palang 
-   public void dispenseItem(boolean validTransact, int itemIndex)
+   public void dispenseItem(int itemIndex)
    {
-        if(validTransact)
-        {
-            System.out.println("Dispensing Item...");
-            // I suggest creating a method for deducting of quantity para mas easier to ready
-            items.get(itemIndex).setItemQuantity(items.get(itemIndex).getItemQuantity() - 1);
-            String name = items.get(itemIndex).getItemName();
-            System.out.println("1 " + name + " dispensed.");
-            System.out.println("Thank you for buying!");
-        }
+          System.out.println("Dispensing Item...");
+          items.get(itemIndex).setItemQuantity(items.get(itemIndex).getItemQuantity() - 1);
+          String name = items.get(itemIndex).getItemName();
+          System.out.println("1 " + name + " dispensed.");
+          System.out.println("Thank you for buying!");
    }
 
    //This function displays the vending machines inventory & its information

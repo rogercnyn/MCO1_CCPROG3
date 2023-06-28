@@ -1,1 +1,1 @@
-                do
+testMachine.processPayment(itemIndex) > 0
