@@ -291,46 +291,40 @@ public class RegularMachine
    public boolean produceChange(int totalInserted, int totalPayable)
    {
           boolean check = false;
-          int i;
+          int i, j;
           int changeAmount = totalInserted - totalPayable;
           int dispensedChange = 0;
           boolean isEqualToDenom = false;
 
-          do
+          isEqualToDenom = isDenomAccepted(changeAmount);
+
+          if(isEqualToDenom && hasDenomStock(changeAmount))
           {
-               isEqualToDenom = isDenomAccepted(changeAmount);
+               change.push(changeAmount);
+               deductQuantityToDenom(changeAmount);
+               changeAmount -= changeAmount;
+          }
+          else if (!isEqualToDenom)
+          {
 
-               if(isEqualToDenom && hasDenomStock(changeAmount))
+               for (i = this.acceptedDenom.length - 1; i >= 0 && changeAmount > 0; --i)
                {
-                    change.push(changeAmount);
-                    deductQuantityToDenom(changeAmount);
-                    changeAmount -= changeAmount;
-               }
-
-               if (!isEqualToDenom)
-               {
-                    for (i = this.acceptedDenom.length - 1; i >= 0; --i)
+                    if (changeAmount > this.acceptedDenom[i] && hasDenomStock(this.acceptedDenom[i]))
                     {
-                         if (changeAmount > 0)
-                         {
-                              if (changeAmount > this.acceptedDenom[i] && hasDenomStock(this.acceptedDenom[i]))
-                              {
-                                   deductQuantityToDenom(this.acceptedDenom[i]);
-                                   change.push(acceptedDenom[i]);
-                                   changeAmount -= acceptedDenom[i];
-                              }
+                         deductQuantityToDenom(this.acceptedDenom[i]);
+                         change.push(acceptedDenom[i]);
+                         changeAmount -= acceptedDenom[i];
+                    }
 
-                              else if (changeAmount % this.acceptedDenom[i] == 0 && hasDenomStock(this.acceptedDenom[i]))
-                              {
-                                   deductQuantityToDenom(this.acceptedDenom[i]);
-                                   change.push(acceptedDenom[i]);
-                                   changeAmount -= acceptedDenom[i];
-                              }
-                         }
+                    while(changeAmount % this.acceptedDenom[i] == 0 && hasDenomStock(this.acceptedDenom[i]) && changeAmount > 0)
+                    {
+                         deductQuantityToDenom(this.acceptedDenom[i]);
+                         change.push(acceptedDenom[i]);
+                         changeAmount -= acceptedDenom[i];
                     }
                }
-
-          }while(changeAmount > 0);
+          }
+     
 
           System.out.println("Dispensing change: ");
 

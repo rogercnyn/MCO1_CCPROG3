@@ -276,6 +276,7 @@ public class Driver
     {
         Scanner sc = new Scanner(System.in);
         int choice, itemIndex;
+        int insertedPayment;
         RegularMachine testMachine = regular.get(regular.size() - 1);
 
         if (!testMachine.hasEnoughDenom()) // has errors
@@ -311,10 +312,15 @@ public class Driver
 
                     if(testMachine.checkQuantity(itemIndex))
                     {
-                        if (testMachine.processPayment(itemIndex) > 0)
+                        insertedPayment = testMachine.processPayment(itemIndex);
+                        if (insertedPayment > 0)
                         {
                             testMachine.dispenseItem(itemIndex);
-                            testMachine.saveTransaction(itemIndex, testMachine.processPayment(itemIndex));
+                            testMachine.saveTransaction(itemIndex, insertedPayment);
+                        }
+                        else
+                        {
+                            System.out.println("Transaction unsuccessful.");
                         }
                     }
 
@@ -358,7 +364,7 @@ public class Driver
         Items item8 = new Items("Cookies", 50, 150, 10);
         itemlist.add(item8);
 
-        int[][] balance = { {1, 3},
+        int[][] balance = { {1, 13},
                             {5, 4},
                             {10, 8},
                             {20, 12},
