@@ -1,15 +1,18 @@
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class RegularMachine 
 {
-   private static ArrayList<Items> items;
-   private int machineCash; 
+   private static ArrayList<Items> items; 
    private ArrayList<Transactions> transactions;
+   private int[] acceptedDenom = {1, 5, 10, 20, 50, 100, 200, 500, 1000};
+   private Stack<Integer> payment = new Stack<Integer>();
+   private int[][] machineBalance;
 
-   public RegularMachine(ArrayList<Items> items, int machineCash)
+   public RegularMachine(ArrayList<Items> items, int[][] machineBalance)
    {
         this.items = items;
-        this.machineCash = machineCash;
+        this.machineBalance = machineBalance;
         this.transactions = new ArrayList<Transactions>();
    }
 
@@ -45,22 +48,47 @@ public class RegularMachine
         return check;
    }
 
-   public boolean replenishMachineBal(int balance)
+   public void replenishMachineBal(int[][] balance)
    {
-        boolean check = false;
-        if (balance > 0)
-        {
-            this.machineCash += balance;
-            check = true;
-        }
-        return check;
+          int i, j;
+          for (i = 0; i < this.machineBalance.length; i++)
+          {
+               for (j = 0; j < this.machineBalance[i].length - 1; j++)
+               {
+                    this.machineBalance[i][j+1] += balance[i][j+1];
+               }
+          }
    }
 
    public void collectMachineBalance()
    {
-          System.out.println("Collecting money...");
-          System.out.println("Collecting a total of " + this.machineCash);
-          this.machineCash = 0;
+          int totalBalance = 0;
+          System.out.println("Calculating total balance...");
+          int i, j;
+          for (i = 0; i < this.machineBalance.length; i++)
+          {
+               for (j = 0; j < this.machineBalance[i].length - 1; j++)
+               {
+                    totalBalance += this.machineBalance[i][j+1] * this.machineBalance[i][j];
+               }
+          }
+          System.out.println("Collecting a total of " + totalBalance);
+          System.out.println("In denomination of:");
+          for (i = 0; i < this.machineBalance.length; i++)
+          {
+               for (j = 0; j < this.machineBalance[i].length - 1; j++)
+               {
+                    System.out.println("Php " + this.machineBalance[i][j] + "s: " + this.machineBalance[i][j+1]);
+               }
+          }
+          System.out.println("Machine balance successfully collected. Thank you!");
+          for (i = 0; i < this.machineBalance.length; i++)
+          {
+               for (j = 0; j < this.machineBalance[i].length - 1; j++)
+               {
+                    this.machineBalance[i][j+1] = 0;
+               }
+          }
    }
 
    public int countItems()
@@ -111,6 +139,11 @@ public class RegularMachine
         return result;
    }
 
+   public void getPayment()
+   {
+          
+   }
+
    //I am not sure if this is right idk what to put on what index doon sa list lalagay ko
    public boolean verifyPayment(int itemIndex, int payment)
    {
@@ -151,7 +184,7 @@ public class RegularMachine
    }
 
    //This function displays the vending machines inventory & its information
-   public static void displayMachine()
+   public void displayMachine()
    {
           System.out.println("------------------------------------------------------------");
           /* Format:
@@ -184,10 +217,5 @@ public class RegularMachine
    public ArrayList<Items> getItem()
    {
           return items;
-   }
-
-   public int getMachineCash()
-   {
-          return machineCash;
    }
 }

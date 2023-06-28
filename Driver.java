@@ -38,6 +38,7 @@ public class Driver
             default:
                 break;
         }
+        sc.close();
     }
 
     private void createMachine(ArrayList<RegularMachine> regular)
@@ -74,6 +75,7 @@ public class Driver
                 mainMenu(regular);
                 break;
         }
+        sc.close();
     }
 
     private String askItemName()
@@ -81,6 +83,7 @@ public class Driver
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter item name: ");
         String itemName = scan.nextLine();
+        scan.close();
         return itemName;
     }
 
@@ -98,6 +101,7 @@ public class Driver
             }
         } while (itemPrice <= 0);
 
+        scan.close();;
         return itemPrice;
     }
 
@@ -114,6 +118,7 @@ public class Driver
                 System.out.println("The calories must be a non-negative and non-zero value.");
             }
         } while (itemCalories <= 0);
+        scan.close();
         return itemCalories;
     }
 
@@ -130,8 +135,45 @@ public class Driver
                 System.out.println("Minimum quantity for a product is 10 items.");
             }
         } while (itemQuantity < 10);
-
+        scan.close();
         return itemQuantity;
+    }
+
+    private int[][] askMachineBal()
+    {
+        int input;
+        System.out.println("[FOR MACHINE BALANCE]");
+        Scanner scan = new Scanner(System.in);
+        int[][] balance = { {1, 0},
+                            {5, 0},
+                            {10, 0},
+                            {20, 0},
+                            {50, 0},
+                            {100, 0},
+                            {200, 0},
+                            {500, 0},
+                            {1000, 0}};
+        int i, j;
+        for (i = 0; i < balance.length; i++)
+        {
+            for (j = 0; j < balance[i].length - 1; j++)
+            {
+                do
+                {
+                    System.out.print("Enter quantity of Php " + balance[i][j] + "s: ");
+                    input = scan.nextInt();
+                    if (input < 0)
+                    {
+                        System.out.println("Negative values are not accepted. The machine only accepts 0 quantity or more.");
+                    }
+                }while(input < 0);
+                
+                balance[i][j+1] = input;
+            }
+            
+        }
+        scan.close();
+        return balance;
     }
 
     private void createRegularMachine(ArrayList<RegularMachine> regular)
@@ -141,6 +183,7 @@ public class Driver
         String itemName;
         int itemPrice, itemCalories;
         int itemQuantity;
+        int[][] balance;
         int counter = 0;
         int addMoreItem;
         int machineCash;
@@ -151,7 +194,6 @@ public class Driver
             itemPrice = askItemPrice();
             itemCalories = askItemCalories();
             itemQuantity = askItemQuantity();
-            //scan.nextLine();
             Items newitem = new Items(itemName, itemPrice, itemCalories, itemQuantity);
             items.add(newitem);
         }
@@ -169,7 +211,6 @@ public class Driver
                     itemPrice = askItemPrice();
                     itemCalories = askItemCalories();
                     itemQuantity = askItemQuantity();
-                    //scan.nextLine();
                     Items newitem = new Items(itemName, itemPrice, itemCalories, itemQuantity);
                     items.add(newitem);
                     counter++;
@@ -180,17 +221,10 @@ public class Driver
             }
         } while (addMoreItem != 2);
 
-        do 
-        {
-            System.out.print("Enter machine cash balance: ");
-            machineCash = scan.nextInt(); 
-            if(machineCash <= 0)
-            {
-                System.out.println("The balance must be a non-negative and non-zero value.");
-            } 
-        } while (machineCash <= 0);
+        balance = askMachineBal();
 
-        RegularMachine newReg = new RegularMachine(items, machineCash);
+        scan.close();
+        RegularMachine newReg = new RegularMachine(items, balance);
         regular.add(newReg);
 
         System.out.println("Congratulations! Your Regular Vending Machine is now ready!");
@@ -225,6 +259,8 @@ public class Driver
                     testMachine(regular);
                 }
             } while (choice < 1 || choice > 3);
+            
+            sc.close();
 
             switch (choice) {
                 case 1:
@@ -244,6 +280,7 @@ public class Driver
                     break;
             }
         }
+    
     }
 
     private void testVendingFeatures(ArrayList<RegularMachine> regular)
@@ -257,59 +294,63 @@ public class Driver
         if (testMachine.getMachineCash() == 0)
         {
             System.out.println("Sorry, this machine has no balance for your change.");
+            testMachine(regular);
         }
 
-        do {
-            testMachine.displayMachine();
-            System.out.print("[1] Buy | [2] Exit Test Mode: ");
-            choice = sc.nextInt();
-            if (choice < 1 || choice > 2)
-            {
-                System.out.println("Enter valid choice.");
-            }
-            if (choice == 1)
-            {
-                do
+        else
+        {
+            do {
+                testMachine.displayMachine();
+                System.out.print("[1] Buy | [2] Exit Test Mode: ");
+                choice = sc.nextInt();
+                if (choice < 1 || choice > 2)
                 {
-                    System.out.print("Enter the number you want to buy: ");
-                    itemIndex = sc.nextInt();
-                    if (itemIndex < 1 || itemIndex > testMachine.countItems())
+                    System.out.println("Enter valid choice.");
+                }
+                if (choice == 1)
+                {
+                    do
                     {
-                        System.out.println("Enter valid number.");
-                    }
-                } while(itemIndex < 1 || itemIndex > testMachine.countItems());
-
-                itemIndex--; // get the real index of the item in the array
-
-                if(testMachine.checkQuantity(itemIndex))
-                {
-                    do {
-                        System.out.print("[PAYMENT]");
-                        /*do {
-                            
-                        } while (payment );*/
-                        payment = sc.nextInt();
-                        if (!testMachine.verifyPayment(itemIndex, payment))
+                        System.out.print("Enter the number you want to buy: ");
+                        itemIndex = sc.nextInt();
+                        if (itemIndex < 1 || itemIndex > testMachine.countItems())
                         {
-                            System.out.println("Enter sufficient amount.");
+                            System.out.println("Enter valid number.");
                         }
-                    } while (!testMachine.verifyPayment(itemIndex, payment));
-                    checkPayment = true;
+                    } while(itemIndex < 1 || itemIndex > testMachine.countItems());
 
-                    // Recheck the necessity of calling the callPayment
-                    testMachine.produceChange(checkPayment, payment, itemIndex);
-                    testMachine.dispenseItem(checkPayment, itemIndex);
-                    testMachine.saveTransaction(itemIndex, payment);
+                    itemIndex--; // get the real index of the item in the array
+
+                    if(testMachine.checkQuantity(itemIndex))
+                    {
+                        do {
+                            System.out.print("[PAYMENT] ");
+                            /*do {
+                                
+                            } while (payment );*/
+                            payment = sc.nextInt();
+                            if (!testMachine.verifyPayment(itemIndex, payment))
+                            {
+                                System.out.println("Enter sufficient amount.");
+                            }
+                        } while (!testMachine.verifyPayment(itemIndex, payment));
+                        checkPayment = true;
+
+                        // Recheck the necessity of calling the callPayment
+                        testMachine.produceChange(checkPayment, payment, itemIndex);
+                        testMachine.dispenseItem(checkPayment, itemIndex);
+                        testMachine.saveTransaction(itemIndex, payment);
+                    }
+
+                    else
+                    {
+                        System.out.println("This product is currently unavailable.");
+                    }
                 }
-
-                else
-                {
-                    System.out.println("This product is currently unavailable.");
-                }
-            }
-        } while (choice != 2);
-
-        testMachine(regular);
+            } while (choice != 2);
+            sc.close();
+            testMachine(regular);
+        }
     }
 
     public static void main(String[] args)
@@ -317,6 +358,7 @@ public class Driver
         ArrayList<RegularMachine> regular = new ArrayList<RegularMachine>();
         ArrayList<Items> itemlist = new ArrayList<Items>();
 
+        // This is just for debugging. Must be removed or edited before submitting.
         Items item1 = new Items("Cup Noodle", 150, 385, 10);
         itemlist.add(item1);
 
@@ -341,7 +383,17 @@ public class Driver
         Items item8 = new Items("Cookies", 50, 150, 10);
         itemlist.add(item8);
 
-        RegularMachine sampleMachine = new RegularMachine(itemlist, 1500);
+        int[][] balance = { {1, 3},
+                            {5, 4},
+                            {10, 8},
+                            {20, 12},
+                            {50, 16},
+                            {100, 15},
+                            {200, 14},
+                            {500, 12},
+                            {1000, 9}};
+
+        RegularMachine sampleMachine = new RegularMachine(itemlist, balance);
         regular.add(sampleMachine);
 
         Driver driver = new Driver();
