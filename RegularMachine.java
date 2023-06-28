@@ -268,15 +268,23 @@ public class RegularMachine
 
    public boolean hasEnoughDenom()
    {
-          boolean check = true;
-          int i, j;
-          for (i = 0; i < this.machineBalance.length; i++)
+          boolean check = false;
+          int i = 0, j;
+          // for (i = 0; i < this.machineBalance.length; i++)
+          // {
+          //      if (this.machineBalance[i][1] <= 0)
+          //      {
+          //           check = false;
+          //      }
+          // }
+          do
           {
-               if (this.machineBalance[i][1] <= 0)
+               if (this.machineBalance[i][1] > 0)
                {
-                    check = false;
+                    check = true;
                }
-          }
+               i++;
+          }while((i < this.machineBalance.length) && !check);
 
           for (i = 0; i < this.machineBalance.length; i++)
           {

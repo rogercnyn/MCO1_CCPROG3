@@ -364,15 +364,15 @@ public class Driver
         Items item8 = new Items("Cookies", 50, 150, 10);
         itemlist.add(item8);
 
-        int[][] balance = { {1, 13},
-                            {5, 4},
-                            {10, 8},
-                            {20, 12},
-                            {50, 16},
-                            {100, 15},
-                            {200, 14},
-                            {500, 12},
-                            {1000, 9}};
+        int[][] balance = { {1, 0},
+                            {5, 0},
+                            {10, 0},
+                            {20, 0},
+                            {50, 0},
+                            {100, 0},
+                            {200, 0},
+                            {500, 0},
+                            {1000, 0}};
 
         RegularMachine sampleMachine = new RegularMachine(itemlist, balance);
         regular.add(sampleMachine);
