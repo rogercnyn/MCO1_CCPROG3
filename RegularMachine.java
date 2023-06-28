@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Stack;
+import java.util.Scanner;
 
 public class RegularMachine 
 {
@@ -139,9 +140,54 @@ public class RegularMachine
         return result;
    }
 
-   public void getPayment()
+   public boolean processPayment(int itemIndex)
    {
-          
+     // return true if the transaction is successful, false if the user cancelled the transaction
+          Scanner scan = new Scanner(System.in);
+          int i;
+          int input = 0;
+          int totalPayable = items.get(itemIndex).getItemPrice();
+          boolean isDenomAccepted = false;
+          System.out.println("[PAYMENT]");
+          System.out.println("Insert any of the available denomination: [1, 5, 10, 20, 50, 100, 200, 500, 1000]");
+          System.out.println("If you want to cancel the transaction, enter 0.");
+          int totalInserted = 0;
+          boolean check = false;
+          do 
+          {
+               System.out.println("Total amount payable: Php " + totalPayable);
+               System.out.print("Insert coin / bill: ");
+               input = scan.nextInt();
+               if (input == 0)
+               {
+                    System.out.println("Transaction cancelled.");
+               }
+               for (i = 0; i < this.acceptedDenom.length; i++)
+               {
+                    if (input == this.acceptedDenom[i])
+                    {
+                         isDenomAccepted = true;
+                    }
+               }
+
+               if(isDenomAccepted)
+               {
+                    this.payment.push(input);
+                    totalPayable -= input;
+                    totalInserted += input;
+               }
+
+               if (!isDenomAccepted)
+               {
+                    System.out.println("Denomination inserted is not accepted.");
+               }
+          } while (totalPayable != 0 || totalInserted < totalPayable || input != 0);
+          if (totalPayable == 0 && totalInserted >= totalPayable)
+          {
+               check = true;
+          }
+          scan.close();
+          return check;
    }
 
    //I am not sure if this is right idk what to put on what index doon sa list lalagay ko
