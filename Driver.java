@@ -369,7 +369,7 @@ public class Driver
                 
                 break;
             case 4:
-            
+                replenishMachineBal(regular);
                 break;
             default:
                 testMachine(regular);
@@ -389,6 +389,24 @@ public class Driver
         System.out.println("Enter the quantity to be added");
         quantity = sc.nextInt();
         testMachine.restockItem(item.get(index).getItemName(), quantity);
+    }
+    // Adding the ballance is still missing but already have an input for the user
+    public void replenishMachineBal(ArrayList<RegularMachine> regular)
+    {
+        int input;
+        Scanner sc = new Scanner(System.in);
+        do
+        {
+            System.out.println("1 | 5 | 10 | 20 | 50 | 100 | 200 | 500 | 1000");
+            System.out.println("Enter the denomination that you will enter : ");
+            input = sc.nextInt();
+            if(input!=1 || input!=5|| input!=10||input!=20||input!=50||input!=100||input!=200||input!=500||input!=1000)
+            {
+                System.out.println("Enter a valid denomination");
+            }
+        }while(input!=1 || input!=5|| input!=10||input!=20||input!=50||input!=100||input!=200||input!=500||input!=1000);
+        
+
     }
     public static void main(String[] args)
     {
