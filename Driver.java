@@ -334,6 +334,62 @@ public class Driver
         }
     }
 
+    public void displayMaintenance(ArrayList<RegularMachine> regular)
+    {
+        int choice;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("----------------------------------------");
+        System.out.println("|               [FEATURES]             |");
+        System.out.println("|         [1] Restock Item             |");
+        System.out.println("|        [2] Add/Remove Item           |");
+        System.out.println("|    [3] Collect Machine Balance       |");
+        System.out.println("|   [4] Replenish Machine Balance      |");
+        System.out.println("|               [5] Back               |");
+        System.out.println("----------------------------------------");
+        System.out.print("Enter choice: ");
+        do {
+            choice = sc.nextInt();
+            if (choice < 1 || choice > 5)
+            {
+                System.out.println("Enter a valid input");
+                displayMaintenance(regular);
+            }
+        } while (choice < 1 || choice > 5);
+        
+        switch (choice) {
+            case 1:
+                displayRestock(regular);
+                break;
+            case 2:
+                
+                break;
+            
+            case 3:
+                
+                break;
+            case 4:
+            
+                break;
+            default:
+                testMachine(regular);
+                break;
+        }
+    }
+    public void displayRestock(ArrayList<RegularMachine> regular)
+    {
+        int index,quantity;
+        Scanner sc = new Scanner(System.in);
+        RegularMachine testMachine = regular.get(regular.size() - 1);
+        ArrayList<Items> item = testMachine.getItem();
+
+        testMachine.displayMachine();
+        System.out.println("Enter the index of the item that will be restocked");
+        index = sc.nextInt();
+        System.out.println("Enter the quantity to be added");
+        quantity = sc.nextInt();
+        testMachine.restockItem(item.get(index).getItemName(), quantity);
+    }
     public static void main(String[] args)
     {
         ArrayList<RegularMachine> regular = new ArrayList<RegularMachine>();
