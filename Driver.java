@@ -342,33 +342,28 @@ public class Driver
         System.out.println("----------------------------------------");
         System.out.println("|               [FEATURES]             |");
         System.out.println("|         [1] Restock Item             |");
-        System.out.println("|        [2] Add/Remove Item           |");
-        System.out.println("|    [3] Collect Machine Balance       |");
-        System.out.println("|   [4] Replenish Machine Balance      |");
-        System.out.println("|               [5] Back               |");
+        System.out.println("|    [2] Collect Machine Balance       |");
+        System.out.println("|   [3] Replenish Machine Balance      |");
+        System.out.println("|               [4] Back               |");
         System.out.println("----------------------------------------");
         System.out.print("Enter choice: ");
         do {
             choice = sc.nextInt();
-            if (choice < 1 || choice > 5)
+            if (choice < 1 || choice > 4)
             {
                 System.out.println("Enter a valid input");
                 displayMaintenance(regular);
             }
-        } while (choice < 1 || choice > 5);
+        } while (choice < 1 || choice > 4);
         
         switch (choice) {
             case 1:
                 displayRestock(regular);
                 break;
             case 2:
-                
+                collectMachineBal(regular);
                 break;
-            
             case 3:
-                
-                break;
-            case 4:
                 replenishMachineBal(regular);
                 break;
             default:
@@ -406,6 +401,10 @@ public class Driver
             }
         }while(input!=1 || input!=5|| input!=10||input!=20||input!=50||input!=100||input!=200||input!=500||input!=1000);
         
+
+    }
+    public void collectMachineBal(ArrayList<RegularMachine> regular)
+    {
 
     }
     public static void main(String[] args)
