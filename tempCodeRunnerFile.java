@@ -1,1 +1,1 @@
-testMachine.processPayment(itemIndex) > 0
+regular

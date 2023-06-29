@@ -257,7 +257,7 @@ public class Driver
                     break;
                 
                 case 2:
-                    // Maintenance Features
+                    displayMaintenance(regular);
                     break;
                 
                 case 3:
@@ -388,13 +388,17 @@ public class Driver
     // Adding the ballance is still missing but already have an input for the user
     public void replenishMachineBal(ArrayList<RegularMachine> regular)
     {
-        int [][] balance = askMachineBal();
-        regular.get(regular.size()).replenishMachineBal(balance);
+        RegularMachine testMachine = regular.get(regular.size() - 1);
+        int[][] replenishBal = askMachineBal();
+        testMachine.replenishMachineBal(replenishBal);
+        testMachine(regular);
     }
+
     public void collectMachineBal(ArrayList<RegularMachine> regular)
     {
         regular.get(regular.size()).collectMachineBalance();
     }
+
     public static void main(String[] args)
     {
         ArrayList<RegularMachine> regular = new ArrayList<RegularMachine>();
@@ -425,15 +429,15 @@ public class Driver
         Items item8 = new Items("Cookies", 50, 150, 10);
         itemlist.add(item8);
 
-        int[][] balance = { {1, 0},
-                            {5, 0},
-                            {10, 0},
-                            {20, 0},
-                            {50, 0},
-                            {100, 0},
-                            {200, 0},
-                            {500, 0},
-                            {1000, 0}};
+        int[][] balance = { {1, 1},
+                            {5, 1},
+                            {10, 1},
+                            {20, 1},
+                            {50, 1},
+                            {100, 1},
+                            {200, 1},
+                            {500, 1},
+                            {1000, 1}};
 
         RegularMachine sampleMachine = new RegularMachine(itemlist, balance);
         regular.add(sampleMachine);

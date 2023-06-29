@@ -57,7 +57,7 @@ public class RegularMachine
           {
                for (j = 0; j < this.machineBalance[i].length - 1; j++)
                {
-                    this.machineBalance[i][j+1] += balance[i][j+1];
+                    this.machineBalance[i][j+1] = this.machineBalance[i][j+1] + balance[i][j+1];
                }
           }
    }
