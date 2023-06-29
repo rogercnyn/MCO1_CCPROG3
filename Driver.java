@@ -396,7 +396,8 @@ public class Driver
 
     public void collectMachineBal(ArrayList<RegularMachine> regular)
     {
-        regular.get(regular.size()).collectMachineBalance();
+        RegularMachine testMachine = regular.get(regular.size() - 1);
+        testMachine.collectMachineBalance();
     }
 
     public static void main(String[] args)
