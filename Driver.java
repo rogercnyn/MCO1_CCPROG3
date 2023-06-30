@@ -368,6 +368,7 @@ public class Driver
     public void salesReport(ArrayList<RegularMachine> regular)
     {
         RegularMachine testMachine = regular.get(regular.size() - 1);
+        testMachine.printSalesSummary();
         testMachine(regular);
     }
 

@@ -3,6 +3,7 @@ public class Items
     private String itemName;
     private int itemPrice, itemCalories;
     private int itemQuantity;
+    private int numberSold;
 
     public Items()
     {

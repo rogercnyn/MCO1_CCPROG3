@@ -1,9 +1,15 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
+
+import javax.swing.text.DateFormatter;
 
 public class sample {
     public static void main(String[] args)
     {
-        System.out.println();
+        LocalDate today = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy");
+        System.out.println(formatter.format(today));
         /*int input;
         System.out.println("[FOR MACHINE BALANCE]");
         Scanner scan = new Scanner(System.in);

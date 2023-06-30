@@ -12,8 +12,12 @@
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Stack;
+
+import javax.swing.text.DateFormatter;
+
 import java.util.Scanner;
 
 
@@ -25,7 +29,7 @@ public class RegularMachine
    private Stack<Integer> payment = new Stack<Integer>();
    private Stack<Integer> change = new Stack<Integer>();
    private int[][] machineBalance;
-   private Date lastrestockDate;
+   private LocalDate lastRestockDate;
 
    /**
     * This is the contructor method that sets the value of the attributes of the newly created instances.
@@ -37,7 +41,7 @@ public class RegularMachine
      this.items = items;
      this.machineBalance = machineBalance;
      this.transactions = new ArrayList<Transactions>();
-     this.lastrestockDate = null;
+     this.lastRestockDate = LocalDate.now();
    }
 
    /**
@@ -48,6 +52,12 @@ public class RegularMachine
    public void restockItem(int itemIndex, int quantity)
    {
      items.get(itemIndex).setItemQuantity(quantity);
+     updateLastRestockDate();
+   }
+   
+   private void updateLastRestockDate()
+   {
+          this.lastRestockDate = LocalDate.now();
    }
 
    /**
@@ -124,25 +134,41 @@ public class RegularMachine
     */
    public void printSalesSummary()
    {
-     int totalsales = 0;
-     int numberSold = 0;
-     Date thisDate = setDate();
-     for(int i=0 ; i<(transactions.size()-1);i++)
+     int i, j;
+     int soldCounter = 0;
+     LocalDate today = LocalDate.now();
+     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy");
+
+     System.out.println("Sales Report from: " + formatter.format(this.lastRestockDate) + " to " + formatter.format(today));
+
+     int totalSales = 0;
+
+     for (i = 0; i < transactions.size(); i++)
      {
-        totalsales += transactions.get(i).getTotalPrice();  
-     }
-     System.out.println("Sales Report from : " +regular.get(regular.size()-1).lastrestockDate+ " to " + thisDate );
-     System.out.println("Total Sales Generated : Php "+totalsales);
-     for(int j=0;j<(items.size()-1);j++)
-     {
-          for(int k=0;k<(transactions.size()-1);k++)
+          if(transactions.get(i).getDate().isAfter(today) || transactions.get(i).getDate().isBefore(today) || transactions.get(i).getDate().equals(today))
           {
-               if(items.get(j).getItemName()==transactions.get(k).getItemName())
+               totalSales = totalSales + transactions.get(i).getTotalPrice();
+          }
+     }
+
+     System.out.println("Total Sales Generated: Php" + totalSales+ "\n");
+
+     System.out.println("Product Sales:");
+
+     for (i = 0; i < items.size(); i++)
+     {
+          soldCounter = 0;
+          for (j = 0; j < transactions.size(); j++)
+          {
+               if(transactions.get(j).getDate().isAfter(today) || transactions.get(j).getDate().isBefore(today) || transactions.get(j).getDate().equals(today))
                {
-                  numberSold+=transactions.get(k).getTotalPrice()/items.get(j).getItemPrice();  
+                    if (items.get(i).getItemName().equals(transactions.get(j).getItemName()))
+                    {
+                         soldCounter++;
+                    }
                }
-               System.out.println("["+numberSold+"] "+items.get(j).getItemName());
-          }     
+          }
+          System.out.println("[" + soldCounter + " sold] " + items.get(i).getItemName());
      }
    }
 
@@ -405,7 +431,7 @@ public class RegularMachine
    public void dispenseItem(int itemIndex)
    {
      System.out.println("Dispensing Item...");
-     items.get(itemIndex).setItemQuantity(items.get(itemIndex).getItemQuantity() - 1);
+     items.get(itemIndex).setItemQuantity(-1);
      String name = items.get(itemIndex).getItemName();
      System.out.println("1 " + name + " dispensed.");
      System.out.println("Thank you for buying!");
@@ -446,10 +472,4 @@ public class RegularMachine
    {
      return items;
    }
-
-   public Date setDate()
-   {
-     return this.lastrestockDate = setDate();
-   }
-
 }

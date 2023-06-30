@@ -1,4 +1,5 @@
-import java.time.format.DateTimeFormatter;  
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDate;
 import java.time.LocalDateTime;    
 
 public class Transactions 
@@ -6,14 +7,14 @@ public class Transactions
     private String itemName;
     private int totalPrice;
     private int payment;
-    private LocalDateTime date;
+    private LocalDate date;
 
     public Transactions(String itemName, int totalPrice, int payment)
     {
         this.itemName = itemName;
         this.totalPrice = totalPrice;
         this.payment = payment;
-        this.date = LocalDateTime.now();
+        this.date = LocalDate.now();
     }
 
     public String getItemName() 
@@ -31,7 +32,7 @@ public class Transactions
         return payment;
     }
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 }
