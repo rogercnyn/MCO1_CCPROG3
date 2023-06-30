@@ -358,12 +358,16 @@ public class Driver
                 replenishMachineBal(regular);
                 break; 
             case 5:
-                
+                salesReport(regular);
                 break;
             default:
                 testMachine(regular);
                 break;
         }
+    }
+    public void salesReport(ArrayList<RegularMachine> regular)
+    {
+        regular.get(regular.size()-1).printSalesSummary(regular);
     }
 
     public void displayRestock(ArrayList<RegularMachine> regular)
@@ -408,7 +412,7 @@ public class Driver
                     }
                 } while (itemQuantity <= 0);
 
-                testMachine.restockItem(itemIndex-1, itemQuantity);
+                testMachine.restockItem(itemIndex-1, itemQuantity, regular);
                 System.out.println("Item is successfully restocked.");
             }
         } while (choice !=2);
