@@ -77,21 +77,38 @@ public class Items
         return itemQuantity;
     }
 
+    /**
+     * setItemName updates the item name
+     * @param itemName - contains the new item name
+     */
+
     public void setItemName(String itemName) 
     {
         this.itemName = itemName;
     }
 
+    /**
+     * setItemPrice updates the item price
+     * @param itemPrice - contains the new item price
+     */
     public void setItemPrice(int itemPrice) 
     {
         this.itemPrice = itemPrice;
     }
 
+    /**
+     * setItemCalories updates the item calories
+     * @param itemCalories - contains the new item calories
+     */
     public void setItemCalories(int itemCalories) 
     {
         this.itemCalories = itemCalories;
     }
 
+    /**
+     * setItemQuantity updates the item quantity
+     * @param itemQuantity - contains the new item quantity
+     */
     public void setItemQuantity(int itemQuantity) 
     {
         this.itemQuantity = this.itemQuantity + itemQuantity;

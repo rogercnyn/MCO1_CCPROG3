@@ -3,6 +3,10 @@ import java.util.Scanner;
 
 public class Driver 
 {
+    /**
+     * mainMenu displays the main menu in the terminal
+     * @param regular - arraylist of regular machine
+     */
     private void mainMenu(ArrayList<RegularMachine> regular)
     {
         int choice;
@@ -40,6 +44,11 @@ public class Driver
         }
     }
 
+    /**
+     * createMachine asks the user on what type of vending machine they want to create.
+     * The options are: regular, special.
+     * @param regular - arraylist of regular machine
+     */
     private void createMachine(ArrayList<RegularMachine> regular)
     {
         int choice;
@@ -76,6 +85,10 @@ public class Driver
         }
     }
 
+    /**
+     * askItemName asks the user for input for the item name.
+     * @return the item name
+     */
     private String askItemName()
     {
         Scanner scan = new Scanner(System.in);
@@ -84,6 +97,10 @@ public class Driver
         return itemName;
     }
 
+    /**
+     * askItemPrice asks the user for input for the item price.
+     * @return the item price
+     */
     private int askItemPrice()
     {
         Scanner scan = new Scanner(System.in);
@@ -100,6 +117,10 @@ public class Driver
         return itemPrice;
     }
 
+    /**
+     * askItemCalories asks the user for input for the item calories
+     * @return the item calories
+     */
     private int askItemCalories()
     {
         Scanner scan = new Scanner(System.in);
@@ -116,6 +137,10 @@ public class Driver
         return itemCalories;
     }
 
+    /**
+     * askItemQuantity asks the user for input for the item quantity
+     * @return the item quantity
+     */
     private int askItemQuantity()
     {
         Scanner scan = new Scanner(System.in);
@@ -132,6 +157,10 @@ public class Driver
         return itemQuantity;
     }
 
+    /**
+     * askMachineBal asks the user to input denomination stocks
+     * @return 2d array containing the balance of each denomination
+     */
     private int[][] askMachineBal()
     {
         int input;
@@ -170,6 +199,10 @@ public class Driver
         return balance;
     }
 
+    /**
+     * createRegularMachine creates regular vending machine.
+     * @param regular - arraylist of regular machine
+     */
     private void createRegularMachine(ArrayList<RegularMachine> regular)
     {
         Scanner scan = new Scanner(System.in);
@@ -225,7 +258,11 @@ public class Driver
         System.out.println("Congratulations! Your Regular Vending Machine is now ready!");
         mainMenu(regular);
     }
-    
+
+    /**
+     * testMachine displays the options to test the features of the vending machine.
+     * @param regular - arraylist of regular machine
+     */
     private void testMachine(ArrayList<RegularMachine> regular)
     {
         if (regular.size() == 0)
@@ -277,6 +314,10 @@ public class Driver
     
     }
 
+    /**
+     * testVendingFeatures allows the user to do the buying simulation of the vending machine.
+     * @param regular - arraylist of regular machine
+     */
     private void testVendingFeatures(ArrayList<RegularMachine> regular)
     {
         Scanner sc = new Scanner(System.in);
@@ -332,6 +373,10 @@ public class Driver
         testMachine(regular);
     }
 
+    /**
+     * displayMaintenance asks the user to choose a maintenance feature to accomplish.
+     * @param regular - arraylist of regular machine
+     */
     public void displayMaintenance(ArrayList<RegularMachine> regular)
     {
         int choice;
@@ -377,6 +422,11 @@ public class Driver
                 break;
         }
     }
+
+    /**
+     * salesReport displays the sales summary from the last restock date to today.
+     * @param regular - arraylist of regular machine
+     */
     public void salesReport(ArrayList<RegularMachine> regular)
     {
         RegularMachine testMachine = regular.get(regular.size() - 1);
@@ -385,6 +435,10 @@ public class Driver
         testMachine(regular);
     }
 
+    /**
+     * displayRestock processes the restocking of a certain item.
+     * @param regular - arraylist of regular machine
+     */
     public void displayRestock(ArrayList<RegularMachine> regular)
     {
         Scanner sc = new Scanner(System.in);
@@ -439,6 +493,10 @@ public class Driver
         testMachine(regular);
     }
 
+    /**
+     * changePrice facilitates the changing of price of a certain item.
+     * @param regular - arraylist of regular machine
+     */
     public void changePrice(ArrayList<RegularMachine> regular)
     {
         Scanner sc = new Scanner(System.in);
@@ -493,6 +551,10 @@ public class Driver
         testMachine(regular);
     }
 
+    /**
+     * replenishBalance handles the restocking of machine balance's denominations.
+     * @param regular - arraylist of regular machine
+     */
     public void replenishMachineBal(ArrayList<RegularMachine> regular)
     {
         RegularMachine testMachine = regular.get(regular.size() - 1);
@@ -505,6 +567,10 @@ public class Driver
         testMachine(regular);
     }
 
+    /**
+     * collectMachineBal facilitates the collecting of machine's balance.
+     * @param regular - arraylist of regular machine
+     */
     public void collectMachineBal(ArrayList<RegularMachine> regular)
     {
         RegularMachine testMachine = regular.get(regular.size() - 1);
