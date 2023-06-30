@@ -18,34 +18,14 @@ public class RegularMachine
         this.transactions = new ArrayList<Transactions>();
    }
 
-   public boolean restockItem(String itemName, int quantity)
+   public void restockItem(int itemIndex, int quantity)
    {
-        boolean check = false;
-        int i;
-        for (i = 0; i < items.size() && items.get(i).getItemName() == itemName; i++)
-        {
-            if (items.get(i).getItemName() == itemName)
-            {
-                items.get(i).setItemQuantity(quantity);
-                check = true;
-            }
-        }
-        return check;
+        items.get(itemIndex).setItemQuantity(quantity);
    }
 
-   public boolean setPrice(String itemName, int price)
+   public void setPrice(int itemIndex, int price)
    {
-        boolean check = false;
-        int i;
-        for (i = 0; i < items.size(); i++)
-        {
-            if (items.get(i).getItemName() == itemName)
-            {
-                items.get(i).setItemPrice(price);
-                check = true;
-            }
-        }
-        return check;
+          items.get(itemIndex).setItemPrice(price);
    }
 
    public void replenishMachineBal(int[][] balance)

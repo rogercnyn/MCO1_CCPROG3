@@ -327,10 +327,12 @@ public class Driver
         Scanner sc = new Scanner(System.in);
         System.out.println("----------------------------------------");
         System.out.println("|               [FEATURES]             |");
-        System.out.println("|         [1] Restock Item             |");
-        System.out.println("|    [2] Collect Machine Balance       |");
-        System.out.println("|   [3] Replenish Machine Balance      |");
-        System.out.println("|               [4] Back               |");
+        System.out.println("|           [1] Restock Item           |");
+        System.out.println("|           [2] Change Price           |");
+        System.out.println("|      [3] Collect Machine Balance     |");
+        System.out.println("|     [4] Replenish Machine Balance    |");
+        System.out.println("|        [5] Print Sales Report        |");
+        System.out.println("|               [6] Back               |");
         System.out.println("----------------------------------------");
         System.out.print("Enter choice: ");
         do {
@@ -347,10 +349,15 @@ public class Driver
                 displayRestock(regular);
                 break;
             case 2:
-                collectMachineBal(regular);
+                changePrice(regular);
                 break;
             case 3:
+                collectMachineBal(regular);
+                break;
+            case 4:
                 replenishMachineBal(regular);
+                break; 
+            case 5:
                 break;
             default:
                 testMachine(regular);
@@ -362,19 +369,99 @@ public class Driver
     {
         Scanner sc = new Scanner(System.in);
         RegularMachine testMachine = regular.get(regular.size() - 1);
-        String itemName;
-        int quantity;
-        System.out.println("Restock Item");
-        itemName = askItemName();
-        quantity = askItemQuantity();
-        if (testMachine.restockItem(itemName, quantity))
+        int choice;
+        int itemIndex;
+        int itemQuantity;
+        do 
         {
-            System.out.println("Item successfully restocked.");
-        }
-        else if (!testMachine.restockItem(itemName, quantity))
+            testMachine.displayMachine();
+            System.out.println("[1] Restock an Item");
+            System.out.println("[2] Exit Restock Mode");
+            System.out.print("Enter choice: ");
+            choice = sc.nextInt();
+
+            if (choice < 1 || choice > 2)
+            {
+                System.out.println("Enter valid choice.");
+            }
+
+            if (choice == 1)
+            {
+                do
+                {
+                    System.out.print("Item number you want to restock: ");
+                    itemIndex = sc.nextInt();
+                    if (itemIndex < 1 || itemIndex > testMachine.countItems())
+                    {
+                        System.out.println("Enter valid number.");
+                    }
+                } while(itemIndex < 1 || itemIndex > testMachine.countItems());
+
+                do 
+                {
+                    System.out.print("Enter additional quantity: ");
+                    itemQuantity = sc.nextInt();
+                    if (itemQuantity <= 0)
+                    {
+                        System.out.println("Please enter a correct value.");
+                    }
+                } while (itemQuantity <= 0);
+
+                testMachine.restockItem(itemIndex-1, itemQuantity);
+                
+            }
+        } while (choice !=2);
+
+        testMachine(regular);
+    }
+
+    public void changePrice(ArrayList<RegularMachine> regular)
+    {
+        Scanner sc = new Scanner(System.in);
+        RegularMachine testMachine = regular.get(regular.size() - 1);
+        int choice;
+        int itemIndex;
+        int itemPrice;
+        do 
         {
-            System.out.println("Unsuccessful. Make sure that the item name is correct.");
-        }
+            testMachine.displayMachine();
+            System.out.println("[1] Change Price of an Item");
+            System.out.println("[2] Exit Edit Mode");
+            System.out.print("Enter choice: ");
+            choice = sc.nextInt();
+
+            if (choice < 1 || choice > 2)
+            {
+                System.out.println("Enter valid choice.");
+            }
+
+            if (choice == 1)
+            {
+                do
+                {
+                    System.out.print("Item number you want to change its price: ");
+                    itemIndex = sc.nextInt();
+                    if (itemIndex < 1 || itemIndex > testMachine.countItems())
+                    {
+                        System.out.println("Enter valid number.");
+                    }
+                } while(itemIndex < 1 || itemIndex > testMachine.countItems());
+
+                do 
+                {
+                    System.out.print("Enter new price: ");
+                    itemPrice = sc.nextInt();
+                    if (itemPrice <= 0)
+                    {
+                        System.out.println("Please enter a correct value.");
+                    }
+                } while (itemPrice <= 0);
+
+                testMachine.setPrice(itemIndex-1, itemPrice);
+            }
+        } while (choice !=2);
+
+        testMachine(regular);
     }
 
     public void replenishMachineBal(ArrayList<RegularMachine> regular)
