@@ -358,6 +358,7 @@ public class Driver
                 replenishMachineBal(regular);
                 break; 
             case 5:
+                
                 break;
             default:
                 testMachine(regular);
@@ -408,7 +409,7 @@ public class Driver
                 } while (itemQuantity <= 0);
 
                 testMachine.restockItem(itemIndex-1, itemQuantity);
-                
+                System.out.println("Item is successfully restocked.");
             }
         } while (choice !=2);
 
@@ -458,6 +459,7 @@ public class Driver
                 } while (itemPrice <= 0);
 
                 testMachine.setPrice(itemIndex-1, itemPrice);
+                System.out.println("Item price successfully changed.");
             }
         } while (choice !=2);
 
