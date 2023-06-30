@@ -57,6 +57,6 @@ public class Items
 
     public void setItemQuantity(int itemQuantity) 
     {
-        this.itemQuantity = itemQuantity;
+        this.itemQuantity = this.itemQuantity + itemQuantity;
     }
 }

@@ -278,60 +278,46 @@ public class Driver
         int choice, itemIndex;
         int insertedPayment;
         RegularMachine testMachine = regular.get(regular.size() - 1);
-
-        if (!testMachine.hasEnoughDenom()) // has errors
+        do 
         {
-            System.out.println("Sorry, this machine has no balance for your change.");
-            testMachine(regular);
-        }
-
-        else
-        {
-            do 
+            testMachine.displayMachine();
+            System.out.print("[1] Buy | [2] Exit Test Mode: ");
+            choice = sc.nextInt();
+            if (choice < 1 || choice > 2)
             {
-                testMachine.displayMachine();
-                System.out.print("[1] Buy | [2] Exit Test Mode: ");
-                choice = sc.nextInt();
-                if (choice < 1 || choice > 2)
+                System.out.println("Enter valid choice.");
+            }
+            if (choice == 1)
+            {
+                do
                 {
-                    System.out.println("Enter valid choice.");
-                }
-                if (choice == 1)
-                {
-                    do
+                    System.out.print("Enter the number you want to buy: ");
+                    itemIndex = sc.nextInt();
+                    if (itemIndex < 1 || itemIndex > testMachine.countItems())
                     {
-                        System.out.print("Enter the number you want to buy: ");
-                        itemIndex = sc.nextInt();
-                        if (itemIndex < 1 || itemIndex > testMachine.countItems())
-                        {
-                            System.out.println("Enter valid number.");
-                        }
-                    } while(itemIndex < 1 || itemIndex > testMachine.countItems());
-
-                    itemIndex--; // get the real index of the item in the array
-
-                    if(testMachine.checkQuantity(itemIndex))
-                    {
-                        insertedPayment = testMachine.processPayment(itemIndex);
-                        if (insertedPayment > 0)
-                        {
-                            testMachine.dispenseItem(itemIndex);
-                            testMachine.saveTransaction(itemIndex, insertedPayment);
-                        }
-                        else
-                        {
-                            System.out.println("Transaction unsuccessful.");
-                        }
+                        System.out.println("Enter valid number.");
                     }
+                } while(itemIndex < 1 || itemIndex > testMachine.countItems());
 
-                    else
+                itemIndex--; // get the real index of the item in the array
+
+                if(testMachine.checkQuantity(itemIndex))
+                {
+                    insertedPayment = testMachine.processPayment(itemIndex);
+                    if (insertedPayment > 0)
                     {
-                        System.out.println("This product is currently unavailable.");
+                        testMachine.dispenseItem(itemIndex);
+                        testMachine.saveTransaction(itemIndex, insertedPayment);
                     }
                 }
-            } while (choice != 2);
-            testMachine(regular);
-        }
+
+                else
+                {
+                    System.out.println("This product is currently unavailable.");
+                }
+            }
+        } while (choice != 2);
+        testMachine(regular);
     }
 
     public void displayMaintenance(ArrayList<RegularMachine> regular)
@@ -371,26 +357,34 @@ public class Driver
                 break;
         }
     }
+
     public void displayRestock(ArrayList<RegularMachine> regular)
     {
-        int index,quantity;
         Scanner sc = new Scanner(System.in);
         RegularMachine testMachine = regular.get(regular.size() - 1);
-        ArrayList<Items> item = testMachine.getItem();
-
-        testMachine.displayMachine();
-        System.out.println("Enter the index of the item that will be restocked");
-        index = sc.nextInt();
-        System.out.println("Enter the quantity to be added");
-        quantity = sc.nextInt();
-        testMachine.restockItem(item.get(index).getItemName(), quantity);
+        String itemName;
+        int quantity;
+        System.out.println("Restock Item");
+        itemName = askItemName();
+        quantity = askItemQuantity();
+        if (testMachine.restockItem(itemName, quantity))
+        {
+            System.out.println("Item successfully restocked.");
+        }
+        else if (!testMachine.restockItem(itemName, quantity))
+        {
+            System.out.println("Unsuccessful. Make sure that the item name is correct.");
+        }
     }
-    // Adding the ballance is still missing but already have an input for the user
+
     public void replenishMachineBal(ArrayList<RegularMachine> regular)
     {
         RegularMachine testMachine = regular.get(regular.size() - 1);
         int[][] replenishBal = askMachineBal();
         testMachine.replenishMachineBal(replenishBal);
+        System.out.println("Adding it to the machine...");
+        System.out.println("Replenishing machine balance is successful!");
+
         testMachine(regular);
     }
 
@@ -398,6 +392,7 @@ public class Driver
     {
         RegularMachine testMachine = regular.get(regular.size() - 1);
         testMachine.collectMachineBalance();
+        testMachine(regular);
     }
 
     public static void main(String[] args)
