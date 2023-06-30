@@ -321,11 +321,11 @@ public class RegularMachine
           {
                int poppedValue = payment.pop();
                System.out.println("Php " + poppedValue);
-               deductQuantityToDenom(poppedValue);
           }
           while (!change.isEmpty())
           {
-               change.pop();
+               int poppedValue = change.pop();
+               addQuantityToDenom(poppedValue);
           }
           System.out.println("Sorry for this inconvience.");
 
