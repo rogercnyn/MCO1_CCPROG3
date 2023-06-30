@@ -337,12 +337,12 @@ public class Driver
         System.out.print("Enter choice: ");
         do {
             choice = sc.nextInt();
-            if (choice < 1 || choice > 4)
+            if (choice < 1 || choice > 5)
             {
                 System.out.println("Enter a valid input");
                 displayMaintenance(regular);
             }
-        } while (choice < 1 || choice > 4);
+        } while (choice < 1 || choice > 5);
         
         switch (choice) {
             case 1:
@@ -367,7 +367,8 @@ public class Driver
     }
     public void salesReport(ArrayList<RegularMachine> regular)
     {
-        regular.get(regular.size()-1).printSalesSummary(regular);
+        RegularMachine testMachine = regular.get(regular.size() - 1);
+        testMachine(regular);
     }
 
     public void displayRestock(ArrayList<RegularMachine> regular)

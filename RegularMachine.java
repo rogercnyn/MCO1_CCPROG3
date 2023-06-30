@@ -84,8 +84,8 @@ public class RegularMachine
 
    public void printSalesSummary(ArrayList<RegularMachine> regular)
    {
-     int totalsales =0;
-     int numberSold =0;
+     int totalsales = 0;
+     int numberSold = 0;
      Date thisDate = setDate();
      for(int i=0 ; i<(transactions.size()-1);i++)
      {
@@ -313,7 +313,7 @@ public class RegularMachine
           System.out.println("Total dispensed change: Php " + dispensedChange);
      }
 
-     else
+     else if (!isChangeComplete(totalInserted - totalPayable))
      {
           System.out.println("Sorry this machine does not have enough balance to produce change.");
           System.out.println("Dispensing your payment: ");
@@ -322,6 +322,10 @@ public class RegularMachine
                int poppedValue = payment.pop();
                System.out.println("Php " + poppedValue);
                deductQuantityToDenom(poppedValue);
+          }
+          while (!change.isEmpty())
+          {
+               change.pop();
           }
           System.out.println("Sorry for this inconvience.");
 
