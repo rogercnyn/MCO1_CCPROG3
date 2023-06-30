@@ -135,6 +135,7 @@ public class Driver
     private int[][] askMachineBal()
     {
         int input;
+        System.out.println();
         System.out.println("[FOR MACHINE BALANCE]");
         Scanner scan = new Scanner(System.in);
         int[][] balance = { {1, 0},
@@ -153,6 +154,7 @@ public class Driver
             {
                 do
                 {
+                    System.out.println();
                     System.out.print("Enter quantity of Php " + balance[i][j] + "s: ");
                     input = scan.nextInt();
                     if (input < 0)
@@ -178,9 +180,9 @@ public class Driver
         int[][] balance;
         int counter = 0;
         int addMoreItem;
-        int machineCash;
         for (counter = 1; counter < 9; counter++)
         {
+            System.out.println();
             System.out.println("Product #" + counter);
             itemName = askItemName();
             itemPrice = askItemPrice();
@@ -192,11 +194,13 @@ public class Driver
 
         do 
         {
+            System.out.println();
             System.out.println("Do you have more items to add?");
             System.out.print("[1] Yes or [2] No: ");
             addMoreItem = scan.nextInt();
             switch (addMoreItem) {
                 case 1:
+                    System.out.println();
                     scan.nextLine();
                     System.out.println("Product #" + counter);
                     itemName = askItemName();
@@ -217,6 +221,7 @@ public class Driver
         RegularMachine newReg = new RegularMachine(items, balance);
         regular.add(newReg);
 
+        System.out.println();
         System.out.println("Congratulations! Your Regular Vending Machine is now ready!");
         mainMenu(regular);
     }
@@ -278,10 +283,13 @@ public class Driver
         int choice, itemIndex;
         int insertedPayment;
         RegularMachine testMachine = regular.get(regular.size() - 1);
+
         do 
         {
             testMachine.displayMachine();
-            System.out.print("[1] Buy | [2] Exit Test Mode: ");
+            System.out.println("[1] Buy");
+            System.out.println("[2] Exit Test Mode");
+            System.out.print("Enter choice: ");
             choice = sc.nextInt();
             if (choice < 1 || choice > 2)
             {
@@ -291,6 +299,7 @@ public class Driver
             {
                 do
                 {
+                    System.out.println();
                     System.out.print("Enter the number you want to buy: ");
                     itemIndex = sc.nextInt();
                     if (itemIndex < 1 || itemIndex > testMachine.countItems())
@@ -306,13 +315,16 @@ public class Driver
                     insertedPayment = testMachine.processPayment(itemIndex);
                     if (insertedPayment > 0)
                     {
+                        System.out.println();
                         testMachine.dispenseItem(itemIndex);
+                        System.out.println();
                         testMachine.saveTransaction(itemIndex, insertedPayment);
                     }
                 }
 
                 else
                 {
+                    System.out.println();
                     System.out.println("This product is currently unavailable.");
                 }
             }
@@ -368,6 +380,7 @@ public class Driver
     public void salesReport(ArrayList<RegularMachine> regular)
     {
         RegularMachine testMachine = regular.get(regular.size() - 1);
+        System.out.println();
         testMachine.printSalesSummary();
         testMachine(regular);
     }
@@ -392,6 +405,8 @@ public class Driver
                 System.out.println("Enter valid choice.");
             }
 
+            System.out.println();
+
             if (choice == 1)
             {
                 do
@@ -415,7 +430,9 @@ public class Driver
                 } while (itemQuantity <= 0);
 
                 testMachine.restockItem(itemIndex-1, itemQuantity);
+                System.out.println();
                 System.out.println("Item is successfully restocked.");
+                System.out.println();
             }
         } while (choice !=2);
 
@@ -442,6 +459,8 @@ public class Driver
                 System.out.println("Enter valid choice.");
             }
 
+            System.out.println();
+
             if (choice == 1)
             {
                 do
@@ -465,7 +484,9 @@ public class Driver
                 } while (itemPrice <= 0);
 
                 testMachine.setPrice(itemIndex-1, itemPrice);
+                System.out.println();
                 System.out.println("Item price successfully changed.");
+                System.out.println();
             }
         } while (choice !=2);
 
@@ -477,6 +498,7 @@ public class Driver
         RegularMachine testMachine = regular.get(regular.size() - 1);
         int[][] replenishBal = askMachineBal();
         testMachine.replenishMachineBal(replenishBal);
+        System.out.println();
         System.out.println("Adding it to the machine...");
         System.out.println("Replenishing machine balance is successful!");
 

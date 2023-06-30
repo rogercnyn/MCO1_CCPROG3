@@ -32,7 +32,7 @@ public class RegularMachine
    private LocalDate lastRestockDate;
 
    /**
-    * This is the contructor method that sets the value of the attributes of the newly created instances.
+    * This is the contructor method that accepts the arraylist of items and machine balance and initialize it to the given values.
     * @param items
     * @param machineBalance
     */
@@ -54,6 +54,10 @@ public class RegularMachine
      items.get(itemIndex).setItemQuantity(quantity);
      updateLastRestockDate();
    }
+
+   /**
+    * updateLastRestockDate updates the lastRestockDate attribute to current date.
+    */
    
    private void updateLastRestockDate()
    {
@@ -91,6 +95,7 @@ public class RegularMachine
     */
    public void collectMachineBalance()
    {
+     System.out.println();
      int totalBalance = 0;
      System.out.println("Calculating total balance...");
      int i, j;
@@ -102,6 +107,7 @@ public class RegularMachine
           }
      }
      System.out.println("Collecting a total of " + totalBalance);
+     System.out.println();
      System.out.println("In denomination of:");
      for (i = 0; i < this.machineBalance.length; i++)
      {
@@ -110,6 +116,7 @@ public class RegularMachine
                System.out.println("Php " + this.machineBalance[i][j] + "s: " + this.machineBalance[i][j+1]);
           }
      }
+     System.out.println();
      System.out.println("Machine balance successfully collected. Thank you!");
      for (i = 0; i < this.machineBalance.length; i++)
      {
@@ -207,77 +214,90 @@ public class RegularMachine
      return check;
    }
 
+   /**
+    * processPayment asks user for their payment and calls produceChange once the payment is equals to the total payable or more than.
+    * @param itemIndex - contains the item index of the selected product.
+    * @return the value of total payment inserted, returns 0 if the user cancelled the transaction.
+    */
    public int processPayment(int itemIndex)
    {
-     Scanner scan = new Scanner(System.in);
-     int i;
-     int input = 0;
-     int totalPrice = items.get(itemIndex).getItemPrice();
-     int totalPayable = items.get(itemIndex).getItemPrice();
-     boolean isDenomAccepted;
-     System.out.println("[PAYMENT]");
-     System.out.println("Insert any of the available denomination: [1, 5, 10, 20, 50, 100, 200, 500, 1000]");
-     System.out.println("If you want to cancel the transaction, enter 0.");
-     int totalInserted = 0;
-     boolean check = false;
-     do 
-     {
-          isDenomAccepted = false;
-          System.out.println("Total amount payable: Php " + totalPayable);
-          System.out.print("Insert coin / bill: ");
-          input = scan.nextInt();
-          if (input == 0)
+          Scanner scan = new Scanner(System.in);
+          int i;
+          int input = 0;
+          int totalPrice = items.get(itemIndex).getItemPrice();
+          int totalPayable = items.get(itemIndex).getItemPrice();
+          boolean isDenomAccepted;
+          System.out.println();
+          System.out.println("[PAYMENT]");
+          System.out.println("Insert any of the available denomination: [1, 5, 10, 20, 50, 100, 200, 500, 1000]");
+          System.out.println("If you want to cancel the transaction, enter 0.");
+          int totalInserted = 0;
+          boolean check = false;
+          do 
           {
-               System.out.println("Transaction cancelled.");
-               if (!payment.empty())
+               isDenomAccepted = false;
+               System.out.println();
+               System.out.println("Total amount payable: Php " + totalPayable);
+               System.out.print("Insert coin / bill: ");
+               input = scan.nextInt();
+               if (input == 0)
                {
-                    System.out.println("Dispensing your payment: ");
-                    while(!payment.empty())
+                    System.out.println();
+                    System.out.println("Transaction cancelled.");
+                    if (!payment.empty())
                     {
-                         System.out.println("Php " + payment.pop() + " ");
+                         System.out.println("Dispensing your payment: ");
+                         while(!payment.empty())
+                         {
+                              System.out.println("Php " + payment.pop() + " ");
+                         }
                     }
+                    System.out.println();
+                    totalInserted = 0;
                }
+
+               else if(isDenomAccepted(input))
+               {
+                    totalInserted += input;
+                    this.payment.push(input);
+                    totalPayable -= input;
+               }
+
+               else if (!isDenomAccepted(input))
+               {
+                    System.out.println("Denomination inserted is not accepted.");
+               }
+
+          } while (totalPayable > 0 && totalInserted < totalPrice && input != 0);
+
+          if (totalPayable == 0) // This condition is for only when the payment inserted is exactly the same as the total payment
+          {
+               while(!payment.empty())
+               {
+                    int poppedValue = payment.pop();
+                    addQuantityToDenom(poppedValue);
+               }
+               System.out.println("Thank you for paying exact amount.");
+               check = true;
+          }
+
+          else if (totalInserted > totalPrice) // Will only run if there is a change
+          {
+               check = produceChange(totalInserted, totalPrice);
+          }
+          
+          if (!check)
+          {
                totalInserted = 0;
           }
 
-          else if(isDenomAccepted(input))
-          {
-               totalInserted += input;
-               this.payment.push(input);
-               totalPayable -= input;
+          return totalInserted;
           }
-
-          else if (!isDenomAccepted(input))
-          {
-               System.out.println("Denomination inserted is not accepted.");
-          }
-
-     } while (totalPayable > 0 && totalInserted < totalPrice && input != 0);
-
-     if (totalPayable == 0) // This condition is for only when the payment inserted is exactly the same as the total payment
-     {
-          while(!payment.empty())
-          {
-               int poppedValue = payment.pop();
-               addQuantityToDenom(poppedValue);
-          }
-          System.out.println("Thank you for paying exact amount.");
-          check = true;
-     }
-
-     else if (totalInserted > totalPrice) // Will only run if there is a change
-     {
-          check = produceChange(totalInserted, totalPrice);
-     }
      
-     if (!check)
-     {
-          totalInserted = 0;
-     }
-
-     return totalInserted;
-     }
-
+     /**
+      * addQuantityToDenom adds a value of 1 to the denomination passed.
+      * @param denom - contains the denomination.
+      */
      private void addQuantityToDenom(int denom)
      {
      int i, j;
@@ -293,6 +313,10 @@ public class RegularMachine
      }
    }
 
+   /**
+     * addQuantityToDenom deducts a value of 1 to the denomination passed.
+     * @param denom - contains the denomination.
+     */
    private void deductQuantityToDenom(int denom)
    {
      int i, j;
@@ -308,6 +332,11 @@ public class RegularMachine
      }
    }
 
+   /**
+    * hasDenomStock checks if the given denomination has more a stock of more than 0.
+    * @param denom - contains the denomination
+    * @return true if the denomination's stock is more than 0, false otherwise.
+    */
    private boolean hasDenomStock(int denom)
    {
      boolean check = false;
@@ -326,6 +355,12 @@ public class RegularMachine
      return check;
    }
 
+   /**
+    * produceChange calculates the change of the user.
+    * @param totalInserted - contains the total amount of payment that the user inserted.
+    * @param totalPayable - contains the total payable of the user.
+    * @return true if producing of change is successful, false otherwise.
+    */
    public boolean produceChange(int totalInserted, int totalPayable)
    {
      boolean check = false;
@@ -377,6 +412,8 @@ public class RegularMachine
                addQuantityToDenom(poppedValue);
           }
 
+          System.out.println();
+
           System.out.println("Dispensing change: ");
 
           while (!change.isEmpty())
@@ -386,12 +423,16 @@ public class RegularMachine
                dispensedChange += poppedValue;
           }
 
+          System.out.println();
+
           System.out.println("Total dispensed change: Php " + dispensedChange);
      }
 
      else if (!isChangeComplete(totalInserted - totalPayable))
      {
+          System.out.println();
           System.out.println("Sorry this machine does not have enough balance to produce change.");
+          System.out.println();
           System.out.println("Dispensing your payment: ");
           while(!payment.empty())
           {
@@ -403,6 +444,7 @@ public class RegularMachine
                int poppedValue = change.pop();
                addQuantityToDenom(poppedValue);
           }
+          System.out.println();
           System.out.println("Sorry for this inconvience.");
 
           check = false;
@@ -411,6 +453,11 @@ public class RegularMachine
      return check;
    }
 
+   /**
+    * isChangeComplete computes the total of the elements inside the change stack and checks if it is equals to expected change amount
+    * @param changeAmount - contains the expected change amount.
+    * @return true if the elements of the change stack is equals to the expected change amount, false otherwise.
+    */
    private boolean isChangeComplete(int changeAmount)
    {
      boolean check = false;
@@ -428,6 +475,10 @@ public class RegularMachine
      return check;
    }
 
+   /**
+    * dispenseItem deducts the quantity of the selected item
+    * @param itemIndex - contains the index of the selected product.
+    */
    public void dispenseItem(int itemIndex)
    {
      System.out.println("Dispensing Item...");
@@ -437,7 +488,10 @@ public class RegularMachine
      System.out.println("Thank you for buying!");
    }
 
-   //This function displays the vending machines inventory & its information
+   
+   /**
+    * displayMachine prints the details of the machine in the terminal.
+    */
    public void displayMachine()
    {
      System.out.println("------------------------------------------------------------");
@@ -460,16 +514,16 @@ public class RegularMachine
      System.out.println("------------------------------------------------------------");
    }
 
+   /**
+    * saveTransaction saves the transaction once it is successful.
+    * @param itemIndex - contains the index of the itemindex.
+    * @param payment - contains the total amount that the user paid.
+    */
    public void saveTransaction(int itemIndex, int payment)
    {
      String itemName = items.get(itemIndex).getItemName();
      int totalPrice = items.get(itemIndex).getItemPrice();
      Transactions transact = new Transactions(itemName, totalPrice, payment);
      transactions.add(transact);
-   }
-
-   public ArrayList<Items> getItem()
-   {
-     return items;
    }
 }
