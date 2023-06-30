@@ -413,7 +413,7 @@ public class Driver
                     }
                 } while (itemQuantity <= 0);
 
-                testMachine.restockItem(itemIndex-1, itemQuantity, regular);
+                testMachine.restockItem(itemIndex-1, itemQuantity);
                 System.out.println("Item is successfully restocked.");
             }
         } while (choice !=2);

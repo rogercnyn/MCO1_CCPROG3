@@ -1,3 +1,15 @@
+/**
+ * Regular Vending Machine is the class that handles the ordinary vending machine.
+ * The following are the attributes of the class:
+ *   <li> items - an array that contains the items inside the machine
+ *   <li> transactions - an array that contains the transactions made by the machine
+ *   <li> acceptedDenom - an array that lists all of the denomination that the machine can accept.
+ *   <li> payment - a stack that holds the payment of the user
+ *   <li> change - a stack that holds the change of the user
+ *   <li> machineBalance - contains the balance of the machine (in denomination)
+ *   <li> lastRestockDate - date that holds the date when the machine was last restocked
+ */
+
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -7,7 +19,7 @@ import java.util.Scanner;
 
 public class RegularMachine 
 {
-   private static ArrayList<Items> items; 
+   private ArrayList<Items> items; 
    private ArrayList<Transactions> transactions;
    private int[] acceptedDenom = {1, 5, 10, 20, 50, 100, 200, 500, 1000};
    private Stack<Integer> payment = new Stack<Integer>();
@@ -15,6 +27,11 @@ public class RegularMachine
    private int[][] machineBalance;
    private Date lastrestockDate;
 
+   /**
+    * This is the contructor method that sets the value of the attributes of the newly created instances.
+    * @param items
+    * @param machineBalance
+    */
    public RegularMachine(ArrayList<Items> items, int[][] machineBalance)
    {
      this.items = items;
@@ -23,17 +40,30 @@ public class RegularMachine
      this.lastrestockDate = null;
    }
 
-   public void restockItem(int itemIndex, int quantity,ArrayList<RegularMachine> regular)
+   /**
+    * restockItem handles the restock of items.
+    * @param itemIndex - contains the itemIndex of the product
+    * @param quantity - contains number of stock to be added
+    */
+   public void restockItem(int itemIndex, int quantity)
    {
      items.get(itemIndex).setItemQuantity(quantity);
-     regular.get(itemIndex).setDate();
    }
 
+   /**
+    * setPrice updates the price of the selected item.
+    * @param itemIndex - contains the itemIndex of the product
+    * @param price - contains the new price
+    */
    public void setPrice(int itemIndex, int price)
    {
      items.get(itemIndex).setItemPrice(price);
    }
 
+   /**
+    * replenishMachineBal updates the stock of the denomination.
+    * @param balance - a 2D array that contains the new stock to be added (per denomination)
+    */
    public void replenishMachineBal(int[][] balance)
    {
      int i, j;
@@ -46,6 +76,9 @@ public class RegularMachine
      }
    }
 
+   /**
+    * collectMachineBalance collects the machine balance.
+    */
    public void collectMachineBalance()
    {
      int totalBalance = 0;
@@ -77,12 +110,19 @@ public class RegularMachine
      }
    }
 
+   /**
+    * countItems count the total number of items in the machine.
+    * @return the number of items
+    */
    public int countItems()
    {
      return items.size();
    }
 
-   public void printSalesSummary(ArrayList<RegularMachine> regular)
+   /**
+    * printSalesSummary printes the sales summary from the date the machine was last restocked up to the day this method was called.
+    */
+   public void printSalesSummary()
    {
      int totalsales = 0;
      int numberSold = 0;
@@ -106,6 +146,11 @@ public class RegularMachine
      }
    }
 
+   /**
+    * checkQuantity checks if the quantity of an item is still more than 0.
+    * @param itemIndex - contains the index of the product chosen.
+    * @return true if the quantity is more than 0, false otherwise.
+    */
    public boolean checkQuantity(int itemIndex)
    {
      boolean result = false;
@@ -118,6 +163,11 @@ public class RegularMachine
      return result;
    }
 
+   /**
+    * isDenomAccepted checks if the denomination entered by the user is accepted
+    * @param input - contains the input of the user
+    * @return true if the denomination is accepted, false otherwise.
+    */
    private boolean isDenomAccepted(int input)
    {
      boolean check = false;
