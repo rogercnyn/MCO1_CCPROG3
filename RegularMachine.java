@@ -151,7 +151,7 @@ public class RegularMachine
           }
      }
 
-     System.out.println("Total Sales Generated: Php" + totalSales+ "\n");
+     System.out.println("Total Sales Generated: Php " + totalSales+ "\n");
 
      System.out.println("Product Sales:");
 
