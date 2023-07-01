@@ -1,3 +1,9 @@
+/**
+ * The driver class serves as the main class.
+ * @author Kristian Kintanar
+ * @author Roger Canayon Jr.
+ */
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
