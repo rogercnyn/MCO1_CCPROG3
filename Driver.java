@@ -11,7 +11,7 @@ public class Driver
 {
     /**
      * mainMenu displays the main menu in the terminal
-     * @param regular - arraylist of regular machine
+     * @param regular arraylist of regular machine
      */
     private void mainMenu(ArrayList<RegularMachine> regular)
     {
@@ -53,7 +53,7 @@ public class Driver
     /**
      * createMachine asks the user on what type of vending machine they want to create.
      * The options are: regular, special.
-     * @param regular - arraylist of regular machine
+     * @param regular arraylist of regular machine
      */
     private void createMachine(ArrayList<RegularMachine> regular)
     {
@@ -207,7 +207,7 @@ public class Driver
 
     /**
      * createRegularMachine creates regular vending machine.
-     * @param regular - arraylist of regular machine
+     * @param regular arraylist of regular machine
      */
     private void createRegularMachine(ArrayList<RegularMachine> regular)
     {
@@ -267,7 +267,7 @@ public class Driver
 
     /**
      * testMachine displays the options to test the features of the vending machine.
-     * @param regular - arraylist of regular machine
+     * @param regular arraylist of regular machine
      */
     private void testMachine(ArrayList<RegularMachine> regular)
     {
@@ -322,7 +322,7 @@ public class Driver
 
     /**
      * testVendingFeatures allows the user to do the buying simulation of the vending machine.
-     * @param regular - arraylist of regular machine
+     * @param regular arraylist of regular machine
      */
     private void testVendingFeatures(ArrayList<RegularMachine> regular)
     {
@@ -381,7 +381,7 @@ public class Driver
 
     /**
      * displayMaintenance asks the user to choose a maintenance feature to accomplish.
-     * @param regular - arraylist of regular machine
+     * @param regular arraylist of regular machine
      */
     public void displayMaintenance(ArrayList<RegularMachine> regular)
     {
@@ -431,7 +431,7 @@ public class Driver
 
     /**
      * salesReport displays the sales summary from the last restock date to today.
-     * @param regular - arraylist of regular machine
+     * @param regular arraylist of regular machine
      */
     public void salesReport(ArrayList<RegularMachine> regular)
     {
@@ -443,7 +443,7 @@ public class Driver
 
     /**
      * displayRestock processes the restocking of a certain item.
-     * @param regular - arraylist of regular machine
+     * @param regular arraylist of regular machine
      */
     public void displayRestock(ArrayList<RegularMachine> regular)
     {
@@ -501,7 +501,7 @@ public class Driver
 
     /**
      * changePrice facilitates the changing of price of a certain item.
-     * @param regular - arraylist of regular machine
+     * @param regular arraylist of regular machine
      */
     public void changePrice(ArrayList<RegularMachine> regular)
     {
@@ -559,7 +559,7 @@ public class Driver
 
     /**
      * replenishBalance handles the restocking of machine balance's denominations.
-     * @param regular - arraylist of regular machine
+     * @param regular arraylist of regular machine
      */
     public void replenishMachineBal(ArrayList<RegularMachine> regular)
     {
@@ -575,7 +575,7 @@ public class Driver
 
     /**
      * collectMachineBal facilitates the collecting of machine's balance.
-     * @param regular - arraylist of regular machine
+     * @param regular arraylist of regular machine
      */
     public void collectMachineBal(ArrayList<RegularMachine> regular)
     {

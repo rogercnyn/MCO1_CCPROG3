@@ -22,9 +22,9 @@ public class Transactions
      * This is the constructor that accepts item name, total price, total amount of payment, 
      * parameters and sets everything to the corresponding values given.
      * The date atttribute will record the obtained date from the system.
-     * @param itemName
-     * @param totalPrice
-     * @param payment
+     * @param itemName contains the item name
+     * @param totalPrice contains the total price
+     * @param payment contains the total payment
      */
     public Transactions(String itemName, int totalPrice, int payment)
     {
