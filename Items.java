@@ -2,24 +2,13 @@
  * Items is a class that handles the details of each item that are inside the vending machine.
  * The following are the attributes of this class:
  *  <li> itemName - contains the name of the product
- *  <li> itemPrice - contains the price of the product
  *  <li> itemCalories - contains the calories of the product
- *  <li> itemQuantity - contains the quantity of the product
  */
 
 public abstract class Items 
 {
     private String itemName;
     private int itemCalories;
-
-    /**
-     * This is the constructor that do not accept any parameters and set everything to its default value.
-     */
-    public Items()
-    {
-        this.itemName = "";
-        this.itemCalories = 0;
-    }
 
     /**
      * This is the constructor that accepts name, price, calories, 
