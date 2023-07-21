@@ -1,3 +1,3 @@
-public class Sellable {
+public interface Sellable {
     
 }
