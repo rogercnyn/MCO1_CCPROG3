@@ -1,5 +1,5 @@
-public class Side extends Items implements Sellable {
-    public Side(String sideName ,int sidePrice, int sideCalories, int sideQuantity){
-        super(sideName, sidePrice, sideCalories, sideQuantity);
+public class Side extends Items {
+    public Side(String sideName, int sideCalories){
+        super(sideName, sideCalories);
     }
 }

@@ -1,5 +1,12 @@
 public class Meal extends Items implements Sellable {
-    public Meal (String mealName ,int mealPrice, int mealCalories, int mealQuantity){
-        super(mealName, mealPrice, mealCalories, mealQuantity);
+    private double price;
+
+    public Meal (String mealName, int mealCalories){
+        super(mealName, mealCalories);
+    }
+
+    public void setPrice()
+    {
+        this.price = price;
     }
 }

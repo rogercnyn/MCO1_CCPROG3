@@ -7,11 +7,10 @@
  *  <li> itemQuantity - contains the quantity of the product
  */
 
-public class Items 
+public abstract class Items 
 {
     private String itemName;
-    private int itemPrice, itemCalories;
-    private int itemQuantity;
+    private int itemCalories;
 
     /**
      * This is the constructor that do not accept any parameters and set everything to its default value.
@@ -19,26 +18,20 @@ public class Items
     public Items()
     {
         this.itemName = "";
-        this.itemPrice = 0;
         this.itemCalories = 0;
-        this.itemQuantity = 0;
     }
 
     /**
      * This is the constructor that accepts name, price, calories, 
      * and quantity as parameters and sets everything to the corresponding values given.
      * @param name - contains the product name of the product
-     * @param price - contains the price of the product
      * @param calories - contains the calories of the product
-     * @param quantity - contains the quantity of the product
      */
 
-    public Items(String name, int price, int calories, int quantity)
+    public Items(String name, int calories)
     {
         this.itemName = name;
-        this.itemPrice = price;
         this.itemCalories = calories;
-        this.itemQuantity = quantity;
     }
 
     /**
@@ -51,30 +44,12 @@ public class Items
     }
 
     /**
-     * getItemPrice returns the object's item price
-     * @return item price
-     */
-    public int getItemPrice() 
-    {
-        return itemPrice;
-    }
-
-    /**
      * getItemCalories returns the object's item calories
      * @return item calories
      */
     public int getItemCalories() 
     {
         return itemCalories;
-    }
-
-    /**
-     * getItemQuantity returns the object's item quantity
-     * @return item quantity
-     */
-    public int getItemQuantity() 
-    {
-        return itemQuantity;
     }
 
     /**
@@ -88,29 +63,11 @@ public class Items
     }
 
     /**
-     * setItemPrice updates the item price
-     * @param itemPrice - contains the new item price
-     */
-    public void setItemPrice(int itemPrice) 
-    {
-        this.itemPrice = itemPrice;
-    }
-
-    /**
      * setItemCalories updates the item calories
      * @param itemCalories - contains the new item calories
      */
     public void setItemCalories(int itemCalories) 
     {
         this.itemCalories = itemCalories;
-    }
-
-    /**
-     * setItemQuantity updates the item quantity
-     * @param itemQuantity - contains the new item quantity
-     */
-    public void setItemQuantity(int itemQuantity) 
-    {
-        this.itemQuantity = this.itemQuantity + itemQuantity;
     }
 }

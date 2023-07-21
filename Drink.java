@@ -1,5 +1,12 @@
 public class Drink extends Items implements Sellable{
-    public Drink(String drinkName ,int drinkPrice, int drinkCalories, int drinkQuantity){
-        super(drinkName, drinkPrice, drinkCalories, drinkQuantity);
+    private double price;
+    
+    public Drink(String drinkName, int drinkCalories){
+        super(drinkName, drinkCalories);
+    }
+
+    public void setPrice()
+    {
+        this.price = price;
     }
 }

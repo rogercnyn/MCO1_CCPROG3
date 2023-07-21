@@ -1,5 +1,12 @@
 public class Extra extends Items implements Sellable{
-    public Extra (String extraName ,int extraPrice, int extraCalories, int extraQuantity){
-        super(extraName, extraPrice, extraCalories, extraQuantity);
+    private double price;
+    
+    public Extra (String extraName, int extraCalories){
+        super(extraName, extraCalories);
+    }
+
+    public void setPrice()
+    {
+        this.price = price;
     }
 }
