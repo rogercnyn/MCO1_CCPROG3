@@ -23,7 +23,9 @@ import java.util.Scanner;
 
 public class RegularMachine 
 {
-   private ArrayList<Items> items; 
+     //Kintanar newly added
+     private ArrayList<Slot> arraySlots;
+
    private ArrayList<Transactions> transactions;
    private int[] acceptedDenom = {1, 5, 10, 20, 50, 100, 200, 500, 1000};
    private Stack<Integer> payment = new Stack<Integer>();
@@ -36,9 +38,9 @@ public class RegularMachine
     * @param items
     * @param machineBalance
     */
-   public RegularMachine(ArrayList<Items> items, int[][] machineBalance)
+   public RegularMachine(ArrayList<Slot> arraySlots, int[][] machineBalance)
    {
-     this.items = items;
+     this.arraySlots = arraySlots;
      this.machineBalance = machineBalance;
      this.transactions = new ArrayList<Transactions>();
      this.lastRestockDate = LocalDate.now();
@@ -49,9 +51,14 @@ public class RegularMachine
     * @param itemIndex - contains the itemIndex of the product
     * @param quantity - contains number of stock to be added
     */
-   public void restockItem(int itemIndex, int quantity)
+   public void restockItem(int slotIndex,int quantity)
    {
-     items.get(itemIndex).setItemQuantity(quantity);
+     // this method only add one item to the vending machine
+     Items item = arraySlots.get(slotIndex).checkItem();
+     for(int i=1 ; i<quantity;i++)
+     {
+     arraySlots.get(slotIndex).addItem(item);
+     }
      updateLastRestockDate();
    }
 
@@ -69,10 +76,12 @@ public class RegularMachine
     * @param itemIndex - contains the itemIndex of the product
     * @param price - contains the new price
     */
+
    public void setPrice(int itemIndex, int price)
    {
-     items.get(itemIndex).setItemPrice(price);
-   }
+     //no idea on how to do this
+     arraySlots.get(itemIndex).checkItem();
+}
 
    /**
     * replenishMachineBal updates the stock of the denomination.
@@ -133,7 +142,7 @@ public class RegularMachine
     */
    public int countItems()
    {
-     return items.size();
+     return arraySlots.size();
    }
 
    /**
@@ -162,20 +171,20 @@ public class RegularMachine
 
      System.out.println("Product Sales:");
 
-     for (i = 0; i < items.size(); i++)
+     for (i = 0; i < arraySlots.size(); i++)
      {
           soldCounter = 0;
           for (j = 0; j < transactions.size(); j++)
           {
                if(transactions.get(j).getDate().isAfter(today) || transactions.get(j).getDate().isBefore(today) || transactions.get(j).getDate().equals(today))
                {
-                    if (items.get(i).getItemName().equals(transactions.get(j).getItemName()))
+                    if (arraySlots.get(i).checkItem().getItemName().equals(transactions.get(j).getItemName()))
                     {
                          soldCounter++;
                     }
                }
           }
-          System.out.println("[" + soldCounter + " sold] " + items.get(i).getItemName());
+          System.out.println("[" + soldCounter + " sold] " + arraySlots.get(i).checkItem().getItemName());
      }
    }
 
@@ -188,7 +197,7 @@ public class RegularMachine
    {
      boolean result = false;
      
-     if (items.get(itemIndex).getItemQuantity() > 0)
+     if (arraySlots.get(itemIndex).getCAPACITY() > 0)
      {
           result = true;
      }
@@ -224,7 +233,7 @@ public class RegularMachine
           Scanner scan = new Scanner(System.in);
           int i;
           int input = 0;
-          int totalPrice = items.get(itemIndex).getItemPrice();
+          int totalPrice = arraySlots.get(itemIndex).checkItem(); // no idea how to do this
           int totalPayable = items.get(itemIndex).getItemPrice();
           boolean isDenomAccepted;
           System.out.println();
@@ -482,8 +491,8 @@ public class RegularMachine
    public void dispenseItem(int itemIndex)
    {
      System.out.println("Dispensing Item...");
-     items.get(itemIndex).setItemQuantity(-1);
-     String name = items.get(itemIndex).getItemName();
+     arraySlots.get(itemIndex).checkItem().setItemQuantity(-1);
+     String name = arraySlots.get(itemIndex).checkItem().getItemName();
      System.out.println("1 " + name + " dispensed.");
      System.out.println("Thank you for buying!");
    }
@@ -499,12 +508,12 @@ public class RegularMachine
           * [1] Cup Noodles (10 available)
           * Php 50 | 150 calories
           */
-     for(int i = 0; i < items.size(); i++)
+     for(int i = 0; i < arraySlots.size(); i++)
      {
           int j = i + 1; // Only to make the numbering start at 1. Must only be used on the [j] part
-          System.out.println("[" + j + "] " + items.get(i).getItemName() + " (" + items.get(i).getItemQuantity() 
+          System.out.println("[" + j + "] " + arraySlots.get(i).checkItem().getItemName() + " (" + arraySlots.get(i).checkItem().getItemQuantity() 
                          + " available)");
-          System.out.println("Php " + items.get(i).getItemPrice() + " | " + items.get(i).getItemCalories() + " calories");
+          System.out.println("Php " + arraySlots.get(i).checkItem().getItemPrice() + " | " + arraySlots.get(i).checkItem().getItemCalories() + " calories");
           
           if (i != items.size() - 1)
           {

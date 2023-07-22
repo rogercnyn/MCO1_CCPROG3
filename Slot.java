@@ -4,9 +4,27 @@ public class Slot {
     private Stack<Items> items;
     private final int CAPACITY;
 
-    public Slot(Items item){
-        item = new Stack<Item>();
-        addItem(item);
+    public Slot(Meal meal){
+        this.items = new Stack<Items>();
+
+        addItem((Items)meal);
+        CAPACITY = 10;
+    }
+
+    public Slot(Side side){
+        this.items = new Stack<Items>();
+        addItem(side);
+        CAPACITY = 10;
+    }
+    
+    public Slot(Drink drink){
+        this.items = new Stack<Items>();
+        addItem(drink);
+        CAPACITY = 10;
+    }
+    public Slot(Extra extra){
+        this.items = new Stack<Items>();
+        addItem(extra);
         CAPACITY = 10;
     }
 
