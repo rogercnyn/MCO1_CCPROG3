@@ -511,11 +511,11 @@ public class RegularMachine
      for(int i = 0; i < arraySlots.size(); i++)
      {
           int j = i + 1; // Only to make the numbering start at 1. Must only be used on the [j] part
-          System.out.println("[" + j + "] " + arraySlots.get(i).checkItem().getItemName() + " (" + arraySlots.get(i).checkItem().getItemQuantity() 
+          System.out.println("[" + j + "] " + arraySlots.get(i).checkItem().getItemName() + " (" + arraySlots.get(i).getCAPACITY() 
                          + " available)");
           System.out.println("Php " + arraySlots.get(i).checkItem().getItemPrice() + " | " + arraySlots.get(i).checkItem().getItemCalories() + " calories");
           
-          if (i != items.size() - 1)
+          if (i != arraySlots.size() - 1)
           {
                System.out.println();
           }
@@ -528,10 +528,10 @@ public class RegularMachine
     * @param itemIndex - contains the index of the itemindex.
     * @param payment - contains the total amount that the user paid.
     */
-   public void saveTransaction(int itemIndex, int payment)
+   public void saveTransaction(int slotIndex, int payment)
    {
-     String itemName = items.get(itemIndex).getItemName();
-     int totalPrice = items.get(itemIndex).getItemPrice();
+     String itemName = arraySlots.get(slotIndex).getItems().get(slotIndex).getItemName();
+     int totalPrice = arraySlots.get(slotIndex).getItems;
      Transactions transact = new Transactions(itemName, totalPrice, payment);
      transactions.add(transact);
    }
