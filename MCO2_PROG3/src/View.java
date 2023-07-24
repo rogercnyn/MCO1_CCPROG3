@@ -1,3 +1,8 @@
+
+import java.awt.Toolkit;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -14,8 +19,9 @@ public class View extends javax.swing.JFrame {
      */
     public View() {
         initComponents();
+        
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,14 +39,14 @@ public class View extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         BackgroundPicture = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
         setPreferredSize(new java.awt.Dimension(665, 590));
         setResizable(false);
         setSize(new java.awt.Dimension(665, 590));
 
         mainMenuPanel.setLayout(null);
 
-        VendingMachineLabel.setBackground(null);
         VendingMachineLabel.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         VendingMachineLabel.setForeground(new java.awt.Color(255, 255, 255));
         VendingMachineLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -48,7 +54,6 @@ public class View extends javax.swing.JFrame {
         mainMenuPanel.add(VendingMachineLabel);
         VendingMachineLabel.setBounds(400, 170, 182, 28);
 
-        FactoryLabel.setBackground(null);
         FactoryLabel.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
         FactoryLabel.setForeground(new java.awt.Color(255, 255, 255));
         FactoryLabel.setText("FACTORY");
@@ -58,6 +63,11 @@ public class View extends javax.swing.JFrame {
         CreateBtn.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         CreateBtn.setText("Create");
         CreateBtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        CreateBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CreateBtnActionPerformed(evt);
+            }
+        });
         mainMenuPanel.add(CreateBtn);
         CreateBtn.setBounds(400, 270, 230, 46);
 
@@ -84,15 +94,25 @@ public class View extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainMenuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainMenuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainMenuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainMenuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    public void close(){
+        WindowEvent closeWindow = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
+        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(closeWindow);
+    }
+    private void CreateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateBtnActionPerformed
+        close();
+        CreateVending vending = new CreateVending();
+        vending.setVisible(true);
+    }//GEN-LAST:event_CreateBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -104,4 +124,5 @@ public class View extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel mainMenuPanel;
     // End of variables declaration//GEN-END:variables
+
 }
