@@ -76,7 +76,7 @@ public class Factory extends javax.swing.JFrame {
         mainMenuPanel.add(jLabel1);
         jLabel1.setBounds(470, 420, 160, 16);
 
-        BackgroundPicture.setIcon(new javax.swing.ImageIcon("/Users/rogercanayon/Documents/college/dlsu/term3/CCPROG3/MCO1_CCPROG3/MCO2_PROG3/Elements/backgroundMainMenu.png")); // NOI18N
+        BackgroundPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/backgroundMainMenu.png"))); // NOI18N
         mainMenuPanel.add(BackgroundPicture);
         BackgroundPicture.setBounds(0, 0, 670, 590);
 
