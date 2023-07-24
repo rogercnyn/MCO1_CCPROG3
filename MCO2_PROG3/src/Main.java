@@ -4,8 +4,8 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Factory factory = new Factory();
-        factory.setVisible(true);
+        View view = new View();
+        view.setVisible(true);
     }
     
 }

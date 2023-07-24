@@ -7,12 +7,12 @@
  *
  * @author rogercanayon
  */
-public class Factory extends javax.swing.JFrame {
+public class View extends javax.swing.JFrame {
 
     /**
      * Creates new form Factory
      */
-    public Factory() {
+    public View() {
         initComponents();
     }
 
