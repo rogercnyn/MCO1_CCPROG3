@@ -38,41 +38,47 @@ public class Factory extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(665, 590));
 
-        mainMenuPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        mainMenuPanel.setLayout(null);
 
         VendingMachineLabel.setBackground(null);
         VendingMachineLabel.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         VendingMachineLabel.setForeground(new java.awt.Color(255, 255, 255));
         VendingMachineLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         VendingMachineLabel.setText("Vending Machine");
-        mainMenuPanel.add(VendingMachineLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, -1, -1));
+        mainMenuPanel.add(VendingMachineLabel);
+        VendingMachineLabel.setBounds(400, 170, 182, 28);
 
         FactoryLabel.setBackground(null);
         FactoryLabel.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
         FactoryLabel.setForeground(new java.awt.Color(255, 255, 255));
         FactoryLabel.setText("FACTORY");
-        mainMenuPanel.add(FactoryLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 249, -1));
+        mainMenuPanel.add(FactoryLabel);
+        FactoryLabel.setBounds(400, 200, 249, 56);
 
         CreateBtn.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         CreateBtn.setText("Create");
         CreateBtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        mainMenuPanel.add(CreateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 230, 46));
+        mainMenuPanel.add(CreateBtn);
+        CreateBtn.setBounds(400, 270, 230, 46);
 
         TestBtn.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         TestBtn.setText("Test");
         TestBtn.setToolTipText("");
         TestBtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        mainMenuPanel.add(TestBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 230, 46));
+        mainMenuPanel.add(TestBtn);
+        TestBtn.setBounds(400, 340, 230, 46);
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("by Roger and Kristian");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        mainMenuPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 420, 160, -1));
+        mainMenuPanel.add(jLabel1);
+        jLabel1.setBounds(470, 420, 160, 16);
 
         BackgroundPicture.setIcon(new javax.swing.ImageIcon("/Users/rogercanayon/Documents/college/dlsu/term3/CCPROG3/MCO1_CCPROG3/MCO2_PROG3/Elements/backgroundMainMenu.png")); // NOI18N
-        mainMenuPanel.add(BackgroundPicture, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 590));
+        mainMenuPanel.add(BackgroundPicture);
+        BackgroundPicture.setBounds(0, 0, 670, 590);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,40 +94,6 @@ public class Factory extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Factory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Factory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Factory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Factory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Factory().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BackgroundPicture;
