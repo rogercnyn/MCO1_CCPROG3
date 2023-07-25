@@ -32,7 +32,7 @@ public class CreateRegularView extends javax.swing.JFrame {
         SaveBtn = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(85, 88, 95));
         setPreferredSize(new java.awt.Dimension(665, 590));
         setSize(new java.awt.Dimension(665, 590));
@@ -49,6 +49,7 @@ public class CreateRegularView extends javax.swing.JFrame {
 
         SaveBtn.setBackground(new java.awt.Color(204, 255, 204));
         SaveBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        SaveBtn.setForeground(new java.awt.Color(0, 0, 0));
         SaveBtn.setText("Save");
         SaveBtn.setMaximumSize(new java.awt.Dimension(72, 73));
         SaveBtn.setMinimumSize(new java.awt.Dimension(72, 73));
@@ -63,11 +64,11 @@ public class CreateRegularView extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 416, Short.MAX_VALUE)
+            .addGap(0, 420, Short.MAX_VALUE)
         );
 
         CreateRegularPanel.add(jPanel1);
-        jPanel1.setBounds(390, 80, 260, 416);
+        jPanel1.setBounds(390, 76, 260, 420);
 
         getContentPane().add(CreateRegularPanel);
         CreateRegularPanel.setBounds(0, 0, 670, 590);

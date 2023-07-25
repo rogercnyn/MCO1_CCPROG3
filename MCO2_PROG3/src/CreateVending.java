@@ -38,7 +38,7 @@ public class CreateVending extends javax.swing.JFrame {
         CreateSpecialBtn = new javax.swing.JButton();
         CreateRegularBtn = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Vending Machine Factory");
         setBackground(java.awt.Color.gray);
         setBounds(new java.awt.Rectangle(0, 25, 665, 590));
@@ -116,11 +116,15 @@ public class CreateVending extends javax.swing.JFrame {
         CreateRegularBtn.addActionListener(actn);
     }
 
-
+    public void setCreateSpecialListener(ActionListener actn)
+    {
+        CreateSpecialBtn.addActionListener(actn);
+    }
     public void setBackBtnListener(ActionListener actn)
     {
         BackBtn.addActionListener(actn);
     }
+    
     
     /**
      * @param args the command line arguments

@@ -15,12 +15,14 @@ public class Factory implements ActionListener{
     private mainMenu mainMenu;
     private CreateVending createvending;
     private CreateRegularView createregularview;
+    private CreateSpecialView createspecialview;
     
     public Factory (){
         this.mainMenu= new mainMenu();
         this.createvending = new CreateVending();
         this.createregularview = new CreateRegularView();
-
+        this.createspecialview = new CreateSpecialView();
+        
         this.mainMenu.setVisible(true);
         
         this.mainMenu.setCreateBtnListener(new ActionListener(){
@@ -54,8 +56,23 @@ public class Factory implements ActionListener{
                 createregularview.setVisible(false);
             }
         });
+        
+        this.createvending.setCreateSpecialListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                createspecialview.setVisible(true);
+                createvending.setVisible(false);
+            }
+        });
+        
+        this.createspecialview.setSaveBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+                {
+                    mainMenu.setVisible(true);
+                    createspecialview.setVisible(false);
+                }
+        });
     }
-    
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equals("Create")){
