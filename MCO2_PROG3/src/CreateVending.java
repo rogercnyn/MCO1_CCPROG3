@@ -31,31 +31,31 @@ public class CreateVending extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        CreateLbl = new javax.swing.JLabel();
         BackBtn = new javax.swing.JButton();
+        CreateLbl = new javax.swing.JLabel();
         CreateSpecialBtn = new javax.swing.JButton();
         CreateRegularBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Vending Machine Factory");
         setBackground(java.awt.Color.gray);
-        setBounds(new java.awt.Rectangle(0, 43, 665, 590));
-        setLocation(new java.awt.Point(0, 0));
+        setBounds(new java.awt.Rectangle(0, 25, 665, 590));
         setPreferredSize(new java.awt.Dimension(665, 590));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(85, 88, 95));
-        jPanel1.setPreferredSize(new java.awt.Dimension(665, 590));
+        jPanel1.setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.setRequestFocusEnabled(false);
-        jPanel1.setSize(new java.awt.Dimension(665, 590));
+
+        BackBtn.setBackground(new java.awt.Color(255, 153, 153));
+        BackBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        BackBtn.setText("Back");
 
         CreateLbl.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         CreateLbl.setForeground(new java.awt.Color(255, 255, 255));
         CreateLbl.setText("Create");
         CreateLbl.setToolTipText("");
-
-        BackBtn.setBackground(new java.awt.Color(255, 153, 153));
-        BackBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BackBtn.setText("Back");
 
         CreateSpecialBtn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         CreateSpecialBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/Vending Machine (1) 1.png"))); // NOI18N
@@ -75,9 +75,9 @@ public class CreateVending extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BackBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CreateLbl))
-                .addContainerGap(504, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(160, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(CreateSpecialBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CreateRegularBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -101,11 +101,11 @@ public class CreateVending extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
         );
 
         pack();

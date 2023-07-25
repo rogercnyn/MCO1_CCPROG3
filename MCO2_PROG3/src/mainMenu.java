@@ -12,12 +12,12 @@ import java.awt.event.WindowEvent;
  *
  * @author rogercanayon
  */
-public class View extends javax.swing.JFrame {
+public class mainMenu extends javax.swing.JFrame {
 
     /**
      * Creates new form Factory
      */
-    public View() {
+    public mainMenu() {
         initComponents();
         
     }
@@ -40,6 +40,7 @@ public class View extends javax.swing.JFrame {
         BackgroundPicture = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Vending Machine Factory");
         setAlwaysOnTop(true);
         setResizable(false);
         setSize(new java.awt.Dimension(665, 590));

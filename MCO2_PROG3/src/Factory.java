@@ -12,19 +12,19 @@ import java.awt.event.ActionListener;
  * @author kriastiankintanar
  */
 public class Factory implements ActionListener{
-    private View view;
+    private mainMenu mainMenu;
     private CreateVending createvending;
     
     public Factory (){
-        this.view= new View();
+        this.mainMenu= new mainMenu();
         this.createvending = new CreateVending();
 
-        this.view.setVisible(true);
+        this.mainMenu.setVisible(true);
         
-        this.view.setCreateBtnListener(new ActionListener(){
+        this.mainMenu.setCreateBtnListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
             {
-                view.setVisible(false);
+                mainMenu.setVisible(false);
                 createvending.setVisible(true);
             }
         });
@@ -33,7 +33,7 @@ public class Factory implements ActionListener{
             public void actionPerformed(ActionEvent e)
             {
                 createvending.setVisible(false);
-                view.setVisible(true);
+                mainMenu.setVisible(true);
             }
         });
     }
