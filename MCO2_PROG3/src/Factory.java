@@ -17,6 +17,7 @@ public class Factory implements ActionListener{
     private CreateRegularView createregularview;
     private CreateSpecialView createspecialview;
     private TestVending testvending;
+    private TestVendFeatures testvendfeatures;
     
     public Factory (){
         this.mainMenu= new mainMenu();
@@ -24,6 +25,7 @@ public class Factory implements ActionListener{
         this.createregularview = new CreateRegularView();
         this.createspecialview = new CreateSpecialView();
         this.testvending = new TestVending();
+        this.testvendfeatures = new TestVendFeatures();
 
         this.mainMenu.setVisible(true);
         
@@ -86,12 +88,21 @@ public class Factory implements ActionListener{
             }
         });
 
-        /*this.testvending.setTestVendingListener(new ActionListener() {
+        this.testvending.setTestVendingListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-
+                testvendfeatures.setVisible(true);
+                testvending.setVisible(false);
             }
-        });*/
+        });
+
+        this.testvendfeatures.setDoneBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testvending.setVisible(true);
+                testvendfeatures.setVisible(false);
+            }
+        });
 
         /*this.testvending.setTestMaintenanceListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
