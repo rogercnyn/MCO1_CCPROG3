@@ -39,9 +39,8 @@ public class View extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         BackgroundPicture = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
-        setPreferredSize(new java.awt.Dimension(665, 590));
         setResizable(false);
         setSize(new java.awt.Dimension(665, 590));
 
@@ -63,11 +62,6 @@ public class View extends javax.swing.JFrame {
         CreateBtn.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         CreateBtn.setText("Create");
         CreateBtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        CreateBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CreateBtnActionPerformed(evt);
-            }
-        });
         mainMenuPanel.add(CreateBtn);
         CreateBtn.setBounds(400, 270, 230, 46);
 
@@ -108,12 +102,11 @@ public class View extends javax.swing.JFrame {
         WindowEvent closeWindow = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
         Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(closeWindow);
     }
-    private void CreateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateBtnActionPerformed
-        close();
-        CreateVending vending = new CreateVending();
-        vending.setVisible(true);
-    }//GEN-LAST:event_CreateBtnActionPerformed
-
+    
+    public void setCreateBtnListener(ActionListener actn)
+    {
+        CreateBtn.addActionListener(actn);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BackgroundPicture;

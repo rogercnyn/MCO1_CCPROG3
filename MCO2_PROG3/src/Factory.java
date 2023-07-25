@@ -13,12 +13,31 @@ import java.awt.event.ActionListener;
  */
 public class Factory implements ActionListener{
     private View view;
+    private CreateVending createvending;
     
-    public Factory (View view){
-        this.view=view;
+    public Factory (){
+        this.view= new View();
+        this.createvending = new CreateVending();
+
+        this.view.setVisible(true);
         
-    
+        this.view.setCreateBtnListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e)
+            {
+                view.setVisible(false);
+                createvending.setVisible(true);
+            }
+        });
+
+        this.createvending.setBackBtnListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e)
+            {
+                createvending.setVisible(false);
+                view.setVisible(true);
+            }
+        });
     }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equals("Create")){

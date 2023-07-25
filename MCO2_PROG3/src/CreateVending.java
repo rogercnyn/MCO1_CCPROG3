@@ -1,5 +1,6 @@
 
 import java.awt.Toolkit;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 /*
@@ -31,68 +32,68 @@ public class CreateVending extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         CreateLbl = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        BackBtn = new javax.swing.JButton();
+        CreateSpecialBtn = new javax.swing.JButton();
+        CreateRegularBtn = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(java.awt.Color.gray);
         setBounds(new java.awt.Rectangle(0, 43, 665, 590));
+        setLocation(new java.awt.Point(0, 0));
         setPreferredSize(new java.awt.Dimension(665, 590));
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(85, 88, 95));
+        jPanel1.setPreferredSize(new java.awt.Dimension(665, 590));
+        jPanel1.setRequestFocusEnabled(false);
+        jPanel1.setSize(new java.awt.Dimension(665, 590));
 
-        CreateLbl.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        CreateLbl.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         CreateLbl.setForeground(new java.awt.Color(255, 255, 255));
         CreateLbl.setText("Create");
         CreateLbl.setToolTipText("");
 
-        jButton1.setBackground(new java.awt.Color(255, 153, 153));
-        jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        BackBtn.setBackground(new java.awt.Color(255, 153, 153));
+        BackBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        BackBtn.setText("Back");
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/Vending Machine (1) 1.png"))); // NOI18N
-        jButton2.setText("Special Vending Machine");
+        CreateSpecialBtn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        CreateSpecialBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/Vending Machine (1) 1.png"))); // NOI18N
+        CreateSpecialBtn.setText("Special Vending Machine");
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/Vending Machine 2.png"))); // NOI18N
-        jButton3.setText("Regular Vending\nMachine");
-        jButton3.setToolTipText("");
+        CreateRegularBtn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        CreateRegularBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/Vending Machine 2.png"))); // NOI18N
+        CreateRegularBtn.setText("Regular Vending\nMachine");
+        CreateRegularBtn.setToolTipText("");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 194, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(118, 118, 118))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BackBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CreateLbl))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(504, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(CreateSpecialBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CreateRegularBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(149, 149, 149))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(CreateLbl)
-                .addGap(43, 43, 43)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addComponent(CreateSpecialBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CreateRegularBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69)
+                .addComponent(BackBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57))
         );
 
@@ -100,26 +101,22 @@ public class CreateVending extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 295, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 273, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        close();
-        View view =new View();
-        view.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+    
+    public void setBackBtnListener(ActionListener actn)
+    {
+        BackBtn.addActionListener(actn);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -156,10 +153,10 @@ public class CreateVending extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackBtn;
     private javax.swing.JLabel CreateLbl;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton CreateRegularBtn;
+    private javax.swing.JButton CreateSpecialBtn;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 
