@@ -120,6 +120,7 @@ public class CreateVending extends javax.swing.JFrame {
     {
         CreateSpecialBtn.addActionListener(actn);
     }
+    
     public void setBackBtnListener(ActionListener actn)
     {
         BackBtn.addActionListener(actn);

@@ -16,15 +16,18 @@ public class Factory implements ActionListener{
     private CreateVending createvending;
     private CreateRegularView createregularview;
     private CreateSpecialView createspecialview;
+    private TestVending testvending;
     
     public Factory (){
         this.mainMenu= new mainMenu();
         this.createvending = new CreateVending();
         this.createregularview = new CreateRegularView();
         this.createspecialview = new CreateSpecialView();
-        
+        this.testvending = new TestVending();
+
         this.mainMenu.setVisible(true);
         
+        // CREATE FEATURES
         this.mainMenu.setCreateBtnListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
             {
@@ -67,10 +70,42 @@ public class Factory implements ActionListener{
         
         this.createspecialview.setSaveBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
-                {
-                    mainMenu.setVisible(true);
-                    createspecialview.setVisible(false);
-                }
+            {
+                mainMenu.setVisible(true);
+                createspecialview.setVisible(false);
+            }
+        });
+        
+        // TEST FEATURES   
+        
+        this.mainMenu.setTestBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testvending.setVisible(true);
+                mainMenu.setVisible(false);
+            }
+        });
+
+        /*this.testvending.setTestVendingListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+
+            }
+        });*/
+
+        /*this.testvending.setTestMaintenanceListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+
+            }
+        });*/
+
+        this.testvending.setBackBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                mainMenu.setVisible(true);
+                testvending.setVisible(false);
+            }
         });
     }
     @Override

@@ -33,6 +33,7 @@ public class CreateRegularView extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Vending Machine Factory");
         setBackground(new java.awt.Color(85, 88, 95));
         setPreferredSize(new java.awt.Dimension(665, 590));
         setSize(new java.awt.Dimension(665, 590));
@@ -49,7 +50,6 @@ public class CreateRegularView extends javax.swing.JFrame {
 
         SaveBtn.setBackground(new java.awt.Color(204, 255, 204));
         SaveBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        SaveBtn.setForeground(new java.awt.Color(0, 0, 0));
         SaveBtn.setText("Save");
         SaveBtn.setMaximumSize(new java.awt.Dimension(72, 73));
         SaveBtn.setMinimumSize(new java.awt.Dimension(72, 73));

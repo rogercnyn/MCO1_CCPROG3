@@ -108,6 +108,11 @@ public class mainMenu extends javax.swing.JFrame {
     {
         CreateBtn.addActionListener(actn);
     }
+    
+    public void setTestBtnListener(ActionListener actn)
+    {
+        TestBtn.addActionListener(actn);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BackgroundPicture;

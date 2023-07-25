@@ -33,7 +33,8 @@ public class CreateSpecialView extends javax.swing.JFrame {
         SaveBtn = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Vending Machine Factory");
         setBackground(new java.awt.Color(85, 88, 95));
         setBounds(new java.awt.Rectangle(0, 38, 665, 590));
 
@@ -49,7 +50,6 @@ public class CreateSpecialView extends javax.swing.JFrame {
 
         SaveBtn.setBackground(new java.awt.Color(204, 255, 204));
         SaveBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        SaveBtn.setForeground(new java.awt.Color(0, 0, 0));
         SaveBtn.setText("Save");
         SaveBtn.setBounds(new java.awt.Rectangle(550, 520, 102, 41));
         SaveBtn.setMaximumSize(new java.awt.Dimension(72, 73));
@@ -71,22 +71,20 @@ public class CreateSpecialView extends javax.swing.JFrame {
         CreateSpecialPanelLayout.setHorizontalGroup(
             CreateSpecialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CreateSpecialPanelLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(487, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CreateSpecialPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(CreateSpecialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, CreateSpecialPanelLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(CreateSpecialPanelLayout.createSequentialGroup()
-                        .addContainerGap(385, Short.MAX_VALUE)
-                        .addGroup(CreateSpecialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(SaveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(37, 37, 37))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SaveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14))
         );
         CreateSpecialPanelLayout.setVerticalGroup(
             CreateSpecialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CreateSpecialPanelLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
+                .addGap(36, 36, 36)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CreateSpecialPanelLayout.createSequentialGroup()
