@@ -18,6 +18,13 @@ public class Factory implements ActionListener{
     private CreateSpecialView createspecialview;
     private TestVending testvending;
     private TestVendFeatures testvendfeatures;
+    private TestMaintenance testmaintenance;
+    private RestockProduct restockproduct;
+    private ChangePrice changeprice;
+    private CollectBalance collectbalance;
+    private Inventory inventory;
+    private PrintSales printsales;
+    private ReplenishBalance replenishbalance;
     
     public Factory (){
         this.mainMenu= new mainMenu();
@@ -26,6 +33,13 @@ public class Factory implements ActionListener{
         this.createspecialview = new CreateSpecialView();
         this.testvending = new TestVending();
         this.testvendfeatures = new TestVendFeatures();
+        this.testmaintenance = new TestMaintenance();
+        this.restockproduct = new RestockProduct();
+        this.changeprice = new ChangePrice();
+        this.collectbalance = new CollectBalance();
+        this.inventory = new Inventory();
+        this.printsales = new PrintSales();
+        this.replenishbalance = new ReplenishBalance();
 
         this.mainMenu.setVisible(true);
         
@@ -104,12 +118,21 @@ public class Factory implements ActionListener{
             }
         });
 
-        /*this.testvending.setTestMaintenanceListener(new ActionListener() {
+        this.testvending.setTestMaintenanceListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-
+                testmaintenance.setVisible(true);
+                testvending.setVisible(false);
             }
-        });*/
+        });
+
+        this.testmaintenance.setBackBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testvending.setVisible(true);
+                testmaintenance.setVisible(false);
+            }
+        });
 
         this.testvending.setBackBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
@@ -118,6 +141,105 @@ public class Factory implements ActionListener{
                 testvending.setVisible(false);
             }
         });
+
+        // MAINTENANCE PART
+
+        this.testmaintenance.setRestockProductBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                restockproduct.setVisible(true);
+                testmaintenance.setVisible(false);
+            }
+        });
+
+        this.restockproduct.setDoneBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testmaintenance.setVisible(true);
+                restockproduct.setVisible(false);
+            }
+        });
+
+        this.testmaintenance.setReplenishBalanceBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                replenishbalance.setVisible(true);
+                testmaintenance.setVisible(false);
+            }
+        });
+
+        this.replenishbalance.setDoneBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testmaintenance.setVisible(true);
+                replenishbalance.setVisible(false);
+            }
+        });
+
+        this.testmaintenance.setCollectBalanceBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                collectbalance.setVisible(true);
+                testmaintenance.setVisible(false);
+            }
+        });
+
+        this.collectbalance.setDoneBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testmaintenance.setVisible(true);
+                collectbalance.setVisible(false);
+            }
+        });
+
+        this.testmaintenance.setChangePriceBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                changeprice.setVisible(true);
+                testmaintenance.setVisible(false);
+            }
+        });
+
+        this.changeprice.setDoneBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testmaintenance.setVisible(true);
+                changeprice.setVisible(false);
+            }
+        });
+
+        this.testmaintenance.setPrintSalesBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                printsales.setVisible(true);
+                testmaintenance.setVisible(false);
+            }
+        });
+
+        this.printsales.setDoneBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testmaintenance.setVisible(true);
+                printsales.setVisible(false);
+            }
+        });
+
+        this.testmaintenance.setInventoryBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                inventory.setVisible(true);
+                testmaintenance.setVisible(false);
+            }
+        });
+
+        this.inventory.setDoneBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testmaintenance.setVisible(true);
+                inventory.setVisible(false);
+            }
+        });
+
     }
     @Override
     public void actionPerformed(ActionEvent e) {

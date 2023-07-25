@@ -32,6 +32,7 @@ public class TestVendFeatures extends javax.swing.JFrame {
         DoneBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Vending Machine Factory");
 
         jPanel1.setBackground(new java.awt.Color(85, 88, 95));
 
