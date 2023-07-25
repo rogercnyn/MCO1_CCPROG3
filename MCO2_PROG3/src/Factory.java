@@ -14,26 +14,44 @@ import java.awt.event.ActionListener;
 public class Factory implements ActionListener{
     private mainMenu mainMenu;
     private CreateVending createvending;
+    private CreateRegularView createregularview;
     
     public Factory (){
         this.mainMenu= new mainMenu();
         this.createvending = new CreateVending();
+        this.createregularview = new CreateRegularView();
 
         this.mainMenu.setVisible(true);
         
         this.mainMenu.setCreateBtnListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
             {
-                mainMenu.setVisible(false);
                 createvending.setVisible(true);
+                mainMenu.setVisible(false);
             }
         });
 
         this.createvending.setBackBtnListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
             {
-                createvending.setVisible(false);
                 mainMenu.setVisible(true);
+                createvending.setVisible(false);
+            }
+        });
+
+        this.createvending.setCreateRegularListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                createregularview.setVisible(true);
+                createvending.setVisible(false);
+            }
+        });
+
+        this.createregularview.setSaveBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                mainMenu.setVisible(true);
+                createregularview.setVisible(false);
             }
         });
     }

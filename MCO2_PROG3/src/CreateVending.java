@@ -3,6 +3,8 @@ import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+import javax.swing.Action;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -40,11 +42,9 @@ public class CreateVending extends javax.swing.JFrame {
         setTitle("Vending Machine Factory");
         setBackground(java.awt.Color.gray);
         setBounds(new java.awt.Rectangle(0, 25, 665, 590));
-        setPreferredSize(new java.awt.Dimension(665, 590));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(85, 88, 95));
-        jPanel1.setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(0, 0));
         jPanel1.setRequestFocusEnabled(false);
 
@@ -111,7 +111,12 @@ public class CreateVending extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
+    public void setCreateRegularListener(ActionListener actn)
+    {
+        CreateRegularBtn.addActionListener(actn);
+    }
+
+
     public void setBackBtnListener(ActionListener actn)
     {
         BackBtn.addActionListener(actn);
