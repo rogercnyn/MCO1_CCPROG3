@@ -37,6 +37,7 @@ public class CreateSpecialView extends javax.swing.JFrame {
         setTitle("Vending Machine Factory");
         setBackground(new java.awt.Color(85, 88, 95));
         setBounds(new java.awt.Rectangle(0, 38, 665, 590));
+        setLocation(new java.awt.Point(0, 0));
 
         CreateSpecialPanel.setBackground(new java.awt.Color(85, 88, 95));
         CreateSpecialPanel.setBounds(new java.awt.Rectangle(0, 0, 670, 590));
