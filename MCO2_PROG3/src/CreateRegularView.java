@@ -30,7 +30,54 @@ public class CreateRegularView extends javax.swing.JFrame {
         CreateRegularPanel = new javax.swing.JPanel();
         RegularLabel = new javax.swing.JLabel();
         SaveBtn = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
+        ItemPanel1 = new javax.swing.JPanel();
+        ItemName1 = new javax.swing.JLabel();
+        ItemPrice1 = new javax.swing.JLabel();
+        ItemCalories1 = new javax.swing.JLabel();
+        ItemPic1 = new javax.swing.JLabel();
+        ItemPanel2 = new javax.swing.JPanel();
+        ItemName2 = new javax.swing.JLabel();
+        ItemPrice2 = new javax.swing.JLabel();
+        ItemCalories2 = new javax.swing.JLabel();
+        ItemPic2 = new javax.swing.JLabel();
+        ItemPanel3 = new javax.swing.JPanel();
+        ItemName3 = new javax.swing.JLabel();
+        ItemPrice3 = new javax.swing.JLabel();
+        ItemCalories3 = new javax.swing.JLabel();
+        ItemPic3 = new javax.swing.JLabel();
+        ItemPanel4 = new javax.swing.JPanel();
+        ItemName4 = new javax.swing.JLabel();
+        ItemPrice4 = new javax.swing.JLabel();
+        ItemCalories4 = new javax.swing.JLabel();
+        ItemPic4 = new javax.swing.JLabel();
+        ItemPanel5 = new javax.swing.JPanel();
+        ItemName5 = new javax.swing.JLabel();
+        ItemPrice5 = new javax.swing.JLabel();
+        ItemCalories5 = new javax.swing.JLabel();
+        ItemPic5 = new javax.swing.JLabel();
+        ItemPanel6 = new javax.swing.JPanel();
+        ItemName6 = new javax.swing.JLabel();
+        ItemPrice6 = new javax.swing.JLabel();
+        ItemCalories6 = new javax.swing.JLabel();
+        ItemPic6 = new javax.swing.JLabel();
+        ItemPanel7 = new javax.swing.JPanel();
+        ItemName7 = new javax.swing.JLabel();
+        ItemPrice7 = new javax.swing.JLabel();
+        ItemCalories7 = new javax.swing.JLabel();
+        ItemPic7 = new javax.swing.JLabel();
+        ItemPanel8 = new javax.swing.JPanel();
+        ItemName8 = new javax.swing.JLabel();
+        ItemPrice8 = new javax.swing.JLabel();
+        ItemCalories8 = new javax.swing.JLabel();
+        ItemPic8 = new javax.swing.JLabel();
+        ItemPanel9 = new javax.swing.JPanel();
+        ItemName9 = new javax.swing.JLabel();
+        ItemPrice9 = new javax.swing.JLabel();
+        ItemCalories9 = new javax.swing.JLabel();
+        ItemPic9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Vending Machine Factory");
@@ -56,19 +103,438 @@ public class CreateRegularView extends javax.swing.JFrame {
         CreateRegularPanel.add(SaveBtn);
         SaveBtn.setBounds(550, 520, 102, 41);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane2.setViewportBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jScrollPane2.setAutoscrolls(true);
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(260, 620));
+        jScrollPane2.setViewportView(jPanel1);
+
+        jPanel1.setPreferredSize(new java.awt.Dimension(250, 420));
+        jPanel1.setSize(new java.awt.Dimension(250, 420));
+
+        jSeparator1.setForeground(new java.awt.Color(242, 242, 242));
+        jSeparator1.setMinimumSize(new java.awt.Dimension(100, 60));
+        jSeparator1.setPreferredSize(new java.awt.Dimension(300, 10));
+        jPanel1.add(jSeparator1);
+
+        ItemPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        ItemPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        ItemPanel1.setPreferredSize(new java.awt.Dimension(200, 70));
+
+        ItemName1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        ItemName1.setText("Okinawa W/ Pearls");
+
+        ItemPrice1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemPrice1.setText("P125");
+
+        ItemCalories1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemCalories1.setText("150 calories");
+
+        ItemPic1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ItemPic1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/okinawa w_ pearls.png"))); // NOI18N
+
+        javax.swing.GroupLayout ItemPanel1Layout = new javax.swing.GroupLayout(ItemPanel1);
+        ItemPanel1.setLayout(ItemPanel1Layout);
+        ItemPanel1Layout.setHorizontalGroup(
+            ItemPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ItemPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ItemPrice1)
+                    .addComponent(ItemCalories1)
+                    .addComponent(ItemName1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(ItemPic1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+        ItemPanel1Layout.setVerticalGroup(
+            ItemPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel1Layout.createSequentialGroup()
+                .addComponent(ItemName1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemPrice1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemCalories1))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemPanel1Layout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addComponent(ItemPic1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
-        CreateRegularPanel.add(jPanel1);
-        jPanel1.setBounds(390, 76, 260, 420);
+        jPanel1.add(ItemPanel1);
+
+        ItemPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        ItemPanel2.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        ItemPanel2.setPreferredSize(new java.awt.Dimension(200, 70));
+
+        ItemName2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        ItemName2.setText("Okinawa W/ Pearls");
+
+        ItemPrice2.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemPrice2.setText("P125");
+
+        ItemCalories2.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemCalories2.setText("150 calories");
+
+        ItemPic2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ItemPic2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/okinawa w_ pearls.png"))); // NOI18N
+
+        javax.swing.GroupLayout ItemPanel2Layout = new javax.swing.GroupLayout(ItemPanel2);
+        ItemPanel2.setLayout(ItemPanel2Layout);
+        ItemPanel2Layout.setHorizontalGroup(
+            ItemPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ItemPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ItemPrice2)
+                    .addComponent(ItemCalories2)
+                    .addComponent(ItemName2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(ItemPic2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        ItemPanel2Layout.setVerticalGroup(
+            ItemPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel2Layout.createSequentialGroup()
+                .addComponent(ItemName2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemPrice2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemCalories2))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemPanel2Layout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addComponent(ItemPic2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel1.add(ItemPanel2);
+
+        ItemPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        ItemPanel3.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        ItemPanel3.setPreferredSize(new java.awt.Dimension(200, 70));
+
+        ItemName3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        ItemName3.setText("Okinawa W/ Pearls");
+
+        ItemPrice3.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemPrice3.setText("P125");
+
+        ItemCalories3.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemCalories3.setText("150 calories");
+
+        ItemPic3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ItemPic3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/okinawa w_ pearls.png"))); // NOI18N
+
+        javax.swing.GroupLayout ItemPanel3Layout = new javax.swing.GroupLayout(ItemPanel3);
+        ItemPanel3.setLayout(ItemPanel3Layout);
+        ItemPanel3Layout.setHorizontalGroup(
+            ItemPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ItemPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ItemPrice3)
+                    .addComponent(ItemCalories3)
+                    .addComponent(ItemName3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(ItemPic3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        ItemPanel3Layout.setVerticalGroup(
+            ItemPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel3Layout.createSequentialGroup()
+                .addComponent(ItemName3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemPrice3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemCalories3))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemPanel3Layout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addComponent(ItemPic3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel1.add(ItemPanel3);
+
+        ItemPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        ItemPanel4.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        ItemPanel4.setPreferredSize(new java.awt.Dimension(200, 70));
+
+        ItemName4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        ItemName4.setText("Okinawa W/ Pearls");
+
+        ItemPrice4.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemPrice4.setText("P125");
+
+        ItemCalories4.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemCalories4.setText("150 calories");
+
+        ItemPic4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ItemPic4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/okinawa w_ pearls.png"))); // NOI18N
+
+        javax.swing.GroupLayout ItemPanel4Layout = new javax.swing.GroupLayout(ItemPanel4);
+        ItemPanel4.setLayout(ItemPanel4Layout);
+        ItemPanel4Layout.setHorizontalGroup(
+            ItemPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ItemPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ItemPrice4)
+                    .addComponent(ItemCalories4)
+                    .addComponent(ItemName4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(ItemPic4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        ItemPanel4Layout.setVerticalGroup(
+            ItemPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel4Layout.createSequentialGroup()
+                .addComponent(ItemName4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemPrice4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemCalories4))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemPanel4Layout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addComponent(ItemPic4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel1.add(ItemPanel4);
+
+        ItemPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        ItemPanel5.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        ItemPanel5.setPreferredSize(new java.awt.Dimension(200, 70));
+
+        ItemName5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        ItemName5.setText("Okinawa W/ Pearls");
+
+        ItemPrice5.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemPrice5.setText("P125");
+
+        ItemCalories5.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemCalories5.setText("150 calories");
+
+        ItemPic5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ItemPic5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/okinawa w_ pearls.png"))); // NOI18N
+
+        javax.swing.GroupLayout ItemPanel5Layout = new javax.swing.GroupLayout(ItemPanel5);
+        ItemPanel5.setLayout(ItemPanel5Layout);
+        ItemPanel5Layout.setHorizontalGroup(
+            ItemPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ItemPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ItemPrice5)
+                    .addComponent(ItemCalories5)
+                    .addComponent(ItemName5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(ItemPic5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        ItemPanel5Layout.setVerticalGroup(
+            ItemPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel5Layout.createSequentialGroup()
+                .addComponent(ItemName5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemPrice5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemCalories5))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemPanel5Layout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addComponent(ItemPic5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel1.add(ItemPanel5);
+
+        ItemPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        ItemPanel6.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        ItemPanel6.setPreferredSize(new java.awt.Dimension(200, 70));
+
+        ItemName6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        ItemName6.setText("Okinawa W/ Pearls");
+
+        ItemPrice6.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemPrice6.setText("P125");
+
+        ItemCalories6.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemCalories6.setText("150 calories");
+
+        ItemPic6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ItemPic6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/okinawa w_ pearls.png"))); // NOI18N
+
+        javax.swing.GroupLayout ItemPanel6Layout = new javax.swing.GroupLayout(ItemPanel6);
+        ItemPanel6.setLayout(ItemPanel6Layout);
+        ItemPanel6Layout.setHorizontalGroup(
+            ItemPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ItemPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ItemPrice6)
+                    .addComponent(ItemCalories6)
+                    .addComponent(ItemName6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(ItemPic6, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        ItemPanel6Layout.setVerticalGroup(
+            ItemPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel6Layout.createSequentialGroup()
+                .addComponent(ItemName6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemPrice6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemCalories6))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemPanel6Layout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addComponent(ItemPic6, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel1.add(ItemPanel6);
+
+        ItemPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        ItemPanel7.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        ItemPanel7.setPreferredSize(new java.awt.Dimension(200, 70));
+
+        ItemName7.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        ItemName7.setText("Okinawa W/ Pearls");
+
+        ItemPrice7.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemPrice7.setText("P125");
+
+        ItemCalories7.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemCalories7.setText("150 calories");
+
+        ItemPic7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ItemPic7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/okinawa w_ pearls.png"))); // NOI18N
+
+        javax.swing.GroupLayout ItemPanel7Layout = new javax.swing.GroupLayout(ItemPanel7);
+        ItemPanel7.setLayout(ItemPanel7Layout);
+        ItemPanel7Layout.setHorizontalGroup(
+            ItemPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ItemPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ItemPrice7)
+                    .addComponent(ItemCalories7)
+                    .addComponent(ItemName7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(ItemPic7, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        ItemPanel7Layout.setVerticalGroup(
+            ItemPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel7Layout.createSequentialGroup()
+                .addComponent(ItemName7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemPrice7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemCalories7))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemPanel7Layout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addComponent(ItemPic7, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel1.add(ItemPanel7);
+
+        ItemPanel8.setBackground(new java.awt.Color(255, 255, 255));
+        ItemPanel8.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        ItemPanel8.setPreferredSize(new java.awt.Dimension(200, 70));
+
+        ItemName8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        ItemName8.setText("Okinawa W/ Pearls");
+
+        ItemPrice8.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemPrice8.setText("P125");
+
+        ItemCalories8.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemCalories8.setText("150 calories");
+
+        ItemPic8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ItemPic8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/okinawa w_ pearls.png"))); // NOI18N
+
+        javax.swing.GroupLayout ItemPanel8Layout = new javax.swing.GroupLayout(ItemPanel8);
+        ItemPanel8.setLayout(ItemPanel8Layout);
+        ItemPanel8Layout.setHorizontalGroup(
+            ItemPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ItemPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ItemPrice8)
+                    .addComponent(ItemCalories8)
+                    .addComponent(ItemName8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(ItemPic8, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        ItemPanel8Layout.setVerticalGroup(
+            ItemPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel8Layout.createSequentialGroup()
+                .addComponent(ItemName8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemPrice8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemCalories8))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemPanel8Layout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addComponent(ItemPic8, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel1.add(ItemPanel8);
+
+        ItemPanel9.setBackground(new java.awt.Color(255, 255, 255));
+        ItemPanel9.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        ItemPanel9.setPreferredSize(new java.awt.Dimension(200, 70));
+
+        ItemName9.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        ItemName9.setText("Okinawa W/ Pearls");
+
+        ItemPrice9.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemPrice9.setText("P125");
+
+        ItemCalories9.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        ItemCalories9.setText("150 calories");
+
+        ItemPic9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ItemPic9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/okinawa w_ pearls.png"))); // NOI18N
+
+        javax.swing.GroupLayout ItemPanel9Layout = new javax.swing.GroupLayout(ItemPanel9);
+        ItemPanel9.setLayout(ItemPanel9Layout);
+        ItemPanel9Layout.setHorizontalGroup(
+            ItemPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ItemPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ItemPrice9)
+                    .addComponent(ItemCalories9)
+                    .addComponent(ItemName9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(ItemPic9, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        ItemPanel9Layout.setVerticalGroup(
+            ItemPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ItemPanel9Layout.createSequentialGroup()
+                .addComponent(ItemName9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemPrice9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ItemCalories9))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemPanel9Layout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addComponent(ItemPic9, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel1.add(ItemPanel9);
+
+        jScrollPane2.setViewportView(jPanel1);
+
+        CreateRegularPanel.add(jScrollPane2);
+        jScrollPane2.setBounds(390, 90, 260, 420);
 
         getContentPane().add(CreateRegularPanel);
         CreateRegularPanel.setBounds(0, 0, 670, 590);
@@ -118,8 +584,55 @@ public class CreateRegularView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel CreateRegularPanel;
+    private javax.swing.JLabel ItemCalories1;
+    private javax.swing.JLabel ItemCalories2;
+    private javax.swing.JLabel ItemCalories3;
+    private javax.swing.JLabel ItemCalories4;
+    private javax.swing.JLabel ItemCalories5;
+    private javax.swing.JLabel ItemCalories6;
+    private javax.swing.JLabel ItemCalories7;
+    private javax.swing.JLabel ItemCalories8;
+    private javax.swing.JLabel ItemCalories9;
+    private javax.swing.JLabel ItemName1;
+    private javax.swing.JLabel ItemName2;
+    private javax.swing.JLabel ItemName3;
+    private javax.swing.JLabel ItemName4;
+    private javax.swing.JLabel ItemName5;
+    private javax.swing.JLabel ItemName6;
+    private javax.swing.JLabel ItemName7;
+    private javax.swing.JLabel ItemName8;
+    private javax.swing.JLabel ItemName9;
+    private javax.swing.JPanel ItemPanel1;
+    private javax.swing.JPanel ItemPanel2;
+    private javax.swing.JPanel ItemPanel3;
+    private javax.swing.JPanel ItemPanel4;
+    private javax.swing.JPanel ItemPanel5;
+    private javax.swing.JPanel ItemPanel6;
+    private javax.swing.JPanel ItemPanel7;
+    private javax.swing.JPanel ItemPanel8;
+    private javax.swing.JPanel ItemPanel9;
+    private javax.swing.JLabel ItemPic1;
+    private javax.swing.JLabel ItemPic2;
+    private javax.swing.JLabel ItemPic3;
+    private javax.swing.JLabel ItemPic4;
+    private javax.swing.JLabel ItemPic5;
+    private javax.swing.JLabel ItemPic6;
+    private javax.swing.JLabel ItemPic7;
+    private javax.swing.JLabel ItemPic8;
+    private javax.swing.JLabel ItemPic9;
+    private javax.swing.JLabel ItemPrice1;
+    private javax.swing.JLabel ItemPrice2;
+    private javax.swing.JLabel ItemPrice3;
+    private javax.swing.JLabel ItemPrice4;
+    private javax.swing.JLabel ItemPrice5;
+    private javax.swing.JLabel ItemPrice6;
+    private javax.swing.JLabel ItemPrice7;
+    private javax.swing.JLabel ItemPrice8;
+    private javax.swing.JLabel ItemPrice9;
     private javax.swing.JLabel RegularLabel;
     private javax.swing.JButton SaveBtn;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
