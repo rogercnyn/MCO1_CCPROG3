@@ -2,6 +2,8 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -14,8 +16,6 @@ import java.awt.event.ActionListener;
 public class Factory implements ActionListener{
     private mainMenu mainMenu;
     private CreateVending createvending;
-    private CreateRegularView createregularview;
-    private CreateSpecialView createspecialview;
     private TestVending testvending;
     private TestVendFeatures testvendfeatures;
     private TestMaintenance testmaintenance;
@@ -25,12 +25,13 @@ public class Factory implements ActionListener{
     private Inventory inventory;
     private PrintSales printsales;
     private ReplenishBalance replenishbalance;
+
+    private RegularMachine machine;
+    private Slot slot;
     
     public Factory (){
         this.mainMenu= new mainMenu();
         this.createvending = new CreateVending();
-        this.createregularview = new CreateRegularView();
-        this.createspecialview = new CreateSpecialView();
         this.testvending = new TestVending();
         this.testvendfeatures = new TestVendFeatures();
         this.testmaintenance = new TestMaintenance();
@@ -40,6 +41,7 @@ public class Factory implements ActionListener{
         this.inventory = new Inventory();
         this.printsales = new PrintSales();
         this.replenishbalance = new ReplenishBalance();
+        this.slot = new Slot();
 
         this.mainMenu.setVisible(true);
         
@@ -63,32 +65,19 @@ public class Factory implements ActionListener{
         this.createvending.setCreateRegularListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                createregularview.setVisible(true);
-                createvending.setVisible(false);
-            }
-        });
-
-        this.createregularview.setSaveBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
+                JOptionPane.showMessageDialog(createvending, "Regular Vending Machine is successfully created!");
+                machine = new RegularMachine(slot.regularItems());
                 mainMenu.setVisible(true);
-                createregularview.setVisible(false);
+                createvending.setVisible(false);
             }
         });
         
         this.createvending.setCreateSpecialListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                createspecialview.setVisible(true);
-                createvending.setVisible(false);
-            }
-        });
-        
-        this.createspecialview.setSaveBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
+                JOptionPane.showMessageDialog(createvending, "Special Vending Machine is successfully created!");
                 mainMenu.setVisible(true);
-                createspecialview.setVisible(false);
+                createvending.setVisible(false);
             }
         });
         
