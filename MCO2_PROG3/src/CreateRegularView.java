@@ -113,11 +113,15 @@ public class CreateRegularView extends javax.swing.JFrame {
         SaveBtn.setBounds(550, 520, 102, 41);
 
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane2.setToolTipText("");
+        jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         jScrollPane2.setViewportBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jScrollPane2.setAutoscrolls(true);
-        jScrollPane2.setPreferredSize(new java.awt.Dimension(260, 620));
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(250, 420));
         jScrollPane2.setViewportView(jPanel1);
 
+        jPanel1.setMaximumSize(new java.awt.Dimension(250, 420));
+        jPanel1.setMinimumSize(new java.awt.Dimension(250, 420));
         jPanel1.setPreferredSize(new java.awt.Dimension(250, 420));
         jPanel1.setSize(new java.awt.Dimension(250, 420));
 
