@@ -120,10 +120,10 @@ public class CreateRegularView extends javax.swing.JFrame {
         jScrollPane2.setPreferredSize(new java.awt.Dimension(250, 420));
         jScrollPane2.setViewportView(jPanel1);
 
-        jPanel1.setMaximumSize(new java.awt.Dimension(250, 420));
-        jPanel1.setMinimumSize(new java.awt.Dimension(250, 420));
-        jPanel1.setPreferredSize(new java.awt.Dimension(250, 420));
-        jPanel1.setSize(new java.awt.Dimension(250, 420));
+        jPanel1.setMaximumSize(new java.awt.Dimension(208, 696));
+        jPanel1.setMinimumSize(new java.awt.Dimension(208, 696));
+        jPanel1.setPreferredSize(new java.awt.Dimension(208, 696));
+        jPanel1.setSize(new java.awt.Dimension(208, 696));
 
         jSeparator1.setForeground(new java.awt.Color(242, 242, 242));
         jSeparator1.setMinimumSize(new java.awt.Dimension(100, 60));
@@ -547,7 +547,7 @@ public class CreateRegularView extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jPanel1);
 
         CreateRegularPanel.add(jScrollPane2);
-        jScrollPane2.setBounds(390, 90, 260, 420);
+        jScrollPane2.setBounds(430, 90, 220, 420);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
