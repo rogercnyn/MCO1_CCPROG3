@@ -88,6 +88,7 @@ public class Factory implements ActionListener{
         this.mainMenu.setTestBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
+                // Add an conditional machine instanceof special
                 loadRegularVending();
                 testvending.setVisible(true);
                 mainMenu.setVisible(false);
@@ -106,6 +107,7 @@ public class Factory implements ActionListener{
         this.testvendfeatures.setPickSlot1BtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
+                // Add an conditional machine instanceof special
                 disableAllPickBtns();
                 String itemName1 = machine.getArraySlots().get(0).checkItem().getItemName();
                 testvendfeatures.setOrderDetailsLbl(itemName1);
