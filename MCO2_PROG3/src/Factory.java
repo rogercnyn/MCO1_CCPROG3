@@ -44,6 +44,7 @@ public class Factory implements ActionListener{
         this.slot = new Slot();
 
         this.mainMenu.setVisible(true);
+        this.mainMenu.setTestEnable(false);
         
         // CREATE FEATURES
         this.mainMenu.setCreateBtnListener(new ActionListener(){
@@ -67,6 +68,7 @@ public class Factory implements ActionListener{
             {
                 JOptionPane.showMessageDialog(createvending, "Regular Vending Machine is successfully created!");
                 machine = new RegularMachine(slot.regularItems());
+                mainMenu.setTestEnable(true);
                 mainMenu.setVisible(true);
                 createvending.setVisible(false);
             }
@@ -81,16 +83,12 @@ public class Factory implements ActionListener{
             }
         });
         
-        // TEST FEATURES   
+        // TEST FEATURES  
         
         this.mainMenu.setTestBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                if (machine instanceof RegularMachine)
-                {
-                    loadRegularVending();
-                }
-
+                loadRegularVending();
                 testvending.setVisible(true);
                 mainMenu.setVisible(false);
             }

@@ -103,6 +103,11 @@ public class mainMenu extends javax.swing.JFrame {
         WindowEvent closeWindow = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
         Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(closeWindow);
     }
+
+    public void setTestEnable(boolean check)
+    {
+        TestBtn.setEnabled(check);
+    }
     
     public void setCreateBtnListener(ActionListener actn)
     {
