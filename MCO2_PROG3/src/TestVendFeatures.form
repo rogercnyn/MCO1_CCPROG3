@@ -54,10 +54,7 @@
                                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                                   <Component id="jPanel2" max="32767" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="DoneBtn" min="-2" pref="102" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="DoneBtn" alignment="1" min="-2" pref="102" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                       </Group>
@@ -235,7 +232,7 @@
                             </Property>
                             <Property name="lineWrap" type="boolean" value="true"/>
                             <Property name="rows" type="int" value="1"/>
-                            <Property name="text" type="java.lang.String" value="Wintermelon w/ White Pearls"/>
+                            <Property name="text" type="java.lang.String" value="Item Name"/>
                             <Property name="wrapStyleWord" type="boolean" value="true"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -252,7 +249,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="10"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -288,7 +285,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="&#x20b1;135"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -404,7 +401,7 @@
                             </Property>
                             <Property name="lineWrap" type="boolean" value="true"/>
                             <Property name="rows" type="int" value="1"/>
-                            <Property name="text" type="java.lang.String" value="Wintermelon w/ White Pearls"/>
+                            <Property name="text" type="java.lang.String" value="Item Name"/>
                             <Property name="wrapStyleWord" type="boolean" value="true"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -421,7 +418,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="10"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -457,7 +454,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="&#x20b1;135"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -573,7 +570,7 @@
                             </Property>
                             <Property name="lineWrap" type="boolean" value="true"/>
                             <Property name="rows" type="int" value="1"/>
-                            <Property name="text" type="java.lang.String" value="Wintermelon w/ White Pearls"/>
+                            <Property name="text" type="java.lang.String" value="Item Name"/>
                             <Property name="wrapStyleWord" type="boolean" value="true"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -590,7 +587,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="10"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -626,7 +623,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="&#x20b1;135"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -742,7 +739,7 @@
                             </Property>
                             <Property name="lineWrap" type="boolean" value="true"/>
                             <Property name="rows" type="int" value="1"/>
-                            <Property name="text" type="java.lang.String" value="Wintermelon w/ White Pearls"/>
+                            <Property name="text" type="java.lang.String" value="Item Name"/>
                             <Property name="wrapStyleWord" type="boolean" value="true"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -759,7 +756,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="10"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -795,7 +792,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="&#x20b1;135"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -911,7 +908,7 @@
                             </Property>
                             <Property name="lineWrap" type="boolean" value="true"/>
                             <Property name="rows" type="int" value="1"/>
-                            <Property name="text" type="java.lang.String" value="Wintermelon w/ White Pearls"/>
+                            <Property name="text" type="java.lang.String" value="Item Name"/>
                             <Property name="wrapStyleWord" type="boolean" value="true"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -928,7 +925,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="10"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -964,7 +961,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="&#x20b1;135"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -1080,7 +1077,7 @@
                             </Property>
                             <Property name="lineWrap" type="boolean" value="true"/>
                             <Property name="rows" type="int" value="1"/>
-                            <Property name="text" type="java.lang.String" value="Wintermelon w/ White Pearls"/>
+                            <Property name="text" type="java.lang.String" value="Item Name"/>
                             <Property name="wrapStyleWord" type="boolean" value="true"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -1097,7 +1094,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="10"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -1133,7 +1130,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="&#x20b1;135"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -1249,7 +1246,7 @@
                             </Property>
                             <Property name="lineWrap" type="boolean" value="true"/>
                             <Property name="rows" type="int" value="1"/>
-                            <Property name="text" type="java.lang.String" value="Wintermelon w/ White Pearls"/>
+                            <Property name="text" type="java.lang.String" value="Item Name"/>
                             <Property name="wrapStyleWord" type="boolean" value="true"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -1266,7 +1263,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="10"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -1302,7 +1299,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="&#x20b1;135"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -1418,7 +1415,7 @@
                             </Property>
                             <Property name="lineWrap" type="boolean" value="true"/>
                             <Property name="rows" type="int" value="1"/>
-                            <Property name="text" type="java.lang.String" value="Wintermelon w/ White Pearls"/>
+                            <Property name="text" type="java.lang.String" value="Item Name"/>
                             <Property name="wrapStyleWord" type="boolean" value="true"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -1435,7 +1432,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="10"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -1471,7 +1468,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="&#x20b1;135"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -1587,7 +1584,7 @@
                             </Property>
                             <Property name="lineWrap" type="boolean" value="true"/>
                             <Property name="rows" type="int" value="1"/>
-                            <Property name="text" type="java.lang.String" value="Wintermelon w/ White Pearls"/>
+                            <Property name="text" type="java.lang.String" value="Item Name"/>
                             <Property name="wrapStyleWord" type="boolean" value="true"/>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -1604,7 +1601,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="10"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
@@ -1640,7 +1637,7 @@
                           <Font name="Arial" size="13" style="0"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="11"/>
-                        <Property name="text" type="java.lang.String" value="&#x20b1;135"/>
+                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>

@@ -164,14 +164,14 @@ public class TestVendFeatures extends javax.swing.JFrame {
         itemNameTextArea1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         itemNameTextArea1.setLineWrap(true);
         itemNameTextArea1.setRows(1);
-        itemNameTextArea1.setText("Wintermelon w/ White Pearls");
+        itemNameTextArea1.setText("Item Name");
         itemNameTextArea1.setWrapStyleWord(true);
         itemNameTextArea1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         itemName1.setViewportView(itemNameTextArea1);
 
         itemQuantity1.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemQuantity1.setText("10");
+        itemQuantity1.setText("0");
         itemQuantity1.setToolTipText("");
 
         availableLbl1.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
@@ -187,7 +187,7 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
         itemPrice1.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemPrice1.setText("₱135");
+        itemPrice1.setText("0");
         itemPrice1.setToolTipText("");
 
         PickSlot1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
@@ -258,14 +258,14 @@ public class TestVendFeatures extends javax.swing.JFrame {
         itemNameTextArea2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         itemNameTextArea2.setLineWrap(true);
         itemNameTextArea2.setRows(1);
-        itemNameTextArea2.setText("Wintermelon w/ White Pearls");
+        itemNameTextArea2.setText("Item Name");
         itemNameTextArea2.setWrapStyleWord(true);
         itemNameTextArea2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         itemName2.setViewportView(itemNameTextArea2);
 
         itemQuantity2.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemQuantity2.setText("10");
+        itemQuantity2.setText("0");
         itemQuantity2.setToolTipText("");
 
         availableLbl2.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
@@ -281,7 +281,7 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
         itemPrice2.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemPrice2.setText("₱135");
+        itemPrice2.setText("0");
         itemPrice2.setToolTipText("");
 
         PickSlot2.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
@@ -352,14 +352,14 @@ public class TestVendFeatures extends javax.swing.JFrame {
         itemNameTextArea3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         itemNameTextArea3.setLineWrap(true);
         itemNameTextArea3.setRows(1);
-        itemNameTextArea3.setText("Wintermelon w/ White Pearls");
+        itemNameTextArea3.setText("Item Name");
         itemNameTextArea3.setWrapStyleWord(true);
         itemNameTextArea3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         itemName3.setViewportView(itemNameTextArea3);
 
         itemQuantity3.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemQuantity3.setText("10");
+        itemQuantity3.setText("0");
         itemQuantity3.setToolTipText("");
 
         availableLbl3.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
@@ -375,7 +375,7 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
         itemPrice3.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemPrice3.setText("₱135");
+        itemPrice3.setText("0");
         itemPrice3.setToolTipText("");
 
         PickSlot3.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
@@ -446,14 +446,14 @@ public class TestVendFeatures extends javax.swing.JFrame {
         itemNameTextArea4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         itemNameTextArea4.setLineWrap(true);
         itemNameTextArea4.setRows(1);
-        itemNameTextArea4.setText("Wintermelon w/ White Pearls");
+        itemNameTextArea4.setText("Item Name");
         itemNameTextArea4.setWrapStyleWord(true);
         itemNameTextArea4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         itemName4.setViewportView(itemNameTextArea4);
 
         itemQuantity4.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemQuantity4.setText("10");
+        itemQuantity4.setText("0");
         itemQuantity4.setToolTipText("");
 
         availableLbl4.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
@@ -469,7 +469,7 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
         itemPrice4.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemPrice4.setText("₱135");
+        itemPrice4.setText("0");
         itemPrice4.setToolTipText("");
 
         PickSlot4.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
@@ -540,14 +540,14 @@ public class TestVendFeatures extends javax.swing.JFrame {
         itemNameTextArea5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         itemNameTextArea5.setLineWrap(true);
         itemNameTextArea5.setRows(1);
-        itemNameTextArea5.setText("Wintermelon w/ White Pearls");
+        itemNameTextArea5.setText("Item Name");
         itemNameTextArea5.setWrapStyleWord(true);
         itemNameTextArea5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         itemName5.setViewportView(itemNameTextArea5);
 
         itemQuantity5.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemQuantity5.setText("10");
+        itemQuantity5.setText("0");
         itemQuantity5.setToolTipText("");
 
         availableLbl5.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
@@ -563,7 +563,7 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
         itemPrice5.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemPrice5.setText("₱135");
+        itemPrice5.setText("0");
         itemPrice5.setToolTipText("");
 
         PickSlot5.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
@@ -634,14 +634,14 @@ public class TestVendFeatures extends javax.swing.JFrame {
         itemNameTextArea6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         itemNameTextArea6.setLineWrap(true);
         itemNameTextArea6.setRows(1);
-        itemNameTextArea6.setText("Wintermelon w/ White Pearls");
+        itemNameTextArea6.setText("Item Name");
         itemNameTextArea6.setWrapStyleWord(true);
         itemNameTextArea6.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         itemName6.setViewportView(itemNameTextArea6);
 
         itemQuantity6.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemQuantity6.setText("10");
+        itemQuantity6.setText("0");
         itemQuantity6.setToolTipText("");
 
         availableLbl6.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
@@ -657,7 +657,7 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
         itemPrice6.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemPrice6.setText("₱135");
+        itemPrice6.setText("0");
         itemPrice6.setToolTipText("");
 
         PickSlot6.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
@@ -728,14 +728,14 @@ public class TestVendFeatures extends javax.swing.JFrame {
         itemNameTextArea7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         itemNameTextArea7.setLineWrap(true);
         itemNameTextArea7.setRows(1);
-        itemNameTextArea7.setText("Wintermelon w/ White Pearls");
+        itemNameTextArea7.setText("Item Name");
         itemNameTextArea7.setWrapStyleWord(true);
         itemNameTextArea7.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         itemName7.setViewportView(itemNameTextArea7);
 
         itemQuantity7.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemQuantity7.setText("10");
+        itemQuantity7.setText("0");
         itemQuantity7.setToolTipText("");
 
         availableLbl7.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
@@ -751,7 +751,7 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
         itemPrice7.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemPrice7.setText("₱135");
+        itemPrice7.setText("0");
         itemPrice7.setToolTipText("");
 
         PickSlot7.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
@@ -822,14 +822,14 @@ public class TestVendFeatures extends javax.swing.JFrame {
         itemNameTextArea8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         itemNameTextArea8.setLineWrap(true);
         itemNameTextArea8.setRows(1);
-        itemNameTextArea8.setText("Wintermelon w/ White Pearls");
+        itemNameTextArea8.setText("Item Name");
         itemNameTextArea8.setWrapStyleWord(true);
         itemNameTextArea8.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         itemName8.setViewportView(itemNameTextArea8);
 
         itemQuantity8.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemQuantity8.setText("10");
+        itemQuantity8.setText("0");
         itemQuantity8.setToolTipText("");
 
         availableLbl8.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
@@ -845,7 +845,7 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
         itemPrice8.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemPrice8.setText("₱135");
+        itemPrice8.setText("0");
         itemPrice8.setToolTipText("");
 
         PickSlot8.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
@@ -916,14 +916,14 @@ public class TestVendFeatures extends javax.swing.JFrame {
         itemNameTextArea9.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         itemNameTextArea9.setLineWrap(true);
         itemNameTextArea9.setRows(1);
-        itemNameTextArea9.setText("Wintermelon w/ White Pearls");
+        itemNameTextArea9.setText("Item Name");
         itemNameTextArea9.setWrapStyleWord(true);
         itemNameTextArea9.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         itemName9.setViewportView(itemNameTextArea9);
 
         itemQuantity9.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemQuantity9.setText("10");
+        itemQuantity9.setText("0");
         itemQuantity9.setToolTipText("");
 
         availableLbl9.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
@@ -939,7 +939,7 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
         itemPrice9.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        itemPrice9.setText("₱135");
+        itemPrice9.setText("0");
         itemPrice9.setToolTipText("");
 
         PickSlot9.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
@@ -1090,9 +1090,7 @@ public class TestVendFeatures extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
                                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(DoneBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(DoneBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(63, 63, 63))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(VendingFeaturesLbl)
