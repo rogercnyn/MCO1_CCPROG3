@@ -50,7 +50,7 @@ public class CashHandler
 
         for (i = 0; i < this.machineBalance.length; i++)
         {
-            for(j = 0; j < this.machineBalance[i].length; j++)
+            for(j = 0; j < this.machineBalance[i].length - 1; j++)
             {
                 if (denom == this.machineBalance[i][j])
                 {
@@ -66,7 +66,7 @@ public class CashHandler
 
         for (i = 0; i < this.machineBalance.length; i++)
         {
-            for(j = 0; j < this.machineBalance[i].length; j++)
+            for(j = 0; j < this.machineBalance[i].length - 1; j++)
             {
                 if (denom == this.machineBalance[i][j])
                 {
@@ -82,7 +82,7 @@ public class CashHandler
         int i, j;
         for (i = 0; i < this.machineBalance.length; i++)
         {
-            for (j = 0; j < this.machineBalance[i].length; j++)
+            for (j = 0; j < this.machineBalance[i].length - 1; j++)
             {
                 if (denom == this.machineBalance[i][j])
                 {
@@ -104,7 +104,7 @@ public class CashHandler
                 return true;
             }
         }
-        return false;
+        return check;
     }
 
     public boolean produceChange()
@@ -178,8 +178,13 @@ public class CashHandler
 
     public String successChange()
     {
+        String output;
+        if (change.empty())
+        {
+            output = "Thank you for paying the exact amount.";
+        }
         int countTotal = 0;
-        String output = "Please get your change:";
+        output = "Please get your change:";
         while (!change.empty())
         {
             int poppedValue = change.pop();
@@ -197,7 +202,7 @@ public class CashHandler
             int poppedValue = change.pop();
             addQuantityToBalance(poppedValue);
         }
-        String output = "Sorry, this machie does not have enough balance to produce your change.";
+        String output = "Sorry, this machine does not have enough balance to produce your change.";
         output += "\nPlease get your payment:";
         while (!payment.empty())
         {

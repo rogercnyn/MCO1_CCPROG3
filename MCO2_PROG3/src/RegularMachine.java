@@ -19,6 +19,11 @@ public class RegularMachine {
         this.lastRestockDate = LocalDate.now();
     }
 
+    public Item getChosenItem() 
+    {
+        return chosenItem;
+    }
+
     public ArrayList<Slot> getArraySlots()
     {
         return arraySlots;
@@ -48,4 +53,9 @@ public class RegularMachine {
         return -1;
     }
 
+    public void addTransactions()
+    {
+        Transactions transaction = new Transactions(getChosenItem().getItemName(), ((Milktea)getChosenItem()).getPrice());
+        transactions.add(transaction);
+    }
 }

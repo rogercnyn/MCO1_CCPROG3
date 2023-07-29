@@ -275,6 +275,7 @@ public class Factory implements ActionListener{
                 {
                     machine.getArraySlots().get(itemIndex).dispenseItem();
                     JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().successChange());
+                    machine.addTransactions();
                 }
 
                 else
@@ -282,7 +283,7 @@ public class Factory implements ActionListener{
                     JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().failChange());
                 }
                 loadRegularVending();
-                //re-enable buttons and clear fields
+                afterDispense();
             }
         });
 
@@ -495,6 +496,23 @@ public class Factory implements ActionListener{
         testvendfeatures.setPickSlot7Enable(false);
         testvendfeatures.setPickSlot8Enable(false);
         testvendfeatures.setPickSlot9Enable(false);
+    }
+
+    public void afterDispense()
+    {
+        testvendfeatures.setPickSlot1Enable(true);
+        testvendfeatures.setPickSlot2Enable(true);
+        testvendfeatures.setPickSlot3Enable(true);
+        testvendfeatures.setPickSlot4Enable(true);
+        testvendfeatures.setPickSlot5Enable(true);
+        testvendfeatures.setPickSlot6Enable(true);
+        testvendfeatures.setPickSlot7Enable(true);
+        testvendfeatures.setPickSlot8Enable(true);
+        testvendfeatures.setPickSlot9Enable(true);
+        testvendfeatures.setDenomComboBoxSelectedIndex();
+        testvendfeatures.setOrderDetailsLbl("Please pick an item.");
+        testvendfeatures.setMessageLbl("");
+        testvendfeatures.setDispenseBtnEnable(false);
     }
 
     @Override

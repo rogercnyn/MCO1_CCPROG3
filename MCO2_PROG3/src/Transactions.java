@@ -3,7 +3,6 @@
  *  The following are the attributes of this class:
  *  <li> itemName - contains the name of the product
  *  <li> totalPrice - contains the price of the product
- *  <li> payment - contains the total amount that the user paid
  *  <li> date - contains the date when the transaction took place
  */
 
@@ -15,7 +14,6 @@ public class Transactions
 {
     private String itemName;
     private int totalPrice;
-    private int payment;
     private LocalDate date;
 
     /**
@@ -24,13 +22,11 @@ public class Transactions
      * The date atttribute will record the obtained date from the system.
      * @param itemName contains the item name
      * @param totalPrice contains the total price
-     * @param payment contains the total payment
      */
-    public Transactions(String itemName, int totalPrice, int payment)
+    public Transactions(String itemName, int totalPrice)
     {
         this.itemName = itemName;
         this.totalPrice = totalPrice;
-        this.payment = payment;
         this.date = LocalDate.now();
     }
 
@@ -50,15 +46,6 @@ public class Transactions
     public int getTotalPrice() 
     {
         return totalPrice;
-    }
-
-    /**
-     * getPayment returns the transaction's total payment received
-     * @return payment to the transaction
-     */
-    public int getPayment() 
-    {
-        return payment;
     }
 
     /**

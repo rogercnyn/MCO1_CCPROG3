@@ -1139,6 +1139,11 @@ public class TestVendFeatures extends javax.swing.JFrame {
         DenominationComboBox.addItem("₱" + denom[6]);
         DenominationComboBox.addItem("₱" + denom[7]);
         DenominationComboBox.addItem("₱" + denom[8]);
+        setDenomComboBoxSelectedIndex();
+    }
+
+    public void setDenomComboBoxSelectedIndex()
+    {
         DenominationComboBox.setSelectedItem(0);
     }
 
