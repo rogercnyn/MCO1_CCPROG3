@@ -86,6 +86,11 @@ public class Factory implements ActionListener{
         this.mainMenu.setTestBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
+                if (machine instanceof RegularMachine)
+                {
+                    loadRegularVending();
+                }
+
                 testvending.setVisible(true);
                 mainMenu.setVisible(false);
             }
