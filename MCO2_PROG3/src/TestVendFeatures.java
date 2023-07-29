@@ -1276,47 +1276,47 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
     public void setItemQuantity1(int quantity)
     {
-        this.itemQuantity1.setText(quantity);
+        this.itemQuantity1.setText(String.valueOf(quantity));
     }
 
     public void setItemQuantity2(int quantity)
     {
-        this.itemQuantity2.setText(quantity);
+        this.itemQuantity2.setText(String.valueOf(quantity));
     }
 
     public void setItemQuantity3(int quantity)
     {
-        this.itemQuantity3.setText(quantity);
+        this.itemQuantity3.setText(String.valueOf(quantity));
     }
 
     public void setItemQuantity4(int quantity)
     {
-        this.itemQuantity4.setText(quantity);
+        this.itemQuantity4.setText(String.valueOf(quantity));
     }
 
     public void setItemQuantity5(int quantity)
     {
-        this.itemQuantity5.setText(quantity);
+        this.itemQuantity5.setText(String.valueOf(quantity));
     }
 
     public void setItemQuantity6(int quantity)
     {
-        this.itemQuantity6.setText(quantity);
+        this.itemQuantity6.setText(String.valueOf(quantity));
     }
 
     public void setItemQuantity7(int quantity)
     {
-        this.itemQuantity7.setText(quantity);
+        this.itemQuantity7.setText(String.valueOf(quantity));
     }
 
     public void setItemQuantity8(int quantity)
     {
-        this.itemQuantity8.setText(quantity);
+        this.itemQuantity8.setText(String.valueOf(quantity));
     }
 
     public void setItemQuantity9(int quantity)
     {
-        this.itemQuantity9.setText(quantity);
+        this.itemQuantity9.setText(String.valueOf(quantity));
     }
 
     // Setting picture
