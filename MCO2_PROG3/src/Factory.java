@@ -99,8 +99,31 @@ public class Factory implements ActionListener{
         this.testvending.setTestVendingListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
+                testvendfeatures.setInsertCashEnable(false);
                 testvendfeatures.setVisible(true);
                 testvending.setVisible(false);
+            }
+        });
+
+        int totalPayable;
+
+        this.testvendfeatures.setInsertCashListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                int totalPayable = machine.getCashHandler().getTotalPayable();
+                int getDenom = (Integer)testvendfeatures.getSelectedDenom();
+                machine.addDenomToPayment(getDenom);
+                testvendfeatures.addInfoInMessageLbl("Inserting ₱" + getDenom);
+                totalPayable -= getDenom;
+                if(totalPayable <= 0)
+                {
+                    testvendfeatures.addInfoInMessageLbl("Please click 'dispense'.");
+                    testvendfeatures.setInsertCashEnable(false);
+                }
+                else
+                {
+                    testvendfeatures.addInfoInMessageLbl("Total payable: " + totalPayable);
+                }
             }
         });
 
@@ -109,8 +132,13 @@ public class Factory implements ActionListener{
             {
                 // Add an conditional machine instanceof special
                 disableAllPickBtns();
-                String itemName1 = machine.getArraySlots().get(0).checkItem().getItemName();
-                testvendfeatures.setOrderDetailsLbl(itemName1);
+                Item item1 = machine.getArraySlots().get(0).checkItem();
+                testvendfeatures.setOrderDetailsLbl(item1.getItemName());
+                testvendfeatures.setMessageLbl("Please insert your payment.");
+                testvendfeatures.setInsertCashEnable(true);
+                machine.getCashHandler().setTotalPayable(((Milktea) item1).getPrice());
+                int totalPayable = machine.getCashHandler().getTotalPayable();
+                testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
             }
         });
 
@@ -120,6 +148,7 @@ public class Factory implements ActionListener{
                 disableAllPickBtns();
                 String itemName2 = machine.getArraySlots().get(1).checkItem().getItemName();
                 testvendfeatures.setOrderDetailsLbl(itemName2);
+                testvendfeatures.setMessageLbl("Please insert your payment.");
             }
         });
 
@@ -129,6 +158,7 @@ public class Factory implements ActionListener{
                 disableAllPickBtns();
                 String itemName3 = machine.getArraySlots().get(2).checkItem().getItemName();
                 testvendfeatures.setOrderDetailsLbl(itemName3);
+                testvendfeatures.setMessageLbl("Please insert your payment.");
             }
         });
 
@@ -138,6 +168,7 @@ public class Factory implements ActionListener{
                 disableAllPickBtns();
                 String itemName4 = machine.getArraySlots().get(3).checkItem().getItemName();
                 testvendfeatures.setOrderDetailsLbl(itemName4);
+                testvendfeatures.setMessageLbl("Please insert your payment.");
             }
         });
 
@@ -147,6 +178,7 @@ public class Factory implements ActionListener{
                 disableAllPickBtns();
                 String itemName5 = machine.getArraySlots().get(4).checkItem().getItemName();
                 testvendfeatures.setOrderDetailsLbl(itemName5);
+                testvendfeatures.setMessageLbl("Please insert your payment.");
             }
         });
 
@@ -156,6 +188,7 @@ public class Factory implements ActionListener{
                 disableAllPickBtns();
                 String itemName6 = machine.getArraySlots().get(5).checkItem().getItemName();
                 testvendfeatures.setOrderDetailsLbl(itemName6);
+                testvendfeatures.setMessageLbl("Please insert your payment.");
             }
         });
 
@@ -165,6 +198,7 @@ public class Factory implements ActionListener{
                 disableAllPickBtns();
                 String itemName7 = machine.getArraySlots().get(6).checkItem().getItemName();
                 testvendfeatures.setOrderDetailsLbl(itemName7);
+                testvendfeatures.setMessageLbl("Please insert your payment.");
             }
         });
 
@@ -174,6 +208,7 @@ public class Factory implements ActionListener{
                 disableAllPickBtns();
                 String itemName8 = machine.getArraySlots().get(7).checkItem().getItemName();
                 testvendfeatures.setOrderDetailsLbl(itemName8);
+                testvendfeatures.setMessageLbl("Please insert your payment.");
             }
         });
 
@@ -183,6 +218,7 @@ public class Factory implements ActionListener{
                 disableAllPickBtns();
                 String itemName9 = machine.getArraySlots().get(8).checkItem().getItemName();
                 testvendfeatures.setOrderDetailsLbl(itemName9);
+                testvendfeatures.setMessageLbl("Please insert your payment.");
             }
         });
 

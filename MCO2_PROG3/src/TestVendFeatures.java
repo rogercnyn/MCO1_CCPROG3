@@ -124,11 +124,12 @@ public class TestVendFeatures extends javax.swing.JFrame {
         PickSlot9 = new javax.swing.JButton();
         OrderDetailsField = new javax.swing.JScrollPane();
         OrderDetailsLbl = new javax.swing.JTextArea();
-        PaymentField = new javax.swing.JTextField();
+        MessageField = new javax.swing.JScrollPane();
+        MessageFieldLbl = new javax.swing.JTextArea();
         PaymentPanel = new javax.swing.JPanel();
         DenominationComboBox = new javax.swing.JComboBox<>();
         DenominationLbl = new javax.swing.JLabel();
-        InsertLbl = new javax.swing.JButton();
+        InsertBtn = new javax.swing.JButton();
         YourItemLbl = new javax.swing.JLabel();
         ItemImageLbl = new javax.swing.JLabel();
         DispenseBtn = new javax.swing.JButton();
@@ -1014,11 +1015,16 @@ public class TestVendFeatures extends javax.swing.JFrame {
         jPanel2.add(OrderDetailsField);
         OrderDetailsField.setBounds(380, 10, 160, 70);
 
-        PaymentField.setEditable(false);
-        PaymentField.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        PaymentField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel2.add(PaymentField);
-        PaymentField.setBounds(380, 90, 160, 90);
+        MessageFieldLbl.setEditable(false);
+        MessageFieldLbl.setColumns(8);
+        MessageFieldLbl.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        MessageFieldLbl.setLineWrap(true);
+        MessageFieldLbl.setRows(4);
+        MessageFieldLbl.setWrapStyleWord(true);
+        MessageField.setViewportView(MessageFieldLbl);
+
+        jPanel2.add(MessageField);
+        MessageField.setBounds(380, 90, 160, 90);
 
         PaymentPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Payment"));
 
@@ -1027,8 +1033,8 @@ public class TestVendFeatures extends javax.swing.JFrame {
         DenominationLbl.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         DenominationLbl.setText("Denomination");
 
-        InsertLbl.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        InsertLbl.setText("Insert");
+        InsertBtn.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        InsertBtn.setText("Insert");
 
         javax.swing.GroupLayout PaymentPanelLayout = new javax.swing.GroupLayout(PaymentPanel);
         PaymentPanel.setLayout(PaymentPanelLayout);
@@ -1043,7 +1049,7 @@ public class TestVendFeatures extends javax.swing.JFrame {
                         .addGap(0, 61, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PaymentPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(InsertLbl)))
+                        .addComponent(InsertBtn)))
                 .addContainerGap())
         );
         PaymentPanelLayout.setVerticalGroup(
@@ -1053,7 +1059,7 @@ public class TestVendFeatures extends javax.swing.JFrame {
                 .addGap(4, 4, 4)
                 .addComponent(DenominationComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(InsertLbl)
+                .addComponent(InsertBtn)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1122,6 +1128,13 @@ public class TestVendFeatures extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public int getSelectedDenom()
+    {
+        String getdenom = (String)DenominationComboBox.getSelectedItem();
+        int denom = Integer.parseInt(getdenom.substring(1));
+        return denom;
+    }
+
     // Button listeners
     public void setDoneBtnListener(ActionListener actn)
     {
@@ -1173,7 +1186,17 @@ public class TestVendFeatures extends javax.swing.JFrame {
         PickSlot9.addActionListener(actn);
     }
 
+    public void setInsertCashListener(ActionListener actn)
+    {
+        InsertBtn.addActionListener(actn);
+    }
+
     // Button enable
+
+    public void setInsertCashEnable(boolean check)
+    {
+        InsertBtn.setEnabled(check);
+    }
 
     public void setPickSlot1Enable(boolean check)
     {
@@ -1465,6 +1488,19 @@ public class TestVendFeatures extends javax.swing.JFrame {
         OrderDetailsLbl.setText("Order:\n" + order);
     }
 
+    // sets the text of message lbl to the string provided.
+    public void setMessageLbl(String output)
+    {
+        MessageFieldLbl.setText(output);
+    }
+
+    // adds the string provided to the existing info in messagelbl
+    public void addInfoInMessageLbl(String additionalInfo)
+    {
+        String currentText = MessageFieldLbl.getText();
+        MessageFieldLbl.setText(currentText + "\n" + additionalInfo);
+    }
+
 
     /**
      * @param args the command line arguments
@@ -1507,11 +1543,12 @@ public class TestVendFeatures extends javax.swing.JFrame {
     private javax.swing.JLabel DenominationLbl;
     private javax.swing.JButton DispenseBtn;
     private javax.swing.JButton DoneBtn;
-    private javax.swing.JButton InsertLbl;
+    private javax.swing.JButton InsertBtn;
     private javax.swing.JLabel ItemImageLbl;
+    private javax.swing.JScrollPane MessageField;
+    private javax.swing.JTextArea MessageFieldLbl;
     private javax.swing.JScrollPane OrderDetailsField;
     private javax.swing.JTextArea OrderDetailsLbl;
-    private javax.swing.JTextField PaymentField;
     private javax.swing.JPanel PaymentPanel;
     private javax.swing.JButton PickSlot1;
     private javax.swing.JButton PickSlot2;

@@ -5,14 +5,13 @@ import java.util.Stack;
 public class RegularMachine {
     private ArrayList<Slot> arraySlots;
     private ArrayList<Transactions> transactions;
-    private int[] acceptedDenom = {1, 5, 10, 20, 50, 100, 200, 500, 1000};
-    private Stack<Integer> payment;
-    private Stack<Integer> change;
+    private CashHandler cashHandler;
     private int[][] machineBalance;
     private LocalDate lastRestockDate;
 
     public RegularMachine(ArrayList<Slot> arraySlots)
     {
+        this.cashHandler = new CashHandler();
         this.arraySlots = arraySlots;
         this.transactions = new ArrayList<Transactions>();
         this.payment = new Stack<Integer>();
@@ -25,6 +24,10 @@ public class RegularMachine {
     public ArrayList<Slot> getArraySlots()
     {
         return arraySlots;
+    }
+
+    public CashHandler getCashHandler() {
+        return cashHandler;
     }
 
 
