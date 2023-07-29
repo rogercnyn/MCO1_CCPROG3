@@ -5,6 +5,8 @@
 
 import java.awt.event.ActionListener;
 
+import javax.swing.Action;
+
 /**
  *
  * @author rogercanayon
@@ -1028,8 +1030,6 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
         PaymentPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Payment"));
 
-        DenominationComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "₱1000", "₱500", "₱200", "₱100", "₱50", "₱20", "₱10", "₱5", "₱1" }));
-
         DenominationLbl.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         DenominationLbl.setText("Denomination");
 
@@ -1128,6 +1128,20 @@ public class TestVendFeatures extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void setDenomComboBoxValues(int[] denom)
+    {
+        DenominationComboBox.addItem("₱" + denom[0]);
+        DenominationComboBox.addItem("₱" + denom[1]);
+        DenominationComboBox.addItem("₱" + denom[2]);
+        DenominationComboBox.addItem("₱" + denom[3]);
+        DenominationComboBox.addItem("₱" + denom[4]);
+        DenominationComboBox.addItem("₱" + denom[5]);
+        DenominationComboBox.addItem("₱" + denom[6]);
+        DenominationComboBox.addItem("₱" + denom[7]);
+        DenominationComboBox.addItem("₱" + denom[8]);
+        DenominationComboBox.setSelectedItem(0);
+    }
+
     public int getSelectedDenom()
     {
         String getdenom = (String)DenominationComboBox.getSelectedItem();
@@ -1189,6 +1203,11 @@ public class TestVendFeatures extends javax.swing.JFrame {
     public void setInsertCashListener(ActionListener actn)
     {
         InsertBtn.addActionListener(actn);
+    }
+
+    public void setDispenseBtnListener(ActionListener actn)
+    {
+        DispenseBtn.addActionListener(actn);
     }
 
     // Button enable

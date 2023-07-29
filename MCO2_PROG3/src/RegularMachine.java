@@ -15,8 +15,6 @@ public class RegularMachine {
         this.arraySlots = arraySlots;
         this.transactions = new ArrayList<Transactions>();
         this.lastRestockDate = LocalDate.now();
-        this.machineBalance = new int[][] {{1, 10}, {5, 10}, {10, 10}, {20, 10},
-                                {50, 10}, {100, 10}, {500, 10}, {1000, 10}};
     }
 
     public ArrayList<Slot> getArraySlots()

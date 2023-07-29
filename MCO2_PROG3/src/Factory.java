@@ -2,6 +2,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.Action;
 import javax.swing.JOptionPane;
 
 /*
@@ -101,6 +102,7 @@ public class Factory implements ActionListener{
             {
                 testvendfeatures.setInsertCashEnable(false);
                 testvendfeatures.setDispenseBtnEnable(false);
+                testvendfeatures.setDenomComboBoxValues(machine.getCashHandler().getAcceptedDenom());
                 testvendfeatures.setVisible(true);
                 testvending.setVisible(false);
             }
@@ -112,6 +114,7 @@ public class Factory implements ActionListener{
                 int totalPayable = machine.getCashHandler().getTotalPayable();
                 int getDenom = (Integer)testvendfeatures.getSelectedDenom();
                 testvendfeatures.addInfoInMessageLbl("Inserting ₱" + getDenom + "...");
+                machine.getCashHandler().addDenomToPayment(getDenom);
                 totalPayable -= getDenom;
                 machine.getCashHandler().setTotalPayable(totalPayable);
                 if(totalPayable <= 0)
@@ -251,6 +254,13 @@ public class Factory implements ActionListener{
                 machine.getCashHandler().setTotalPayable(((Milktea) item9).getPrice());
                 int totalPayable = machine.getCashHandler().getTotalPayable();
                 testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
+            }
+        });
+
+        this.testvendfeatures.setDispenseBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                machine.getCashHandler().transferPaymentToBalance();
             }
         });
 
