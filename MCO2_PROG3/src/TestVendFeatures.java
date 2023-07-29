@@ -1128,7 +1128,244 @@ public class TestVendFeatures extends javax.swing.JFrame {
     {
         DoneBtn.addActionListener(actn);
     }
+
+    // Set item names in GUI
+
+    public void setItemName1(String name)
+    {
+        this.itemNameTextArea1.setText(name);
+    }
+
+    public void setItemName2(String name)
+    {
+        this.itemNameTextArea2.setText(name);
+    }
+
+    public void setItemName3(String name)
+    {
+        this.itemNameTextArea3.setText(name);
+    }
+
+    public void setItemName4(String name)
+    {
+        this.itemNameTextArea4.setText(name);
+    }
+
+    public void setItemName5(String name)
+    {
+        this.itemNameTextArea5.setText(name);
+    }
+
+    public void setItemName6(String name)
+    {
+        this.itemNameTextArea6.setText(name);
+    }
+
+    public void setItemName7(String name)
+    {
+        this.itemNameTextArea7.setText(name);
+    }
+
+    public void setItemName8(String name)
+    {
+        this.itemNameTextArea8.setText(name);
+    }
+
+    public void setItemName9(String name)
+    {
+        this.itemNameTextArea9.setText(name);
+    }
+
+
+    // Setting calories
+
+
+    public void setItemCalories1(int calories)
+    {
+        this.itemCalories1.setText(calories + " kCal");
+    }
+
+    public void setItemCalories2(int calories)
+    {
+        this.itemCalories2.setText(calories + " kCal");
+    }
+
+    public void setItemCalories3(int calories)
+    {
+        this.itemCalories3.setText(calories + " kCal");
+    }
+
+    public void setItemCalories4(int calories)
+    {
+        this.itemCalories4.setText(calories + " kCal");
+    }
+
+    public void setItemCalories5(int calories)
+    {
+        this.itemCalories5.setText(calories + " kCal");
+    }
+
+    public void setItemCalories6(int calories)
+    {
+        this.itemCalories6.setText(calories + " kCal");
+    }
+
+    public void setItemCalories7(int calories)
+    {
+        this.itemCalories7.setText(calories + " kCal");
+    }
+
+    public void setItemCalories8(int calories)
+    {
+        this.itemCalories8.setText(calories + " kCal");
+    }
+
+    public void setItemCalories9(int calories)
+    {
+        this.itemCalories9.setText(calories + " kCal");
+    }
     
+    // Setting price
+
+    public void setItemPrice1(int price)
+    {
+        this.itemPrice1.setText("₱" + price);
+    }
+
+    public void setItemPrice2(int price)
+    {
+        this.itemPrice2.setText("₱" + price);
+    }
+
+    public void setItemPrice3(int price)
+    {
+        this.itemPrice3.setText("₱" + price);
+    }
+
+    public void setItemPrice4(int price)
+    {
+        this.itemPrice4.setText("₱" + price);
+    }
+
+    public void setItemPrice5(int price)
+    {
+        this.itemPrice5.setText("₱" + price);
+    }
+
+    public void setItemPrice6(int price)
+    {
+        this.itemPrice6.setText("₱" + price);
+    }
+
+    public void setItemPrice7(int price)
+    {
+        this.itemPrice7.setText("₱" + price);
+    }
+
+    public void setItemPrice8(int price)
+    {
+        this.itemPrice8.setText("₱" + price);
+    }
+
+    public void setItemPrice9(int price)
+    {
+        this.itemPrice9.setText("₱" + price);
+    }
+
+    // Setting the quantity available
+
+    public void setItemQuantity1(int quantity)
+    {
+        this.itemQuantity1.setText(quantity);
+    }
+
+    public void setItemQuantity2(int quantity)
+    {
+        this.itemQuantity2.setText(quantity);
+    }
+
+    public void setItemQuantity3(int quantity)
+    {
+        this.itemQuantity3.setText(quantity);
+    }
+
+    public void setItemQuantity4(int quantity)
+    {
+        this.itemQuantity4.setText(quantity);
+    }
+
+    public void setItemQuantity5(int quantity)
+    {
+        this.itemQuantity5.setText(quantity);
+    }
+
+    public void setItemQuantity6(int quantity)
+    {
+        this.itemQuantity6.setText(quantity);
+    }
+
+    public void setItemQuantity7(int quantity)
+    {
+        this.itemQuantity7.setText(quantity);
+    }
+
+    public void setItemQuantity8(int quantity)
+    {
+        this.itemQuantity8.setText(quantity);
+    }
+
+    public void setItemQuantity9(int quantity)
+    {
+        this.itemQuantity9.setText(quantity);
+    }
+
+    // Setting picture
+
+    public void setItemPicture1(String path)
+    {
+        itemPicture1.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
+    }
+
+    public void setItemPicture2(String path)
+    {
+        itemPicture2.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
+    }
+
+    public void setItemPicture3(String path)
+    {
+        itemPicture3.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
+    }
+
+    public void setItemPicture4(String path)
+    {
+        itemPicture4.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
+    }
+
+    public void setItemPicture5(String path)
+    {
+        itemPicture5.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
+    }
+
+    public void setItemPicture6(String path)
+    {
+        itemPicture6.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
+    }
+
+    public void setItemPicture7(String path)
+    {
+        itemPicture7.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
+    }
+
+    public void setItemPicture8(String path)
+    {
+        itemPicture8.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
+    }
+
+    public void setItemPicture9(String path)
+    {
+        itemPicture9.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
+    }
+
 
     /**
      * @param args the command line arguments

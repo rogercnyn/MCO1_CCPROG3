@@ -22,5 +22,10 @@ public class RegularMachine {
                                 {50, 10}, {100, 10}, {500, 10}, {1000, 10}};
     }
 
+    public ArrayList<Slot> getArraySlots()
+    {
+        return arraySlots;
+    }
+
 
 }

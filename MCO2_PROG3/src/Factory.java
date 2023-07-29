@@ -133,7 +133,7 @@ public class Factory implements ActionListener{
 
         // MAINTENANCE PART
 
-        this.testmaintenance.setRestockProductBtnListener(new ActionListener() {
+        /*this.testmaintenance.setRestockProductBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
                 restockproduct.setVisible(true);
@@ -227,9 +227,31 @@ public class Factory implements ActionListener{
                 testmaintenance.setVisible(true);
                 inventory.setVisible(false);
             }
-        });
+        });*/
 
     }
+
+    public void loadRegularVending()
+    {
+        testvendfeatures.setItemName1(machine.getArraySlots().get(0).checkItem().getItemName());
+        
+        testvendfeatures.setItemName2(machine.getArraySlots().get(1).checkItem().getItemName());
+
+        testvendfeatures.setItemName3(machine.getArraySlots().get(2).checkItem().getItemName());
+        
+        testvendfeatures.setItemName4(machine.getArraySlots().get(3).checkItem().getItemName());
+
+        testvendfeatures.setItemName5(machine.getArraySlots().get(4).checkItem().getItemName());
+        
+        testvendfeatures.setItemName6(machine.getArraySlots().get(5).checkItem().getItemName());
+
+        testvendfeatures.setItemName7(machine.getArraySlots().get(6).checkItem().getItemName());
+        
+        testvendfeatures.setItemName8(machine.getArraySlots().get(7).checkItem().getItemName());
+
+        testvendfeatures.setItemName9(machine.getArraySlots().get(8).checkItem().getItemName());
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equals("Create")){
