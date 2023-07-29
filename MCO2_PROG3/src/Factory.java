@@ -140,6 +140,7 @@ public class Factory implements ActionListener{
                 testvendfeatures.setMessageLbl("Please insert your payment.");
                 testvendfeatures.setInsertCashEnable(true);
                 machine.getCashHandler().setTotalPayable(((Milktea) item1).getPrice());
+                machine.setChosenItem(item1);
                 int totalPayable = machine.getCashHandler().getTotalPayable();
                 testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
             }
@@ -154,6 +155,7 @@ public class Factory implements ActionListener{
                 testvendfeatures.setMessageLbl("Please insert your payment.");
                 testvendfeatures.setInsertCashEnable(true);
                 machine.getCashHandler().setTotalPayable(((Milktea) item2).getPrice());
+                machine.setChosenItem(item2);
                 int totalPayable = machine.getCashHandler().getTotalPayable();
                 testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
             }
@@ -168,6 +170,7 @@ public class Factory implements ActionListener{
                 testvendfeatures.setMessageLbl("Please insert your payment.");
                 testvendfeatures.setInsertCashEnable(true);
                 machine.getCashHandler().setTotalPayable(((Milktea) item3).getPrice());
+                machine.setChosenItem(item3);
                 int totalPayable = machine.getCashHandler().getTotalPayable();
                 testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
             }
@@ -182,6 +185,7 @@ public class Factory implements ActionListener{
                 testvendfeatures.setMessageLbl("Please insert your payment.");
                 testvendfeatures.setInsertCashEnable(true);
                 machine.getCashHandler().setTotalPayable(((Milktea) item4).getPrice());
+                machine.setChosenItem(item4);
                 int totalPayable = machine.getCashHandler().getTotalPayable();
                 testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
             }
@@ -196,6 +200,7 @@ public class Factory implements ActionListener{
                 testvendfeatures.setMessageLbl("Please insert your payment.");
                 testvendfeatures.setInsertCashEnable(true);
                 machine.getCashHandler().setTotalPayable(((Milktea) item5).getPrice());
+                machine.setChosenItem(item5);
                 int totalPayable = machine.getCashHandler().getTotalPayable();
                 testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
             }
@@ -210,6 +215,7 @@ public class Factory implements ActionListener{
                 testvendfeatures.setMessageLbl("Please insert your payment.");
                 testvendfeatures.setInsertCashEnable(true);
                 machine.getCashHandler().setTotalPayable(((Milktea) item6).getPrice());
+                machine.setChosenItem(item6);
                 int totalPayable = machine.getCashHandler().getTotalPayable();
                 testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
             }
@@ -224,6 +230,7 @@ public class Factory implements ActionListener{
                 testvendfeatures.setMessageLbl("Please insert your payment.");
                 testvendfeatures.setInsertCashEnable(true);
                 machine.getCashHandler().setTotalPayable(((Milktea) item7).getPrice());
+                machine.setChosenItem(item7);
                 int totalPayable = machine.getCashHandler().getTotalPayable();
                 testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
             }
@@ -238,6 +245,7 @@ public class Factory implements ActionListener{
                 testvendfeatures.setMessageLbl("Please insert your payment.");
                 testvendfeatures.setInsertCashEnable(true);
                 machine.getCashHandler().setTotalPayable(((Milktea) item8).getPrice());
+                machine.setChosenItem(item8);
                 int totalPayable = machine.getCashHandler().getTotalPayable();
                 testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
             }
@@ -252,6 +260,7 @@ public class Factory implements ActionListener{
                 testvendfeatures.setMessageLbl("Please insert your payment.");
                 testvendfeatures.setInsertCashEnable(true);
                 machine.getCashHandler().setTotalPayable(((Milktea) item9).getPrice());
+                machine.setChosenItem(item9);
                 int totalPayable = machine.getCashHandler().getTotalPayable();
                 testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
             }
@@ -260,7 +269,20 @@ public class Factory implements ActionListener{
         this.testvendfeatures.setDispenseBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                machine.getCashHandler().transferPaymentToBalance();
+                int itemIndex = machine.getChosenItemIndex();
+                boolean isSuccess = machine.getCashHandler().produceChange();
+                if (isSuccess)
+                {
+                    machine.getArraySlots().get(itemIndex).dispenseItem();
+                    JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().successChange());
+                }
+
+                else
+                {
+                    JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().failChange());
+                }
+                loadRegularVending();
+                //re-enable buttons and clear fields
             }
         });
 
