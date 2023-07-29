@@ -14,8 +14,6 @@ public class RegularMachine {
         this.cashHandler = new CashHandler();
         this.arraySlots = arraySlots;
         this.transactions = new ArrayList<Transactions>();
-        this.payment = new Stack<Integer>();
-        this.change = new Stack<Integer>();
         this.lastRestockDate = LocalDate.now();
         this.machineBalance = new int[][] {{1, 10}, {5, 10}, {10, 10}, {20, 10},
                                 {50, 10}, {100, 10}, {500, 10}, {1000, 10}};

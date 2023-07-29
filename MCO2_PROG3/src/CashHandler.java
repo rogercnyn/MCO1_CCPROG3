@@ -23,7 +23,7 @@ public class CashHandler
         return totalPayable;
     }
 
-    public addDenomToPayment(int denom)
+    public void addDenomToPayment(int denom)
     {
         this.payment.push(denom);
     }

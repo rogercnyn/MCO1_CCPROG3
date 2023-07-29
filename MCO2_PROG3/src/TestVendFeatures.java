@@ -1198,6 +1198,11 @@ public class TestVendFeatures extends javax.swing.JFrame {
         InsertBtn.setEnabled(check);
     }
 
+    public void setDispenseBtnEnable(boolean check)
+    {
+        DispenseBtn.setEnabled(check);
+    }
+
     public void setPickSlot1Enable(boolean check)
     {
         PickSlot1.setEnabled(check);

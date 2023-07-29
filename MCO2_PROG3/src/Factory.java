@@ -100,29 +100,29 @@ public class Factory implements ActionListener{
             public void actionPerformed(ActionEvent e)
             {
                 testvendfeatures.setInsertCashEnable(false);
+                testvendfeatures.setDispenseBtnEnable(false);
                 testvendfeatures.setVisible(true);
                 testvending.setVisible(false);
             }
         });
-
-        int totalPayable;
 
         this.testvendfeatures.setInsertCashListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
                 int totalPayable = machine.getCashHandler().getTotalPayable();
                 int getDenom = (Integer)testvendfeatures.getSelectedDenom();
-                machine.addDenomToPayment(getDenom);
-                testvendfeatures.addInfoInMessageLbl("Inserting ₱" + getDenom);
+                testvendfeatures.addInfoInMessageLbl("Inserting ₱" + getDenom + "...");
                 totalPayable -= getDenom;
+                machine.getCashHandler().setTotalPayable(totalPayable);
                 if(totalPayable <= 0)
                 {
                     testvendfeatures.addInfoInMessageLbl("Please click 'dispense'.");
                     testvendfeatures.setInsertCashEnable(false);
+                    testvendfeatures.setDispenseBtnEnable(true);
                 }
                 else
                 {
-                    testvendfeatures.addInfoInMessageLbl("Total payable: " + totalPayable);
+                    testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
                 }
             }
         });
