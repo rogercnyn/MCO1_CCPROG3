@@ -94,11 +94,93 @@ public class Factory implements ActionListener{
             }
         });
 
+
         this.testvending.setTestVendingListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
                 testvendfeatures.setVisible(true);
                 testvending.setVisible(false);
+            }
+        });
+
+        this.testvendfeatures.setPickSlot1BtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                disableAllPickBtns();
+                String itemName1 = machine.getArraySlots().get(0).checkItem().getItemName();
+                testvendfeatures.setOrderDetailsLbl(itemName1);
+            }
+        });
+
+        this.testvendfeatures.setPickSlot2BtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                disableAllPickBtns();
+                String itemName2 = machine.getArraySlots().get(1).checkItem().getItemName();
+                testvendfeatures.setOrderDetailsLbl(itemName2);
+            }
+        });
+
+        this.testvendfeatures.setPickSlot3BtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                disableAllPickBtns();
+                String itemName3 = machine.getArraySlots().get(2).checkItem().getItemName();
+                testvendfeatures.setOrderDetailsLbl(itemName3);
+            }
+        });
+
+        this.testvendfeatures.setPickSlot4BtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                disableAllPickBtns();
+                String itemName4 = machine.getArraySlots().get(3).checkItem().getItemName();
+                testvendfeatures.setOrderDetailsLbl(itemName4);
+            }
+        });
+
+        this.testvendfeatures.setPickSlot5BtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                disableAllPickBtns();
+                String itemName5 = machine.getArraySlots().get(4).checkItem().getItemName();
+                testvendfeatures.setOrderDetailsLbl(itemName5);
+            }
+        });
+
+        this.testvendfeatures.setPickSlot6BtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                disableAllPickBtns();
+                String itemName6 = machine.getArraySlots().get(5).checkItem().getItemName();
+                testvendfeatures.setOrderDetailsLbl(itemName6);
+            }
+        });
+
+        this.testvendfeatures.setPickSlot7BtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                disableAllPickBtns();
+                String itemName7 = machine.getArraySlots().get(6).checkItem().getItemName();
+                testvendfeatures.setOrderDetailsLbl(itemName7);
+            }
+        });
+
+        this.testvendfeatures.setPickSlot8BtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                disableAllPickBtns();
+                String itemName8 = machine.getArraySlots().get(7).checkItem().getItemName();
+                testvendfeatures.setOrderDetailsLbl(itemName8);
+            }
+        });
+
+        this.testvendfeatures.setPickSlot9BtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                disableAllPickBtns();
+                String itemName9 = machine.getArraySlots().get(8).checkItem().getItemName();
+                testvendfeatures.setOrderDetailsLbl(itemName9);
             }
         });
 
@@ -298,6 +380,19 @@ public class Factory implements ActionListener{
         testvendfeatures.setItemQuantity9(machine.getArraySlots().get(8).getNumberOfStock());
         testvendfeatures.setItemCalories9(item9.getItemCalories());
         testvendfeatures.setItemPicture9("/Elements/ItemElements/hokkaido w_ nata.png");
+    }
+
+    public void disableAllPickBtns()
+    {
+        testvendfeatures.setPickSlot1Enable(false);
+        testvendfeatures.setPickSlot2Enable(false);
+        testvendfeatures.setPickSlot3Enable(false);
+        testvendfeatures.setPickSlot4Enable(false);
+        testvendfeatures.setPickSlot5Enable(false);
+        testvendfeatures.setPickSlot6Enable(false);
+        testvendfeatures.setPickSlot7Enable(false);
+        testvendfeatures.setPickSlot8Enable(false);
+        testvendfeatures.setPickSlot9Enable(false);
     }
 
     @Override

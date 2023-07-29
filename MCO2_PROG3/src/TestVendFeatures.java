@@ -1005,8 +1005,9 @@ public class TestVendFeatures extends javax.swing.JFrame {
         OrderDetailsLbl.setEditable(false);
         OrderDetailsLbl.setColumns(10);
         OrderDetailsLbl.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        OrderDetailsLbl.setLineWrap(true);
         OrderDetailsLbl.setRows(3);
-        OrderDetailsLbl.setText("Order: \nMilk Tea with Okinawa");
+        OrderDetailsLbl.setText("Please pick an item.");
         OrderDetailsLbl.setWrapStyleWord(true);
         OrderDetailsField.setViewportView(OrderDetailsLbl);
 
@@ -1016,7 +1017,6 @@ public class TestVendFeatures extends javax.swing.JFrame {
         PaymentField.setEditable(false);
         PaymentField.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         PaymentField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        PaymentField.setText("Total Payable: ");
         jPanel2.add(PaymentField);
         PaymentField.setBounds(380, 90, 160, 90);
 
@@ -1122,10 +1122,104 @@ public class TestVendFeatures extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Button listeners
     public void setDoneBtnListener(ActionListener actn)
     {
         DoneBtn.addActionListener(actn);
     }
+    
+    public void setPickSlot1BtnListener(ActionListener actn)
+    {
+        PickSlot1.addActionListener(actn);
+    }
+
+    public void setPickSlot2BtnListener(ActionListener actn)
+    {
+        PickSlot2.addActionListener(actn);
+    }
+    
+    public void setPickSlot3BtnListener(ActionListener actn)
+    {
+        PickSlot3.addActionListener(actn);
+    }
+
+    public void setPickSlot4BtnListener(ActionListener actn)
+    {
+        PickSlot4.addActionListener(actn);
+    }
+
+    public void setPickSlot5BtnListener(ActionListener actn)
+    {
+        PickSlot5.addActionListener(actn);
+    }
+    
+    public void setPickSlot6BtnListener(ActionListener actn)
+    {
+        PickSlot6.addActionListener(actn);
+    }
+
+    public void setPickSlot7BtnListener(ActionListener actn)
+    {
+        PickSlot7.addActionListener(actn);
+    }
+
+    public void setPickSlot8BtnListener(ActionListener actn)
+    {
+        PickSlot8.addActionListener(actn);
+    }
+    
+    public void setPickSlot9BtnListener(ActionListener actn)
+    {
+        PickSlot9.addActionListener(actn);
+    }
+
+    // Button enable
+
+    public void setPickSlot1Enable(boolean check)
+    {
+        PickSlot1.setEnabled(check);
+    }
+
+    public void setPickSlot2Enable(boolean check)
+    {
+        PickSlot2.setEnabled(check);
+    }
+
+    public void setPickSlot3Enable(boolean check)
+    {
+        PickSlot3.setEnabled(check);
+    }
+
+    public void setPickSlot4Enable(boolean check)
+    {
+        PickSlot4.setEnabled(check);
+    }
+
+    public void setPickSlot5Enable(boolean check)
+    {
+        PickSlot5.setEnabled(check);
+    }
+
+    public void setPickSlot6Enable(boolean check)
+    {
+        PickSlot6.setEnabled(check);
+    }
+
+    public void setPickSlot7Enable(boolean check)
+    {
+        PickSlot7.setEnabled(check);
+    }
+
+    public void setPickSlot8Enable(boolean check)
+    {
+        PickSlot8.setEnabled(check);
+    }
+
+    public void setPickSlot9Enable(boolean check)
+    {
+        PickSlot9.setEnabled(check);
+    }
+
 
     // Set item names in GUI
 
@@ -1362,6 +1456,13 @@ public class TestVendFeatures extends javax.swing.JFrame {
     public void setItemPicture9(String path)
     {
         itemPicture9.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
+    }
+
+    // Set text areas
+
+    public void setOrderDetailsLbl(String order)
+    {
+        OrderDetailsLbl.setText("Order:\n" + order);
     }
 
 
