@@ -41,6 +41,7 @@ public class TestMaintenance extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vending Machine Factory");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(85, 88, 95));
 
