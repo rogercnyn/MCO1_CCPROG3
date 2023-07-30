@@ -32,15 +32,12 @@ public class Slot {
         return items.size();
     }
 
-    public Stack<Item> addItem(Item item)
+    public void addItem(Item item, int totalNumberOfRestock)
     {
-        Stack<Item> stackOfItems = new Stack<Item>();
-        for (int i = 0; i < CAPACITY; i++)
+        for (int i = 0; i < totalNumberOfRestock; i++)
         {
-            stackOfItems.push(item);
+            items.push(item);
         }
-
-        return stackOfItems;
     }
 
     public ArrayList<Slot> regularItems()

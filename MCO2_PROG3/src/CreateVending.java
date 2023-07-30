@@ -65,6 +65,11 @@ public class CreateVending extends javax.swing.JFrame {
         CreateRegularBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/Vending Machine 2.png"))); // NOI18N
         CreateRegularBtn.setText("Regular Vending\nMachine");
         CreateRegularBtn.setToolTipText("");
+        CreateRegularBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CreateRegularBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -110,6 +115,10 @@ public class CreateVending extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void CreateRegularBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateRegularBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CreateRegularBtnActionPerformed
 
     public void setCreateRegularListener(ActionListener actn)
     {

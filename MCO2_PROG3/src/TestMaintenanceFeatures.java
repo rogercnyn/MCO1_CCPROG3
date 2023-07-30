@@ -124,12 +124,12 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         priceLbl9 = new javax.swing.JLabel();
         itemPrice9 = new javax.swing.JLabel();
         PickSlot9 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        restockbalbtn = new javax.swing.JButton();
+        restockBtn = new javax.swing.JButton();
+        changeBtn = new javax.swing.JButton();
+        inventoryBtn = new javax.swing.JButton();
+        salesBtn = new javax.swing.JButton();
+        collectBalBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vending Machine Factory");
@@ -999,29 +999,29 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         jPanel2.add(SlotContainer);
         SlotContainer.setBounds(0, 0, 370, 430);
 
-        jButton1.setText("Restock Balance");
-        jPanel2.add(jButton1);
-        jButton1.setBounds(380, 120, 150, 23);
+        restockbalbtn.setText("Restock Balance");
+        jPanel2.add(restockbalbtn);
+        restockbalbtn.setBounds(380, 120, 150, 23);
 
-        jButton2.setText("Restock Item");
-        jPanel2.add(jButton2);
-        jButton2.setBounds(380, 40, 150, 23);
+        restockBtn.setText("Restock Item");
+        jPanel2.add(restockBtn);
+        restockBtn.setBounds(380, 40, 150, 23);
 
-        jButton3.setText("Change Item Price");
-        jPanel2.add(jButton3);
-        jButton3.setBounds(380, 80, 150, 23);
+        changeBtn.setText("Change Item Price");
+        jPanel2.add(changeBtn);
+        changeBtn.setBounds(380, 80, 150, 23);
 
-        jButton4.setText("Inventory");
-        jPanel2.add(jButton4);
-        jButton4.setBounds(380, 240, 150, 23);
+        inventoryBtn.setText("Inventory");
+        jPanel2.add(inventoryBtn);
+        inventoryBtn.setBounds(380, 240, 150, 23);
 
-        jButton5.setText("Print Sales");
-        jPanel2.add(jButton5);
-        jButton5.setBounds(380, 200, 150, 23);
+        salesBtn.setText("Print Sales");
+        jPanel2.add(salesBtn);
+        salesBtn.setBounds(380, 200, 150, 23);
 
-        jButton6.setText("Collect Balance");
-        jPanel2.add(jButton6);
-        jButton6.setBounds(380, 160, 150, 23);
+        collectBalBtn.setText("Collect Balance");
+        jPanel2.add(collectBalBtn);
+        collectBalBtn.setBounds(380, 160, 150, 23);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1068,6 +1068,36 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     // Button listeners
+    public void disablePickBtn()
+    {
+        PickSlot1.setEnabled(false);
+        PickSlot2.setEnabled(false);
+        PickSlot3.setEnabled(false);
+        PickSlot4.setEnabled(false);
+        PickSlot5.setEnabled(false);
+        PickSlot6.setEnabled(false);
+        PickSlot7.setEnabled(false);
+        PickSlot8.setEnabled(false);
+        PickSlot9.setEnabled(false);
+    }
+    
+    public void enablePickBtn()
+    {
+        PickSlot1.setEnabled(true);
+        PickSlot2.setEnabled(true);
+        PickSlot3.setEnabled(true);
+        PickSlot4.setEnabled(true);
+        PickSlot5.setEnabled(true);
+        PickSlot6.setEnabled(true);
+        PickSlot7.setEnabled(true);
+        PickSlot8.setEnabled(true);
+        PickSlot9.setEnabled(true);
+    }
+    
+    public void setrestockBtnListener(ActionListener actn)
+    {
+        restockBtn.addActionListener(actn);
+    }
     public void setDoneBtnListener(ActionListener actn)
     {
         DoneBtn.addActionListener(actn);
@@ -1400,7 +1430,7 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
     {
         itemPicture9.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
     }
-
+    
     /**
      * @param args the command line arguments
      */
@@ -1467,6 +1497,9 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
     private javax.swing.JLabel availableLbl7;
     private javax.swing.JLabel availableLbl8;
     private javax.swing.JLabel availableLbl9;
+    private javax.swing.JButton changeBtn;
+    private javax.swing.JButton collectBalBtn;
+    private javax.swing.JButton inventoryBtn;
     private javax.swing.JLabel itemCalories1;
     private javax.swing.JLabel itemCalories2;
     private javax.swing.JLabel itemCalories3;
@@ -1521,12 +1554,6 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
     private javax.swing.JLabel itemQuantity7;
     private javax.swing.JLabel itemQuantity8;
     private javax.swing.JLabel itemQuantity9;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel priceLbl1;
@@ -1538,5 +1565,8 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
     private javax.swing.JLabel priceLbl7;
     private javax.swing.JLabel priceLbl8;
     private javax.swing.JLabel priceLbl9;
+    private javax.swing.JButton restockBtn;
+    private javax.swing.JButton restockbalbtn;
+    private javax.swing.JButton salesBtn;
     // End of variables declaration//GEN-END:variables
 }

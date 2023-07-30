@@ -135,6 +135,9 @@
             <Property name="text" type="java.lang.String" value="Regular Vending&#xa;Machine"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CreateRegularBtnActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

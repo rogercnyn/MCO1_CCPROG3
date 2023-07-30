@@ -1,6 +1,8 @@
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.swing.Action;
 import javax.swing.JOptionPane;
@@ -19,13 +21,14 @@ public class Factory implements ActionListener{
     private CreateVending createvending;
     private TestVending testvending;
     private TestVendFeatures testvendfeatures;
-    private TestMaintenance testmaintenance;
+    private TestMaintenanceFeatures testmaintenance;
     private RestockProduct restockproduct;
     private ChangePrice changeprice;
     private CollectBalance collectbalance;
     private Inventory inventory;
     private PrintSales printsales;
     private ReplenishBalance replenishbalance;
+    private ReStock_Item restock;
 
     private RegularMachine machine;
     private Slot slot;
@@ -35,7 +38,7 @@ public class Factory implements ActionListener{
         this.createvending = new CreateVending();
         this.testvending = new TestVending();
         this.testvendfeatures = new TestVendFeatures();
-        this.testmaintenance = new TestMaintenance();
+        this.testmaintenance = new TestMaintenanceFeatures();
         this.restockproduct = new RestockProduct();
         this.changeprice = new ChangePrice();
         this.collectbalance = new CollectBalance();
@@ -43,6 +46,7 @@ public class Factory implements ActionListener{
         this.printsales = new PrintSales();
         this.replenishbalance = new ReplenishBalance();
         this.slot = new Slot();
+        this.restock = new ReStock_Item();
 
         this.mainMenu.setVisible(true);
         this.mainMenu.setTestEnable(false);
@@ -300,17 +304,160 @@ public class Factory implements ActionListener{
             {
                 testmaintenance.setVisible(true);
                 testvending.setVisible(false);
+                testmaintenance.disablePickBtn();
             }
         });
 
-        this.testmaintenance.setBackBtnListener(new ActionListener() {
+        this.testmaintenance.setDoneBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
                 testvending.setVisible(true);
                 testmaintenance.setVisible(false);
             }
         });
-
+        
+        this.testmaintenance.setrestockBtnListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e)
+            {
+                testmaintenance.enablePickBtn();
+                testmaintenance.setPickSlot1BtnListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        Item item1 = machine.getArraySlots().get(0).checkItem();
+                        restock.setItemNameLbl(item1.getItemName());
+                        restock.setVisible(true);
+                        restock.setAddBtnListener(new ActionListener()
+                        {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                machine.getArraySlots().get(0).addItem(item1,restock.getQuantity());
+                            }          
+                        });
+                    }
+                });
+                testmaintenance.setPickSlot2BtnListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        Item item2 = machine.getArraySlots().get(1).checkItem();
+                        restock.setItemNameLbl(item2.getItemName());
+                        restock.setVisible(true);
+                        restock.setAddBtnListener(new ActionListener()
+                        {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                machine.getArraySlots().get(0).addItem(item2,restock.getQuantity());                              
+                            }
+                        });            
+                    }
+                });
+                        
+                testmaintenance.setPickSlot3BtnListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        Item item3 = machine.getArraySlots().get(2).checkItem();
+                        restock.setItemNameLbl(item3.getItemName());
+                        restock.setVisible(true);
+                        restock.setAddBtnListener(new ActionListener()
+                        {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                machine.getArraySlots().get(1).addItem(item3,restock.getQuantity());
+                            }
+                        });            
+                    }
+                });
+                testmaintenance.setPickSlot4BtnListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e)
+                    {
+                       Item item4 = machine.getArraySlots().get(3).checkItem();
+                        restock.setItemNameLbl(item4.getItemName());
+                        restock.setVisible(true);
+                        restock.setAddBtnListener(new ActionListener()
+                        {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                machine.getArraySlots().get(1).addItem(item4,restock.getQuantity());
+                            }
+                        });            
+                    }
+                });
+                testmaintenance.setPickSlot5BtnListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        Item item5 = machine.getArraySlots().get(4).checkItem();
+                        restock.setItemNameLbl(item5.getItemName());
+                        restock.setVisible(true);
+                        restock.setAddBtnListener(new ActionListener()
+                        {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                machine.getArraySlots().get(1).addItem(item5,restock.getQuantity());
+                            }
+                        });            
+                    }
+                });
+                testmaintenance.setPickSlot6BtnListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e)
+                    {
+                       Item item6 = machine.getArraySlots().get(5).checkItem();
+                        restock.setItemNameLbl(item6.getItemName());
+                        restock.setVisible(true);
+                        restock.setAddBtnListener(new ActionListener()
+                        {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                machine.getArraySlots().get(1).addItem(item6,restock.getQuantity());
+                            }
+                        });            
+                    }
+                });
+                testmaintenance.setPickSlot7BtnListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        Item item7 = machine.getArraySlots().get(6).checkItem();
+                        restock.setItemNameLbl(item7.getItemName());
+                        restock.setVisible(true);
+                        restock.setAddBtnListener(new ActionListener()
+                        {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                machine.getArraySlots().get(1).addItem(item7,restock.getQuantity());
+                            }
+                        });            
+                    }
+                });
+                testmaintenance.setPickSlot8BtnListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e)
+                    {
+                       Item item8 = machine.getArraySlots().get(7).checkItem();
+                        restock.setItemNameLbl(item8.getItemName());
+                        restock.setVisible(true);
+                        restock.setAddBtnListener(new ActionListener()
+                        {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                machine.getArraySlots().get(1).addItem(item8,restock.getQuantity());
+                            }
+                        });            
+                    }
+                });
+                testmaintenance.setPickSlot9BtnListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        Item item9 = machine.getArraySlots().get(8).checkItem();
+                        restock.setItemNameLbl(item9.getItemName());
+                        restock.setVisible(true);
+                        restock.setAddBtnListener(new ActionListener()
+                        {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                machine.getArraySlots().get(1).addItem(item9,restock.getQuantity());
+                            }
+                        });            
+                    }
+                });
+            }
+        });
         this.testvending.setBackBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
