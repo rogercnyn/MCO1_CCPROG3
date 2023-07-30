@@ -124,18 +124,12 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         priceLbl9 = new javax.swing.JLabel();
         itemPrice9 = new javax.swing.JLabel();
         PickSlot9 = new javax.swing.JButton();
-        OrderDetailsField = new javax.swing.JScrollPane();
-        OrderDetailsLbl = new javax.swing.JTextArea();
-        MessageField = new javax.swing.JScrollPane();
-        MessageFieldLbl = new javax.swing.JTextArea();
-        PaymentPanel = new javax.swing.JPanel();
-        DenominationComboBox = new javax.swing.JComboBox<>();
-        DenominationLbl = new javax.swing.JLabel();
-        InsertBtn = new javax.swing.JButton();
-        YourItemLbl = new javax.swing.JLabel();
-        ItemImageLbl = new javax.swing.JLabel();
-        DispenseBtn = new javax.swing.JButton();
-        CancelBtn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vending Machine Factory");
@@ -145,7 +139,7 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
 
         VendingFeaturesLbl.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         VendingFeaturesLbl.setForeground(new java.awt.Color(255, 255, 255));
-        VendingFeaturesLbl.setText("Vending Features");
+        VendingFeaturesLbl.setText("Test Maintenance");
 
         DoneBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         DoneBtn.setText("Done");
@@ -1005,84 +999,29 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         jPanel2.add(SlotContainer);
         SlotContainer.setBounds(0, 0, 370, 430);
 
-        OrderDetailsLbl.setEditable(false);
-        OrderDetailsLbl.setColumns(10);
-        OrderDetailsLbl.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        OrderDetailsLbl.setLineWrap(true);
-        OrderDetailsLbl.setRows(3);
-        OrderDetailsLbl.setText("Please pick an item.");
-        OrderDetailsLbl.setWrapStyleWord(true);
-        OrderDetailsField.setViewportView(OrderDetailsLbl);
+        jButton1.setText("Restock Balance");
+        jPanel2.add(jButton1);
+        jButton1.setBounds(380, 120, 150, 23);
 
-        jPanel2.add(OrderDetailsField);
-        OrderDetailsField.setBounds(380, 10, 160, 70);
+        jButton2.setText("Restock Item");
+        jPanel2.add(jButton2);
+        jButton2.setBounds(380, 40, 150, 23);
 
-        MessageFieldLbl.setEditable(false);
-        MessageFieldLbl.setColumns(8);
-        MessageFieldLbl.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        MessageFieldLbl.setLineWrap(true);
-        MessageFieldLbl.setRows(4);
-        MessageFieldLbl.setWrapStyleWord(true);
-        MessageField.setViewportView(MessageFieldLbl);
+        jButton3.setText("Change Item Price");
+        jPanel2.add(jButton3);
+        jButton3.setBounds(380, 80, 150, 23);
 
-        jPanel2.add(MessageField);
-        MessageField.setBounds(380, 90, 160, 90);
+        jButton4.setText("Inventory");
+        jPanel2.add(jButton4);
+        jButton4.setBounds(380, 240, 150, 23);
 
-        PaymentPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Payment"));
+        jButton5.setText("Print Sales");
+        jPanel2.add(jButton5);
+        jButton5.setBounds(380, 200, 150, 23);
 
-        DenominationLbl.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        DenominationLbl.setText("Denomination");
-
-        InsertBtn.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        InsertBtn.setText("Insert");
-
-        javax.swing.GroupLayout PaymentPanelLayout = new javax.swing.GroupLayout(PaymentPanel);
-        PaymentPanel.setLayout(PaymentPanelLayout);
-        PaymentPanelLayout.setHorizontalGroup(
-            PaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PaymentPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(PaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(DenominationComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(PaymentPanelLayout.createSequentialGroup()
-                        .addComponent(DenominationLbl)
-                        .addGap(0, 61, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PaymentPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(InsertBtn)))
-                .addContainerGap())
-        );
-        PaymentPanelLayout.setVerticalGroup(
-            PaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PaymentPanelLayout.createSequentialGroup()
-                .addComponent(DenominationLbl)
-                .addGap(4, 4, 4)
-                .addComponent(DenominationComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(InsertBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel2.add(PaymentPanel);
-        PaymentPanel.setBounds(380, 190, 160, 0);
-
-        YourItemLbl.setText("Your item:");
-        jPanel2.add(YourItemLbl);
-        YourItemLbl.setBounds(380, 340, 120, 17);
-
-        ItemImageLbl.setBackground(new java.awt.Color(0, 0, 0));
-        ItemImageLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/hokkaido w_ pearls.png"))); // NOI18N
-        ItemImageLbl.setText("jLabel3");
-        jPanel2.add(ItemImageLbl);
-        ItemImageLbl.setBounds(470, 340, 46, 46);
-
-        DispenseBtn.setText("Dispense");
-        jPanel2.add(DispenseBtn);
-        DispenseBtn.setBounds(380, 300, 85, 23);
-
-        CancelBtn.setText("Cancel");
-        jPanel2.add(CancelBtn);
-        CancelBtn.setBounds(470, 300, 70, 23);
+        jButton6.setText("Collect Balance");
+        jPanel2.add(jButton6);
+        jButton6.setBounds(380, 160, 150, 23);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1567,18 +1506,7 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CancelBtn;
-    private javax.swing.JComboBox<String> DenominationComboBox;
-    private javax.swing.JLabel DenominationLbl;
-    private javax.swing.JButton DispenseBtn;
     private javax.swing.JButton DoneBtn;
-    private javax.swing.JButton InsertBtn;
-    private javax.swing.JLabel ItemImageLbl;
-    private javax.swing.JScrollPane MessageField;
-    private javax.swing.JTextArea MessageFieldLbl;
-    private javax.swing.JScrollPane OrderDetailsField;
-    private javax.swing.JTextArea OrderDetailsLbl;
-    private javax.swing.JPanel PaymentPanel;
     private javax.swing.JButton PickSlot1;
     private javax.swing.JButton PickSlot2;
     private javax.swing.JButton PickSlot3;
@@ -1599,7 +1527,6 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
     private javax.swing.JPanel Slot9;
     private javax.swing.JPanel SlotContainer;
     private javax.swing.JLabel VendingFeaturesLbl;
-    private javax.swing.JLabel YourItemLbl;
     private javax.swing.JLabel availableLbl1;
     private javax.swing.JLabel availableLbl2;
     private javax.swing.JLabel availableLbl3;
@@ -1663,6 +1590,12 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
     private javax.swing.JLabel itemQuantity7;
     private javax.swing.JLabel itemQuantity8;
     private javax.swing.JLabel itemQuantity9;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel priceLbl1;
