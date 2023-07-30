@@ -491,7 +491,7 @@ public class RegularMachine
    public void dispenseItem(int itemIndex)
    {
      System.out.println("Dispensing Item...");
-     arraySlots.get(itemIndex).checkItem().setItemQuantity(-1);
+     arraySlots.get(itemIndex).dispenseItem();
      String name = arraySlots.get(itemIndex).checkItem().getItemName();
      System.out.println("1 " + name + " dispensed.");
      System.out.println("Thank you for buying!");
