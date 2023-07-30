@@ -1067,32 +1067,6 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void setDenomComboBoxValues(int[] denom)
-    {
-        DenominationComboBox.addItem("₱" + denom[0]);
-        DenominationComboBox.addItem("₱" + denom[1]);
-        DenominationComboBox.addItem("₱" + denom[2]);
-        DenominationComboBox.addItem("₱" + denom[3]);
-        DenominationComboBox.addItem("₱" + denom[4]);
-        DenominationComboBox.addItem("₱" + denom[5]);
-        DenominationComboBox.addItem("₱" + denom[6]);
-        DenominationComboBox.addItem("₱" + denom[7]);
-        DenominationComboBox.addItem("₱" + denom[8]);
-        setDenomComboBoxSelectedIndex();
-    }
-
-    public void setDenomComboBoxSelectedIndex()
-    {
-        DenominationComboBox.setSelectedItem(0);
-    }
-
-    public int getSelectedDenom()
-    {
-        String getdenom = (String)DenominationComboBox.getSelectedItem();
-        int denom = Integer.parseInt(getdenom.substring(1));
-        return denom;
-    }
-
     // Button listeners
     public void setDoneBtnListener(ActionListener actn)
     {
@@ -1142,28 +1116,6 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
     public void setPickSlot9BtnListener(ActionListener actn)
     {
         PickSlot9.addActionListener(actn);
-    }
-
-    public void setInsertCashListener(ActionListener actn)
-    {
-        InsertBtn.addActionListener(actn);
-    }
-
-    public void setDispenseBtnListener(ActionListener actn)
-    {
-        DispenseBtn.addActionListener(actn);
-    }
-
-    // Button enable
-
-    public void setInsertCashEnable(boolean check)
-    {
-        InsertBtn.setEnabled(check);
-    }
-
-    public void setDispenseBtnEnable(boolean check)
-    {
-        DispenseBtn.setEnabled(check);
     }
 
     public void setPickSlot1Enable(boolean check)
@@ -1448,27 +1400,6 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
     {
         itemPicture9.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
     }
-
-    // Set text areas
-
-    public void setOrderDetailsLbl(String order)
-    {
-        OrderDetailsLbl.setText("Order:\n" + order);
-    }
-
-    // sets the text of message lbl to the string provided.
-    public void setMessageLbl(String output)
-    {
-        MessageFieldLbl.setText(output);
-    }
-
-    // adds the string provided to the existing info in messagelbl
-    public void addInfoInMessageLbl(String additionalInfo)
-    {
-        String currentText = MessageFieldLbl.getText();
-        MessageFieldLbl.setText(currentText + "\n" + additionalInfo);
-    }
-
 
     /**
      * @param args the command line arguments
