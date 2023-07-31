@@ -458,11 +458,183 @@ public class Factory implements ActionListener{
                 });
             }
         });
+
         this.testvending.setBackBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
                 mainMenu.setVisible(true);
                 testvending.setVisible(false);
+            }
+        });
+
+        this.testmaintenance.setChangePrice(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testmaintenance.enablePickBtn();
+
+                testmaintenance.setPickSlot1BtnListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        changeprice.setVisible(true);
+                        testmaintenance.setVisible(false);
+                        changeprice.setChangePriceBtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item item1 = machine.getArraySlots().get(0).checkItem();
+                                int newprice = changeprice.getNewPrice();
+                                ((Milktea)item1).setPrice(newprice);
+                                testmaintenance.setVisible(true);
+                                changeprice.setVisible(false);
+                            }
+                        });
+                    }
+                });
+
+                testmaintenance.setPickSlot2BtnListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        changeprice.setVisible(true);
+                        testmaintenance.setVisible(false);
+                        changeprice.setChangePriceBtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item item2 = machine.getArraySlots().get(1).checkItem();
+                                int newprice = changeprice.getNewPrice();
+                                ((Milktea)item2).setPrice(newprice);
+                                testmaintenance.setVisible(true);
+                                changeprice.setVisible(false);
+                            }
+                        });
+                    }
+                });
+
+                testmaintenance.setPickSlot3BtnListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        changeprice.setVisible(true);
+                        testmaintenance.setVisible(false);
+                        changeprice.setChangePriceBtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item item3 = machine.getArraySlots().get(2).checkItem();
+                                int newprice = changeprice.getNewPrice();
+                                ((Milktea)item3).setPrice(newprice);
+                                testmaintenance.setVisible(true);
+                                changeprice.setVisible(false);
+                            }
+                        });
+                    }
+                });
+
+                testmaintenance.setPickSlot4BtnListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        changeprice.setVisible(true);
+                        testmaintenance.setVisible(false);
+                        changeprice.setChangePriceBtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item item4 = machine.getArraySlots().get(3).checkItem();
+                                int newprice = changeprice.getNewPrice();
+                                ((Milktea)item4).setPrice(newprice);
+                                testmaintenance.setVisible(true);
+                                changeprice.setVisible(false);
+                            }
+                        });
+                    }
+                });
+
+
+                testmaintenance.setPickSlot5BtnListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        changeprice.setVisible(true);
+                        testmaintenance.setVisible(false);
+                        changeprice.setChangePriceBtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item item5 = machine.getArraySlots().get(4).checkItem();
+                                int newprice = changeprice.getNewPrice();
+                                ((Milktea)item5).setPrice(newprice);
+                                testmaintenance.setVisible(true);
+                                changeprice.setVisible(false);
+                            }
+                        });
+                    }
+                });
+
+                testmaintenance.setPickSlot6BtnListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        changeprice.setVisible(true);
+                        testmaintenance.setVisible(false);
+                        changeprice.setChangePriceBtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item item6 = machine.getArraySlots().get(5).checkItem();
+                                int newprice = changeprice.getNewPrice();
+                                ((Milktea)item6).setPrice(newprice);
+                                testmaintenance.setVisible(true);
+                                changeprice.setVisible(false);
+                            }
+                        });
+                    }
+                });
+
+                testmaintenance.setPickSlot7BtnListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        changeprice.setVisible(true);
+                        testmaintenance.setVisible(false);
+                        changeprice.setChangePriceBtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item item7 = machine.getArraySlots().get(6).checkItem();
+                                int newprice = changeprice.getNewPrice();
+                                ((Milktea)item7).setPrice(newprice);
+                                testmaintenance.setVisible(true);
+                                changeprice.setVisible(false);
+                            }
+                        });
+                    }
+                });
+
+                testmaintenance.setPickSlot8BtnListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        changeprice.setVisible(true);
+                        testmaintenance.setVisible(false);
+                        changeprice.setChangePriceBtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item item8 = machine.getArraySlots().get(7).checkItem();
+                                int newprice = changeprice.getNewPrice();
+                                ((Milktea)item8).setPrice(newprice);
+                                testmaintenance.setVisible(true);
+                                changeprice.setVisible(false);
+                            }
+                        });
+                    }
+                });
+
+                testmaintenance.setPickSlot9BtnListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        changeprice.setVisible(true);
+                        testmaintenance.setVisible(false);
+                        changeprice.setChangePriceBtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item item9 = machine.getArraySlots().get(8).checkItem();
+                                int newprice = changeprice.getNewPrice();
+                                ((Milktea)item9).setPrice(newprice);
+                                testmaintenance.setVisible(true);
+                                changeprice.setVisible(false);
+                            }
+                        });
+                    }
+                });
+
             }
         });
 

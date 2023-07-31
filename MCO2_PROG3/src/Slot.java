@@ -53,7 +53,7 @@ public class Slot {
         Sinker nata = new Sinker("Nata de Coco", 100);
 
         Milktea okinawapearls = new Milktea("Okinawa with Pearls", okinawa, pearls, 135);
-        Item itemone = new Item(okinawapearls, 118);
+        Item itemone = new Item(okinawapearls.getItemName(), 118);
         Stack<Item> itemOne = new Stack<Item>();
         for(int i=0;i<10;i++)
         {
@@ -63,7 +63,7 @@ public class Slot {
         regularItems.add(slot1);
 
         Milktea okinawawhitepearls = new Milktea("Okinawa with White Pearls", okinawa, whitepearls, 135);
-        Item itemtwo = new Item(okinawawhitepearls, 120);
+        Item itemtwo = new Item(okinawawhitepearls.getItemName(), 120);
         Stack<Item> itemTwo = new Stack<Item>();
         for(int i=0;i<10;i++)
         {
@@ -73,7 +73,7 @@ public class Slot {
         regularItems.add(slot2);
 
         Milktea okinawanata = new Milktea("Okinawa with Nata", okinawa, nata, 135);
-        Item itemthree = new Item(okinawanata, 130);
+        Item itemthree = new Item(okinawanata.getItemName(), 130);
         Stack<Item> itemThree = new Stack<Item>();
         for(int i=0;i<10;i++)
         {
@@ -83,7 +83,7 @@ public class Slot {
         regularItems.add(slot3);
 
         Milktea wintermelonpearls = new Milktea("Wintermelon with Pearls", wintermelon, pearls, 135);
-        Item itemfour = new Item(wintermelonpearls, 118);
+        Item itemfour = new Item(wintermelonpearls.getItemName(), 118);
         Stack<Item> itemFour = new Stack<Item>();
         for(int i=0;i<10;i++)
         {
@@ -93,7 +93,7 @@ public class Slot {
         regularItems.add(slot4);
 
         Milktea wintermelonwhitepearls = new Milktea("Wintermelon with White Pearls", wintermelon, whitepearls, 135);
-        Item itemfive = new Item(wintermelonwhitepearls, 120);
+        Item itemfive = new Item(wintermelonwhitepearls.getItemName(), 120);
         Stack<Item> itemFive = new Stack<Item>();
         for(int i=0;i<10;i++)
         {
@@ -103,7 +103,7 @@ public class Slot {
         regularItems.add(slot5);
 
         Milktea wintermelonnata = new Milktea("Wintermelon with Nata", wintermelon, nata, 135);
-         Item itemsix = new Item(wintermelonnata, 130);
+         Item itemsix = new Item(wintermelonnata.getItemName(), 130);
         Stack<Item> itemSix = new Stack<Item>();
         for(int i=0;i<10;i++)
         {
@@ -113,7 +113,7 @@ public class Slot {
         regularItems.add(slot6);
 
         Milktea hokkaidopearls = new Milktea("Hokkaido with Pearls", hokkaido, pearls, 135);
-         Item itemseven = new Item(hokkaidopearls, 120);
+         Item itemseven = new Item(hokkaidopearls.getItemName(), 120);
         Stack<Item> itemSeven = new Stack<Item>();
         for(int i=0;i<10;i++)
         {
@@ -123,7 +123,7 @@ public class Slot {
         regularItems.add(slot7);
 
         Milktea hokkaidowhitepearls = new Milktea("Hokkaido with White Pearls", hokkaido, whitepearls, 135);
-        Item itemeight = new Item(hokkaidowhitepearls, 118);
+        Item itemeight = new Item(hokkaidowhitepearls.getItemName(), 118);
         Stack<Item> itemEight = new Stack<Item>();
         for(int i=0;i<10;i++)
         {
@@ -133,7 +133,7 @@ public class Slot {
         regularItems.add(slot8);
 
         Milktea hokkaidonata = new Milktea("Hokkaido with Nata", hokkaido, nata, 135);
-        Item itemnine = new Item(hokkaidonata, 130);
+        Item itemnine = new Item(hokkaidonata.getItemName(), 130);
         Stack<Item> itemNinesStack = new Stack<Item>();
         for(int i=0;i<10;i++)
         {
