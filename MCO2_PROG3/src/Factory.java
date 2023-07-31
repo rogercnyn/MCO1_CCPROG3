@@ -638,6 +638,13 @@ public class Factory implements ActionListener{
             }
         });
 
+        this.testmaintenance.setReStockBalListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testmaintenance.enablePickBtn();
+                
+            }
+        });
         // MAINTENANCE PART
 
         /*this.testmaintenance.setRestockProductBtnListener(new ActionListener() {

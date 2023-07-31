@@ -1108,6 +1108,12 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
     {
         changeBtn.addActionListener(actn);
     }
+    
+    public void setReStockBalListener(ActionListener actn)
+    {
+        restockbalbtn.addActionListener(actn);
+    }
+    
     public void setPickSlot1BtnListener(ActionListener actn)
     {
         PickSlot1.addActionListener(actn);
