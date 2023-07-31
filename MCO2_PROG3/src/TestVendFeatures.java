@@ -1144,7 +1144,7 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
     public void setDenomComboBoxSelectedIndex()
     {
-        DenominationComboBox.setSelectedItem(0);
+        DenominationComboBox.setSelectedItem(null);
     }
 
     public int getSelectedDenom()
@@ -1215,7 +1215,17 @@ public class TestVendFeatures extends javax.swing.JFrame {
         DispenseBtn.addActionListener(actn);
     }
 
+    public void setCancelBtnListener(ActionListener actn)
+    {
+        CancelBtn.addActionListener(actn);
+    }
+
     // Button enable
+
+    public void setCancelBtnEnable(boolean check)
+    {
+        CancelBtn.setEnabled(check);
+    }
 
     public void setInsertCashEnable(boolean check)
     {
@@ -1511,6 +1521,11 @@ public class TestVendFeatures extends javax.swing.JFrame {
     }
 
     // Set text areas
+
+    public void restartOrderDetailsLbl()
+    {
+        OrderDetailsLbl.setText("Please pick an item.");
+    }
 
     public void setOrderDetailsLbl(String order)
     {

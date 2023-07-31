@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 import java.util.Stack;
 
 public class Slot {
@@ -23,8 +24,13 @@ public class Slot {
     }
 
     public Item checkItem()
-    {
-        return items.peek();
+    { // error
+        //Item tempItem = items.peek(); 
+        try {
+            return items.peek();
+        } catch (EmptyStackException e) {
+            return null;
+        }
     }
 
     public int getNumberOfStock()

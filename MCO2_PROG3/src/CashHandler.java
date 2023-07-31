@@ -162,19 +162,19 @@ public class CashHandler
 
         else if (!isDenom(totalPayable))
         {
-            for (int i = this.acceptedDenom.length - 1; i >= 0 && totalPayable > 0; --i)
+            for (int i = this.acceptedDenom.length - 1; i >= 0; --i)
             {
                 if (totalPayable > this.acceptedDenom[i] && hasDenomStock(this.acceptedDenom[i]))
                 {
-                    change.push(acceptedDenom[i]);
                     deductQuantityToBalance(acceptedDenom[i]);
+                    change.push(acceptedDenom[i]);
                     totalPayable -= acceptedDenom[i];
                 }
 
                 while (totalPayable % this.acceptedDenom[i] == 0 && hasDenomStock(this.acceptedDenom[i]) && totalPayable > 0)
                 {
-                    change.push(acceptedDenom[i]);
                     deductQuantityToBalance(acceptedDenom[i]);
+                    change.push(acceptedDenom[i]);
                     totalPayable -= acceptedDenom[i];
                 }
             }
@@ -219,15 +219,20 @@ public class CashHandler
         {
             output = "Thank you for paying the exact amount.";
         }
-        int countTotal = 0;
-        output = "Please get your change:";
-        while (!change.empty())
+
+        else
         {
-            int poppedValue = change.pop();
-            countTotal += poppedValue;
-            output += "\n₱" + poppedValue;
+            int countTotal = 0;
+            output = "Please get your change:";
+            while (!change.empty())
+            {
+                int poppedValue = change.pop();
+                countTotal += poppedValue;
+                output += "\n₱" + poppedValue;
+            }
+            output += "\nTotal change: ₱" + countTotal + ".";
         }
-        output += "\n Total change: " + countTotal + ".";
+    
         return output;
     }
 
@@ -239,6 +244,23 @@ public class CashHandler
             addQuantityToBalance(poppedValue);
         }
         String output = "Sorry, this machine does not have enough balance to produce your change.";
+        output += "\nPlease get your payment:";
+        while (!payment.empty())
+        {
+            int poppedValue = payment.pop();
+            output += "\n₱" + poppedValue;
+        }
+        return output;
+    }
+
+    public String cancel()
+    {
+         while (!change.empty())
+        {
+            int poppedValue = change.pop();
+            addQuantityToBalance(poppedValue);
+        }
+        String output = "Transaction is now cancelled.";
         output += "\nPlease get your payment:";
         while (!payment.empty())
         {
