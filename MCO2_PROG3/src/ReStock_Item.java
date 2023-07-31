@@ -48,7 +48,6 @@ public class ReStock_Item extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(364, 364));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(85, 88, 95));
@@ -61,7 +60,7 @@ public class ReStock_Item extends javax.swing.JFrame {
         AddBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         AddBtn.setText("Add");
 
-        ItemName.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        ItemName.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         ItemName.setForeground(new java.awt.Color(255, 255, 255));
         ItemName.setText("ItemName");
 
@@ -81,17 +80,18 @@ public class ReStock_Item extends javax.swing.JFrame {
                 .addGap(105, 105, 105))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(27, 27, 27)
-                        .addComponent(Quantity, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
-                    .addComponent(ItemName, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addComponent(jLabel2)
+                .addGap(27, 27, 27)
+                .addComponent(Quantity, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
                 .addGap(60, 60, 60))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(129, 129, 129)
                 .addComponent(AddBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ItemName)
+                .addGap(93, 93, 93))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,7 +106,7 @@ public class ReStock_Item extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addComponent(AddBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

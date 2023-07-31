@@ -26,6 +26,24 @@ public class CashHandler
         return totalPayable;
     }
 
+    public int getTotalAvailableDenom(int denom)
+    {
+        int result = 0;
+        int i, j;
+
+        for (i = 0; i < this.machineBalance.length; i++)
+        {
+            for(j = 0; j < this.machineBalance[i].length - 1; j++)
+            {
+                if (denom == this.machineBalance[i][j])
+                {
+                    result++;
+                }
+            }
+        }
+        return result;
+    }
+
     public void addDenomToPayment(int denom)
     {
         this.payment.push(denom);
@@ -36,6 +54,24 @@ public class CashHandler
         return acceptedDenom;
     }
 
+    public String printDenom(int denom)
+    {
+        String string;
+        int amountavailable=0;
+        for (int i = 0; i < this.machineBalance.length; i++)
+        {
+            for(int j = 0; j < this.machineBalance[i].length - 1; j++)
+            {
+                if (denom == this.machineBalance[i][j])
+                {
+                    amountavailable++;
+                }
+            }
+        }
+        string = denom + " : " + amountavailable;
+        return string;
+    }
+
     private void transferPaymentToBalance()
     {
         while(!payment.empty())
@@ -44,7 +80,7 @@ public class CashHandler
         }
     }
 
-    private void addQuantityToBalance(int denom)
+    public void addQuantityToBalance(int denom)
     {
         int i, j;
 
@@ -60,7 +96,7 @@ public class CashHandler
         }
     }
 
-    private void deductQuantityToBalance(int denom)
+    public void deductQuantityToBalance(int denom)
     {
         int i, j;
 

@@ -641,11 +641,109 @@ public class Factory implements ActionListener{
         this.testmaintenance.setReStockBalListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                testmaintenance.enablePickBtn();
-            
+                testmaintenance.setVisible(false);
+                replenishbalance.setVisible(true);
+                replenishbalance.setReplenishBtn(new ActionListener() {
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        int[] addbalance;
+                        int i,j;
+                        int[] acceptedDenom = machine.getCashHandler().getAcceptedDenom();
+                        for(i=0;i<replenishbalance.getBal1();i++)
+                        {
+                            machine.getCashHandler().addQuantityToBalance(0);  
+                        }
+                        for(i=0;i<replenishbalance.getBal10();i++)
+                        {
+                            machine.getCashHandler().addQuantityToBalance(0);  
+                        }
+                        for(i=0;i<replenishbalance.getBal100();i++)
+                        {
+                            machine.getCashHandler().addQuantityToBalance(0);  
+                        }
+                        for(i=0;i<replenishbalance.getBal1000();i++)
+                        {
+                            machine.getCashHandler().addQuantityToBalance(0);  
+                        }
+                        for(i=0;i<replenishbalance.getBal20();i++)
+                        {
+                            machine.getCashHandler().addQuantityToBalance(0);  
+                        }
+                        for(i=0;i<replenishbalance.getBal200();i++)
+                        {
+                            machine.getCashHandler().addQuantityToBalance(0);  
+                        }
+                        for(i=0;i<replenishbalance.getBal5();i++)
+                        {
+                            machine.getCashHandler().addQuantityToBalance(0);  
+                        }
+                        for(i=0;i<replenishbalance.getBal5();i++)
+                        {
+                            machine.getCashHandler().addQuantityToBalance(0);  
+                        }
+                        for(i=0;i<replenishbalance.getBal50();i++)
+                        {
+                            machine.getCashHandler().addQuantityToBalance(0);  
+                        }
+                        for(i=0;i<replenishbalance.getBal500();i++)
+                        {
+                            machine.getCashHandler().addQuantityToBalance(0);  
+                        }
+                    }
+                });
                 
             }
         });
+
+        this.testmaintenance.setCollectBalListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testmaintenance.setVisible(false);
+                collectbalance.setVisible(true);
+                int[] denoms = machine.getCashHandler().getAcceptedDenom();
+                collectbalance.setTextArea(machine.getCashHandler().printDenom(1) + "\n" + machine.getCashHandler().printDenom(5) + "\n" + 
+                                            machine.getCashHandler().printDenom(10) + "\n" + machine.getCashHandler().printDenom(50) + "\n" +
+                                            machine.getCashHandler().printDenom(100) + "\n" + machine.getCashHandler().printDenom(200) + "\n" +
+                                            machine.getCashHandler().printDenom(500) + "\n" + machine.getCashHandler().printDenom(1000));
+                collectbalance.setDoneBtnListener(new ActionListener() 
+                {
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        JOptionPane.showMessageDialog(collectbalance, "Collected all balance");
+                        int i,j;
+                        for(i= 0;i < denoms.length;i++ )
+                        {
+                            for(j =0;j < machine.getCashHandler().getTotalAvailableDenom(denoms[i]);i++)
+                            {
+                                machine.getCashHandler().deductQuantityToBalance(denoms[i]);
+                            }
+                        }
+                    }
+                });
+            }
+        });
+        
+
+        this.testmaintenance.setSalesBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testmaintenance.setVisible(false);
+                printsales.setVisible(true);
+                //printsales will display and all sales will display in a text area
+                
+            }
+        });
+
+        this.testmaintenance.setInventoryBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testmaintenance.setVisible(false);
+                inventory.setVisible(true);
+                //will display all the inventory of all items in a text area
+
+            }
+        });
+
         // MAINTENANCE PART
 
         /*this.testmaintenance.setRestockProductBtnListener(new ActionListener() {
