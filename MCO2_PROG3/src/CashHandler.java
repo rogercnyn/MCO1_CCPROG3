@@ -13,7 +13,7 @@ public class CashHandler
         this.payment = new Stack<Integer>();
         this.change = new Stack<Integer>();
         this.machineBalance = new int[][] {{1, 10}, {5, 10}, {10, 10}, {20, 10},
-                                {50, 10}, {100, 10}, {500, 10}, {1000, 10}};
+                                {50, 10}, {100, 10}, {200, 10}, {500, 10}, {1000, 10}};
     }
 
     public void setTotalPayable(int totalPayable) 
@@ -162,9 +162,10 @@ public class CashHandler
 
         else if (!isDenom(totalPayable))
         {
-            for (int i = this.acceptedDenom.length - 1; i >= 0; --i)
+            for (int i = this.acceptedDenom.length - 1; i >= 0 && totalPayable > 0; --i)
             {
-                if (totalPayable > this.acceptedDenom[i] && hasDenomStock(this.acceptedDenom[i]))
+
+                while(totalPayable > this.acceptedDenom[i] && hasDenomStock(this.acceptedDenom[i]) && totalPayable > 0)
                 {
                     deductQuantityToBalance(acceptedDenom[i]);
                     change.push(acceptedDenom[i]);
@@ -180,7 +181,10 @@ public class CashHandler
             }
         }
 
-        if (isChangeComplete(tempExpectedChange))
+        transferPaymentToBalance();
+        check = true;
+
+        /*if (isChangeComplete(tempExpectedChange))
         {
             transferPaymentToBalance();
             check = true;
@@ -189,7 +193,7 @@ public class CashHandler
         else if (!isChangeComplete(tempExpectedChange))
         {
             check = false;
-        }
+        }*/
 
         return check;
     }
