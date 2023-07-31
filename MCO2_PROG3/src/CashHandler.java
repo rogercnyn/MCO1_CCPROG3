@@ -12,6 +12,11 @@ public class CashHandler
     {
         this.payment = new Stack<Integer>();
         this.change = new Stack<Integer>();
+        setMachineBalance();
+    }
+
+    public void setMachineBalance()
+    {
         this.machineBalance = new int[][] {{1, 10}, {5, 10}, {10, 10}, {20, 10},
                                 {50, 10}, {100, 10}, {200, 10}, {500, 10}, {1000, 10}};
     }
@@ -180,11 +185,7 @@ public class CashHandler
                 }
             }
         }
-
-        transferPaymentToBalance();
-        check = true;
-
-        /*if (isChangeComplete(tempExpectedChange))
+        if (isChangeComplete(tempExpectedChange))
         {
             transferPaymentToBalance();
             check = true;
@@ -193,7 +194,7 @@ public class CashHandler
         else if (!isChangeComplete(tempExpectedChange))
         {
             check = false;
-        }*/
+        }
 
         return check;
     }

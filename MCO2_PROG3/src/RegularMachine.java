@@ -7,7 +7,6 @@ public class RegularMachine {
     private ArrayList<Slot> arraySlots;
     private ArrayList<Transactions> transactions;
     private CashHandler cashHandler;
-    private int[][] machineBalance;
     private LocalDate lastRestockDate;
 
     public RegularMachine(ArrayList<Slot> arraySlots)
