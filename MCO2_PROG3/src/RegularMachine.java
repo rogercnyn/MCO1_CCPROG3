@@ -51,6 +51,19 @@ public class RegularMachine {
         return -1;
     }
 
+    public int locateItemIndex(Item item)
+    {
+        int i;
+        for (i = 0; i < this.arraySlots.size(); i++)
+        {
+            if (item.equals(this.arraySlots.get(i).checkItem()))
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public void addTransactions()
     {
         Transactions transaction = new Transactions(getChosenItem().getItemName(), ((Milktea)getChosenItem()).getPrice());

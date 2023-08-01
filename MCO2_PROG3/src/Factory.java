@@ -571,27 +571,93 @@ public class Factory implements ActionListener{
         this.testvendfeatures.setDispenseBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                int itemIndex = machine.getChosenItemIndex();
-                Item item = machine.getArraySlots().get(itemIndex).checkItem();
-                boolean isSuccess = machine.getCashHandler().produceChange();
-                if (isSuccess)
+                if (machine instanceof SpecialMachine)
                 {
-                    testvendfeatures.setMessageLbl("----- Preparing Milktea -----");
-                    testvendfeatures.addInfoInMessageLbl("Adding " + ((Milktea) item).getSinker().getItemName() + "...");
-                    testvendfeatures.addInfoInMessageLbl("Pouring " + ((Milktea) item).getFlavor().getItemName() + "...");
-                    testvendfeatures.addInfoInMessageLbl(item.getItemName() + " done!");
-                    machine.getArraySlots().get(itemIndex).dispenseItem();
-                    JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().successChange());
-                    machine.addTransactions();
-                    testvendfeatures.restartOrderDetailsLbl();
+                    if (machine.getChosenItem() instanceof Milktea)
+                    {
+                        // code
+                        Milktea order = ((Milktea) machine.getChosenItem());
+                        Flavor flavor = order.getFlavor();
+                        Sinker sinker = order.getSinker();
+
+                        int orderIndex = machine.locateItemIndex(order);
+                        int flavorIndex = machine.locateItemIndex(flavor);
+                        int sinkerIndex = machine.locateItemIndex(sinker);
+
+                        boolean isSuccess = machine.getCashHandler().produceChange();
+                        if (isSuccess)
+                        {
+                            testvendfeatures.setMessageLbl("----- Preparing Milktea -----");
+                            testvendfeatures.addInfoInMessageLbl("Adding " + sinker.getItemName() + "...");
+                            testvendfeatures.addInfoInMessageLbl("Pouring " + flavor.getItemName() + "...");
+                            testvendfeatures.addInfoInMessageLbl(flavor.getItemName() + " with " + sinker.getItemName() + " done!");
+                            machine.getArraySlots().get(orderIndex).dispenseItem();
+                            machine.getArraySlots().get(flavorIndex).dispenseItem();
+                            machine.getArraySlots().get(sinkerIndex).dispenseItem();
+                            JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().successChange());
+                            machine.addTransactions();
+                            testvendfeatures.restartOrderDetailsLbl();
+                            restartTestingSpecial();
+                        }
+
+                        else
+                        {
+                            JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().failChange());
+                            loadSpecialVending();
+                            restartTestingSpecial();
+                        }
+                    }
+
+                    else if (machine.getChosenItem() instanceof Sinker)
+                    {
+                        Sinker sinker = ((Sinker) machine.getChosenItem());
+                        int sinkerIndex = machine.getChosenItemIndex();
+                        boolean isSuccess = machine.getCashHandler().produceChange();
+                        if (isSuccess)
+                        {
+                            testvendfeatures.setMessageLbl("----- Preparing Sinker -----");
+                            testvendfeatures.addInfoInMessageLbl("Getting " + sinker.getItemName() + "...");
+                            testvendfeatures.addInfoInMessageLbl("Packing it up...");
+                            testvendfeatures.addInfoInMessageLbl(sinker.getItemName() + " done!");
+                            machine.getArraySlots().get(sinkerIndex).dispenseItem();
+                            JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().successChange());
+                            machine.addTransactions();
+                            testvendfeatures.restartOrderDetailsLbl();
+                            restartTestingSpecial();
+                        }
+                        else
+                        {
+                            JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().failChange());
+                            loadSpecialVending();
+                            restartTestingSpecial();
+                        }
+                    }
                 }
 
                 else
                 {
-                    JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().failChange());
+                    int itemIndex = machine.getChosenItemIndex();
+                    Item item = machine.getArraySlots().get(itemIndex).checkItem();
+                    boolean isSuccess = machine.getCashHandler().produceChange();
+                    if (isSuccess)
+                    {
+                        testvendfeatures.setMessageLbl("----- Preparing Milktea -----");
+                        testvendfeatures.addInfoInMessageLbl("Adding " + ((Milktea) item).getSinker().getItemName() + "...");
+                        testvendfeatures.addInfoInMessageLbl("Pouring " + ((Milktea) item).getFlavor().getItemName() + "...");
+                        testvendfeatures.addInfoInMessageLbl(item.getItemName() + " done!");
+                        machine.getArraySlots().get(itemIndex).dispenseItem();
+                        JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().successChange());
+                        machine.addTransactions();
+                        testvendfeatures.restartOrderDetailsLbl();
+                    }
+
+                    else
+                    {
+                        JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().failChange());
+                    }
+                    loadRegularVending();
+                    restartTestingVend();
                 }
-                loadRegularVending();
-                restartTestingVend();
             }
         });
 
