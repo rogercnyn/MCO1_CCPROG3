@@ -62,6 +62,7 @@ public class ChangePrice extends javax.swing.JFrame {
 
         ItemName.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         ItemName.setForeground(new java.awt.Color(255, 255, 255));
+        ItemName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ItemName.setText("ItemName");
 
         newPrice.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
@@ -80,12 +81,13 @@ public class ChangePrice extends javax.swing.JFrame {
                         .addGap(49, 49, 49)
                         .addComponent(Lbl))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(ItemName, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(91, 91, 91)
                         .addComponent(newPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ItemName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

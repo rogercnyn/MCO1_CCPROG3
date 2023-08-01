@@ -923,7 +923,7 @@ public class Factory implements ActionListener{
                     public void actionPerformed(ActionEvent e)
                     {
                         Item item1 = machine.getArraySlots().get(0).checkItem();
-                        changeprice.setName(item1.getItemName());
+                        changeprice.setItemName(item1.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
@@ -933,6 +933,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item1).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                loadRegularVendingmaintenance();
                             }
                         });
                     }
@@ -942,7 +943,7 @@ public class Factory implements ActionListener{
                     public void actionPerformed(ActionEvent e)
                     {
                         Item item2 = machine.getArraySlots().get(1).checkItem();
-                        changeprice.setName(item2.getItemName());
+                        changeprice.setItemName(item2.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);     
                         changeprice.setChangePriceBtnListener(new ActionListener() {
@@ -952,6 +953,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item2).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                loadRegularVendingmaintenance();
                             }
                         });
                     }
@@ -961,7 +963,7 @@ public class Factory implements ActionListener{
                     public void actionPerformed(ActionEvent e)
                     {
                         Item item3 = machine.getArraySlots().get(2).checkItem();
-                        changeprice.setName(item3.getItemName());
+                        changeprice.setItemName(item3.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
@@ -971,6 +973,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item3).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                loadRegularVendingmaintenance();
                             }
                         });
                     }
@@ -980,7 +983,7 @@ public class Factory implements ActionListener{
                     public void actionPerformed(ActionEvent e)
                     {
                         Item item4 = machine.getArraySlots().get(3).checkItem();
-                        changeprice.setName(item4.getItemName());
+                        changeprice.setItemName(item4.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
@@ -991,6 +994,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item4).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                loadRegularVendingmaintenance();
                             }
                         });
                     }
@@ -1001,7 +1005,7 @@ public class Factory implements ActionListener{
                     public void actionPerformed(ActionEvent e)
                     {
                         Item item5 = machine.getArraySlots().get(4).checkItem();
-                        changeprice.setName(item5.getItemName());
+                        changeprice.setItemName(item5.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
@@ -1011,6 +1015,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item5).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                loadRegularVendingmaintenance();
                             }
                         });
                     }
@@ -1020,7 +1025,7 @@ public class Factory implements ActionListener{
                     public void actionPerformed(ActionEvent e)
                     {
                         Item item6 = machine.getArraySlots().get(5).checkItem();
-                        changeprice.setName(item6.getItemName());
+                        changeprice.setItemName(item6.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
@@ -1031,6 +1036,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item6).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                loadRegularVendingmaintenance();
                             }
                         });
                     }
@@ -1040,7 +1046,7 @@ public class Factory implements ActionListener{
                     public void actionPerformed(ActionEvent e)
                     {
                         Item item7 = machine.getArraySlots().get(6).checkItem();
-                        changeprice.setName(item7.getItemName());
+                        changeprice.setItemName(item7.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
@@ -1050,6 +1056,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item7).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                loadRegularVendingmaintenance();
                             }
                         });
                     }
@@ -1059,7 +1066,7 @@ public class Factory implements ActionListener{
                     public void actionPerformed(ActionEvent e)
                     {
                         Item item8 = machine.getArraySlots().get(7).checkItem();
-                        changeprice.setName(item8.getItemName());
+                        changeprice.setItemName(item8.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
@@ -1069,6 +1076,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item8).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                loadRegularVendingmaintenance();
                             }
                         });
                     }
@@ -1078,7 +1086,7 @@ public class Factory implements ActionListener{
                     public void actionPerformed(ActionEvent e)
                     {
                         Item item9 = machine.getArraySlots().get(8).checkItem();
-                        changeprice.setName(item9.getItemName());
+                        changeprice.setItemName(item9.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
@@ -1088,6 +1096,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item9).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                loadRegularVendingmaintenance();
                             }
                         });
                     }
