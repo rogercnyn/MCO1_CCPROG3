@@ -104,6 +104,7 @@ public class Factory implements ActionListener{
         this.testvending.setTestVendingListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
+                loadRegularVending();
                 testvendfeatures.setInsertCashEnable(false);
                 testvendfeatures.setDispenseBtnEnable(false);
                 testvendfeatures.setCancelBtnEnable(false);
@@ -384,6 +385,7 @@ public class Factory implements ActionListener{
         this.testvending.setTestMaintenanceListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
+                loadRegularVendingmaintenance();
                 testmaintenance.setVisible(true);
                 testvending.setVisible(false);
                 testmaintenance.disablePickBtn();
@@ -405,6 +407,7 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot1BtnListener(new ActionListener(){
                     public void actionPerformed(ActionEvent e)
                     {
+                        testmaintenance.setVisible(false);
                         Item item1 = machine.getArraySlots().get(0).checkItem();
                         restock.setItemNameLbl(item1.getItemName());
                         restock.setVisible(true);
@@ -413,6 +416,11 @@ public class Factory implements ActionListener{
                             public void actionPerformed(ActionEvent e)
                             {
                                 machine.getArraySlots().get(0).addItem(item1,restock.getQuantity());
+                                restock.setVisible(false);
+                                loadRegularVendingmaintenance();
+                                testmaintenance.setVisible(true);
+                                restock.cleartxtarea();
+                                testmaintenance.disablePickBtn();
                             }          
                         });
                     }
@@ -420,6 +428,7 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot2BtnListener(new ActionListener(){
                     public void actionPerformed(ActionEvent e)
                     {
+                        testmaintenance.setVisible(false);
                         Item item2 = machine.getArraySlots().get(1).checkItem();
                         restock.setItemNameLbl(item2.getItemName());
                         restock.setVisible(true);
@@ -427,7 +436,12 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(0).addItem(item2,restock.getQuantity());                              
+                                machine.getArraySlots().get(1).addItem(item2,restock.getQuantity());
+                                restock.setVisible(false);
+                                loadRegularVendingmaintenance();
+                                testmaintenance.setVisible(true);    
+                                restock.cleartxtarea();
+                                testmaintenance.disablePickBtn();                          
                             }
                         });            
                     }
@@ -436,6 +450,7 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot3BtnListener(new ActionListener(){
                     public void actionPerformed(ActionEvent e)
                     {
+                        testmaintenance.setVisible(false);
                         Item item3 = machine.getArraySlots().get(2).checkItem();
                         restock.setItemNameLbl(item3.getItemName());
                         restock.setVisible(true);
@@ -443,7 +458,12 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(1).addItem(item3,restock.getQuantity());
+                                machine.getArraySlots().get(2).addItem(item3,restock.getQuantity());
+                                restock.setVisible(false);
+                                loadRegularVendingmaintenance();
+                                testmaintenance.setVisible(true);
+                                restock.cleartxtarea();
+                                testmaintenance.disablePickBtn();
                             }
                         });            
                     }
@@ -451,14 +471,20 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot4BtnListener(new ActionListener(){
                     public void actionPerformed(ActionEvent e)
                     {
-                       Item item4 = machine.getArraySlots().get(3).checkItem();
+                        testmaintenance.setVisible(false);
+                        Item item4 = machine.getArraySlots().get(3).checkItem();
                         restock.setItemNameLbl(item4.getItemName());
                         restock.setVisible(true);
                         restock.setAddBtnListener(new ActionListener()
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(1).addItem(item4,restock.getQuantity());
+                                machine.getArraySlots().get(3).addItem(item4,restock.getQuantity());
+                                restock.setVisible(false);
+                                loadRegularVendingmaintenance();
+                                testmaintenance.setVisible(true);
+                                restock.cleartxtarea();
+                                testmaintenance.disablePickBtn();
                             }
                         });            
                     }
@@ -466,6 +492,7 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot5BtnListener(new ActionListener(){
                     public void actionPerformed(ActionEvent e)
                     {
+                        testmaintenance.setVisible(false);
                         Item item5 = machine.getArraySlots().get(4).checkItem();
                         restock.setItemNameLbl(item5.getItemName());
                         restock.setVisible(true);
@@ -473,7 +500,12 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(1).addItem(item5,restock.getQuantity());
+                                machine.getArraySlots().get(4).addItem(item5,restock.getQuantity());
+                                restock.setVisible(false);
+                                loadRegularVendingmaintenance();
+                                testmaintenance.setVisible(true);
+                                restock.cleartxtarea();
+                                testmaintenance.disablePickBtn();
                             }
                         });            
                     }
@@ -481,14 +513,20 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot6BtnListener(new ActionListener(){
                     public void actionPerformed(ActionEvent e)
                     {
-                       Item item6 = machine.getArraySlots().get(5).checkItem();
+                       testmaintenance.setVisible(false);
+                        Item item6 = machine.getArraySlots().get(5).checkItem();
                         restock.setItemNameLbl(item6.getItemName());
                         restock.setVisible(true);
                         restock.setAddBtnListener(new ActionListener()
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(1).addItem(item6,restock.getQuantity());
+                                machine.getArraySlots().get(5).addItem(item6,restock.getQuantity());
+                                restock.setVisible(false);
+                                loadRegularVendingmaintenance();
+                                testmaintenance.setVisible(true);
+                                restock.cleartxtarea();
+                                testmaintenance.disablePickBtn();
                             }
                         });            
                     }
@@ -496,6 +534,7 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot7BtnListener(new ActionListener(){
                     public void actionPerformed(ActionEvent e)
                     {
+                        testmaintenance.setVisible(false);
                         Item item7 = machine.getArraySlots().get(6).checkItem();
                         restock.setItemNameLbl(item7.getItemName());
                         restock.setVisible(true);
@@ -503,7 +542,12 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(1).addItem(item7,restock.getQuantity());
+                                machine.getArraySlots().get(6).addItem(item7,restock.getQuantity());
+                                restock.setVisible(false);
+                                loadRegularVendingmaintenance();
+                                testmaintenance.setVisible(true);
+                                restock.cleartxtarea();
+                                testmaintenance.disablePickBtn();
                             }
                         });            
                     }
@@ -511,14 +555,20 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot8BtnListener(new ActionListener(){
                     public void actionPerformed(ActionEvent e)
                     {
-                       Item item8 = machine.getArraySlots().get(7).checkItem();
+                        testmaintenance.setVisible(false);
+                        Item item8 = machine.getArraySlots().get(7).checkItem();
                         restock.setItemNameLbl(item8.getItemName());
                         restock.setVisible(true);
                         restock.setAddBtnListener(new ActionListener()
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(1).addItem(item8,restock.getQuantity());
+                                machine.getArraySlots().get(7).addItem(item8,restock.getQuantity());
+                                restock.setVisible(false);
+                                loadRegularVendingmaintenance();
+                                testmaintenance.setVisible(true);
+                                restock.cleartxtarea();
+                                testmaintenance.disablePickBtn();
                             }
                         });            
                     }
@@ -526,6 +576,7 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot9BtnListener(new ActionListener(){
                     public void actionPerformed(ActionEvent e)
                     {
+                        testmaintenance.setVisible(false);
                         Item item9 = machine.getArraySlots().get(8).checkItem();
                         restock.setItemNameLbl(item9.getItemName());
                         restock.setVisible(true);
@@ -533,7 +584,12 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(1).addItem(item9,restock.getQuantity());
+                                machine.getArraySlots().get(8).addItem(item9,restock.getQuantity());
+                                restock.setVisible(false);
+                                loadRegularVendingmaintenance();
+                                testmaintenance.setVisible(true);
+                                restock.cleartxtarea();
+                                testmaintenance.disablePickBtn();
                             }
                         });            
                     }
@@ -576,7 +632,7 @@ public class Factory implements ActionListener{
                     public void actionPerformed(ActionEvent e)
                     {
                         changeprice.setVisible(true);
-                        testmaintenance.setVisible(false);
+                        testmaintenance.setVisible(false);     
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
@@ -728,9 +784,7 @@ public class Factory implements ActionListener{
                 replenishbalance.setReplenishBtn(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
-                        int[] addbalance;
-                        int i,j;
-                        int[] acceptedDenom = machine.getCashHandler().getAcceptedDenom();
+                        int i;
                         for(i=0;i<replenishbalance.getBal1();i++)
                         {
                             machine.getCashHandler().addQuantityToBalance(0);  
@@ -990,6 +1044,72 @@ public class Factory implements ActionListener{
         testvendfeatures.setItemQuantity9(machine.getArraySlots().get(8).getNumberOfStock());
         testvendfeatures.setItemCalories9(item9.getItemCalories());
         testvendfeatures.setItemPicture9("/Elements/ItemElements/hokkaido w_ nata.png");
+    }
+
+    public void loadRegularVendingmaintenance()
+    {
+        Item item1 = machine.getArraySlots().get(0).checkItem(); 
+        testmaintenance.setItemName1(item1.getItemName());
+        testmaintenance.setItemPrice1(((Milktea) item1).getPrice());
+        testmaintenance.setItemQuantity1(machine.getArraySlots().get(0).getNumberOfStock());
+        testmaintenance.setItemCalories1(item1.getItemCalories());
+        testmaintenance.setItemPicture1("/Elements/ItemElements/okinawa w_ pearls.png");
+        
+        Item item2 = machine.getArraySlots().get(1).checkItem(); 
+        testmaintenance.setItemName2(item2.getItemName());
+        testmaintenance.setItemPrice2(((Milktea) item2).getPrice());
+        testmaintenance.setItemQuantity2(machine.getArraySlots().get(1).getNumberOfStock());
+        testmaintenance.setItemCalories2(item2.getItemCalories());
+        testmaintenance.setItemPicture2("/Elements/ItemElements/okinawa w_ white pearls.png");
+
+        Item item3 = machine.getArraySlots().get(2).checkItem(); 
+        testmaintenance.setItemName3(item3.getItemName());
+        testmaintenance.setItemPrice3(((Milktea) item3).getPrice());
+        testmaintenance.setItemQuantity3(machine.getArraySlots().get(2).getNumberOfStock());
+        testmaintenance.setItemCalories3(item3.getItemCalories());
+        testmaintenance.setItemPicture3("/Elements/ItemElements/okinawa w_ nata.png");
+        
+        Item item4 = machine.getArraySlots().get(3).checkItem(); 
+        testmaintenance.setItemName4(item4.getItemName());
+        testmaintenance.setItemPrice4(((Milktea) item4).getPrice());
+        testmaintenance.setItemQuantity4(machine.getArraySlots().get(3).getNumberOfStock());
+        testmaintenance.setItemCalories4(item4.getItemCalories());
+        testmaintenance.setItemPicture4("/Elements/ItemElements/wintermelon w_ pearls.png");
+
+        Item item5 = machine.getArraySlots().get(4).checkItem(); 
+        testmaintenance.setItemName5(item5.getItemName());
+        testmaintenance.setItemPrice5(((Milktea) item5).getPrice());
+        testmaintenance.setItemQuantity5(machine.getArraySlots().get(4).getNumberOfStock());
+        testmaintenance.setItemCalories5(item5.getItemCalories());
+        testmaintenance.setItemPicture5("/Elements/ItemElements/wintermelon w_ white pearls.png");
+        
+        Item item6 = machine.getArraySlots().get(5).checkItem(); 
+        testmaintenance.setItemName6(item6.getItemName());
+        testmaintenance.setItemPrice6(((Milktea) item6).getPrice());
+        testmaintenance.setItemQuantity6(machine.getArraySlots().get(5).getNumberOfStock());
+        testmaintenance.setItemCalories6(item6.getItemCalories());
+        testmaintenance.setItemPicture6("/Elements/ItemElements/wintermelon w_ nat.png");
+
+        Item item7 = machine.getArraySlots().get(6).checkItem(); 
+        testmaintenance.setItemName7(item7.getItemName());
+        testmaintenance.setItemPrice7(((Milktea) item7).getPrice());
+        testmaintenance.setItemQuantity7(machine.getArraySlots().get(6).getNumberOfStock());
+        testmaintenance.setItemCalories7(item7.getItemCalories());
+        testmaintenance.setItemPicture7("/Elements/ItemElements/hokkaido w_ pearls.png");
+        
+        Item item8 = machine.getArraySlots().get(7).checkItem(); 
+        testmaintenance.setItemName8(item8.getItemName());
+        testmaintenance.setItemPrice8(((Milktea) item8).getPrice());
+        testmaintenance.setItemQuantity8(machine.getArraySlots().get(7).getNumberOfStock());
+        testmaintenance.setItemCalories8(item8.getItemCalories());
+        testmaintenance.setItemPicture8("/Elements/ItemElements/hokkaido w_ white pearls.png");
+
+        Item item9 = machine.getArraySlots().get(8).checkItem(); 
+        testmaintenance.setItemName9(item9.getItemName());
+        testmaintenance.setItemPrice9(((Milktea) item9).getPrice());
+        testmaintenance.setItemQuantity9(machine.getArraySlots().get(8).getNumberOfStock());
+        testmaintenance.setItemCalories9(item9.getItemCalories());
+        testmaintenance.setItemPicture9("/Elements/ItemElements/hokkaido w_ nata.png");
     }
 
     public void disableAllPickBtns()

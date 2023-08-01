@@ -27,6 +27,7 @@ public class TestVending extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSeparator1 = new javax.swing.JSeparator();
         jPanel1 = new javax.swing.JPanel();
         testLabel = new javax.swing.JLabel();
         testVendingBtn = new javax.swing.JButton();
@@ -151,6 +152,7 @@ public class TestVending extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel testLabel;
     private javax.swing.JButton testMaintenanceBtn;
     private javax.swing.JButton testVendingBtn;
