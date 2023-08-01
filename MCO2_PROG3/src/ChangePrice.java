@@ -33,6 +33,10 @@ public class ChangePrice extends javax.swing.JFrame {
         ItemName.setText(Name);
     }
     
+    public void clearTA()
+    {
+        newPrice.setText("");
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

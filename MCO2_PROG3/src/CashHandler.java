@@ -70,7 +70,7 @@ public class CashHandler
                 amountavailable = this.machineBalance[i][1];
             }
         }
-        string = denom + " : " + amountavailable;
+        string = "₱ " + denom + " : " + amountavailable;
         return string;
     }
 

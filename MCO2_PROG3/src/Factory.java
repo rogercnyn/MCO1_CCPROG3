@@ -933,6 +933,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item1).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                changeprice.clearTA();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -953,6 +954,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item2).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                changeprice.clearTA();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -973,6 +975,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item3).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                changeprice.clearTA();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -994,6 +997,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item4).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                changeprice.clearTA();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -1015,6 +1019,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item5).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                changeprice.clearTA();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -1036,6 +1041,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item6).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                changeprice.clearTA();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -1056,6 +1062,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item7).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                changeprice.clearTA();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -1076,6 +1083,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item8).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                changeprice.clearTA();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -1096,6 +1104,7 @@ public class Factory implements ActionListener{
                                 ((Milktea)item9).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
+                                changeprice.clearTA();
                                 loadRegularVendingmaintenance();
                             }
                         });
