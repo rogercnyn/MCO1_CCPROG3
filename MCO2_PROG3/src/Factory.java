@@ -1,6 +1,9 @@
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -934,6 +937,7 @@ public class Factory implements ActionListener{
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
+                                testmaintenance.disablePickBtn();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -955,6 +959,7 @@ public class Factory implements ActionListener{
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
+                                testmaintenance.disablePickBtn();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -976,6 +981,7 @@ public class Factory implements ActionListener{
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
+                                testmaintenance.disablePickBtn();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -998,12 +1004,12 @@ public class Factory implements ActionListener{
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
+                                testmaintenance.disablePickBtn();
                                 loadRegularVendingmaintenance();
                             }
                         });
                     }
                 });
-
 
                 testmaintenance.setPickSlot5BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
@@ -1020,6 +1026,7 @@ public class Factory implements ActionListener{
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
+                                testmaintenance.disablePickBtn();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -1042,6 +1049,7 @@ public class Factory implements ActionListener{
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
+                                testmaintenance.disablePickBtn();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -1063,6 +1071,7 @@ public class Factory implements ActionListener{
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
+                                testmaintenance.disablePickBtn();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -1084,6 +1093,7 @@ public class Factory implements ActionListener{
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
+                                testmaintenance.disablePickBtn();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -1105,6 +1115,7 @@ public class Factory implements ActionListener{
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
+                                testmaintenance.disablePickBtn();
                                 loadRegularVendingmaintenance();
                             }
                         });
@@ -1159,6 +1170,10 @@ public class Factory implements ActionListener{
                         {
                             machine.getCashHandler().addQuantityToBalance(500);  
                         }
+                        JOptionPane.showMessageDialog(replenishbalance, "Added Balance");
+                        testmaintenance.setVisible(true);
+                        replenishbalance.setVisible(false);
+                        replenishbalance.clearTA();
                     }
                 });
                 
@@ -1189,7 +1204,6 @@ public class Factory implements ActionListener{
             }
         });
         
-
         this.testmaintenance.setSalesBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
@@ -1197,6 +1211,53 @@ public class Factory implements ActionListener{
                 printsales.setVisible(true);
                 //printsales will display and all sales will display in a text area
                 
+                int i, j;
+                int soldCounter = 0;
+                LocalDate today = LocalDate.now();
+                ArrayList<Slot> arraySlots =machine.getArraySlots();
+                ArrayList<Transactions> transactions = machine.geTransactions();
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy");
+                String display;
+
+                display =("Sales Report from: " + formatter.format(machine.getLastRestockDate()) + " to " + formatter.format(today));
+
+                int totalSales = 0;
+
+                for (i = 0; i < transactions.size(); i++)
+                {
+                    if(transactions.get(i).getDate().isAfter(today) || transactions.get(i).getDate().isBefore(today) || transactions.get(i).getDate().equals(today))
+                    {
+                        totalSales = totalSales + transactions.get(i).getTotalPrice();
+                    }
+                }
+
+               display += ("\nTotal Sales Generated: Php " + totalSales+ "\n");
+
+                display += ("Product Sales:");
+
+                for (i = 0; i < arraySlots.size(); i++)
+                {
+                    soldCounter = 0;
+                    for (j = 0; j < transactions.size(); j++)
+                    {
+                        if(transactions.get(j).getDate().isAfter(today) || transactions.get(j).getDate().isBefore(today) || transactions.get(j).getDate().equals(today))
+                        {
+                                if (arraySlots.get(i).checkItem().getItemName().equals(transactions.get(j).getItemName()))
+                                {
+                                    soldCounter++;
+                                }
+                        }
+                    }
+                    display += ("\n[" + soldCounter + " sold] " + arraySlots.get(i).checkItem().getItemName()+"\n");
+                }
+                printsales.setTA(display);
+                printsales.setDoneBtnListener(new ActionListener() {
+                    public void actionPerformed (ActionEvent e)
+                    {
+                        printsales.setVisible(false);
+                        testmaintenance.setVisible(true);
+                    }
+                });
             }
         });
 

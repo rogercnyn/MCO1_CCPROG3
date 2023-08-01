@@ -11,7 +11,7 @@ public class Slot {
         this.items = new Stack<Item>();
         this.CAPACITY = 10;
     }
-
+    
     public Slot(Stack<Item> items)
     {
         this.items = items;
