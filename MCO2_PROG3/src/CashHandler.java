@@ -114,6 +114,19 @@ public class CashHandler
         }
     }
 
+    public void collectBalance()
+    {
+        int i, j;
+
+        for (i = 0; i < this.machineBalance.length; i++)
+        {
+            for(j = 0; j < this.machineBalance[i].length - 1; j++)
+            {
+                this.machineBalance[i][j+1] = 0;
+            }
+        }
+    }
+
     private boolean hasDenomStock(int denom)
     {
         boolean check = false;

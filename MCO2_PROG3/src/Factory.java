@@ -727,7 +727,7 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(0).addItem(item1,restock.getQuantity());
                                 restock.setVisible(false);
-                                loadRegularVendingmaintenance();
+                                loadRegularVending();
                                 testmaintenance.setVisible(true);
                                 restock.cleartxtarea();
                                 testmaintenance.disablePickBtn();
@@ -1172,14 +1172,7 @@ public class Factory implements ActionListener{
                     public void actionPerformed(ActionEvent e)
                     {
                         JOptionPane.showMessageDialog(collectbalance, "Collected all balance");
-                        int i,j;
-                        for(i= 0;i < denoms.length-1;i++ )
-                        {
-                            for(j =0;j < machine.getCashHandler().getTotalAvailableDenom(denoms[i])-1;i++)
-                            {
-                                machine.getCashHandler().deductQuantityToBalance(denoms[i]);
-                            }
-                        }
+                        machine.getCashHandler().collectBalance();
                         collectbalance.setVisible(false);                    
                         testmaintenance.setVisible(true);
                     }

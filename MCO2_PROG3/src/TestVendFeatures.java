@@ -1071,10 +1071,12 @@ public class TestVendFeatures extends javax.swing.JFrame {
         YourItemLbl.setBounds(380, 340, 120, 17);
 
         ItemImageLbl.setBackground(new java.awt.Color(0, 0, 0));
+        ItemImageLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ItemImageLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/hokkaido w_ pearls.png"))); // NOI18N
-        ItemImageLbl.setText("jLabel3");
+        ItemImageLbl.setPreferredSize(new java.awt.Dimension(70, 70));
+        ItemImageLbl.setSize(new java.awt.Dimension(70, 70));
         jPanel2.add(ItemImageLbl);
-        ItemImageLbl.setBounds(470, 340, 46, 46);
+        ItemImageLbl.setBounds(470, 340, 70, 70);
 
         DispenseBtn.setText("Dispense");
         jPanel2.add(DispenseBtn);
