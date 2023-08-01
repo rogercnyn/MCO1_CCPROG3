@@ -3,11 +3,12 @@ public class Milktea extends Item implements Sellable {
     private Flavor flavor;
     private Sinker sinker;
     
-    public Milktea(String name)
+    public Milktea(String name, int price)
     {
         super(name);
         this.flavor = null;
         this.sinker = null;
+        setPrice(price);
     }
 
     public Milktea(String name, Flavor flavor, Sinker sinker, int price)

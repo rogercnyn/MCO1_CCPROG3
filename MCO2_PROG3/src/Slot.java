@@ -57,6 +57,59 @@ public class Slot {
         }
     }
 
+    public ArrayList<Slot> specialItems()
+    {
+        ArrayList<Slot> specialItems = new ArrayList<Slot>();
+
+        Milktea milktea = new Milktea("Milktea", 135);
+        Stack<Item> itemOne = addItem(milktea);
+        Slot slot1 = new Slot(itemOne);
+        specialItems.add(slot1);
+
+        Flavor okinawa = new Flavor("Okinawa", 30);
+        Stack<Item> itemTwo = addItem(okinawa);
+        Slot slot2 = new Slot(itemTwo);
+        specialItems.add(slot2);
+
+        Flavor wintermelon = new Flavor("Wintermelon", 30);
+        Stack<Item> itemThree = addItem(wintermelon);
+        Slot slot3 = new Slot(itemThree);
+        specialItems.add(slot3);
+
+        Sinker pearls = new Sinker("Pearls", 88, 20);
+        Stack<Item> itemFour = addItem(pearls);
+        Slot slot4 = new Slot(itemFour);
+        specialItems.add(slot4);
+
+        Sinker whitepearls = new Sinker("White Pearls", 90, 20);
+        Stack<Item> itemFive = addItem(whitepearls);
+        Slot slot5 = new Slot(itemFive);
+        specialItems.add(slot5);
+
+        Sinker nata = new Sinker("Nata de Coco", 100, 25);
+        Stack<Item> itemSix = addItem(nata);
+        Slot slot6 = new Slot(itemSix);
+        specialItems.add(slot6);
+
+        Sinker grassjelly = new Sinker("Grass Jelly", 93, 25);
+        Stack<Item> itemSeven = addItem(grassjelly);
+        Slot slot7 = new Slot(itemSeven);
+        specialItems.add(slot7);
+
+        Sinker eggpudding = new Sinker("Egg Pudding", 105, 30);
+        Stack<Item> itemEight = addItem(eggpudding);
+        Slot slot8 = new Slot(itemEight);
+        specialItems.add(slot8);
+
+        Sinker coffeejelly = new Sinker("Coffee Jelly", 118, 30);
+        Stack<Item> itemNine = addItem(coffeejelly);
+        Slot slot9 = new Slot(itemNine);
+        specialItems.add(slot9);
+
+        return specialItems;
+
+    }
+
     public ArrayList<Slot> regularItems()
     {
         ArrayList<Slot> regularItems = new ArrayList<Slot>();

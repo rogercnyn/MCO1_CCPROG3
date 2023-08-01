@@ -1150,7 +1150,12 @@ public class TestVendFeatures extends javax.swing.JFrame {
     public int getSelectedDenom()
     {
         String getdenom = (String)DenominationComboBox.getSelectedItem();
-        int denom = Integer.parseInt(getdenom.substring(1));
+        int denom = 0;
+        try {
+            denom = Integer.parseInt(getdenom.substring(1));
+        } catch (Exception e) {
+            
+        }
         return denom;
     }
 
@@ -1530,6 +1535,18 @@ public class TestVendFeatures extends javax.swing.JFrame {
     public void setOrderDetailsLbl(String order)
     {
         OrderDetailsLbl.setText("Order:\n" + order);
+    }
+
+    public void setFlavorDetailsLbl(String order)
+    {
+        String currentText = OrderDetailsLbl.getText();
+        OrderDetailsLbl.setText(currentText + "\nFlavor: " + order);
+    }
+
+    public void setSinkerDetailsLbl(String order)
+    {
+        String currentText = OrderDetailsLbl.getText();
+        OrderDetailsLbl.setText(currentText + "\nSinker: " + order);
     }
 
     // sets the text of message lbl to the string provided.

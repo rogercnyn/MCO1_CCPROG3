@@ -83,7 +83,9 @@ public class Factory implements ActionListener{
             public void actionPerformed(ActionEvent e)
             {
                 JOptionPane.showMessageDialog(createvending, "Special Vending Machine is successfully created!");
+                machine = new SpecialMachine(slot.specialItems());
                 mainMenu.setVisible(true);
+                mainMenu.setTestEnable(true);
                 createvending.setVisible(false);
             }
         });
@@ -93,8 +95,15 @@ public class Factory implements ActionListener{
         this.mainMenu.setTestBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                // Add an conditional machine instanceof special
-                loadRegularVending();
+                if (machine instanceof SpecialMachine)
+                {
+                    loadSpecialVending();
+                    disableFlavor();
+                }
+                else
+                {
+                    loadRegularVending();
+                }
                 testvending.setVisible(true);
                 mainMenu.setVisible(false);
             }
@@ -104,7 +113,15 @@ public class Factory implements ActionListener{
         this.testvending.setTestVendingListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                loadRegularVending();
+                if (machine instanceof SpecialMachine)
+                {
+                    loadSpecialVending();
+                    disableFlavor();
+                }
+                else
+                {
+                    loadRegularVending();
+                }
                 testvendfeatures.setInsertCashEnable(false);
                 testvendfeatures.setDispenseBtnEnable(false);
                 testvendfeatures.setCancelBtnEnable(false);
@@ -148,17 +165,149 @@ public class Factory implements ActionListener{
 
                 else
                 {
-                    disableAllPickBtns();
                     Item item1 = machine.getArraySlots().get(0).checkItem();
                     testvendfeatures.setOrderDetailsLbl(item1.getItemName());
-                    testvendfeatures.setMessageLbl("Please insert your payment.");
-                    testvendfeatures.setInsertCashEnable(true);
-                    machine.getCashHandler().setTotalPayable(((Milktea) item1).getPrice());
-                    machine.setChosenItem(item1);
-                    int totalPayable = machine.getCashHandler().getTotalPayable();
-                    testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
+
+                    if (machine instanceof SpecialMachine)
+                    {
+                        testvendfeatures.setPickSlot1Enable(false);
+                        disableSinkers();
+                        enableFlavor();
+
+                        testvendfeatures.setMessageLbl("Pick the flavor of your milktea.");
+
+                        testvendfeatures.setPickSlot2BtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item flavor = machine.getArraySlots().get(1).checkItem();
+                                testvendfeatures.setFlavorDetailsLbl(((Flavor) flavor).getItemName());
+                                testvendfeatures.setMessageLbl("Pick the sinker of your choice.");
+                                ((Milktea) item1).setFlavor(((Flavor) flavor));
+                                disableFlavor();
+                                enableSinkers();
+                            }
+                        });
+
+                        testvendfeatures.setPickSlot3BtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item flavor = machine.getArraySlots().get(2).checkItem();
+                                testvendfeatures.setFlavorDetailsLbl(((Flavor) flavor).getItemName());
+                                testvendfeatures.setMessageLbl("Pick the sinker of your choice.");
+                                ((Milktea) item1).setFlavor(((Flavor) flavor));
+                                disableFlavor();
+                                enableSinkers();
+                            }
+                        });
+
+                        testvendfeatures.setPickSlot4BtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item sinker = machine.getArraySlots().get(3).checkItem();
+                                testvendfeatures.setSinkerDetailsLbl(((Sinker) sinker).getItemName());
+                                ((Milktea) item1).setSinker(((Sinker) sinker));
+                                disableAllPickBtns();
+                                testvendfeatures.setMessageLbl("Please insert your payment.");
+                                testvendfeatures.setInsertCashEnable(true);
+                                machine.getCashHandler().setTotalPayable(((Milktea) item1).getPrice());
+                                machine.setChosenItem(item1);
+                                int totalPayable = machine.getCashHandler().getTotalPayable();
+                                testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
+                            }
+                        });
+
+                        testvendfeatures.setPickSlot5BtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item sinker = machine.getArraySlots().get(4).checkItem();
+                                testvendfeatures.setSinkerDetailsLbl(((Sinker) sinker).getItemName());
+                                ((Milktea) item1).setSinker(((Sinker) sinker));
+                                disableAllPickBtns();
+                                testvendfeatures.setMessageLbl("Please insert your payment.");
+                                testvendfeatures.setInsertCashEnable(true);
+                                machine.getCashHandler().setTotalPayable(((Milktea) item1).getPrice());
+                                machine.setChosenItem(item1);
+                                int totalPayable = machine.getCashHandler().getTotalPayable();
+                                testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
+                            }
+                        });
+
+                        testvendfeatures.setPickSlot6BtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item sinker = machine.getArraySlots().get(5).checkItem();
+                                testvendfeatures.setSinkerDetailsLbl(((Sinker) sinker).getItemName());
+                                ((Milktea) item1).setSinker(((Sinker) sinker));
+                                disableAllPickBtns();
+                                testvendfeatures.setMessageLbl("Please insert your payment.");
+                                testvendfeatures.setInsertCashEnable(true);
+                                machine.getCashHandler().setTotalPayable(((Milktea) item1).getPrice());
+                                machine.setChosenItem(item1);
+                                int totalPayable = machine.getCashHandler().getTotalPayable();
+                                testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
+                            }
+                        });
+
+                        testvendfeatures.setPickSlot7BtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item sinker = machine.getArraySlots().get(6).checkItem();
+                                testvendfeatures.setSinkerDetailsLbl(((Sinker) sinker).getItemName());
+                                ((Milktea) item1).setSinker(((Sinker) sinker));
+                                disableAllPickBtns();
+                                testvendfeatures.setMessageLbl("Please insert your payment.");
+                                testvendfeatures.setInsertCashEnable(true);
+                                machine.getCashHandler().setTotalPayable(((Milktea) item1).getPrice());
+                                machine.setChosenItem(item1);
+                                int totalPayable = machine.getCashHandler().getTotalPayable();
+                                testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
+                            }
+                        });
+
+                        testvendfeatures.setPickSlot8BtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item sinker = machine.getArraySlots().get(7).checkItem();
+                                testvendfeatures.setSinkerDetailsLbl(((Sinker) sinker).getItemName());
+                                ((Milktea) item1).setSinker(((Sinker) sinker));
+                                disableAllPickBtns();
+                                testvendfeatures.setMessageLbl("Please insert your payment.");
+                                testvendfeatures.setInsertCashEnable(true);
+                                machine.getCashHandler().setTotalPayable(((Milktea) item1).getPrice());
+                                machine.setChosenItem(item1);
+                                int totalPayable = machine.getCashHandler().getTotalPayable();
+                                testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
+                            }
+                        });
+
+                        testvendfeatures.setPickSlot9BtnListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e)
+                            {
+                                Item sinker = machine.getArraySlots().get(8).checkItem();
+                                testvendfeatures.setSinkerDetailsLbl(((Sinker) sinker).getItemName());
+                                ((Milktea) item1).setSinker(((Sinker) sinker));
+                                disableAllPickBtns();
+                                testvendfeatures.setMessageLbl("Please insert your payment.");
+                                testvendfeatures.setInsertCashEnable(true);
+                                machine.getCashHandler().setTotalPayable(((Milktea) item1).getPrice());
+                                machine.setChosenItem(item1);
+                                int totalPayable = machine.getCashHandler().getTotalPayable();
+                                testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
+                            }
+                        });
+                    }
+
+                    else
+                    {
+                        testvendfeatures.setMessageLbl("Please insert your payment.");
+                        testvendfeatures.setInsertCashEnable(true);
+                        disableAllPickBtns();
+                        machine.getCashHandler().setTotalPayable(((Milktea) item1).getPrice());
+                        machine.setChosenItem(item1);
+                        int totalPayable = machine.getCashHandler().getTotalPayable();
+                        testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
+                    }
                 }
-                
             }
         });
 
@@ -172,12 +321,19 @@ public class Factory implements ActionListener{
 
                 else
                 {
-                    disableAllPickBtns();
                     Item item2 = machine.getArraySlots().get(1).checkItem();
                     testvendfeatures.setOrderDetailsLbl(item2.getItemName());
                     testvendfeatures.setMessageLbl("Please insert your payment.");
                     testvendfeatures.setInsertCashEnable(true);
-                    machine.getCashHandler().setTotalPayable(((Milktea) item2).getPrice());
+                    disableAllPickBtns();
+                    if (machine instanceof SpecialMachine)
+                    {
+                        //machine.getCashHandler().setTotalPayable(((Flavor) item2).getPrice());
+                    }
+                    else
+                    {
+                        machine.getCashHandler().setTotalPayable(((Milktea) item2).getPrice());
+                    }
                     machine.setChosenItem(item2);
                     int totalPayable = machine.getCashHandler().getTotalPayable();
                     testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
@@ -201,7 +357,14 @@ public class Factory implements ActionListener{
                     testvendfeatures.setOrderDetailsLbl(item3.getItemName());
                     testvendfeatures.setMessageLbl("Please insert your payment.");
                     testvendfeatures.setInsertCashEnable(true);
-                    machine.getCashHandler().setTotalPayable(((Milktea) item3).getPrice());
+                    if (machine instanceof SpecialMachine)
+                    {
+                        //machine.getCashHandler().setTotalPayable(((Flavor) item3).getPrice());
+                    }
+                    else
+                    {
+                        machine.getCashHandler().setTotalPayable(((Milktea) item3).getPrice());
+                    }
                     machine.setChosenItem(item3);
                     int totalPayable = machine.getCashHandler().getTotalPayable();
                     testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
@@ -223,7 +386,14 @@ public class Factory implements ActionListener{
                     testvendfeatures.setOrderDetailsLbl(item4.getItemName());
                     testvendfeatures.setMessageLbl("Please insert your payment.");
                     testvendfeatures.setInsertCashEnable(true);
-                    machine.getCashHandler().setTotalPayable(((Milktea) item4).getPrice());
+                    if (machine instanceof SpecialMachine)
+                    {
+                        machine.getCashHandler().setTotalPayable(((Sinker) item4).getPrice());
+                    }
+                    else
+                    {
+                        machine.getCashHandler().setTotalPayable(((Milktea) item4).getPrice());
+                    }
                     machine.setChosenItem(item4);
                     int totalPayable = machine.getCashHandler().getTotalPayable();
                     testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
@@ -246,7 +416,14 @@ public class Factory implements ActionListener{
                     testvendfeatures.setOrderDetailsLbl(item5.getItemName());
                     testvendfeatures.setMessageLbl("Please insert your payment.");
                     testvendfeatures.setInsertCashEnable(true);
-                    machine.getCashHandler().setTotalPayable(((Milktea) item5).getPrice());
+                    if (machine instanceof SpecialMachine)
+                    {
+                        machine.getCashHandler().setTotalPayable(((Sinker) item5).getPrice());
+                    }
+                    else
+                    {
+                        machine.getCashHandler().setTotalPayable(((Milktea) item5).getPrice());
+                    }
                     machine.setChosenItem(item5);
                     int totalPayable = machine.getCashHandler().getTotalPayable();
                     testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
@@ -269,7 +446,14 @@ public class Factory implements ActionListener{
                     testvendfeatures.setOrderDetailsLbl(item6.getItemName());
                     testvendfeatures.setMessageLbl("Please insert your payment.");
                     testvendfeatures.setInsertCashEnable(true);
-                    machine.getCashHandler().setTotalPayable(((Milktea) item6).getPrice());
+                    if (machine instanceof SpecialMachine)
+                    {
+                        machine.getCashHandler().setTotalPayable(((Sinker) item6).getPrice());
+                    }
+                    else
+                    {
+                        machine.getCashHandler().setTotalPayable(((Milktea) item6).getPrice());
+                    }
                     machine.setChosenItem(item6);
                     int totalPayable = machine.getCashHandler().getTotalPayable();
                     testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
@@ -291,7 +475,14 @@ public class Factory implements ActionListener{
                     testvendfeatures.setOrderDetailsLbl(item7.getItemName());
                     testvendfeatures.setMessageLbl("Please insert your payment.");
                     testvendfeatures.setInsertCashEnable(true);
-                    machine.getCashHandler().setTotalPayable(((Milktea) item7).getPrice());
+                    if (machine instanceof SpecialMachine)
+                    {
+                        machine.getCashHandler().setTotalPayable(((Sinker) item7).getPrice());
+                    }
+                    else
+                    {
+                        machine.getCashHandler().setTotalPayable(((Milktea) item7).getPrice());
+                    }
                     machine.setChosenItem(item7);
                     int totalPayable = machine.getCashHandler().getTotalPayable();
                     testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
@@ -313,7 +504,14 @@ public class Factory implements ActionListener{
                     testvendfeatures.setOrderDetailsLbl(item8.getItemName());
                     testvendfeatures.setMessageLbl("Please insert your payment.");
                     testvendfeatures.setInsertCashEnable(true);
-                    machine.getCashHandler().setTotalPayable(((Milktea) item8).getPrice());
+                    if (machine instanceof SpecialMachine)
+                    {
+                        machine.getCashHandler().setTotalPayable(((Sinker) item8).getPrice());
+                    }
+                    else
+                    {
+                        machine.getCashHandler().setTotalPayable(((Milktea) item8).getPrice());
+                    }
                     machine.setChosenItem(item8);
                     int totalPayable = machine.getCashHandler().getTotalPayable();
                     testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
@@ -336,7 +534,14 @@ public class Factory implements ActionListener{
                     testvendfeatures.setOrderDetailsLbl(item9.getItemName());
                     testvendfeatures.setMessageLbl("Please insert your payment.");
                     testvendfeatures.setInsertCashEnable(true);
-                    machine.getCashHandler().setTotalPayable(((Milktea) item9).getPrice());
+                    if (machine instanceof SpecialMachine)
+                    {
+                        machine.getCashHandler().setTotalPayable(((Sinker) item9).getPrice());
+                    }
+                    else
+                    {
+                        machine.getCashHandler().setTotalPayable(((Milktea) item9).getPrice());
+                    }
                     machine.setChosenItem(item9);
                     int totalPayable = machine.getCashHandler().getTotalPayable();
                     testvendfeatures.addInfoInMessageLbl("Total payable: ₱" + totalPayable);
@@ -348,12 +553,18 @@ public class Factory implements ActionListener{
             public void actionPerformed(ActionEvent e)
             {
                 int itemIndex = machine.getChosenItemIndex();
+                Item item = machine.getArraySlots().get(itemIndex).checkItem();
                 boolean isSuccess = machine.getCashHandler().produceChange();
                 if (isSuccess)
                 {
+                    testvendfeatures.setMessageLbl("----- Preparing Milktea -----");
+                    testvendfeatures.addInfoInMessageLbl("Adding " + ((Milktea) item).getSinker().getItemName() + "...");
+                    testvendfeatures.addInfoInMessageLbl("Pouring " + ((Milktea) item).getFlavor().getItemName() + "...");
+                    testvendfeatures.addInfoInMessageLbl(item.getItemName() + " done!");
                     machine.getArraySlots().get(itemIndex).dispenseItem();
                     JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().successChange());
                     machine.addTransactions();
+                    testvendfeatures.restartOrderDetailsLbl();
                 }
 
                 else
@@ -978,6 +1189,104 @@ public class Factory implements ActionListener{
             }
         });*/
 
+    }
+
+    public void enableFlavor()
+    {
+        testvendfeatures.setPickSlot2Enable(true);
+        testvendfeatures.setPickSlot3Enable(true);
+    }
+
+    public void enableSinkers()
+    {
+        testvendfeatures.setPickSlot4Enable(true);
+        testvendfeatures.setPickSlot5Enable(true);
+        testvendfeatures.setPickSlot6Enable(true);
+        testvendfeatures.setPickSlot7Enable(true);
+        testvendfeatures.setPickSlot8Enable(true);
+        testvendfeatures.setPickSlot9Enable(true);
+    }
+
+    public void disableFlavor()
+    {
+        testvendfeatures.setPickSlot2Enable(false);
+        testvendfeatures.setPickSlot3Enable(false);
+    }
+
+    public void disableSinkers()
+    {
+        testvendfeatures.setPickSlot4Enable(false);
+        testvendfeatures.setPickSlot5Enable(false);
+        testvendfeatures.setPickSlot6Enable(false);
+        testvendfeatures.setPickSlot7Enable(false);
+        testvendfeatures.setPickSlot8Enable(false);
+        testvendfeatures.setPickSlot9Enable(false);
+    }
+
+    public void loadSpecialVending()
+    {
+        Item item1 = machine.getArraySlots().get(0).checkItem(); 
+        testvendfeatures.setItemName1(item1.getItemName());
+        testvendfeatures.setItemPrice1(((Milktea) item1).getPrice());
+        testvendfeatures.setItemQuantity1(machine.getArraySlots().get(0).getNumberOfStock());
+        testvendfeatures.setItemCalories1(item1.getItemCalories());
+        testvendfeatures.setItemPicture1("/Elements/ItemElements/okinawa w_ pearls.png");
+        
+        Item item2 = machine.getArraySlots().get(1).checkItem(); 
+        testvendfeatures.setItemName2(item2.getItemName());
+        //testvendfeatures.setItemPrice2(((Flavor) item2).getPrice());
+        testvendfeatures.setItemQuantity2(machine.getArraySlots().get(1).getNumberOfStock());
+        testvendfeatures.setItemCalories2(item2.getItemCalories());
+        testvendfeatures.setItemPicture2("/Elements/ItemElements/okinawa w_ white pearls.png");
+
+        Item item3 = machine.getArraySlots().get(2).checkItem(); 
+        testvendfeatures.setItemName3(item3.getItemName());
+        //testvendfeatures.setItemPrice3(((Flavor) item3).getPrice());
+        testvendfeatures.setItemQuantity3(machine.getArraySlots().get(2).getNumberOfStock());
+        testvendfeatures.setItemCalories3(item3.getItemCalories());
+        testvendfeatures.setItemPicture3("/Elements/ItemElements/okinawa w_ nata.png");
+        
+        Item item4 = machine.getArraySlots().get(3).checkItem(); 
+        testvendfeatures.setItemName4(item4.getItemName());
+        testvendfeatures.setItemPrice4(((Sinker) item4).getPrice());
+        testvendfeatures.setItemQuantity4(machine.getArraySlots().get(3).getNumberOfStock());
+        testvendfeatures.setItemCalories4(item4.getItemCalories());
+        testvendfeatures.setItemPicture4("/Elements/ItemElements/wintermelon w_ pearls.png");
+
+        Item item5 = machine.getArraySlots().get(4).checkItem(); 
+        testvendfeatures.setItemName5(item5.getItemName());
+        testvendfeatures.setItemPrice5(((Sinker) item5).getPrice());
+        testvendfeatures.setItemQuantity5(machine.getArraySlots().get(4).getNumberOfStock());
+        testvendfeatures.setItemCalories5(item5.getItemCalories());
+        testvendfeatures.setItemPicture5("/Elements/ItemElements/wintermelon w_ white pearls.png");
+        
+        Item item6 = machine.getArraySlots().get(5).checkItem(); 
+        testvendfeatures.setItemName6(item6.getItemName());
+        testvendfeatures.setItemPrice6(((Sinker) item6).getPrice());
+        testvendfeatures.setItemQuantity6(machine.getArraySlots().get(5).getNumberOfStock());
+        testvendfeatures.setItemCalories6(item6.getItemCalories());
+        testvendfeatures.setItemPicture6("/Elements/ItemElements/wintermelon w_ nat.png");
+
+        Item item7 = machine.getArraySlots().get(6).checkItem(); 
+        testvendfeatures.setItemName7(item7.getItemName());
+        testvendfeatures.setItemPrice7(((Sinker) item7).getPrice());
+        testvendfeatures.setItemQuantity7(machine.getArraySlots().get(6).getNumberOfStock());
+        testvendfeatures.setItemCalories7(item7.getItemCalories());
+        testvendfeatures.setItemPicture7("/Elements/ItemElements/hokkaido w_ pearls.png");
+        
+        Item item8 = machine.getArraySlots().get(7).checkItem(); 
+        testvendfeatures.setItemName8(item8.getItemName());
+        testvendfeatures.setItemPrice8(((Sinker) item8).getPrice());
+        testvendfeatures.setItemQuantity8(machine.getArraySlots().get(7).getNumberOfStock());
+        testvendfeatures.setItemCalories8(item8.getItemCalories());
+        testvendfeatures.setItemPicture8("/Elements/ItemElements/hokkaido w_ white pearls.png");
+
+        Item item9 = machine.getArraySlots().get(8).checkItem(); 
+        testvendfeatures.setItemName9(item9.getItemName());
+        testvendfeatures.setItemPrice9(((Sinker) item9).getPrice());
+        testvendfeatures.setItemQuantity9(machine.getArraySlots().get(8).getNumberOfStock());
+        testvendfeatures.setItemCalories9(item9.getItemCalories());
+        testvendfeatures.setItemPicture9("/Elements/ItemElements/hokkaido w_ nata.png");
     }
 
     public void loadRegularVending()
