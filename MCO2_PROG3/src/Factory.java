@@ -698,7 +698,15 @@ public class Factory implements ActionListener{
         this.testvending.setTestMaintenanceListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                loadRegularVendingmaintenance();
+                if (machine instanceof SpecialMachine)
+                {
+                    loadSpecialVendingmaintenance();
+                }
+                else
+                {
+                    loadRegularVendingmaintenance();
+                }
+
                 testmaintenance.setVisible(true);
                 testvending.setVisible(false);
                 testmaintenance.disablePickBtn();
@@ -1601,6 +1609,72 @@ public class Factory implements ActionListener{
         testmaintenance.setItemPicture9("/Elements/ItemElements/hokkaido w_ nata.png");
     }
 
+    public void loadSpecialVendingmaintenance()
+    {
+        Item item1 = machine.getArraySlots().get(0).checkItem(); 
+        testmaintenance.setItemName1(item1.getItemName());
+        testmaintenance.setItemPrice1(((Milktea) item1).getPrice());
+        testmaintenance.setItemQuantity1(machine.getArraySlots().get(0).getNumberOfStock());
+        testmaintenance.setItemCalories1(item1.getItemCalories());
+        testmaintenance.setItemPicture1("/Elements/ItemElements/okinawa w_ pearls.png");
+        
+        Item item2 = machine.getArraySlots().get(1).checkItem(); 
+        testmaintenance.setItemName2(item2.getItemName());
+        //testvendfeatures.setItemPrice2(((Flavor) item2).getPrice());
+        testmaintenance.setItemQuantity2(machine.getArraySlots().get(1).getNumberOfStock());
+        testmaintenance.setItemCalories2(item2.getItemCalories());
+        testmaintenance.setItemPicture2("/Elements/ItemElements/okinawa w_ white pearls.png");
+
+        Item item3 = machine.getArraySlots().get(2).checkItem(); 
+        testmaintenance.setItemName3(item3.getItemName());
+        //testvendfeatures.setItemPrice3(((Flavor) item3).getPrice());
+        testmaintenance.setItemQuantity3(machine.getArraySlots().get(2).getNumberOfStock());
+        testmaintenance.setItemCalories3(item3.getItemCalories());
+        testmaintenance.setItemPicture3("/Elements/ItemElements/okinawa w_ nata.png");
+        
+        Item item4 = machine.getArraySlots().get(3).checkItem(); 
+        testmaintenance.setItemName4(item4.getItemName());
+        testmaintenance.setItemPrice4(((Sinker) item4).getPrice());
+        testmaintenance.setItemQuantity4(machine.getArraySlots().get(3).getNumberOfStock());
+        testmaintenance.setItemCalories4(item4.getItemCalories());
+        testmaintenance.setItemPicture4("/Elements/ItemElements/wintermelon w_ pearls.png");
+
+        Item item5 = machine.getArraySlots().get(4).checkItem(); 
+        testmaintenance.setItemName5(item5.getItemName());
+        testmaintenance.setItemPrice5(((Sinker) item5).getPrice());
+        testmaintenance.setItemQuantity5(machine.getArraySlots().get(4).getNumberOfStock());
+        testmaintenance.setItemCalories5(item5.getItemCalories());
+        testmaintenance.setItemPicture5("/Elements/ItemElements/wintermelon w_ white pearls.png");
+        
+        Item item6 = machine.getArraySlots().get(5).checkItem(); 
+        testmaintenance.setItemName6(item6.getItemName());
+        testmaintenance.setItemPrice6(((Sinker) item6).getPrice());
+        testmaintenance.setItemQuantity6(machine.getArraySlots().get(5).getNumberOfStock());
+        testmaintenance.setItemCalories6(item6.getItemCalories());
+        testmaintenance.setItemPicture6("/Elements/ItemElements/wintermelon w_ nat.png");
+
+        Item item7 = machine.getArraySlots().get(6).checkItem(); 
+        testmaintenance.setItemName7(item7.getItemName());
+        testmaintenance.setItemPrice7(((Sinker) item7).getPrice());
+        testmaintenance.setItemQuantity7(machine.getArraySlots().get(6).getNumberOfStock());
+        testmaintenance.setItemCalories7(item7.getItemCalories());
+        testmaintenance.setItemPicture7("/Elements/ItemElements/hokkaido w_ pearls.png");
+        
+        Item item8 = machine.getArraySlots().get(7).checkItem(); 
+        testmaintenance.setItemName8(item8.getItemName());
+        testmaintenance.setItemPrice8(((Sinker) item8).getPrice());
+        testmaintenance.setItemQuantity8(machine.getArraySlots().get(7).getNumberOfStock());
+        testmaintenance.setItemCalories8(item8.getItemCalories());
+        testmaintenance.setItemPicture8("/Elements/ItemElements/hokkaido w_ white pearls.png");
+
+        Item item9 = machine.getArraySlots().get(8).checkItem(); 
+        testmaintenance.setItemName9(item9.getItemName());
+        testmaintenance.setItemPrice9(((Sinker) item9).getPrice());
+        testmaintenance.setItemQuantity9(machine.getArraySlots().get(8).getNumberOfStock());
+        testmaintenance.setItemCalories9(item9.getItemCalories());
+        testmaintenance.setItemPicture9("/Elements/ItemElements/hokkaido w_ nata.png"); 
+    }
+    
     public void disableAllPickBtns()
     {
         testvendfeatures.setPickSlot1Enable(false);
