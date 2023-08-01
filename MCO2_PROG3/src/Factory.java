@@ -820,16 +820,16 @@ public class Factory implements ActionListener{
             public void actionPerformed(ActionEvent e)
             {
                 testmaintenance.enablePickBtn();
-
                 testmaintenance.setPickSlot1BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
+                        Item item1 = machine.getArraySlots().get(0).checkItem();
+                        changeprice.setName(item1.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                Item item1 = machine.getArraySlots().get(0).checkItem();
                                 int newprice = changeprice.getNewPrice();
                                 ((Milktea)item1).setPrice(newprice);
                                 testmaintenance.setVisible(true);
@@ -842,12 +842,13 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot2BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
+                        Item item2 = machine.getArraySlots().get(1).checkItem();
+                        changeprice.setName(item2.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);     
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                Item item2 = machine.getArraySlots().get(1).checkItem();
                                 int newprice = changeprice.getNewPrice();
                                 ((Milktea)item2).setPrice(newprice);
                                 testmaintenance.setVisible(true);
@@ -860,12 +861,13 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot3BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
+                        Item item3 = machine.getArraySlots().get(2).checkItem();
+                        changeprice.setName(item3.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                Item item3 = machine.getArraySlots().get(2).checkItem();
                                 int newprice = changeprice.getNewPrice();
                                 ((Milktea)item3).setPrice(newprice);
                                 testmaintenance.setVisible(true);
@@ -878,6 +880,8 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot4BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
+                        Item item4 = machine.getArraySlots().get(3).checkItem();
+                        changeprice.setName(item4.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
@@ -897,12 +901,13 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot5BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
+                        Item item5 = machine.getArraySlots().get(4).checkItem();
+                        changeprice.setName(item5.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                Item item5 = machine.getArraySlots().get(4).checkItem();
                                 int newprice = changeprice.getNewPrice();
                                 ((Milktea)item5).setPrice(newprice);
                                 testmaintenance.setVisible(true);
@@ -915,6 +920,8 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot6BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
+                        Item item6 = machine.getArraySlots().get(5).checkItem();
+                        changeprice.setName(item6.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
@@ -933,12 +940,13 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot7BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
+                        Item item7 = machine.getArraySlots().get(6).checkItem();
+                        changeprice.setName(item7.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                Item item7 = machine.getArraySlots().get(6).checkItem();
                                 int newprice = changeprice.getNewPrice();
                                 ((Milktea)item7).setPrice(newprice);
                                 testmaintenance.setVisible(true);
@@ -951,12 +959,13 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot8BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
+                        Item item8 = machine.getArraySlots().get(7).checkItem();
+                        changeprice.setName(item8.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                Item item8 = machine.getArraySlots().get(7).checkItem();
                                 int newprice = changeprice.getNewPrice();
                                 ((Milktea)item8).setPrice(newprice);
                                 testmaintenance.setVisible(true);
@@ -969,12 +978,13 @@ public class Factory implements ActionListener{
                 testmaintenance.setPickSlot9BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
+                        Item item9 = machine.getArraySlots().get(8).checkItem();
+                        changeprice.setName(item9.getItemName());
                         changeprice.setVisible(true);
                         testmaintenance.setVisible(false);
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                Item item9 = machine.getArraySlots().get(8).checkItem();
                                 int newprice = changeprice.getNewPrice();
                                 ((Milktea)item9).setPrice(newprice);
                                 testmaintenance.setVisible(true);
@@ -998,43 +1008,39 @@ public class Factory implements ActionListener{
                         int i;
                         for(i=0;i<replenishbalance.getBal1();i++)
                         {
-                            machine.getCashHandler().addQuantityToBalance(0);  
+                            machine.getCashHandler().addQuantityToBalance(1);  
                         }
                         for(i=0;i<replenishbalance.getBal10();i++)
                         {
-                            machine.getCashHandler().addQuantityToBalance(0);  
+                            machine.getCashHandler().addQuantityToBalance(10);  
                         }
                         for(i=0;i<replenishbalance.getBal100();i++)
                         {
-                            machine.getCashHandler().addQuantityToBalance(0);  
+                            machine.getCashHandler().addQuantityToBalance(100);  
                         }
                         for(i=0;i<replenishbalance.getBal1000();i++)
                         {
-                            machine.getCashHandler().addQuantityToBalance(0);  
+                            machine.getCashHandler().addQuantityToBalance(1000);  
                         }
                         for(i=0;i<replenishbalance.getBal20();i++)
                         {
-                            machine.getCashHandler().addQuantityToBalance(0);  
+                            machine.getCashHandler().addQuantityToBalance(20);  
                         }
                         for(i=0;i<replenishbalance.getBal200();i++)
                         {
-                            machine.getCashHandler().addQuantityToBalance(0);  
+                            machine.getCashHandler().addQuantityToBalance(200);  
                         }
                         for(i=0;i<replenishbalance.getBal5();i++)
                         {
-                            machine.getCashHandler().addQuantityToBalance(0);  
-                        }
-                        for(i=0;i<replenishbalance.getBal5();i++)
-                        {
-                            machine.getCashHandler().addQuantityToBalance(0);  
+                            machine.getCashHandler().addQuantityToBalance(5);  
                         }
                         for(i=0;i<replenishbalance.getBal50();i++)
                         {
-                            machine.getCashHandler().addQuantityToBalance(0);  
+                            machine.getCashHandler().addQuantityToBalance(50);  
                         }
                         for(i=0;i<replenishbalance.getBal500();i++)
                         {
-                            machine.getCashHandler().addQuantityToBalance(0);  
+                            machine.getCashHandler().addQuantityToBalance(500);  
                         }
                     }
                 });
@@ -1048,6 +1054,7 @@ public class Factory implements ActionListener{
                 testmaintenance.setVisible(false);
                 collectbalance.setVisible(true);
                 int[] denoms = machine.getCashHandler().getAcceptedDenom();
+                collectbalance.clearTxtArea();
                 collectbalance.setTextArea(machine.getCashHandler().printDenom(1) + "\n" + machine.getCashHandler().printDenom(5) + "\n" + 
                                             machine.getCashHandler().printDenom(10) + "\n" + machine.getCashHandler().printDenom(50) + "\n" +
                                             machine.getCashHandler().printDenom(100) + "\n" + machine.getCashHandler().printDenom(200) + "\n" +
@@ -1058,13 +1065,15 @@ public class Factory implements ActionListener{
                     {
                         JOptionPane.showMessageDialog(collectbalance, "Collected all balance");
                         int i,j;
-                        for(i= 0;i < denoms.length;i++ )
+                        for(i= 0;i < denoms.length-1;i++ )
                         {
-                            for(j =0;j < machine.getCashHandler().getTotalAvailableDenom(denoms[i]);i++)
+                            for(j =0;j < machine.getCashHandler().getTotalAvailableDenom(denoms[i])-1;i++)
                             {
                                 machine.getCashHandler().deductQuantityToBalance(denoms[i]);
                             }
                         }
+                        collectbalance.setVisible(false);                    
+                        testmaintenance.setVisible(true);
                     }
                 });
             }

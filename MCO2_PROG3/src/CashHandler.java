@@ -65,12 +65,9 @@ public class CashHandler
         int amountavailable=0;
         for (int i = 0; i < this.machineBalance.length; i++)
         {
-            for(int j = 0; j < this.machineBalance[i].length - 1; j++)
+            if (denom == this.machineBalance[i][0])
             {
-                if (denom == this.machineBalance[i][j])
-                {
-                    amountavailable++;
-                }
+                amountavailable = this.machineBalance[i][1];
             }
         }
         string = denom + " : " + amountavailable;

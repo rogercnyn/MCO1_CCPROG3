@@ -107,6 +107,10 @@ public class CollectBalance extends javax.swing.JFrame {
         balance.setText(text);
     }
 
+    public void clearTxtArea()
+    {
+        setTextArea("");
+    }
     /**
      * @param args the command line arguments
      */
