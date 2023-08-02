@@ -1885,63 +1885,63 @@ public class Factory implements ActionListener{
         testvendfeatures.setItemPrice1(((Milktea) item1).getPrice());
         testvendfeatures.setItemQuantity1(machine.getArraySlots().get(0).getNumberOfStock());
         testvendfeatures.setItemCalories1(148);
-        testvendfeatures.setItemPicture1("/Elements/ItemElements/okinawa w_ pearls.png");
+        testvendfeatures.setItemPicture1("/Elements/ItemElements/milkteacup.png");
         
         Item item2 = machine.getArraySlots().get(1).checkItem(); 
         testvendfeatures.setItemName2(item2.getItemName());
         //testvendfeatures.setItemPrice2(((Flavor) item2).getPrice());
         testvendfeatures.setItemQuantity2(machine.getArraySlots().get(1).getNumberOfStock());
         testvendfeatures.setItemCalories2(item2.getItemCalories());
-        testvendfeatures.setItemPicture2("/Elements/ItemElements/okinawa w_ white pearls.png");
+        testvendfeatures.setItemPicture2("/Elements/ItemElements/okinawa.png");
 
         Item item3 = machine.getArraySlots().get(2).checkItem(); 
         testvendfeatures.setItemName3(item3.getItemName());
         //testvendfeatures.setItemPrice3(((Flavor) item3).getPrice());
         testvendfeatures.setItemQuantity3(machine.getArraySlots().get(2).getNumberOfStock());
         testvendfeatures.setItemCalories3(item3.getItemCalories());
-        testvendfeatures.setItemPicture3("/Elements/ItemElements/okinawa w_ nata.png");
+        testvendfeatures.setItemPicture3("/Elements/ItemElements/wintermelon.png");
         
         Item item4 = machine.getArraySlots().get(3).checkItem(); 
         testvendfeatures.setItemName4(item4.getItemName());
         testvendfeatures.setItemPrice4(((Sinker) item4).getPrice());
         testvendfeatures.setItemQuantity4(machine.getArraySlots().get(3).getNumberOfStock());
         testvendfeatures.setItemCalories4(item4.getItemCalories());
-        testvendfeatures.setItemPicture4("/Elements/ItemElements/wintermelon w_ pearls.png");
+        testvendfeatures.setItemPicture4("/Elements/ItemElements/pearls.png");
 
         Item item5 = machine.getArraySlots().get(4).checkItem(); 
         testvendfeatures.setItemName5(item5.getItemName());
         testvendfeatures.setItemPrice5(((Sinker) item5).getPrice());
         testvendfeatures.setItemQuantity5(machine.getArraySlots().get(4).getNumberOfStock());
         testvendfeatures.setItemCalories5(item5.getItemCalories());
-        testvendfeatures.setItemPicture5("/Elements/ItemElements/wintermelon w_ white pearls.png");
+        testvendfeatures.setItemPicture5("/Elements/ItemElements/whitepearls.png");
         
         Item item6 = machine.getArraySlots().get(5).checkItem(); 
         testvendfeatures.setItemName6(item6.getItemName());
         testvendfeatures.setItemPrice6(((Sinker) item6).getPrice());
         testvendfeatures.setItemQuantity6(machine.getArraySlots().get(5).getNumberOfStock());
         testvendfeatures.setItemCalories6(item6.getItemCalories());
-        testvendfeatures.setItemPicture6("/Elements/ItemElements/wintermelon w_ nat.png");
+        testvendfeatures.setItemPicture6("/Elements/ItemElements/natadecoco.png");
 
         Item item7 = machine.getArraySlots().get(6).checkItem(); 
         testvendfeatures.setItemName7(item7.getItemName());
         testvendfeatures.setItemPrice7(((Sinker) item7).getPrice());
         testvendfeatures.setItemQuantity7(machine.getArraySlots().get(6).getNumberOfStock());
         testvendfeatures.setItemCalories7(item7.getItemCalories());
-        testvendfeatures.setItemPicture7("/Elements/ItemElements/hokkaido w_ pearls.png");
+        testvendfeatures.setItemPicture7("/Elements/ItemElements/grassjelly.png");
         
         Item item8 = machine.getArraySlots().get(7).checkItem(); 
         testvendfeatures.setItemName8(item8.getItemName());
         testvendfeatures.setItemPrice8(((Sinker) item8).getPrice());
         testvendfeatures.setItemQuantity8(machine.getArraySlots().get(7).getNumberOfStock());
         testvendfeatures.setItemCalories8(item8.getItemCalories());
-        testvendfeatures.setItemPicture8("/Elements/ItemElements/hokkaido w_ white pearls.png");
+        testvendfeatures.setItemPicture8("/Elements/ItemElements/eggpudding.png");
 
         Item item9 = machine.getArraySlots().get(8).checkItem(); 
         testvendfeatures.setItemName9(item9.getItemName());
         testvendfeatures.setItemPrice9(((Sinker) item9).getPrice());
         testvendfeatures.setItemQuantity9(machine.getArraySlots().get(8).getNumberOfStock());
         testvendfeatures.setItemCalories9(item9.getItemCalories());
-        testvendfeatures.setItemPicture9("/Elements/ItemElements/hokkaido w_ nata.png");
+        testvendfeatures.setItemPicture9("/Elements/ItemElements/coffeejelly.png");
     }
 
     public void loadRegularVending()
