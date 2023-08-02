@@ -48,14 +48,17 @@ public class ReplenishBalance extends javax.swing.JFrame {
         bal200 = new javax.swing.JTextField();
         bal500 = new javax.swing.JTextField();
         bal1000 = new javax.swing.JTextField();
+        WarningLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vending Machine Factory");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(85, 88, 95));
 
         Lbl.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         Lbl.setForeground(new java.awt.Color(255, 255, 255));
+        Lbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Lbl.setText("Replenish Balance");
 
         replenishBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -115,6 +118,11 @@ public class ReplenishBalance extends javax.swing.JFrame {
 
         bal1000.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 
+        WarningLbl.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        WarningLbl.setForeground(new java.awt.Color(255, 255, 255));
+        WarningLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        WarningLbl.setText("jLabel10");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -123,48 +131,49 @@ public class ReplenishBalance extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel5)
+                        .addGap(53, 53, 53)
+                        .addComponent(bal50)
+                        .addGap(126, 126, 126))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel8)
                             .addComponent(jLabel7)
                             .addComponent(jLabel6)
-                            .addComponent(jLabel5)
                             .addComponent(jLabel4)
                             .addComponent(jLabel3)
                             .addComponent(jLabel2)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel9)
-                                    .addGap(27, 27, 27)
-                                    .addComponent(bal1000, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(replenishBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(Lbl)))
-                        .addContainerGap(18, Short.MAX_VALUE))
+                            .addComponent(jLabel9))
+                        .addGap(18, 18, 18))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(66, 66, 66)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(66, 66, 66)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(bal5)
-                                    .addComponent(bal1)
-                                    .addComponent(bal10, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(bal20, javax.swing.GroupLayout.Alignment.TRAILING)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGap(79, 79, 79)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(bal500, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(bal200, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(bal100, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(bal50))))
+                            .addComponent(bal1)
+                            .addComponent(bal500)
+                            .addComponent(bal200)
+                            .addComponent(bal100)
+                            .addComponent(bal20, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bal10, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bal5, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bal1000))
                         .addGap(126, 126, 126))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Lbl, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(replenishBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
+            .addComponent(WarningLbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(30, 30, 30)
                 .addComponent(Lbl)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(bal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -184,7 +193,7 @@ public class ReplenishBalance extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(bal50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(bal100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -199,9 +208,12 @@ public class ReplenishBalance extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(bal1000, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(replenishBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                    .addComponent(bal1000, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(WarningLbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addComponent(replenishBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -212,7 +224,9 @@ public class ReplenishBalance extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -221,6 +235,16 @@ public class ReplenishBalance extends javax.swing.JFrame {
     public void setReplenishBtn(ActionListener actn)
     {
         replenishBtn.addActionListener(actn);
+    }
+
+    public void setWarningVisible(boolean check)
+    {
+        WarningLbl.setVisible(check);
+    }
+
+    public void setWarningMessage(String txt)
+    {
+        WarningLbl.setText(txt);
     }
     
     public int getBal1()
@@ -311,6 +335,7 @@ public class ReplenishBalance extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Lbl;
+    private javax.swing.JLabel WarningLbl;
     private javax.swing.JTextField bal1;
     private javax.swing.JTextField bal10;
     private javax.swing.JTextField bal100;

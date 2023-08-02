@@ -132,6 +132,45 @@ public class Factory implements ActionListener{
                 testvendfeatures.setDispenseBtnEnable(false);
                 testvendfeatures.setCancelBtnEnable(false);
                 testvendfeatures.setDenomComboBoxValues(machine.getCashHandler().getAcceptedDenom());
+
+                if (machine.getArraySlots().get(0).getNumberOfStock() == 0)
+                {
+                    testvendfeatures.setPickSlot1Enable(false);
+                }
+                if (machine.getArraySlots().get(1).getNumberOfStock() == 0)
+                {
+                    testvendfeatures.setPickSlot2Enable(false);
+                }
+
+                if (machine.getArraySlots().get(2).getNumberOfStock() == 0)
+                {
+                    testvendfeatures.setPickSlot3Enable(false);
+                }
+                if (machine.getArraySlots().get(3).getNumberOfStock() == 0)
+                {
+                    testvendfeatures.setPickSlot4Enable(false);
+                }
+                if (machine.getArraySlots().get(4).getNumberOfStock() == 0)
+                {
+                    testvendfeatures.setPickSlot5Enable(false);
+                }
+                if (machine.getArraySlots().get(5).getNumberOfStock() == 0)
+                {
+                    testvendfeatures.setPickSlot6Enable(false);
+                }
+                if (machine.getArraySlots().get(6).getNumberOfStock() == 0)
+                {
+                    testvendfeatures.setPickSlot7Enable(false);
+                }
+                if (machine.getArraySlots().get(7).getNumberOfStock() == 0)
+                {
+                    testvendfeatures.setPickSlot8Enable(false);
+                }
+                if (machine.getArraySlots().get(8).getNumberOfStock() == 0)
+                {
+                    testvendfeatures.setPickSlot9Enable(false);
+                }
+
                 testvendfeatures.setVisible(true);
                 testvending.setVisible(false);
             }
@@ -761,10 +800,11 @@ public class Factory implements ActionListener{
             public void actionPerformed(ActionEvent e)
             {
                 testmaintenance.enablePickBtn();
-
+                restock.setWarningVisible(false);
                 testmaintenance.setPickSlot1BtnListener(new ActionListener(){
                     public void actionPerformed(ActionEvent e)
                     {
+                        restock.setWarningVisible(false);
                         testmaintenance.setVisible(false);
                         Item item1 = machine.getArraySlots().get(0).checkItem();
                         restock.setItemNameLbl(item1.getItemName());
@@ -773,21 +813,36 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(0).addItem(item1, restock.getQuantity());
-                                machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
-                                restock.setVisible(false);
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
+                                int addStock;
+                                try {
+                                    addStock = restock.getQuantity();
+                                    if (addStock <= 0)
+                                    {
+                                        restock.setWarningMessage("Please input a positive integer.");
+                                        restock.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        machine.getArraySlots().get(0).addItem(item1, addStock);
+                                        machine.updateLastRestockDate();
+                                        machine.setInventory(machine.getArraySlots());
+                                        restock.setVisible(false);
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        restock.cleartxtarea();
+                                        testmaintenance.disablePickBtn();
+                                    }
+                                } catch (Exception d) {
+                                    restock.setWarningMessage("Please input a positive integer.");
+                                    restock.setWarningVisible(true);
                                 }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
-                                }
-                                testmaintenance.setVisible(true);
-                                restock.cleartxtarea();
-                                testmaintenance.disablePickBtn();
                             }          
                         });
                     }
@@ -803,21 +858,36 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(1).addItem(item2,restock.getQuantity());
-                                machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
-                                restock.setVisible(false);
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
-                                }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
-                                }
-                                testmaintenance.setVisible(true);    
-                                restock.cleartxtarea();
-                                testmaintenance.disablePickBtn();                          
+                                int addStock;
+                                try {
+                                    addStock = restock.getQuantity();
+                                    if (addStock <= 0)
+                                    {
+                                        restock.setWarningMessage("Please input a positive integer.");
+                                        restock.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        machine.getArraySlots().get(1).addItem(item2, addStock);
+                                        machine.updateLastRestockDate();
+                                        machine.setInventory(machine.getArraySlots());
+                                        restock.setVisible(false);
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        restock.cleartxtarea();
+                                        testmaintenance.disablePickBtn();
+                                    }
+                                } catch (Exception d) {
+                                    restock.setWarningMessage("Please input a positive integer.");
+                                    restock.setWarningVisible(true);
+                                }                          
                             }
                         });            
                     }
@@ -833,21 +903,36 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(2).addItem(item3,restock.getQuantity());
-                                machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
-                                restock.setVisible(false);
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
+                                int addStock;
+                                try {
+                                    addStock = restock.getQuantity();
+                                    if (addStock <= 0)
+                                    {
+                                        restock.setWarningMessage("Please input a positive integer.");
+                                        restock.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        machine.getArraySlots().get(2).addItem(item3, addStock);
+                                        machine.updateLastRestockDate();
+                                        machine.setInventory(machine.getArraySlots());
+                                        restock.setVisible(false);
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        restock.cleartxtarea();
+                                        testmaintenance.disablePickBtn();
+                                    }
+                                } catch (Exception d) {
+                                    restock.setWarningMessage("Please input a positive integer.");
+                                    restock.setWarningVisible(true);
                                 }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
-                                }
-                                testmaintenance.setVisible(true);
-                                restock.cleartxtarea();
-                                testmaintenance.disablePickBtn();
                             }
                         });            
                     }
@@ -863,21 +948,36 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(3).addItem(item4,restock.getQuantity());
-                                machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
-                                restock.setVisible(false);
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
+                               int addStock;
+                                try {
+                                    addStock = restock.getQuantity();
+                                    if (addStock <= 0)
+                                    {
+                                        restock.setWarningMessage("Please input a positive integer.");
+                                        restock.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        machine.getArraySlots().get(3).addItem(item4, addStock);
+                                        machine.updateLastRestockDate();
+                                        machine.setInventory(machine.getArraySlots());
+                                        restock.setVisible(false);
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        restock.cleartxtarea();
+                                        testmaintenance.disablePickBtn();
+                                    }
+                                } catch (Exception d) {
+                                    restock.setWarningMessage("Please input a positive integer.");
+                                    restock.setWarningVisible(true);
                                 }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
-                                }
-                                testmaintenance.setVisible(true);
-                                restock.cleartxtarea();
-                                testmaintenance.disablePickBtn();
                             }
                         });            
                     }
@@ -893,21 +993,36 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(4).addItem(item5,restock.getQuantity());
-                                machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
-                                restock.setVisible(false);
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
+                                int addStock;
+                                try {
+                                    addStock = restock.getQuantity();
+                                    if (addStock <= 0)
+                                    {
+                                        restock.setWarningMessage("Please input a positive integer.");
+                                        restock.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        machine.getArraySlots().get(4).addItem(item5, addStock);
+                                        machine.updateLastRestockDate();
+                                        machine.setInventory(machine.getArraySlots());
+                                        restock.setVisible(false);
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        restock.cleartxtarea();
+                                        testmaintenance.disablePickBtn();
+                                    }
+                                } catch (Exception d) {
+                                    restock.setWarningMessage("Please input a positive integer.");
+                                    restock.setWarningVisible(true);
                                 }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
-                                }
-                                testmaintenance.setVisible(true);
-                                restock.cleartxtarea();
-                                testmaintenance.disablePickBtn();
                             }
                         });            
                     }
@@ -923,21 +1038,36 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(5).addItem(item6,restock.getQuantity());
-                                machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
-                                restock.setVisible(false);
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
+                                int addStock;
+                                try {
+                                    addStock = restock.getQuantity();
+                                    if (addStock <= 0)
+                                    {
+                                        restock.setWarningMessage("Please input a positive integer.");
+                                        restock.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        machine.getArraySlots().get(5).addItem(item6, addStock);
+                                        machine.updateLastRestockDate();
+                                        machine.setInventory(machine.getArraySlots());
+                                        restock.setVisible(false);
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        restock.cleartxtarea();
+                                        testmaintenance.disablePickBtn();
+                                    }
+                                } catch (Exception d) {
+                                    restock.setWarningMessage("Please input a positive integer.");
+                                    restock.setWarningVisible(true);
                                 }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
-                                }
-                                testmaintenance.setVisible(true);
-                                restock.cleartxtarea();
-                                testmaintenance.disablePickBtn();
                             }
                         });            
                     }
@@ -953,21 +1083,36 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(6).addItem(item7,restock.getQuantity());
-                                machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
-                                restock.setVisible(false);
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
+                                int addStock;
+                                try {
+                                    addStock = restock.getQuantity();
+                                    if (addStock <= 0)
+                                    {
+                                        restock.setWarningMessage("Please input a positive integer.");
+                                        restock.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        machine.getArraySlots().get(6).addItem(item7, addStock);
+                                        machine.updateLastRestockDate();
+                                        machine.setInventory(machine.getArraySlots());
+                                        restock.setVisible(false);
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        restock.cleartxtarea();
+                                        testmaintenance.disablePickBtn();
+                                    }
+                                } catch (Exception d) {
+                                    restock.setWarningMessage("Please input a positive integer.");
+                                    restock.setWarningVisible(true);
                                 }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
-                                }
-                                testmaintenance.setVisible(true);
-                                restock.cleartxtarea();
-                                testmaintenance.disablePickBtn();
                             }
                         });            
                     }
@@ -983,21 +1128,36 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(7).addItem(item8,restock.getQuantity());
-                                machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
-                                restock.setVisible(false);
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
+                                int addStock;
+                                try {
+                                    addStock = restock.getQuantity();
+                                    if (addStock <= 0)
+                                    {
+                                        restock.setWarningMessage("Please input a positive integer.");
+                                        restock.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        machine.getArraySlots().get(7).addItem(item8, addStock);
+                                        machine.updateLastRestockDate();
+                                        machine.setInventory(machine.getArraySlots());
+                                        restock.setVisible(false);
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        restock.cleartxtarea();
+                                        testmaintenance.disablePickBtn();
+                                    }
+                                } catch (Exception d) {
+                                    restock.setWarningMessage("Please input a positive integer.");
+                                    restock.setWarningVisible(true);
                                 }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
-                                }
-                                testmaintenance.setVisible(true);
-                                restock.cleartxtarea();
-                                testmaintenance.disablePickBtn();
                             }
                         });            
                     }
@@ -1013,21 +1173,36 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(8).addItem(item9,restock.getQuantity());
-                                machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
-                                restock.setVisible(false);
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
+                                int addStock;
+                                try {
+                                    addStock = restock.getQuantity();
+                                    if (addStock <= 0)
+                                    {
+                                        restock.setWarningMessage("Please input a positive integer.");
+                                        restock.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        machine.getArraySlots().get(8).addItem(item9, addStock);
+                                        machine.updateLastRestockDate();
+                                        machine.setInventory(machine.getArraySlots());
+                                        restock.setVisible(false);
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        restock.cleartxtarea();
+                                        testmaintenance.disablePickBtn();
+                                    }
+                                } catch (Exception d) {
+                                    restock.setWarningMessage("Please input a positive integer.");
+                                    restock.setWarningVisible(true);
                                 }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
-                                }
-                                testmaintenance.setVisible(true);
-                                restock.cleartxtarea();
-                                testmaintenance.disablePickBtn();
                             }
                         });            
                     }
@@ -1038,9 +1213,13 @@ public class Factory implements ActionListener{
         this.testmaintenance.setChangePrice(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
+                changeprice.setWarningVisible(false);
                 testmaintenance.enablePickBtn();
-                testmaintenance.setPickSlot2Enable(false);
-                testmaintenance.setPickSlot3Enable(false);
+                if (machine instanceof SpecialMachine)
+                {
+                    testmaintenance.setPickSlot2Enable(false);
+                    testmaintenance.setPickSlot3Enable(false);
+                }
                 testmaintenance.setPickSlot1BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
@@ -1051,19 +1230,33 @@ public class Factory implements ActionListener{
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                int newprice = changeprice.getNewPrice();
-                                ((Milktea)item1).setPrice(newprice);
-                                testmaintenance.setVisible(true);
-                                changeprice.setVisible(false);
-                                changeprice.clearTA();
-                                testmaintenance.disablePickBtn();
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
-                                }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
+                                int newprice;
+                                try {
+                                    newprice = changeprice.getNewPrice();
+                                    if (newprice <= 0)
+                                    {
+                                        changeprice.setWarningMessage("Please input a positive integer.");
+                                        changeprice.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        ((Milktea)item1).setPrice(newprice);
+                                        testmaintenance.setVisible(true);
+                                        changeprice.setVisible(false);
+                                        changeprice.clearTA();
+                                        testmaintenance.disablePickBtn();
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                    }
+                                } catch (Exception d) {
+                                    changeprice.setWarningMessage("Please input a positive integer.");
+                                    changeprice.setWarningVisible(true);
                                 }
                             }
                         });
@@ -1079,13 +1272,34 @@ public class Factory implements ActionListener{
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                int newprice = changeprice.getNewPrice();
-                                ((Milktea)item2).setPrice(newprice);
-                                testmaintenance.setVisible(true);
-                                changeprice.setVisible(false);
-                                changeprice.clearTA();
-                                testmaintenance.disablePickBtn();
-                                loadRegularVendingmaintenance();                       
+                                int newprice;
+                                try {
+                                    newprice = changeprice.getNewPrice();
+                                    if (newprice <= 0)
+                                    {
+                                        changeprice.setWarningMessage("Please input a positive integer.");
+                                        changeprice.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        ((Milktea)item2).setPrice(newprice);
+                                        testmaintenance.setVisible(true);
+                                        changeprice.setVisible(false);
+                                        changeprice.clearTA();
+                                        testmaintenance.disablePickBtn();
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                    }
+                                } catch (Exception d) {
+                                    changeprice.setWarningMessage("Please input a positive integer.");
+                                    changeprice.setWarningVisible(true);
+                                }                       
                             }
                         });
                     }
@@ -1100,13 +1314,34 @@ public class Factory implements ActionListener{
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                int newprice = changeprice.getNewPrice();
-                                ((Milktea)item3).setPrice(newprice);
-                                testmaintenance.setVisible(true);
-                                changeprice.setVisible(false);
-                                changeprice.clearTA();
-                                testmaintenance.disablePickBtn();
-                                loadRegularVendingmaintenance();
+                                int newprice;
+                                try {
+                                    newprice = changeprice.getNewPrice();
+                                    if (newprice <= 0)
+                                    {
+                                        changeprice.setWarningMessage("Please input a positive integer.");
+                                        changeprice.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        ((Milktea)item3).setPrice(newprice);
+                                        testmaintenance.setVisible(true);
+                                        changeprice.setVisible(false);
+                                        changeprice.clearTA();
+                                        testmaintenance.disablePickBtn();
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                    }
+                                } catch (Exception d) {
+                                    changeprice.setWarningMessage("Please input a positive integer.");
+                                    changeprice.setWarningVisible(true);
+                                }
                             }
                         });
                     }
@@ -1121,26 +1356,40 @@ public class Factory implements ActionListener{
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                int newprice = changeprice.getNewPrice();
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    ((Sinker)item4).setPrice(newprice);
-                                }
-                                else
-                                {
-                                    ((Milktea)item4).setPrice(newprice);
-                                }
-                                testmaintenance.setVisible(true);
-                                changeprice.setVisible(false);
-                                changeprice.clearTA();
-                                testmaintenance.disablePickBtn();
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
-                                }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
+                                int newprice;
+                                try {
+                                    newprice = changeprice.getNewPrice();
+                                    if (newprice <= 0)
+                                    {
+                                        changeprice.setWarningMessage("Please input a positive integer.");
+                                        changeprice.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            ((Sinker)item4).setPrice(newprice);
+                                        }
+                                        else
+                                        {
+                                            ((Milktea)item4).setPrice(newprice);
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        changeprice.setVisible(false);
+                                        changeprice.clearTA();
+                                        testmaintenance.disablePickBtn();
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                    }
+                                } catch (Exception d) {
+                                    changeprice.setWarningMessage("Please input a positive integer.");
+                                    changeprice.setWarningVisible(true);
                                 }
                             }
                         });
@@ -1156,26 +1405,40 @@ public class Factory implements ActionListener{
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                int newprice = changeprice.getNewPrice();
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    ((Sinker)item5).setPrice(newprice);
-                                }
-                                else
-                                {
-                                    ((Milktea)item5).setPrice(newprice);
-                                }
-                                testmaintenance.setVisible(true);
-                                changeprice.setVisible(false);
-                                changeprice.clearTA();
-                                testmaintenance.disablePickBtn();
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
-                                }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
+                                int newprice;
+                                try {
+                                    newprice = changeprice.getNewPrice();
+                                    if (newprice <= 0)
+                                    {
+                                        changeprice.setWarningMessage("Please input a positive integer.");
+                                        changeprice.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            ((Sinker)item5).setPrice(newprice);
+                                        }
+                                        else
+                                        {
+                                            ((Milktea)item5).setPrice(newprice);
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        changeprice.setVisible(false);
+                                        changeprice.clearTA();
+                                        testmaintenance.disablePickBtn();
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                    }
+                                } catch (Exception d) {
+                                    changeprice.setWarningMessage("Please input a positive integer.");
+                                    changeprice.setWarningVisible(true);
                                 }
                             }
                         });
@@ -1191,26 +1454,40 @@ public class Factory implements ActionListener{
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                int newprice = changeprice.getNewPrice();
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    ((Sinker)item6).setPrice(newprice);
-                                }
-                                else
-                                {
-                                    ((Milktea)item6).setPrice(newprice);
-                                }
-                                testmaintenance.setVisible(true);
-                                changeprice.setVisible(false);
-                                changeprice.clearTA();
-                                testmaintenance.disablePickBtn();
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
-                                }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
+                                int newprice;
+                                try {
+                                    newprice = changeprice.getNewPrice();
+                                    if (newprice <= 0)
+                                    {
+                                        changeprice.setWarningMessage("Please input a positive integer.");
+                                        changeprice.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            ((Sinker)item6).setPrice(newprice);
+                                        }
+                                        else
+                                        {
+                                            ((Milktea)item6).setPrice(newprice);
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        changeprice.setVisible(false);
+                                        changeprice.clearTA();
+                                        testmaintenance.disablePickBtn();
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                    }
+                                } catch (Exception d) {
+                                    changeprice.setWarningMessage("Please input a positive integer.");
+                                    changeprice.setWarningVisible(true);
                                 }
                             }
                         });
@@ -1226,26 +1503,40 @@ public class Factory implements ActionListener{
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                int newprice = changeprice.getNewPrice();
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    ((Sinker)item7).setPrice(newprice);
-                                }
-                                else
-                                {
-                                    ((Milktea)item7).setPrice(newprice);
-                                }
-                                testmaintenance.setVisible(true);
-                                changeprice.setVisible(false);
-                                changeprice.clearTA();
-                                testmaintenance.disablePickBtn();
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
-                                }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
+                                int newprice;
+                                try {
+                                    newprice = changeprice.getNewPrice();
+                                    if (newprice <= 0)
+                                    {
+                                        changeprice.setWarningMessage("Please input a positive integer.");
+                                        changeprice.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            ((Sinker)item7).setPrice(newprice);
+                                        }
+                                        else
+                                        {
+                                            ((Milktea)item7).setPrice(newprice);
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        changeprice.setVisible(false);
+                                        changeprice.clearTA();
+                                        testmaintenance.disablePickBtn();
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                    }
+                                } catch (Exception d) {
+                                    changeprice.setWarningMessage("Please input a positive integer.");
+                                    changeprice.setWarningVisible(true);
                                 }
                             }
                         });
@@ -1261,26 +1552,40 @@ public class Factory implements ActionListener{
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                int newprice = changeprice.getNewPrice();
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    ((Sinker)item8).setPrice(newprice);
-                                }
-                                else
-                                {
-                                    ((Milktea)item8).setPrice(newprice);
-                                }
-                                testmaintenance.setVisible(true);
-                                changeprice.setVisible(false);
-                                changeprice.clearTA();
-                                testmaintenance.disablePickBtn();
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
-                                }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
+                                int newprice;
+                                try {
+                                    newprice = changeprice.getNewPrice();
+                                    if (newprice <= 0)
+                                    {
+                                        changeprice.setWarningMessage("Please input a positive integer.");
+                                        changeprice.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            ((Sinker)item8).setPrice(newprice);
+                                        }
+                                        else
+                                        {
+                                            ((Milktea)item8).setPrice(newprice);
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        changeprice.setVisible(false);
+                                        changeprice.clearTA();
+                                        testmaintenance.disablePickBtn();
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                    }
+                                } catch (Exception d) {
+                                    changeprice.setWarningMessage("Please input a positive integer.");
+                                    changeprice.setWarningVisible(true);
                                 }
                             }
                         });
@@ -1296,26 +1601,40 @@ public class Factory implements ActionListener{
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                int newprice = changeprice.getNewPrice();
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    ((Sinker)item9).setPrice(newprice);
-                                }
-                                else
-                                {
-                                    ((Milktea)item9).setPrice(newprice);
-                                }
-                                testmaintenance.setVisible(true);
-                                changeprice.setVisible(false);
-                                changeprice.clearTA();
-                                testmaintenance.disablePickBtn();
-                                if (machine instanceof SpecialMachine)
-                                {
-                                    loadSpecialVendingmaintenance();
-                                }
-                                else
-                                {
-                                    loadRegularVendingmaintenance();
+                                int newprice;
+                                try {
+                                    newprice = changeprice.getNewPrice();
+                                    if (newprice <= 0)
+                                    {
+                                        changeprice.setWarningMessage("Please input a positive integer.");
+                                        changeprice.setWarningVisible(true);
+                                    }
+                                    else
+                                    {
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            ((Sinker)item9).setPrice(newprice);
+                                        }
+                                        else
+                                        {
+                                            ((Milktea)item9).setPrice(newprice);
+                                        }
+                                        testmaintenance.setVisible(true);
+                                        changeprice.setVisible(false);
+                                        changeprice.clearTA();
+                                        testmaintenance.disablePickBtn();
+                                        if (machine instanceof SpecialMachine)
+                                        {
+                                            loadSpecialVendingmaintenance();
+                                        }
+                                        else
+                                        {
+                                            loadRegularVendingmaintenance();
+                                        }
+                                    }
+                                } catch (Exception d) {
+                                    changeprice.setWarningMessage("Please input a positive integer.");
+                                    changeprice.setWarningVisible(true);
                                 }
                             }
                         });
@@ -1328,51 +1647,70 @@ public class Factory implements ActionListener{
             public void actionPerformed(ActionEvent e)
             {
                 testmaintenance.setVisible(false);
+                replenishbalance.setWarningVisible(false);;
                 replenishbalance.setVisible(true);
                 replenishbalance.setReplenishBtn(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
                         int i;
-                        for(i=0;i<replenishbalance.getBal1();i++)
-                        {
-                            machine.getCashHandler().addQuantityToBalance(1);  
+                        int replenish;
+                        try {
+                            if (replenishbalance.getBal1() >= 0 && replenishbalance.getBal5() >= 0 &&
+                                replenishbalance.getBal10() >= 0 && replenishbalance.getBal20() >= 0 &&
+                                replenishbalance.getBal50() >= 0 && replenishbalance.getBal100() >= 0 &&
+                                replenishbalance.getBal200() >= 0 && replenishbalance.getBal500() >= 0 &&
+                                replenishbalance.getBal1000() >= 0)
+                            {
+                                for(i=0;i<replenishbalance.getBal1();i++)
+                                {
+                                    machine.getCashHandler().addQuantityToBalance(1);  
+                                }
+                                for(i=0;i<replenishbalance.getBal10();i++)
+                                {
+                                    machine.getCashHandler().addQuantityToBalance(10);  
+                                }
+                                for(i=0;i<replenishbalance.getBal100();i++)
+                                {
+                                    machine.getCashHandler().addQuantityToBalance(100);  
+                                }
+                                for(i=0;i<replenishbalance.getBal1000();i++)
+                                {
+                                    machine.getCashHandler().addQuantityToBalance(1000);  
+                                }
+                                for(i=0;i<replenishbalance.getBal20();i++)
+                                {
+                                    machine.getCashHandler().addQuantityToBalance(20);  
+                                }
+                                for(i=0;i<replenishbalance.getBal200();i++)
+                                {
+                                    machine.getCashHandler().addQuantityToBalance(200);  
+                                }
+                                for(i=0;i<replenishbalance.getBal5();i++)
+                                {
+                                    machine.getCashHandler().addQuantityToBalance(5);  
+                                }
+                                for(i=0;i<replenishbalance.getBal50();i++)
+                                {
+                                    machine.getCashHandler().addQuantityToBalance(50);  
+                                }
+                                for(i=0;i<replenishbalance.getBal500();i++)
+                                {
+                                    machine.getCashHandler().addQuantityToBalance(500);  
+                                }
+                                JOptionPane.showMessageDialog(replenishbalance, "Added Balance");
+                                testmaintenance.setVisible(true);
+                                replenishbalance.setVisible(false);
+                                replenishbalance.clearTA();
+                            }
+                            else
+                            {
+                                replenishbalance.setWarningMessage("Please input a positive integer.");
+                                replenishbalance.setWarningVisible(true);
+                            }
+                        } catch (Exception d) {
+                            replenishbalance.setWarningMessage("Please input a positive integer.");
+                            replenishbalance.setWarningVisible(true);
                         }
-                        for(i=0;i<replenishbalance.getBal10();i++)
-                        {
-                            machine.getCashHandler().addQuantityToBalance(10);  
-                        }
-                        for(i=0;i<replenishbalance.getBal100();i++)
-                        {
-                            machine.getCashHandler().addQuantityToBalance(100);  
-                        }
-                        for(i=0;i<replenishbalance.getBal1000();i++)
-                        {
-                            machine.getCashHandler().addQuantityToBalance(1000);  
-                        }
-                        for(i=0;i<replenishbalance.getBal20();i++)
-                        {
-                            machine.getCashHandler().addQuantityToBalance(20);  
-                        }
-                        for(i=0;i<replenishbalance.getBal200();i++)
-                        {
-                            machine.getCashHandler().addQuantityToBalance(200);  
-                        }
-                        for(i=0;i<replenishbalance.getBal5();i++)
-                        {
-                            machine.getCashHandler().addQuantityToBalance(5);  
-                        }
-                        for(i=0;i<replenishbalance.getBal50();i++)
-                        {
-                            machine.getCashHandler().addQuantityToBalance(50);  
-                        }
-                        for(i=0;i<replenishbalance.getBal500();i++)
-                        {
-                            machine.getCashHandler().addQuantityToBalance(500);  
-                        }
-                        JOptionPane.showMessageDialog(replenishbalance, "Added Balance");
-                        testmaintenance.setVisible(true);
-                        replenishbalance.setVisible(false);
-                        replenishbalance.clearTA();
                     }
                 });
             }
@@ -1381,23 +1719,39 @@ public class Factory implements ActionListener{
         this.testmaintenance.setCollectBalListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                testmaintenance.setVisible(false);
-                collectbalance.setVisible(true);
                 int[] denoms = machine.getCashHandler().getAcceptedDenom();
-                collectbalance.clearTxtArea();
-                collectbalance.setTextArea(machine.getCashHandler().printDenom(1) + "\n" + machine.getCashHandler().printDenom(5) + "\n" + 
-                                            machine.getCashHandler().printDenom(10) + "\n" + machine.getCashHandler().printDenom(50) + "\n" +
-                                            machine.getCashHandler().printDenom(100) + "\n" + machine.getCashHandler().printDenom(200) + "\n" +
-                                            machine.getCashHandler().printDenom(500) + "\n" + machine.getCashHandler().printDenom(1000));
-                collectbalance.setDoneBtnListener(new ActionListener() {
-                    public void actionPerformed(ActionEvent e)
-                    {
-                        JOptionPane.showMessageDialog(collectbalance, "Collected all balance");
-                        machine.getCashHandler().collectBalance();
-                        collectbalance.setVisible(false);                    
-                        testmaintenance.setVisible(true);
-                    }
-                });
+                if (machine.getCashHandler().hasDenomStock(denoms[0]) || machine.getCashHandler().hasDenomStock(denoms[1]) ||
+                    machine.getCashHandler().hasDenomStock(denoms[2]) || machine.getCashHandler().hasDenomStock(denoms[3]) ||
+                    machine.getCashHandler().hasDenomStock(denoms[4]) || machine.getCashHandler().hasDenomStock(denoms[5]) ||
+                    machine.getCashHandler().hasDenomStock(denoms[6]) || machine.getCashHandler().hasDenomStock(denoms[7]) ||
+                    machine.getCashHandler().hasDenomStock(denoms[8]))
+                {
+                    testmaintenance.setVisible(false);
+                    collectbalance.setVisible(true);
+                    collectbalance.clearTxtArea();
+                    collectbalance.setTextArea(machine.getCashHandler().printDenom(1) + "\n" + machine.getCashHandler().printDenom(5) + "\n" + 
+                                                machine.getCashHandler().printDenom(10) + "\n" + machine.getCashHandler().printDenom(50) + "\n" +
+                                                machine.getCashHandler().printDenom(100) + "\n" + machine.getCashHandler().printDenom(200) + "\n" +
+                                                machine.getCashHandler().printDenom(500) + "\n" + machine.getCashHandler().printDenom(1000));
+                    collectbalance.setDoneBtnListener(new ActionListener() {
+                        public void actionPerformed(ActionEvent e)
+                        {
+                            JOptionPane.showMessageDialog(collectbalance, "Collected all balance.");
+                            machine.getCashHandler().collectBalance();
+                            collectbalance.setVisible(false);                    
+                            testmaintenance.setVisible(true);
+                        }
+                    });
+                }
+
+                else if (!machine.getCashHandler().hasDenomStock(denoms[0]) && !machine.getCashHandler().hasDenomStock(denoms[1]) &&
+                    !machine.getCashHandler().hasDenomStock(denoms[2]) && !machine.getCashHandler().hasDenomStock(denoms[3]) &&
+                    !machine.getCashHandler().hasDenomStock(denoms[4]) && !machine.getCashHandler().hasDenomStock(denoms[5]) &&
+                    !machine.getCashHandler().hasDenomStock(denoms[6]) && !machine.getCashHandler().hasDenomStock(denoms[7]) &&
+                    !machine.getCashHandler().hasDenomStock(denoms[8]))
+                {
+                    JOptionPane.showMessageDialog(collectbalance, "There are currently no balance available.");
+                }
             }
         });
         

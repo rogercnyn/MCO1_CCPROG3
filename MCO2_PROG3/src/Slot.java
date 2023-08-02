@@ -13,13 +13,13 @@ public class Slot {
         this.items = new Stack<Item>();
         this.specialItemsDts = new Stack<Item>();
         this.regularItemsDts = new Stack<Item>();
-        this.CAPACITY = 10;
+        this.CAPACITY = 11;
     }
 
     public Slot(Stack<Item> items)
     {
         this.items = items;
-        this.CAPACITY = 10;
+        this.CAPACITY = 11;
     }
 
     public Item dispenseItem()
@@ -29,16 +29,12 @@ public class Slot {
 
     public Item checkItem()
     {
-        try {
-            return items.peek();
-        } catch (EmptyStackException e) {
-            return null;
-        }
+        return items.peek();
     }
 
     public int getNumberOfStock()
     {
-        return items.size();
+        return items.size() - 1;
     }
 
     public Stack<Item> addItem(Item item)

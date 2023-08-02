@@ -127,7 +127,7 @@ public class CashHandler
         }
     }
 
-    private boolean hasDenomStock(int denom)
+    public boolean hasDenomStock(int denom)
     {
         boolean check = false;
         int i, j;

@@ -31,9 +31,11 @@ public class ChangePrice extends javax.swing.JFrame {
         ChangeBtn = new javax.swing.JButton();
         ItemName = new javax.swing.JLabel();
         newPrice = new javax.swing.JTextField();
+        WarningLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vending Machine Factory");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(85, 88, 95));
 
@@ -49,29 +51,37 @@ public class ChangePrice extends javax.swing.JFrame {
         ItemName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ItemName.setText("ItemName");
 
-        newPrice.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        newPrice.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+
+        WarningLbl.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        WarningLbl.setForeground(new java.awt.Color(255, 255, 255));
+        WarningLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        WarningLbl.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(137, Short.MAX_VALUE)
-                .addComponent(ChangeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(125, 125, 125))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(Lbl))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(newPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(ItemName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 68, Short.MAX_VALUE)
+                .addComponent(Lbl)
+                .addGap(66, 66, 66))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(131, 131, 131)
+                        .addComponent(ChangeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(WarningLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(92, 92, 92)
+                        .addComponent(newPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,11 +90,13 @@ public class ChangePrice extends javax.swing.JFrame {
                 .addComponent(Lbl)
                 .addGap(18, 18, 18)
                 .addComponent(ItemName)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(35, 35, 35)
                 .addComponent(newPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
+                .addGap(29, 29, 29)
+                .addComponent(WarningLbl)
+                .addGap(18, 18, 18)
                 .addComponent(ChangeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -106,9 +118,19 @@ public class ChangePrice extends javax.swing.JFrame {
         ChangeBtn.addActionListener(actn);
     }
 
-    public int  getNewPrice()
+    public int getNewPrice()
     {
         return Integer.parseInt(newPrice.getText());
+    }
+
+    public void setWarningVisible(boolean check)
+    {
+        WarningLbl.setVisible(check);
+    }
+
+    public void setWarningMessage(String txt)
+    {
+        WarningLbl.setText(txt);
     }
     
     public void setItemName(String Name)
@@ -165,6 +187,7 @@ public class ChangePrice extends javax.swing.JFrame {
     private javax.swing.JButton ChangeBtn;
     private javax.swing.JLabel ItemName;
     private javax.swing.JLabel Lbl;
+    private javax.swing.JLabel WarningLbl;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField newPrice;
     // End of variables declaration//GEN-END:variables

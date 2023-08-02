@@ -25,12 +25,17 @@ public class ReStock_Item extends javax.swing.JFrame {
     }
     
     public int getQuantity(){
-        int result = 0;
-        if(Quantity.getText()!="")
-        {
-            result = Integer.parseInt(Quantity.getText());
-        }
-        return result;
+        return Integer.parseInt(Quantity.getText());
+    }
+
+    public void setWarningVisible(boolean check)
+    {
+        WarningLbl.setVisible(check);
+    }
+
+    public void setWarningMessage(String txt)
+    {
+        WarningLbl.setText(txt);
     }
     
     public void cleartxtarea(){
@@ -54,8 +59,10 @@ public class ReStock_Item extends javax.swing.JFrame {
         ItemName = new javax.swing.JLabel();
         Quantity = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        WarningLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Vending Machine Factory");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(85, 88, 95));
@@ -63,20 +70,27 @@ public class ReStock_Item extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("ReStock");
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Restock Item");
 
         AddBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         AddBtn.setText("Add");
 
-        ItemName.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        ItemName.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         ItemName.setForeground(new java.awt.Color(255, 255, 255));
+        ItemName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ItemName.setText("ItemName");
 
-        Quantity.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        Quantity.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Quantity");
+
+        WarningLbl.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
+        WarningLbl.setForeground(new java.awt.Color(255, 255, 255));
+        WarningLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        WarningLbl.setText("jLabel3");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -85,35 +99,43 @@ public class ReStock_Item extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(jLabel2)
-                .addGap(27, 27, 27)
-                .addComponent(Quantity, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                .addGap(60, 60, 60))
+                .addGap(44, 44, 44)
+                .addComponent(Quantity, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                .addGap(43, 43, 43))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(69, 69, 69))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(129, 129, 129)
+                        .addGap(130, 130, 130)
                         .addComponent(AddBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(107, 107, 107)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ItemName)
-                            .addComponent(jLabel1))))
+                        .addGap(61, 61, 61)
+                        .addComponent(WarningLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ItemName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
+                .addGap(35, 35, 35)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(ItemName)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Quantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel2)
+                    .addComponent(Quantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addComponent(WarningLbl)
+                .addGap(27, 27, 27)
                 .addComponent(AddBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addGap(61, 61, 61))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -169,6 +191,7 @@ public class ReStock_Item extends javax.swing.JFrame {
     private javax.swing.JButton AddBtn;
     private javax.swing.JLabel ItemName;
     private javax.swing.JTextField Quantity;
+    private javax.swing.JLabel WarningLbl;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
