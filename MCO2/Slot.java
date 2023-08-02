@@ -100,42 +100,42 @@ public class Slot {
         Slot slot1 = new Slot(itemOne);
         specialItems.add(slot1);
 
-        Flavor okinawa = new Flavor("Okinawa", 30);
+        Flavor okinawa = new Flavor("Okinawa", 462);
         Stack<Item> itemTwo = addItem(okinawa);
         Slot slot2 = new Slot(itemTwo);
         specialItems.add(slot2);
 
-        Flavor wintermelon = new Flavor("Wintermelon", 30);
+        Flavor wintermelon = new Flavor("Wintermelon", 462);
         Stack<Item> itemThree = addItem(wintermelon);
         Slot slot3 = new Slot(itemThree);
         specialItems.add(slot3);
 
-        Sinker pearls = new Sinker("Pearls", 88, 20);
+        Sinker pearls = new Sinker("Pearls", 358, 20);
         Stack<Item> itemFour = addItem(pearls);
         Slot slot4 = new Slot(itemFour);
         specialItems.add(slot4);
 
-        Sinker whitepearls = new Sinker("White Pearls", 90, 20);
+        Sinker whitepearls = new Sinker("White Pearls", 358, 20);
         Stack<Item> itemFive = addItem(whitepearls);
         Slot slot5 = new Slot(itemFive);
         specialItems.add(slot5);
 
-        Sinker nata = new Sinker("Nata de Coco", 100, 25);
+        Sinker nata = new Sinker("Nata de Coco", 109, 25);
         Stack<Item> itemSix = addItem(nata);
         Slot slot6 = new Slot(itemSix);
         specialItems.add(slot6);
 
-        Sinker grassjelly = new Sinker("Grass Jelly", 93, 25);
+        Sinker grassjelly = new Sinker("Grass Jelly", 94, 25);
         Stack<Item> itemSeven = addItem(grassjelly);
         Slot slot7 = new Slot(itemSeven);
         specialItems.add(slot7);
 
-        Sinker eggpudding = new Sinker("Egg Pudding", 105, 30);
+        Sinker eggpudding = new Sinker("Egg Pudding", 265, 30);
         Stack<Item> itemEight = addItem(eggpudding);
         Slot slot8 = new Slot(itemEight);
         specialItems.add(slot8);
 
-        Sinker coffeejelly = new Sinker("Coffee Jelly", 118, 30);
+        Sinker coffeejelly = new Sinker("Coffee Jelly", 115, 30);
         Stack<Item> itemNine = addItem(coffeejelly);
         Slot slot9 = new Slot(itemNine);
         specialItems.add(slot9);
@@ -152,13 +152,13 @@ public class Slot {
     {
         ArrayList<Slot> regularItems = new ArrayList<Slot>();
 
-        Flavor okinawa = new Flavor("Okinawa", 30);
-        Flavor wintermelon = new Flavor("Wintermelon", 30);
-        Flavor hokkaido = new Flavor("Hokkaido", 30);
+        Flavor okinawa = new Flavor("Okinawa", 462);
+        Flavor wintermelon = new Flavor("Wintermelon", 462);
+        Flavor hokkaido = new Flavor("Hokkaido", 462);
 
-        Sinker pearls = new Sinker("Pearls", 88);
-        Sinker whitepearls = new Sinker("White Pearls", 90);
-        Sinker nata = new Sinker("Nata de Coco", 100);
+        Sinker pearls = new Sinker("Pearls", 358);
+        Sinker whitepearls = new Sinker("White Pearls", 358);
+        Sinker nata = new Sinker("Nata de Coco", 109);
 
         Milktea okinawapearls = new Milktea("Okinawa with Pearls", okinawa, pearls, 135);
         Stack<Item> itemOne = addItem(okinawapearls);

@@ -1905,7 +1905,7 @@ public class Factory implements ActionListener{
         testvendfeatures.setItemName1(item1.getItemName());
         testvendfeatures.setItemPrice1(((Milktea) item1).getPrice());
         testvendfeatures.setItemQuantity1(machine.getArraySlots().get(0).getNumberOfStock());
-        testvendfeatures.setItemCalories1(148);
+        testvendfeatures.setItemCalories1(812);
         testvendfeatures.setItemPicture1("/Elements/ItemElements/milkteacup.png");
         
         Item item2 = machine.getArraySlots().get(1).checkItem(); 
@@ -2112,7 +2112,7 @@ public class Factory implements ActionListener{
         testmaintenance.setItemName1(item1.getItemName());
         testmaintenance.setItemPrice1(((Milktea) item1).getPrice());
         testmaintenance.setItemQuantity1(machine.getArraySlots().get(0).getNumberOfStock());
-        testmaintenance.setItemCalories1(148);
+        testmaintenance.setItemCalories1(812);
         testmaintenance.setItemPicture1("/Elements/ItemElements/milkteacup.png");
         
         Item item2 = machine.getArraySlots().get(1).checkItem(); 
