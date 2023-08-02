@@ -9,9 +9,9 @@ public class Slot {
     public Slot()
     {
         this.items = new Stack<Item>();
-        this.CAPACITY = 10;
+        this.CAPACITY = 0;
     }
-    
+
     public Slot(Stack<Item> items)
     {
         this.items = items;

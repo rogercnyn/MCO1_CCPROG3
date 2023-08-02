@@ -55,6 +55,7 @@ public class Factory implements ActionListener{
         this.mainMenu.setTestEnable(false);
         
         // CREATE FEATURES
+        
         this.mainMenu.setCreateBtnListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
             {
@@ -570,7 +571,6 @@ public class Factory implements ActionListener{
             }
         });
 
-
         this.testvendfeatures.setDispenseBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
@@ -713,6 +713,16 @@ public class Factory implements ActionListener{
             }
         });
 
+         this.testvending.setBackBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                mainMenu.setVisible(true);
+                testvending.setVisible(false);
+            }
+        });
+        
+        // MAINTENANCE PART
+
         this.testmaintenance.setDoneBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
@@ -725,6 +735,7 @@ public class Factory implements ActionListener{
             public void actionPerformed(ActionEvent e)
             {
                 testmaintenance.enablePickBtn();
+
                 testmaintenance.setPickSlot1BtnListener(new ActionListener(){
                     public void actionPerformed(ActionEvent e)
                     {
@@ -738,7 +749,14 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(0).addItem(item1,restock.getQuantity());
                                 restock.setVisible(false);
-                                loadRegularVending();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                                 testmaintenance.setVisible(true);
                                 restock.cleartxtarea();
                                 testmaintenance.disablePickBtn();
@@ -759,7 +777,14 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(1).addItem(item2,restock.getQuantity());
                                 restock.setVisible(false);
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                                 testmaintenance.setVisible(true);    
                                 restock.cleartxtarea();
                                 testmaintenance.disablePickBtn();                          
@@ -767,7 +792,6 @@ public class Factory implements ActionListener{
                         });            
                     }
                 });
-                        
                 testmaintenance.setPickSlot3BtnListener(new ActionListener(){
                     public void actionPerformed(ActionEvent e)
                     {
@@ -781,7 +805,14 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(2).addItem(item3,restock.getQuantity());
                                 restock.setVisible(false);
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                                 testmaintenance.setVisible(true);
                                 restock.cleartxtarea();
                                 testmaintenance.disablePickBtn();
@@ -802,7 +833,14 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(3).addItem(item4,restock.getQuantity());
                                 restock.setVisible(false);
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                                 testmaintenance.setVisible(true);
                                 restock.cleartxtarea();
                                 testmaintenance.disablePickBtn();
@@ -823,7 +861,14 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(4).addItem(item5,restock.getQuantity());
                                 restock.setVisible(false);
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                                 testmaintenance.setVisible(true);
                                 restock.cleartxtarea();
                                 testmaintenance.disablePickBtn();
@@ -844,7 +889,14 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(5).addItem(item6,restock.getQuantity());
                                 restock.setVisible(false);
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                                 testmaintenance.setVisible(true);
                                 restock.cleartxtarea();
                                 testmaintenance.disablePickBtn();
@@ -865,7 +917,14 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(6).addItem(item7,restock.getQuantity());
                                 restock.setVisible(false);
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                                 testmaintenance.setVisible(true);
                                 restock.cleartxtarea();
                                 testmaintenance.disablePickBtn();
@@ -886,7 +945,14 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(7).addItem(item8,restock.getQuantity());
                                 restock.setVisible(false);
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                                 testmaintenance.setVisible(true);
                                 restock.cleartxtarea();
                                 testmaintenance.disablePickBtn();
@@ -907,7 +973,14 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(8).addItem(item9,restock.getQuantity());
                                 restock.setVisible(false);
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                                 testmaintenance.setVisible(true);
                                 restock.cleartxtarea();
                                 testmaintenance.disablePickBtn();
@@ -918,18 +991,12 @@ public class Factory implements ActionListener{
             }
         });
 
-        this.testvending.setBackBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
-                mainMenu.setVisible(true);
-                testvending.setVisible(false);
-            }
-        });
-
         this.testmaintenance.setChangePrice(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
                 testmaintenance.enablePickBtn();
+                testmaintenance.setPickSlot2Enable(false);
+                testmaintenance.setPickSlot3Enable(false);
                 testmaintenance.setPickSlot1BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
@@ -946,12 +1013,18 @@ public class Factory implements ActionListener{
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
                                 testmaintenance.disablePickBtn();
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                             }
                         });
                     }
                 });
-
                 testmaintenance.setPickSlot2BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
@@ -968,12 +1041,11 @@ public class Factory implements ActionListener{
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
                                 testmaintenance.disablePickBtn();
-                                loadRegularVendingmaintenance();
+                                loadRegularVendingmaintenance();                       
                             }
                         });
                     }
                 });
-
                 testmaintenance.setPickSlot3BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
@@ -995,7 +1067,6 @@ public class Factory implements ActionListener{
                         });
                     }
                 });
-
                 testmaintenance.setPickSlot4BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
@@ -1006,19 +1077,24 @@ public class Factory implements ActionListener{
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                Item item4 = machine.getArraySlots().get(3).checkItem();
                                 int newprice = changeprice.getNewPrice();
                                 ((Milktea)item4).setPrice(newprice);
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
                                 testmaintenance.disablePickBtn();
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                             }
                         });
                     }
                 });
-
                 testmaintenance.setPickSlot5BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
@@ -1030,17 +1106,30 @@ public class Factory implements ActionListener{
                             public void actionPerformed(ActionEvent e)
                             {
                                 int newprice = changeprice.getNewPrice();
-                                ((Milktea)item5).setPrice(newprice);
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    ((Sinker)item5).setPrice(newprice);
+                                }
+                                else
+                                {
+                                    ((Milktea)item5).setPrice(newprice);
+                                }
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
                                 testmaintenance.disablePickBtn();
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                             }
                         });
                     }
                 });
-
                 testmaintenance.setPickSlot6BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
@@ -1051,19 +1140,31 @@ public class Factory implements ActionListener{
                         changeprice.setChangePriceBtnListener(new ActionListener() {
                             public void actionPerformed(ActionEvent e)
                             {
-                                Item item6 = machine.getArraySlots().get(5).checkItem();
                                 int newprice = changeprice.getNewPrice();
-                                ((Milktea)item6).setPrice(newprice);
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    ((Sinker)item6).setPrice(newprice);
+                                }
+                                else
+                                {
+                                    ((Milktea)item6).setPrice(newprice);
+                                }
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
                                 testmaintenance.disablePickBtn();
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                             }
                         });
                     }
                 });
-
                 testmaintenance.setPickSlot7BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
@@ -1075,17 +1176,30 @@ public class Factory implements ActionListener{
                             public void actionPerformed(ActionEvent e)
                             {
                                 int newprice = changeprice.getNewPrice();
-                                ((Milktea)item7).setPrice(newprice);
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    ((Sinker)item7).setPrice(newprice);
+                                }
+                                else
+                                {
+                                    ((Milktea)item7).setPrice(newprice);
+                                }
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
                                 testmaintenance.disablePickBtn();
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                             }
                         });
                     }
                 });
-
                 testmaintenance.setPickSlot8BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
@@ -1097,17 +1211,30 @@ public class Factory implements ActionListener{
                             public void actionPerformed(ActionEvent e)
                             {
                                 int newprice = changeprice.getNewPrice();
-                                ((Milktea)item8).setPrice(newprice);
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    ((Sinker)item8).setPrice(newprice);
+                                }
+                                else
+                                {
+                                    ((Milktea)item8).setPrice(newprice);
+                                }
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
                                 testmaintenance.disablePickBtn();
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                             }
                         });
                     }
                 });
-
                 testmaintenance.setPickSlot9BtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
@@ -1119,17 +1246,30 @@ public class Factory implements ActionListener{
                             public void actionPerformed(ActionEvent e)
                             {
                                 int newprice = changeprice.getNewPrice();
-                                ((Milktea)item9).setPrice(newprice);
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    ((Sinker)item9).setPrice(newprice);
+                                }
+                                else
+                                {
+                                    ((Milktea)item9).setPrice(newprice);
+                                }
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
                                 testmaintenance.disablePickBtn();
-                                loadRegularVendingmaintenance();
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    loadSpecialVendingmaintenance();
+                                }
+                                else
+                                {
+                                    loadRegularVendingmaintenance();
+                                }
                             }
                         });
                     }
                 });
-
             }
         });
 
@@ -1184,7 +1324,6 @@ public class Factory implements ActionListener{
                         replenishbalance.clearTA();
                     }
                 });
-                
             }
         });
 
@@ -1199,8 +1338,7 @@ public class Factory implements ActionListener{
                                             machine.getCashHandler().printDenom(10) + "\n" + machine.getCashHandler().printDenom(50) + "\n" +
                                             machine.getCashHandler().printDenom(100) + "\n" + machine.getCashHandler().printDenom(200) + "\n" +
                                             machine.getCashHandler().printDenom(500) + "\n" + machine.getCashHandler().printDenom(1000));
-                collectbalance.setDoneBtnListener(new ActionListener() 
-                {
+                collectbalance.setDoneBtnListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e)
                     {
                         JOptionPane.showMessageDialog(collectbalance, "Collected all balance");
@@ -1278,105 +1416,6 @@ public class Factory implements ActionListener{
 
             }
         });
-
-        // MAINTENANCE PART
-
-        /*this.testmaintenance.setRestockProductBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
-                restockproduct.setVisible(true);
-                testmaintenance.setVisible(false);
-            }
-        });
-
-        this.restockproduct.setDoneBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
-                testmaintenance.setVisible(true);
-                restockproduct.setVisible(false);
-            }
-        });
-
-        this.testmaintenance.setReplenishBalanceBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
-                replenishbalance.setVisible(true);
-                testmaintenance.setVisible(false);
-            }
-        });
-
-        this.replenishbalance.setDoneBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
-                testmaintenance.setVisible(true);
-                replenishbalance.setVisible(false);
-            }
-        });
-
-        this.testmaintenance.setCollectBalanceBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
-                collectbalance.setVisible(true);
-                testmaintenance.setVisible(false);
-            }
-        });
-
-        this.collectbalance.setDoneBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
-                testmaintenance.setVisible(true);
-                collectbalance.setVisible(false);
-            }
-        });
-
-        this.testmaintenance.setChangePriceBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
-                changeprice.setVisible(true);
-                testmaintenance.setVisible(false);
-            }
-        });
-
-        this.changeprice.setDoneBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
-                testmaintenance.setVisible(true);
-                changeprice.setVisible(false);
-            }
-        });
-
-        this.testmaintenance.setPrintSalesBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
-                printsales.setVisible(true);
-                testmaintenance.setVisible(false);
-            }
-        });
-
-        this.printsales.setDoneBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
-                testmaintenance.setVisible(true);
-                printsales.setVisible(false);
-            }
-        });
-
-        this.testmaintenance.setInventoryBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
-                inventory.setVisible(true);
-                testmaintenance.setVisible(false);
-            }
-        });
-
-        this.inventory.setDoneBtnListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
-                testmaintenance.setVisible(true);
-                inventory.setVisible(false);
-            }
-        });*/
-
     }
 
     public void enableFlavor()
