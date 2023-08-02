@@ -1462,9 +1462,21 @@ public class Factory implements ActionListener{
                 testmaintenance.setVisible(false);
                 inventory.setVisible(true);
                 
-                String display;
+                String displayInitial = "", displayCurrent = "";
 
-                
+                for (int i = 0; i < machine.getInventory().size(); i++)
+                {
+                    Item item = machine.getInventory().get(i).checkItem();
+                    displayInitial += item.getItemName() + " (" + machine.getInventory().get(i).getNumberOfStock() + " available)\n";
+                }
+                inventory.setInitialText(displayInitial);   
+
+                for (int i = 0; i < machine.getArraySlots().size(); i++)
+                {
+                    Item item = machine.getArraySlots().get(i).checkItem();
+                    displayCurrent += item.getItemName() + " (" + machine.getArraySlots().get(i).getNumberOfStock() + " available)\n";
+                }
+                inventory.setCurrentText(displayCurrent);
             }
         });
     

@@ -40,6 +40,7 @@ public class Inventory extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vending Machine Factory");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(85, 88, 95));
 
@@ -53,9 +54,8 @@ public class Inventory extends javax.swing.JFrame {
         InitialInventoryPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Initial Inventory", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Arial", 0, 13))); // NOI18N
 
         InitialTextArea.setEditable(false);
-        InitialTextArea.setBackground(new java.awt.Color(242, 242, 242));
         InitialTextArea.setColumns(20);
-        InitialTextArea.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        InitialTextArea.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         InitialTextArea.setLineWrap(true);
         InitialTextArea.setRows(15);
         InitialTextArea.setWrapStyleWord(true);
@@ -82,7 +82,7 @@ public class Inventory extends javax.swing.JFrame {
 
         CurrentTextArea.setEditable(false);
         CurrentTextArea.setColumns(20);
-        CurrentTextArea.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        CurrentTextArea.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         CurrentTextArea.setLineWrap(true);
         CurrentTextArea.setRows(15);
         CurrentTextArea.setWrapStyleWord(true);
@@ -136,10 +136,8 @@ public class Inventory extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(DoneBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(63, 63, 63))
+                            .addComponent(DoneBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(49, 49, 49))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(Lbl)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -173,6 +171,16 @@ public class Inventory extends javax.swing.JFrame {
     public void setDoneBtnListener(ActionListener actn)
     {
         DoneBtn.addActionListener(actn);
+    }
+
+    public void setInitialText(String text)
+    {
+        InitialTextArea.setText(text);
+    }
+
+    public void setCurrentText(String text)
+    {
+        CurrentTextArea.setText(text);
     }
 
     /**

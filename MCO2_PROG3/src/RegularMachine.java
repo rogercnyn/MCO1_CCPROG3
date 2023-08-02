@@ -25,6 +25,11 @@ public class RegularMachine {
         this.inventory = arraySlots;
     }
 
+    public ArrayList<Slot> getInventory() 
+    {
+        return inventory;
+    }
+
     public void updateLastRestockDate()
     {
         this.lastRestockDate = LocalDate.now();
