@@ -1534,6 +1534,12 @@ public class TestVendFeatures extends javax.swing.JFrame {
         OrderDetailsLbl.setText("Please pick an item.");
     }
 
+    /*
+     * [Output:]
+     * Order: Milktea
+     * Flavor: Okinawa
+     */
+
     public void setOrderDetailsLbl(String order)
     {
         OrderDetailsLbl.setText("Order:\n" + order);

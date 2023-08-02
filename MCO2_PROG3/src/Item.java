@@ -13,6 +13,11 @@ public class Item {
         this.itemCalories = itemCalories;
     }
 
+    public void setItemCalories(int itemCalories) 
+    {
+        this.itemCalories = itemCalories;
+    }
+
     public String getItemName() {
         return itemName;
     }

@@ -17,26 +17,6 @@ public class ChangePrice extends javax.swing.JFrame {
     public ChangePrice() {
         initComponents();
     }
-
-    public void setChangePriceBtnListener(ActionListener actn)
-    {
-        ChangeBtn.addActionListener(actn);
-    }
-
-    public int  getNewPrice()
-    {
-        return Integer.parseInt(newPrice.getText());
-    }
-    
-    public void setItemName(String Name)
-    {
-        ItemName.setText(Name);
-    }
-    
-    public void clearTA()
-    {
-        newPrice.setText("");
-    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -121,6 +101,26 @@ public class ChangePrice extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void setChangePriceBtnListener(ActionListener actn)
+    {
+        ChangeBtn.addActionListener(actn);
+    }
+
+    public int  getNewPrice()
+    {
+        return Integer.parseInt(newPrice.getText());
+    }
+    
+    public void setItemName(String Name)
+    {
+        ItemName.setText(Name);
+    }
+    
+    public void clearTA()
+    {
+        newPrice.setText("");
+    }
+    
     public void setDoneBtnListener(ActionListener actn)
     {
         ChangeBtn.addActionListener(actn);

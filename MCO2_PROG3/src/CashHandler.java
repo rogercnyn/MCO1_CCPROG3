@@ -284,5 +284,15 @@ public class CashHandler
         }
         return output;
     }
+
+    public boolean isPaymentStackEmpty()
+    {
+        boolean check = false;
+        if (payment.empty())
+        {
+            check = true;
+        }
+        return check;
+    }
 }
 

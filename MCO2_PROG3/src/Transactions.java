@@ -30,6 +30,21 @@ public class Transactions
         this.date = LocalDate.now();
     }
 
+    // to record flavor and sinker in the customizeable
+    public Transactions(String itemName)
+    {
+        this.itemName = itemName;
+        this.totalPrice = 0;
+        this.date = LocalDate.now();
+    }
+
+    public Transactions()
+    {
+        this.itemName = "";
+        this.totalPrice = 0;
+        this.date = LocalDate.now();
+    }
+
     /**
      * getItemName returns the transaction's item name
      * @return item name of the transaction

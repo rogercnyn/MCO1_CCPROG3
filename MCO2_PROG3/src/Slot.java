@@ -9,7 +9,7 @@ public class Slot {
     public Slot()
     {
         this.items = new Stack<Item>();
-        this.CAPACITY = 0;
+        this.CAPACITY = 10;
     }
 
     public Slot(Stack<Item> items)

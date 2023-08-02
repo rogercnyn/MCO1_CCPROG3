@@ -75,9 +75,23 @@ public class RegularMachine {
         return -1;
     }
 
+    public ArrayList<Transactions> getTransactions() 
+    {
+        return transactions;
+    }
+
     public void addTransactions()
     {
-        Transactions transaction = new Transactions(getChosenItem().getItemName(), ((Milktea)getChosenItem()).getPrice());
+        Transactions transaction = new Transactions();
+        if (chosenItem instanceof Milktea)
+        {
+            transaction = new Transactions(getChosenItem().getItemName(), ((Milktea)getChosenItem()).getPrice());
+        }
+        else if (chosenItem instanceof Sinker)
+        {
+            transaction = new Transactions(getChosenItem().getItemName(), ((Sinker)getChosenItem()).getPrice());
+        }
+
         transactions.add(transaction);
     }
 }

@@ -168,6 +168,7 @@ public class Factory implements ActionListener{
 
                 else
                 {
+                    testvendfeatures.setCancelBtnEnable(true);
                     Item item1 = machine.getArraySlots().get(0).checkItem();
                     if (machine instanceof SpecialMachine)
                     {
@@ -205,6 +206,7 @@ public class Factory implements ActionListener{
 
                 else
                 {
+                    testvendfeatures.setCancelBtnEnable(true);
                     Item item2 = machine.getArraySlots().get(1).checkItem();
                     if (machine instanceof SpecialMachine)
                     {
@@ -242,6 +244,7 @@ public class Factory implements ActionListener{
                 
                 else
                 {
+                    testvendfeatures.setCancelBtnEnable(true);
                     Item item3 = machine.getArraySlots().get(2).checkItem();
                     if (machine instanceof SpecialMachine)
                     {
@@ -277,6 +280,7 @@ public class Factory implements ActionListener{
                 }
                 else
                 {
+                    testvendfeatures.setCancelBtnEnable(true);
                     Item item4 = machine.getArraySlots().get(3).checkItem();
                     disableAllPickBtns();
                     if (machine instanceof SpecialMachine)
@@ -306,6 +310,7 @@ public class Factory implements ActionListener{
 
                     else
                     {
+                        testvendfeatures.setCancelBtnEnable(true);
                         testvendfeatures.setOrderDetailsLbl(item4.getItemName());
                         testvendfeatures.setMessageLbl("Please insert your payment.");
                         testvendfeatures.setInsertCashEnable(true);
@@ -328,6 +333,7 @@ public class Factory implements ActionListener{
 
                 else
                 {
+                    testvendfeatures.setCancelBtnEnable(true);
                     Item item5 = machine.getArraySlots().get(4).checkItem();
                     disableAllPickBtns();
                     if (machine instanceof SpecialMachine)
@@ -357,6 +363,7 @@ public class Factory implements ActionListener{
 
                     else
                     {
+                        testvendfeatures.setCancelBtnEnable(true);
                         testvendfeatures.setOrderDetailsLbl(item5.getItemName());
                         testvendfeatures.setMessageLbl("Please insert your payment.");
                         testvendfeatures.setInsertCashEnable(true);
@@ -379,6 +386,7 @@ public class Factory implements ActionListener{
                 
                 else
                 {
+                    testvendfeatures.setCancelBtnEnable(true);
                     Item item6 = machine.getArraySlots().get(5).checkItem();
                     disableAllPickBtns();
                     if (machine instanceof SpecialMachine)
@@ -429,10 +437,12 @@ public class Factory implements ActionListener{
                 }
                 else
                 {
+                    testvendfeatures.setCancelBtnEnable(true);
                     Item item7 = machine.getArraySlots().get(6).checkItem();
                     disableAllPickBtns();
                     if (machine instanceof SpecialMachine)
                     {
+                        testvendfeatures.setCancelBtnEnable(true);
                         if (machine.getChosenItem() == null)
                         {
                             testvendfeatures.setOrderDetailsLbl(item7.getItemName());
@@ -479,6 +489,7 @@ public class Factory implements ActionListener{
                 }
                 else
                 {
+                    testvendfeatures.setCancelBtnEnable(true);
                     Item item8 = machine.getArraySlots().get(8).checkItem();
                     disableAllPickBtns();
                     if (machine instanceof SpecialMachine)
@@ -530,6 +541,7 @@ public class Factory implements ActionListener{
 
                 else
                 {
+                    testvendfeatures.setCancelBtnEnable(true);
                     Item item9 = machine.getArraySlots().get(8).checkItem();
                     disableAllPickBtns();
                     if (machine instanceof SpecialMachine)
@@ -578,7 +590,6 @@ public class Factory implements ActionListener{
                 {
                     if (machine.getChosenItem() instanceof Milktea)
                     {
-                        // code
                         Milktea order = ((Milktea) machine.getChosenItem());
                         Flavor flavor = order.getFlavor();
                         Sinker sinker = order.getSinker();
@@ -599,7 +610,10 @@ public class Factory implements ActionListener{
                             machine.getArraySlots().get(sinkerIndex).dispenseItem();
                             JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().successChange());
                             machine.addTransactions();
+                            ((SpecialMachine) machine).addTransactions(sinker);
+                            ((SpecialMachine) machine).addTransactions(flavor);
                             testvendfeatures.restartOrderDetailsLbl();
+                            loadSpecialVending();
                             restartTestingSpecial();
                         }
 
@@ -626,6 +640,7 @@ public class Factory implements ActionListener{
                             JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().successChange());
                             machine.addTransactions();
                             testvendfeatures.restartOrderDetailsLbl();
+                            loadSpecialVending();
                             restartTestingSpecial();
                         }
                         else
@@ -667,11 +682,20 @@ public class Factory implements ActionListener{
         this.testvendfeatures.setCancelBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().cancel());
+                if (machine.getCashHandler().isPaymentStackEmpty())
+                {
+                    JOptionPane.showMessageDialog(testvendfeatures, "Transaction is now cancelled.");
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(testvendfeatures, machine.getCashHandler().cancel());
+                }
+
                 if (machine instanceof SpecialMachine)
                 {
                     restartTestingSpecial();
                 }
+
                 else
                 {
                     restartTestingVend();
@@ -1078,7 +1102,14 @@ public class Factory implements ActionListener{
                             public void actionPerformed(ActionEvent e)
                             {
                                 int newprice = changeprice.getNewPrice();
-                                ((Milktea)item4).setPrice(newprice);
+                                if (machine instanceof SpecialMachine)
+                                {
+                                    ((Sinker)item4).setPrice(newprice);
+                                }
+                                else
+                                {
+                                    ((Milktea)item4).setPrice(newprice);
+                                }
                                 testmaintenance.setVisible(true);
                                 changeprice.setVisible(false);
                                 changeprice.clearTA();
@@ -1365,7 +1396,7 @@ public class Factory implements ActionListener{
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy");
                 String display;
 
-                display =("Sales Report from: " + formatter.format(machine.getLastRestockDate()) + " to " + formatter.format(today));
+                display = ("Sales Report from: " + formatter.format(machine.getLastRestockDate()) + " to " + formatter.format(today));
 
                 int totalSales = 0;
 
@@ -1377,7 +1408,7 @@ public class Factory implements ActionListener{
                     }
                 }
 
-               display += ("\nTotal Sales Generated: Php " + totalSales+ "\n");
+               display += ("\nTotal Sales Generated: Php " + totalSales + "\n");
 
                 display += ("Product Sales:");
 
@@ -1456,7 +1487,7 @@ public class Factory implements ActionListener{
         testvendfeatures.setItemName1(item1.getItemName());
         testvendfeatures.setItemPrice1(((Milktea) item1).getPrice());
         testvendfeatures.setItemQuantity1(machine.getArraySlots().get(0).getNumberOfStock());
-        testvendfeatures.setItemCalories1(item1.getItemCalories());
+        testvendfeatures.setItemCalories1(148);
         testvendfeatures.setItemPicture1("/Elements/ItemElements/okinawa w_ pearls.png");
         
         Item item2 = machine.getArraySlots().get(1).checkItem(); 
@@ -1654,7 +1685,7 @@ public class Factory implements ActionListener{
         testmaintenance.setItemName1(item1.getItemName());
         testmaintenance.setItemPrice1(((Milktea) item1).getPrice());
         testmaintenance.setItemQuantity1(machine.getArraySlots().get(0).getNumberOfStock());
-        testmaintenance.setItemCalories1(item1.getItemCalories());
+        testmaintenance.setItemCalories1(148);
         testmaintenance.setItemPicture1("/Elements/ItemElements/okinawa w_ pearls.png");
         
         Item item2 = machine.getArraySlots().get(1).checkItem(); 
