@@ -17,10 +17,10 @@ public class RegularMachine {
         this.arraySlots = arraySlots;
         this.transactions = new ArrayList<Transactions>();
         this.lastRestockDate = LocalDate.now();
-        this.inventory = arraySlots;
+        this.inventory = new ArrayList<Slot>();
     }
 
-    public void updateInventory()
+    public void setInventory(ArrayList<Slot> arraySlots)
     {
         this.inventory = arraySlots;
     }

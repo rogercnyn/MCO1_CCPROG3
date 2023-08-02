@@ -77,6 +77,7 @@ public class Factory implements ActionListener{
             {
                 JOptionPane.showMessageDialog(createvending, "Regular Vending Machine is successfully created!");
                 machine = new RegularMachine(slot.regularItems());
+                machine.setInventory(slot.regularItems());
                 mainMenu.setTestEnable(true);
                 mainMenu.setVisible(true);
                 createvending.setVisible(false);
@@ -88,6 +89,7 @@ public class Factory implements ActionListener{
             {
                 JOptionPane.showMessageDialog(createvending, "Special Vending Machine is successfully created!");
                 machine = new SpecialMachine(slot.specialItems());
+                machine.setInventory(slot.specialItems());
                 mainMenu.setVisible(true);
                 mainMenu.setTestEnable(true);
                 createvending.setVisible(false);
@@ -773,7 +775,7 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(0).addItem(item1, restock.getQuantity());
                                 machine.updateLastRestockDate();
-                                machine.updateInventory();
+                                machine.setInventory(machine.getArraySlots());
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -803,7 +805,7 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(1).addItem(item2,restock.getQuantity());
                                 machine.updateLastRestockDate();
-                                machine.updateInventory();
+                                machine.setInventory(machine.getArraySlots());
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -833,7 +835,7 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(2).addItem(item3,restock.getQuantity());
                                 machine.updateLastRestockDate();
-                                machine.updateInventory();
+                                machine.setInventory(machine.getArraySlots());
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -863,7 +865,7 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(3).addItem(item4,restock.getQuantity());
                                 machine.updateLastRestockDate();
-                                machine.updateInventory();
+                                machine.setInventory(machine.getArraySlots());
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -893,7 +895,7 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(4).addItem(item5,restock.getQuantity());
                                 machine.updateLastRestockDate();
-                                machine.updateInventory();
+                                machine.setInventory(machine.getArraySlots());
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -923,7 +925,7 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(5).addItem(item6,restock.getQuantity());
                                 machine.updateLastRestockDate();
-                                machine.updateInventory();
+                                machine.setInventory(machine.getArraySlots());
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -953,7 +955,7 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(6).addItem(item7,restock.getQuantity());
                                 machine.updateLastRestockDate();
-                                machine.updateInventory();
+                                machine.setInventory(machine.getArraySlots());
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -983,7 +985,7 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(7).addItem(item8,restock.getQuantity());
                                 machine.updateLastRestockDate();
-                                machine.updateInventory();
+                                machine.setInventory(machine.getArraySlots());
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -1013,7 +1015,7 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(8).addItem(item9,restock.getQuantity());
                                 machine.updateLastRestockDate();
-                                machine.updateInventory();
+                                machine.setInventory(machine.getArraySlots());
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
