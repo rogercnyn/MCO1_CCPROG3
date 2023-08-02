@@ -17,7 +17,17 @@ public class RegularMachine {
         this.arraySlots = arraySlots;
         this.transactions = new ArrayList<Transactions>();
         this.lastRestockDate = LocalDate.now();
-        this.inventory = new ArrayList<Slot>();
+        this.inventory = arraySlots;
+    }
+
+    public void updateInventory()
+    {
+        this.inventory = arraySlots;
+    }
+
+    public void updateLastRestockDate()
+    {
+        this.lastRestockDate = LocalDate.now();
     }
 
     public Item getChosenItem() 
@@ -44,6 +54,7 @@ public class RegularMachine {
     {
         return lastRestockDate;
     }
+
     public void setChosenItem(Item chosenItem) 
     {
         this.chosenItem = chosenItem;

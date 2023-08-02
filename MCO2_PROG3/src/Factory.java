@@ -771,7 +771,9 @@ public class Factory implements ActionListener{
                         {
                             public void actionPerformed(ActionEvent e)
                             {
-                                machine.getArraySlots().get(0).addItem(item1,restock.getQuantity());
+                                machine.getArraySlots().get(0).addItem(item1, restock.getQuantity());
+                                machine.updateLastRestockDate();
+                                machine.updateInventory();
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -800,6 +802,8 @@ public class Factory implements ActionListener{
                             public void actionPerformed(ActionEvent e)
                             {
                                 machine.getArraySlots().get(1).addItem(item2,restock.getQuantity());
+                                machine.updateLastRestockDate();
+                                machine.updateInventory();
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -828,6 +832,8 @@ public class Factory implements ActionListener{
                             public void actionPerformed(ActionEvent e)
                             {
                                 machine.getArraySlots().get(2).addItem(item3,restock.getQuantity());
+                                machine.updateLastRestockDate();
+                                machine.updateInventory();
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -856,6 +862,8 @@ public class Factory implements ActionListener{
                             public void actionPerformed(ActionEvent e)
                             {
                                 machine.getArraySlots().get(3).addItem(item4,restock.getQuantity());
+                                machine.updateLastRestockDate();
+                                machine.updateInventory();
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -884,6 +892,8 @@ public class Factory implements ActionListener{
                             public void actionPerformed(ActionEvent e)
                             {
                                 machine.getArraySlots().get(4).addItem(item5,restock.getQuantity());
+                                machine.updateLastRestockDate();
+                                machine.updateInventory();
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -912,6 +922,8 @@ public class Factory implements ActionListener{
                             public void actionPerformed(ActionEvent e)
                             {
                                 machine.getArraySlots().get(5).addItem(item6,restock.getQuantity());
+                                machine.updateLastRestockDate();
+                                machine.updateInventory();
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -940,6 +952,8 @@ public class Factory implements ActionListener{
                             public void actionPerformed(ActionEvent e)
                             {
                                 machine.getArraySlots().get(6).addItem(item7,restock.getQuantity());
+                                machine.updateLastRestockDate();
+                                machine.updateInventory();
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -968,6 +982,8 @@ public class Factory implements ActionListener{
                             public void actionPerformed(ActionEvent e)
                             {
                                 machine.getArraySlots().get(7).addItem(item8,restock.getQuantity());
+                                machine.updateLastRestockDate();
+                                machine.updateInventory();
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -996,6 +1012,8 @@ public class Factory implements ActionListener{
                             public void actionPerformed(ActionEvent e)
                             {
                                 machine.getArraySlots().get(8).addItem(item9,restock.getQuantity());
+                                machine.updateLastRestockDate();
+                                machine.updateInventory();
                                 restock.setVisible(false);
                                 if (machine instanceof SpecialMachine)
                                 {
@@ -1408,7 +1426,7 @@ public class Factory implements ActionListener{
                     }
                 }
 
-               display += ("\nTotal Sales Generated: Php " + totalSales + "\n");
+                display += ("\nTotal Sales Generated: Php " + totalSales + "\n");
 
                 display += ("Product Sales:");
 
@@ -1443,7 +1461,18 @@ public class Factory implements ActionListener{
             {
                 testmaintenance.setVisible(false);
                 inventory.setVisible(true);
-                //will display all the inventory of all items in a text area
+                
+                String display;
+
+                
+            }
+        });
+    
+        this.inventory.setDoneBtnListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                testmaintenance.setVisible(true);
+                inventory.setVisible(false);
 
             }
         });
