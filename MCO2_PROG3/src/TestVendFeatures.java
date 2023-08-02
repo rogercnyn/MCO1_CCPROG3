@@ -132,8 +132,6 @@ public class TestVendFeatures extends javax.swing.JFrame {
         DenominationComboBox = new javax.swing.JComboBox<>();
         DenominationLbl = new javax.swing.JLabel();
         InsertBtn = new javax.swing.JButton();
-        YourItemLbl = new javax.swing.JLabel();
-        ItemImageLbl = new javax.swing.JLabel();
         DispenseBtn = new javax.swing.JButton();
         CancelBtn = new javax.swing.JButton();
 
@@ -1066,18 +1064,6 @@ public class TestVendFeatures extends javax.swing.JFrame {
         jPanel2.add(PaymentPanel);
         PaymentPanel.setBounds(380, 190, 160, 99);
 
-        YourItemLbl.setText("Your item:");
-        jPanel2.add(YourItemLbl);
-        YourItemLbl.setBounds(380, 340, 120, 17);
-
-        ItemImageLbl.setBackground(new java.awt.Color(0, 0, 0));
-        ItemImageLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ItemImageLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/hokkaido w_ pearls.png"))); // NOI18N
-        ItemImageLbl.setPreferredSize(new java.awt.Dimension(70, 70));
-        ItemImageLbl.setSize(new java.awt.Dimension(70, 70));
-        jPanel2.add(ItemImageLbl);
-        ItemImageLbl.setBounds(470, 340, 70, 70);
-
         DispenseBtn.setText("Dispense");
         jPanel2.add(DispenseBtn);
         DispenseBtn.setBounds(380, 300, 85, 23);
@@ -1613,7 +1599,6 @@ public class TestVendFeatures extends javax.swing.JFrame {
     private javax.swing.JButton DispenseBtn;
     private javax.swing.JButton DoneBtn;
     private javax.swing.JButton InsertBtn;
-    private javax.swing.JLabel ItemImageLbl;
     private javax.swing.JScrollPane MessageField;
     private javax.swing.JTextArea MessageFieldLbl;
     private javax.swing.JScrollPane OrderDetailsField;
@@ -1639,7 +1624,6 @@ public class TestVendFeatures extends javax.swing.JFrame {
     private javax.swing.JPanel Slot9;
     private javax.swing.JPanel SlotContainer;
     private javax.swing.JLabel VendingFeaturesLbl;
-    private javax.swing.JLabel YourItemLbl;
     private javax.swing.JLabel availableLbl1;
     private javax.swing.JLabel availableLbl2;
     private javax.swing.JLabel availableLbl3;
