@@ -104,7 +104,6 @@ public class Factory implements ActionListener{
                 if (machine instanceof SpecialMachine)
                 {
                     loadSpecialVending();
-                    disableFlavor();
                 }
                 else
                 {
@@ -124,8 +123,10 @@ public class Factory implements ActionListener{
                     loadSpecialVending();
                     disableFlavor();
                 }
+
                 else
                 {
+                    enableFlavor();
                     loadRegularVending();
                 }
                 testvendfeatures.setInsertCashEnable(false);
@@ -717,12 +718,14 @@ public class Factory implements ActionListener{
                     loadRegularVending();
                     restartTestingVend();
                 }
+                machine.setChosenItem(null);
             }
         });
 
         this.testvendfeatures.setCancelBtnListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
+                machine.setChosenItem(null);
                 if (machine.getCashHandler().isPaymentStackEmpty())
                 {
                     JOptionPane.showMessageDialog(testvendfeatures, "Transaction is now cancelled.");
