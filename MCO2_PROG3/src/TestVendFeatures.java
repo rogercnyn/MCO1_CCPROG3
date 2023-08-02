@@ -1130,11 +1130,18 @@ public class TestVendFeatures extends javax.swing.JFrame {
         setDenomComboBoxSelectedIndex();
     }
 
+    /**
+     * Sets the selected index to null
+     */
     public void setDenomComboBoxSelectedIndex()
     {
         DenominationComboBox.setSelectedItem(null);
     }
 
+    /**
+     * Returns the selected denomination
+     * @return selected denomination
+     */
     public int getSelectedDenom()
     {
         String getdenom = (String)DenominationComboBox.getSelectedItem();
@@ -1147,129 +1154,227 @@ public class TestVendFeatures extends javax.swing.JFrame {
         return denom;
     }
 
-    // Button listeners
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setDoneBtnListener(ActionListener actn)
     {
         DoneBtn.addActionListener(actn);
     }
     
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setPickSlot1BtnListener(ActionListener actn)
     {
         PickSlot1.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setPickSlot2BtnListener(ActionListener actn)
     {
         PickSlot2.addActionListener(actn);
     }
     
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setPickSlot3BtnListener(ActionListener actn)
     {
         PickSlot3.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setPickSlot4BtnListener(ActionListener actn)
     {
         PickSlot4.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setPickSlot5BtnListener(ActionListener actn)
     {
         PickSlot5.addActionListener(actn);
     }
     
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setPickSlot6BtnListener(ActionListener actn)
     {
         PickSlot6.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setPickSlot7BtnListener(ActionListener actn)
     {
         PickSlot7.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setPickSlot8BtnListener(ActionListener actn)
     {
         PickSlot8.addActionListener(actn);
     }
     
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setPickSlot9BtnListener(ActionListener actn)
     {
         PickSlot9.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setInsertCashListener(ActionListener actn)
     {
         InsertBtn.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setDispenseBtnListener(ActionListener actn)
     {
         DispenseBtn.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setCancelBtnListener(ActionListener actn)
     {
         CancelBtn.addActionListener(actn);
     }
 
     // Button enable
-
+    /**
+     * Sets the 'enable' capability of the button
+     * @param check - boolean value
+     */
     public void setCancelBtnEnable(boolean check)
     {
         CancelBtn.setEnabled(check);
     }
 
+    /**
+     * Sets the 'enable' capability of the button
+     * @param check - boolean value
+     */
     public void setInsertCashEnable(boolean check)
     {
         InsertBtn.setEnabled(check);
     }
 
+    /**
+     * Sets the 'enable' capability of the button
+     * @param check - boolean value
+     */
     public void setDispenseBtnEnable(boolean check)
     {
         DispenseBtn.setEnabled(check);
     }
 
+    /**
+     * Sets the 'enable' capability of the button
+     * @param check - boolean value
+     */
     public void setPickSlot1Enable(boolean check)
     {
         PickSlot1.setEnabled(check);
     }
 
+    /**
+     * Sets the 'enable' capability of the button
+     * @param check - boolean value
+     */
     public void setPickSlot2Enable(boolean check)
     {
         PickSlot2.setEnabled(check);
     }
 
+    /**
+     * Sets the 'enable' capability of the button
+     * @param check - boolean value
+     */
     public void setPickSlot3Enable(boolean check)
     {
         PickSlot3.setEnabled(check);
     }
 
+    /**
+     * Sets the 'enable' capability of the button
+     * @param check - boolean value
+     */
     public void setPickSlot4Enable(boolean check)
     {
         PickSlot4.setEnabled(check);
     }
 
+    /**
+     * Sets the 'enable' capability of the button
+     * @param check - boolean value
+     */
     public void setPickSlot5Enable(boolean check)
     {
         PickSlot5.setEnabled(check);
     }
 
+    /**
+     * Sets the 'enable' capability of the button
+     * @param check - boolean value
+     */
     public void setPickSlot6Enable(boolean check)
     {
         PickSlot6.setEnabled(check);
     }
 
+    /**
+     * Sets the 'enable' capability of the button
+     * @param check - boolean value
+     */
     public void setPickSlot7Enable(boolean check)
     {
         PickSlot7.setEnabled(check);
     }
 
+    /**
+     * Sets the 'enable' capability of the button
+     * @param check - boolean value
+     */
     public void setPickSlot8Enable(boolean check)
     {
         PickSlot8.setEnabled(check);
     }
 
+    /**
+     * Sets the 'enable' capability of the button
+     * @param check - boolean value
+     */
     public void setPickSlot9Enable(boolean check)
     {
         PickSlot9.setEnabled(check);
@@ -1277,47 +1382,82 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
 
     // Set item names in GUI
-
+    /**
+     * Sets the item name
+     * @param name - contains the name
+     */
     public void setItemName1(String name)
     {
         this.itemNameTextArea1.setText(name);
     }
 
+    /**
+     * Sets the item name
+     * @param name - contains the name
+     */
     public void setItemName2(String name)
     {
         this.itemNameTextArea2.setText(name);
     }
 
+    /**
+     * Sets the item name
+     * @param name - contains the name
+     */
     public void setItemName3(String name)
     {
         this.itemNameTextArea3.setText(name);
     }
 
+    /**
+     * Sets the item name
+     * @param name - contains the name
+     */
     public void setItemName4(String name)
     {
         this.itemNameTextArea4.setText(name);
     }
 
+    /**
+     * Sets the item name
+     * @param name - contains the name
+     */
     public void setItemName5(String name)
     {
         this.itemNameTextArea5.setText(name);
     }
 
+    /**
+     * Sets the item name
+     * @param name - contains the name
+     */
     public void setItemName6(String name)
     {
         this.itemNameTextArea6.setText(name);
     }
 
+    /**
+     * Sets the item name
+     * @param name - contains the name
+     */
     public void setItemName7(String name)
     {
         this.itemNameTextArea7.setText(name);
     }
 
+    /**
+     * Sets the item name
+     * @param name - contains the name
+     */
     public void setItemName8(String name)
     {
         this.itemNameTextArea8.setText(name);
     }
 
+    /**
+     * Sets the item name
+     * @param name - contains the name
+     */
     public void setItemName9(String name)
     {
         this.itemNameTextArea9.setText(name);
@@ -1326,47 +1466,82 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
     // Setting calories
 
-
+    /**
+     * Sets the item calories
+     * @param calories - contains the calories
+     */
     public void setItemCalories1(int calories)
     {
         this.itemCalories1.setText(calories + " kCal");
     }
 
+    /**
+     * Sets the item calories
+     * @param calories - contains the calories
+     */
     public void setItemCalories2(int calories)
     {
         this.itemCalories2.setText(calories + " kCal");
     }
 
+    /**
+     * Sets the item calories
+     * @param calories - contains the calories
+     */
     public void setItemCalories3(int calories)
     {
         this.itemCalories3.setText(calories + " kCal");
     }
 
+    /**
+     * Sets the item calories
+     * @param calories - contains the calories
+     */
     public void setItemCalories4(int calories)
     {
         this.itemCalories4.setText(calories + " kCal");
     }
 
+    /**
+     * Sets the item calories
+     * @param calories - contains the calories
+     */
     public void setItemCalories5(int calories)
     {
         this.itemCalories5.setText(calories + " kCal");
     }
 
+    /**
+     * Sets the item calories
+     * @param calories - contains the calories
+     */
     public void setItemCalories6(int calories)
     {
         this.itemCalories6.setText(calories + " kCal");
     }
 
+    /**
+     * Sets the item calories
+     * @param calories - contains the calories
+     */
     public void setItemCalories7(int calories)
     {
         this.itemCalories7.setText(calories + " kCal");
     }
 
+    /**
+     * Sets the item calories
+     * @param calories - contains the calories
+     */
     public void setItemCalories8(int calories)
     {
         this.itemCalories8.setText(calories + " kCal");
     }
 
+    /**
+     * Sets the item calories
+     * @param calories - contains the calories
+     */
     public void setItemCalories9(int calories)
     {
         this.itemCalories9.setText(calories + " kCal");
@@ -1374,46 +1549,82 @@ public class TestVendFeatures extends javax.swing.JFrame {
     
     // Setting price
 
+    /**
+     * Sets the item price
+     * @param price - contains the price
+     */
     public void setItemPrice1(int price)
     {
         this.itemPrice1.setText("₱" + price);
     }
 
+    /**
+     * Sets the item price
+     * @param price - contains the price
+     */
     public void setItemPrice2(int price)
     {
         this.itemPrice2.setText("₱" + price);
     }
 
+    /**
+     * Sets the item price
+     * @param price - contains the price
+     */
     public void setItemPrice3(int price)
     {
         this.itemPrice3.setText("₱" + price);
     }
 
+    /**
+     * Sets the item price
+     * @param price - contains the price
+     */
     public void setItemPrice4(int price)
     {
         this.itemPrice4.setText("₱" + price);
     }
 
+    /**
+     * Sets the item price
+     * @param price - contains the price
+     */
     public void setItemPrice5(int price)
     {
         this.itemPrice5.setText("₱" + price);
     }
 
+    /**
+     * Sets the item price
+     * @param price - contains the price
+     */
     public void setItemPrice6(int price)
     {
         this.itemPrice6.setText("₱" + price);
     }
 
+    /**
+     * Sets the item price
+     * @param price - contains the price
+     */
     public void setItemPrice7(int price)
     {
         this.itemPrice7.setText("₱" + price);
     }
 
+    /**
+     * Sets the item price
+     * @param price - contains the price
+     */
     public void setItemPrice8(int price)
     {
         this.itemPrice8.setText("₱" + price);
     }
 
+    /**
+     * Sets the item price
+     * @param price - contains the price
+     */
     public void setItemPrice9(int price)
     {
         this.itemPrice9.setText("₱" + price);
@@ -1421,46 +1632,82 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
     // Setting the quantity available
 
+    /**
+     * Sets the item quantity
+     * @param quantity - contains the quantity
+     */
     public void setItemQuantity1(int quantity)
     {
         this.itemQuantity1.setText(String.valueOf(quantity));
     }
 
+    /**
+     * Sets the item quantity
+     * @param quantity - contains the quantity
+     */
     public void setItemQuantity2(int quantity)
     {
         this.itemQuantity2.setText(String.valueOf(quantity));
     }
 
+    /**
+     * Sets the item quantity
+     * @param quantity - contains the quantity
+     */
     public void setItemQuantity3(int quantity)
     {
         this.itemQuantity3.setText(String.valueOf(quantity));
     }
 
+    /**
+     * Sets the item quantity
+     * @param quantity - contains the quantity
+     */
     public void setItemQuantity4(int quantity)
     {
         this.itemQuantity4.setText(String.valueOf(quantity));
     }
 
+    /**
+     * Sets the item quantity
+     * @param quantity - contains the quantity
+     */
     public void setItemQuantity5(int quantity)
     {
         this.itemQuantity5.setText(String.valueOf(quantity));
     }
 
+    /**
+     * Sets the item quantity
+     * @param quantity - contains the quantity
+     */
     public void setItemQuantity6(int quantity)
     {
         this.itemQuantity6.setText(String.valueOf(quantity));
     }
 
+    /**
+     * Sets the item quantity
+     * @param quantity - contains the quantity
+     */
     public void setItemQuantity7(int quantity)
     {
         this.itemQuantity7.setText(String.valueOf(quantity));
     }
 
+    /**
+     * Sets the item quantity
+     * @param quantity - contains the quantity
+     */
     public void setItemQuantity8(int quantity)
     {
         this.itemQuantity8.setText(String.valueOf(quantity));
     }
 
+    /**
+     * Sets the item quantity
+     * @param quantity - contains the quantity
+     */
     public void setItemQuantity9(int quantity)
     {
         this.itemQuantity9.setText(String.valueOf(quantity));
@@ -1468,88 +1715,138 @@ public class TestVendFeatures extends javax.swing.JFrame {
 
     // Setting picture
 
+    /**
+     * Sets the item picture
+     * @param path - contains the path of the picture
+     */
     public void setItemPicture1(String path)
     {
         itemPicture1.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
     }
 
+    /**
+     * Sets the item picture
+     * @param path - contains the path of the picture
+     */
     public void setItemPicture2(String path)
     {
         itemPicture2.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
     }
 
+    /**
+     * Sets the item picture
+     * @param path - contains the path of the picture
+     */
     public void setItemPicture3(String path)
     {
         itemPicture3.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
     }
 
+    /**
+     * Sets the item picture
+     * @param path - contains the path of the picture
+     */
     public void setItemPicture4(String path)
     {
         itemPicture4.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
     }
 
+    /**
+     * Sets the item picture
+     * @param path - contains the path of the picture
+     */
     public void setItemPicture5(String path)
     {
         itemPicture5.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
     }
 
+    /**
+     * Sets the item picture
+     * @param path - contains the path of the picture
+     */
     public void setItemPicture6(String path)
     {
         itemPicture6.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
     }
 
+    /**
+     * Sets the item picture
+     * @param path - contains the path of the picture
+     */
     public void setItemPicture7(String path)
     {
         itemPicture7.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
     }
 
+    /**
+     * Sets the item picture
+     * @param path - contains the path of the picture
+     */
     public void setItemPicture8(String path)
     {
         itemPicture8.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
     }
 
+    /**
+     * Sets the item picture
+     * @param path - contains the path of the picture
+     */
     public void setItemPicture9(String path)
     {
         itemPicture9.setIcon(new javax.swing.ImageIcon(getClass().getResource(path)));
     }
 
     // Set text areas
-
+    /**
+     * Restarts the order details label
+     */
     public void restartOrderDetailsLbl()
     {
         OrderDetailsLbl.setText("Please pick an item.");
     }
 
-    /*
-     * [Output:]
-     * Order: Milktea
-     * Flavor: Okinawa
+    /**
+     * Sets the order details to the given string
+     * @param order - a string
      */
-
     public void setOrderDetailsLbl(String order)
     {
         OrderDetailsLbl.setText("Order:\n" + order);
     }
 
+    /**
+     * Add more details in the label
+     * @param order - contain the details to add
+     */
     public void setFlavorDetailsLbl(String order)
     {
         String currentText = OrderDetailsLbl.getText();
         OrderDetailsLbl.setText(currentText + "\nFlavor: " + order);
     }
 
+    /**
+     * Add more details in the label
+     * @param order - contain the details to add
+     */
     public void setSinkerDetailsLbl(String order)
     {
         String currentText = OrderDetailsLbl.getText();
         OrderDetailsLbl.setText(currentText + "\nSinker: " + order);
     }
 
-    // sets the text of message lbl to the string provided.
+    /**
+     * Sets the text of message lbl to the string provided.
+     * @param output
+     */
     public void setMessageLbl(String output)
     {
         MessageFieldLbl.setText(output);
     }
 
-    // adds the string provided to the existing info in messagelbl
+    /**
+     * Adds the string provided to the existing info in messagelbl
+     * @param additionalInfo
+     */
     public void addInfoInMessageLbl(String additionalInfo)
     {
         String currentText = MessageFieldLbl.getText();

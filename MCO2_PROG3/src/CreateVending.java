@@ -120,16 +120,28 @@ public class CreateVending extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CreateRegularBtnActionPerformed
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setCreateRegularListener(ActionListener actn)
     {
         CreateRegularBtn.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setCreateSpecialListener(ActionListener actn)
     {
         CreateSpecialBtn.addActionListener(actn);
     }
     
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setBackBtnListener(ActionListener actn)
     {
         BackBtn.addActionListener(actn);

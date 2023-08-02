@@ -1,3 +1,7 @@
+/**
+ * CashHandler is the class responsible for handling all the payment and change system.
+ */
+
 import java.util.Stack;
 
 public class CashHandler 
@@ -8,6 +12,9 @@ public class CashHandler
     private Stack<Integer> change;
     private int[][] machineBalance;
 
+    /**
+     * Constructor that initializes the payment and change stack and set the machine balance.
+     */
     public CashHandler()
     {
         this.payment = new Stack<Integer>();
@@ -15,22 +22,39 @@ public class CashHandler
         setMachineBalance();
     }
 
+    /**
+     * Sets the machine balance.
+     */
     public void setMachineBalance()
     {
         this.machineBalance = new int[][] {{1, 10}, {5, 10}, {10, 10}, {20, 10},
                                 {50, 10}, {100, 10}, {200, 10}, {500, 10}, {1000, 10}};
     }
 
+    /**
+     * Updates the value of total payable
+     * @param totalPayable - total amount that must be paid
+     */
     public void setTotalPayable(int totalPayable) 
     {
         this.totalPayable = totalPayable;
     }
+
+    /**
+     * Gets the total payable
+     * @return total payable
+     */
 
     public int getTotalPayable() 
     {
         return totalPayable;
     }
 
+    /**
+     * Gets the total amount of denomination that is still available
+     * @param denom - denom to check
+     * @return results
+     */
     public int getTotalAvailableDenom(int denom)
     {
         int result = 0;
@@ -49,16 +73,29 @@ public class CashHandler
         return result;
     }
 
+    /**
+     * Add the denom to payment stack
+     * @param denom denomination paid
+     */
     public void addDenomToPayment(int denom)
     {
         this.payment.push(denom);
     }
 
+    /**
+     * Returns the array of accepted denomination
+     * @return array of accepted denomination
+     */
     public int[] getAcceptedDenom() 
     {
         return acceptedDenom;
     }
 
+    /**
+     * Prints the denomination and the current number of stock the machine has
+     * @param denom contains the denomination
+     * @return string that contains the denomination and amount available
+     */
     public String printDenom(int denom)
     {
         String string;
@@ -74,6 +111,9 @@ public class CashHandler
         return string;
     }
 
+    /**
+     * Transfer the stack of payment to the machine balance
+     */
     private void transferPaymentToBalance()
     {
         while(!payment.empty())
@@ -82,6 +122,10 @@ public class CashHandler
         }
     }
 
+    /**
+     * Add a stock to the denomination given
+     * @param denom paid denomination
+     */
     public void addQuantityToBalance(int denom)
     {
         int i, j;
@@ -98,6 +142,10 @@ public class CashHandler
         }
     }
 
+    /**
+     * Deducts a denomination in the machine balance
+     * @param denom denomination to deduct
+     */
     public void deductQuantityToBalance(int denom)
     {
         int i, j;
@@ -114,6 +162,9 @@ public class CashHandler
         }
     }
 
+    /**
+     * Dispense the machine balance
+     */
     public void collectBalance()
     {
         int i, j;
@@ -127,6 +178,11 @@ public class CashHandler
         }
     }
 
+    /**
+     * Checks if the machine still has a stock of the given denomination
+     * @param denom denomination to check
+     * @return true if there is still stock, false otherwise
+     */
     public boolean hasDenomStock(int denom)
     {
         boolean check = false;
@@ -145,6 +201,11 @@ public class CashHandler
         return check;
     }
 
+    /**
+     * Check if the given number is an accepted denomination
+     * @param denom a number to check
+     * @return true if the number is a denomination, false otherwise
+     */
     private boolean isDenom(int denom)
     {
         boolean check = false;
@@ -158,6 +219,10 @@ public class CashHandler
         return check;
     }
 
+    /**
+     * Produce change
+     * @return true if change is complete, false otherwise
+     */
     public boolean produceChange()
     {
         boolean check = false;
@@ -209,6 +274,11 @@ public class CashHandler
         return check;
     }
 
+    /**
+     * Checks if the calculated change is equals to the expected change
+     * @param expectedChange - expected change
+     * @return true if it is equal, false otherwise
+     */
     private boolean isChangeComplete(int expectedChange)
     {
         boolean check = false;
@@ -227,6 +297,10 @@ public class CashHandler
         return check;
     }
 
+    /**
+     * Returns a success message if the change is successful
+     * @return success message
+     */
     public String successChange()
     {
         String output;
@@ -251,6 +325,10 @@ public class CashHandler
         return output;
     }
 
+    /**
+     * Returns a fail message if the change is unsuccessful
+     * @return an error message
+     */
     public String failChange()
     {
         while (!change.empty())
@@ -268,6 +346,10 @@ public class CashHandler
         return output;
     }
 
+    /**
+     * Produces a string if the user cancelled their order
+     * @return a String message
+     */
     public String cancel()
     {
          while (!change.empty())
@@ -285,6 +367,10 @@ public class CashHandler
         return output;
     }
 
+    /**
+     * Checks if the payment stack is empty
+     * @return true if empty, false otherwise
+     */
     public boolean isPaymentStackEmpty()
     {
         boolean check = false;

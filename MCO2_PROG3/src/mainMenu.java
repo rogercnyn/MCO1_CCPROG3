@@ -104,16 +104,28 @@ public class mainMenu extends javax.swing.JFrame {
         Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(closeWindow);
     }
 
+    /**
+     * Sets the 'enable' capability of the button
+     * @param check - boolean value
+     */
     public void setTestEnable(boolean check)
     {
         TestBtn.setEnabled(check);
     }
-    
+
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setCreateBtnListener(ActionListener actn)
     {
         CreateBtn.addActionListener(actn);
     }
     
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setTestBtnListener(ActionListener actn)
     {
         TestBtn.addActionListener(actn);

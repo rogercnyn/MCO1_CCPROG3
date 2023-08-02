@@ -129,36 +129,64 @@ public class TestMaintenance extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setBackBtnListener(ActionListener actn)
     {
         BackBtn.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setRestockProductBtnListener(ActionListener actn)
     {
         RestockProductsBtn.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setChangePriceBtnListener(ActionListener actn)
     {
         ChangePriceBtn.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setReplenishBalanceBtnListener(ActionListener actn)
     {
         ReplenishBalanceBtn.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setCollectBalanceBtnListener(ActionListener actn)
     {
         CollectBalanceBtn.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setPrintSalesBtnListener(ActionListener actn)
     {
         PrintSalesBtn.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setInventoryBtnListener(ActionListener actn)
     {
         InventoryBtn.addActionListener(actn);

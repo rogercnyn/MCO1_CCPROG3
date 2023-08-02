@@ -20,27 +20,51 @@ public class ReStock_Item extends javax.swing.JFrame {
         initComponents();
     }
     
+    /**
+     * Sets the name label
+     * @param itemname - contains the item name
+     */
     public void setItemNameLbl(String itemname){
         ItemName.setText(itemname);
     }
     
+    /**
+     * Returns the quantity entered
+     * @return quantity entered
+     */
     public int getQuantity(){
         return Integer.parseInt(Quantity.getText());
     }
 
+    /**
+     * Sets the visibility of the label
+     * @param check - a boolean value
+     */
     public void setWarningVisible(boolean check)
     {
         WarningLbl.setVisible(check);
     }
 
+    /**
+     * Sets the message of the label
+     * @param txt - contains the text
+     */
     public void setWarningMessage(String txt)
     {
         WarningLbl.setText(txt);
     }
     
+    /**
+     * Clears the text area
+     */
     public void cleartxtarea(){
         Quantity.setText("");
     }
+
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setAddBtnListener(ActionListener actn){
         AddBtn.addActionListener(actn);
     }

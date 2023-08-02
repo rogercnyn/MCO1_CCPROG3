@@ -97,16 +97,27 @@ public class CollectBalance extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setDoneBtnListener(ActionListener actn)
     {
         DoneBtn.addActionListener(actn);
     }
     
+    /**
+     * Sets the text area
+     * @param text - contains the text to set
+     */
     public void setTextArea(String text)
     {
         balance.setText(text);
     }
 
+    /**
+     * Clears the text area
+     */
     public void clearTxtArea()
     {
         setTextArea("");

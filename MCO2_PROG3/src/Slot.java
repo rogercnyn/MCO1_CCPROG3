@@ -1,20 +1,29 @@
+/**
+ * Slot is responsible for handling the stock of each item.
+ */
+
 import java.util.ArrayList;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
 public class Slot {
     private Stack<Item> items;
-    private Stack<Item> specialItemsDts; // wont work
-    private Stack<Item> regularItemsDts; // wont work
     private int CAPACITY;
 
+    /**
+     * This is the constructor that does not accept any parameter.
+     * It creates a slot object within an empty stack.
+     */
     public Slot()
     {
         this.items = new Stack<Item>();
-        this.specialItemsDts = new Stack<Item>();
-        this.regularItemsDts = new Stack<Item>();
         this.CAPACITY = 11;
     }
+
+    /**
+     * This is the constructor that accepts a stack of items as parameter.
+     * @param items - contains a stack of item
+     */
 
     public Slot(Stack<Item> items)
     {
@@ -22,21 +31,38 @@ public class Slot {
         this.CAPACITY = 11;
     }
 
+    /**
+     * Dispense the top of the stack.
+     * @return the top of slot
+     */
     public Item dispenseItem()
     {
         return items.pop();
     }
 
+    /**
+     * Peeks at the top of the stack
+     * @return the top of slot without removing it
+     */
     public Item checkItem()
     {
         return items.peek();
     }
 
+    /**
+     * Gets the number of items available at a particular stack
+     * @return number of items
+     */
     public int getNumberOfStock()
     {
         return items.size() - 1;
     }
 
+    /**
+     * Put the item inside the stack
+     * @param item - item that the stack will store
+     * @return a stack of items
+     */
     public Stack<Item> addItem(Item item)
     {
         Stack<Item> stackOfItems = new Stack<Item>();
@@ -48,6 +74,11 @@ public class Slot {
         return stackOfItems;
     }
 
+    /**
+     * Add the item to the stack
+     * @param item - item to add
+     * @param totalNumberOfRestock - number of items to add
+     */
     public void addItem(Item item, int totalNumberOfRestock)
     {
         for (int i = 0; i < totalNumberOfRestock; i++)
@@ -56,6 +87,10 @@ public class Slot {
         }
     }
 
+    /**
+     * Generates the item for special vending machine
+     * @return Arraylist of Slot that holds the items for the machine
+     */
     public ArrayList<Slot> specialItems()
     {
         ArrayList<Slot> specialItems = new ArrayList<Slot>();
@@ -118,6 +153,10 @@ public class Slot {
 
     }
 
+    /**
+     * Generates the item for regular vending machine
+     * @return Arraylist of Slot that holds the items for the machine
+     */
     public ArrayList<Slot> regularItems()
     {
         ArrayList<Slot> regularItems = new ArrayList<Slot>();

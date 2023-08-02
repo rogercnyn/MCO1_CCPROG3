@@ -168,16 +168,28 @@ public class Inventory extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setDoneBtnListener(ActionListener actn)
     {
         DoneBtn.addActionListener(actn);
     }
 
+    /**
+     * Sets the text
+     * @param text contains the text
+     */
     public void setInitialText(String text)
     {
         InitialTextArea.setText(text);
     }
 
+    /**
+     * Sets the text
+     * @param text contains the text
+     */
     public void setCurrentText(String text)
     {
         CurrentTextArea.setText(text);

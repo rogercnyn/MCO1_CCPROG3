@@ -1,4 +1,3 @@
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDate;
@@ -16,8 +15,9 @@ import javax.swing.JOptionPane;
  */
 
 /**
- *
+ * Factory is the main controller of the program.
  * @author kriastiankintanar
+ * @author rogercanayon
  */
 public class Factory implements ActionListener{
     private mainMenu mainMenu;
@@ -35,7 +35,11 @@ public class Factory implements ActionListener{
 
     private RegularMachine machine;
     private Slot slot;
-    
+
+    /**
+     * Once Factory is initialized, the whole program will run.
+     * The programmers followed the MVC architecture for this program.
+     */
     public Factory (){
         this.mainMenu= new mainMenu();
         this.createvending = new CreateVending();
@@ -1849,12 +1853,18 @@ public class Factory implements ActionListener{
         });
     }
 
+    /**
+     * Enables the buttons that hold the flavor slots.
+     */
     public void enableFlavor()
     {
         testvendfeatures.setPickSlot2Enable(true);
         testvendfeatures.setPickSlot3Enable(true);
     }
 
+    /**
+     * Enables the buttons that hold the sinker slots.
+     */
     public void enableSinkers()
     {
         testvendfeatures.setPickSlot4Enable(true);
@@ -1865,12 +1875,18 @@ public class Factory implements ActionListener{
         testvendfeatures.setPickSlot9Enable(true);
     }
 
+    /**
+     * Disables the buttons that hold the flavor slots.
+     */
     public void disableFlavor()
     {
         testvendfeatures.setPickSlot2Enable(false);
         testvendfeatures.setPickSlot3Enable(false);
     }
 
+    /**
+     * Disables the buttons that hold the sinker slots.
+     */
     public void disableSinkers()
     {
         testvendfeatures.setPickSlot4Enable(false);
@@ -1881,6 +1897,9 @@ public class Factory implements ActionListener{
         testvendfeatures.setPickSlot9Enable(false);
     }
 
+    /**
+     * Loads the special items for special vending machine.
+     */
     public void loadSpecialVending()
     {
         Item item1 = machine.getArraySlots().get(0).checkItem(); 
@@ -1947,6 +1966,9 @@ public class Factory implements ActionListener{
         testvendfeatures.setItemPicture9("/Elements/ItemElements/coffeejelly.png");
     }
 
+    /**
+     * Loads the items for regular vending machine.
+     */
     public void loadRegularVending()
     {
         Item item1 = machine.getArraySlots().get(0).checkItem(); 
@@ -2013,6 +2035,9 @@ public class Factory implements ActionListener{
         testvendfeatures.setItemPicture9("/Elements/ItemElements/hokkaido w_ nata.png");
     }
 
+    /**
+     * Loads the items for regular vending machine maintenance.
+     */
     public void loadRegularVendingmaintenance()
     {
         Item item1 = machine.getArraySlots().get(0).checkItem(); 
@@ -2079,6 +2104,9 @@ public class Factory implements ActionListener{
         testmaintenance.setItemPicture9("/Elements/ItemElements/hokkaido w_ nata.png");
     }
 
+    /**
+     * Loads the special items for special vending machine maintenance.
+     */
     public void loadSpecialVendingmaintenance()
     {
         Item item1 = machine.getArraySlots().get(0).checkItem(); 
@@ -2145,6 +2173,9 @@ public class Factory implements ActionListener{
         testmaintenance.setItemPicture9("/Elements/ItemElements/hokkaido w_ nata.png"); 
     }
     
+    /**
+     * Disable all of the pick buttons of vending machine.
+     */
     public void disableAllPickBtns()
     {
         testvendfeatures.setPickSlot1Enable(false);
@@ -2158,6 +2189,10 @@ public class Factory implements ActionListener{
         testvendfeatures.setPickSlot9Enable(false);
     }
 
+    /**
+     * Restarts the machine after testing the regular machine.
+     * It enables all of the pick buttons.
+     */
     public void restartTestingVend()
     {
         testvendfeatures.setPickSlot1Enable(true);
@@ -2176,6 +2211,10 @@ public class Factory implements ActionListener{
         testvendfeatures.setCancelBtnEnable(false);
     }
 
+    /**
+     * Restarts the machine after testing the special machine.
+     * It enables all of the pick buttons, except the flavor buttons.
+     */
     public void restartTestingSpecial()
     {
         testvendfeatures.setPickSlot1Enable(true);

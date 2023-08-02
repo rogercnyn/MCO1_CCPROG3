@@ -113,36 +113,63 @@ public class ChangePrice extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setChangePriceBtnListener(ActionListener actn)
     {
         ChangeBtn.addActionListener(actn);
     }
 
+    /**
+     * Returns the new price entered
+     * @return new price entered
+     */
     public int getNewPrice()
     {
         return Integer.parseInt(newPrice.getText());
     }
 
+    /**
+     * Sets the visibility of the label
+     * @param check - a boolean value
+     */
     public void setWarningVisible(boolean check)
     {
         WarningLbl.setVisible(check);
     }
 
+    /**
+     * Sets the message of the label
+     * @param txt - contains the text
+     */
     public void setWarningMessage(String txt)
     {
         WarningLbl.setText(txt);
     }
     
+    /**
+     * Sets the item name
+     * @param Name - contains the name
+     */
     public void setItemName(String Name)
     {
         ItemName.setText(Name);
     }
     
+    /**
+     * Clears the text area
+     */
     public void clearTA()
     {
         newPrice.setText("");
     }
     
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setDoneBtnListener(ActionListener actn)
     {
         ChangeBtn.addActionListener(actn);

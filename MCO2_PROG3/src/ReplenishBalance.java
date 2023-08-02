@@ -232,60 +232,117 @@ public class ReplenishBalance extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Sets the action listener of the button
+     * @param actn - an ActionListener
+     */
     public void setReplenishBtn(ActionListener actn)
     {
         replenishBtn.addActionListener(actn);
     }
 
+    /**
+     * Sets the visibility of the label
+     * @param check - a boolean value
+     */
     public void setWarningVisible(boolean check)
     {
         WarningLbl.setVisible(check);
     }
 
+    /**
+     * Sets the message of the label
+     * @param txt - contains the text
+     */
     public void setWarningMessage(String txt)
     {
         WarningLbl.setText(txt);
     }
     
+    /**
+     * Gets the value entered in the textfield of Php1
+     * @return entered value
+     */
     public int getBal1()
     {
         return Integer.parseInt(bal1.getText());
     }
     
+    /**
+     * Gets the value entered in the textfield of Php5
+     * @return entered value
+     */
     public int getBal5()
     {
         return Integer.parseInt(bal5.getText());
     }
+
+    /**
+     * Gets the value entered in the textfield of Php10
+     * @return entered value
+     */
     public int getBal10()
     {
         return Integer.parseInt(bal10.getText());
     }
+
+    /**
+     * Gets the value entered in the textfield of Php20
+     * @return entered value
+     */
     public int getBal20()
     {
         return Integer.parseInt(bal20.getText());
     }
+
+    /**
+     * Gets the value entered in the textfield of Php50
+     * @return entered value
+     */
     public int getBal50()
     {
         return Integer.parseInt(bal50.getText());
     }
+
+    /**
+     * Gets the value entered in the textfield of Php100
+     * @return entered value
+     */
     public int getBal100()
     {
         return Integer.parseInt(bal100.getText());
     }
+
+    /**
+     * Gets the value entered in the textfield of Php200
+     * @return entered value
+     */
     public int getBal200()
     {
         return Integer.parseInt(bal200.getText());
     }
+
+    /**
+     * Gets the value entered in the textfield of Php500
+     * @return entered value
+     */
     public int getBal500()
     {
         return Integer.parseInt(bal500.getText());
     }
     
+    /**
+     * Gets the value entered in the textfield of Php1000
+     * @return entered value
+     */
     public int getBal1000()
     {
         return Integer.parseInt(bal1000.getText());
     }
     
+    /**
+     * Clear all of the text field
+     */
     public void clearTA()
     {
         bal1.setText("");

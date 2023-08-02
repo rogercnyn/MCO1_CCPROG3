@@ -99,16 +99,28 @@ public class TestVending extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setTestVendingListener(ActionListener actn)
     {
         testVendingBtn.addActionListener(actn);
     }
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setTestMaintenanceListener(ActionListener actn)
     {
         testMaintenanceBtn.addActionListener(actn);
     }
     
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setBackBtnListener(ActionListener actn)
     {
         backBtn.addActionListener(actn);

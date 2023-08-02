@@ -96,16 +96,27 @@ public class PrintSales extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Sets a button action listener
+     * @param actn - an action listener
+     */
     public void setDoneBtnListener(ActionListener actn)
     {
         DoneBtn.addActionListener(actn);
     }
     
+    /**
+     * Sets the text
+     * @param t contains the text
+     */
     public void setTA(String t)
     {
         jTextArea1.setText(t);
     }
     
+    /**
+     * Clears the text area
+     */
     public void clearTA()
     {
         jTextArea1.setText("");
