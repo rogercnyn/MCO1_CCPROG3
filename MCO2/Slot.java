@@ -125,7 +125,7 @@ public class Slot {
         Slot slot6 = new Slot(itemSix);
         specialItems.add(slot6);
 
-        Sinker grassjelly = new Sinker("Grass Jelly", 94, 25);
+        Sinker grassjelly = new Sinker("Grass Jelly", 114, 25);
         Stack<Item> itemSeven = addItem(grassjelly);
         Slot slot7 = new Slot(itemSeven);
         specialItems.add(slot7);
@@ -135,7 +135,7 @@ public class Slot {
         Slot slot8 = new Slot(itemEight);
         specialItems.add(slot8);
 
-        Sinker coffeejelly = new Sinker("Coffee Jelly", 115, 30);
+        Sinker coffeejelly = new Sinker("Coffee Jelly", 64, 30);
         Stack<Item> itemNine = addItem(coffeejelly);
         Slot slot9 = new Slot(itemNine);
         specialItems.add(slot9);

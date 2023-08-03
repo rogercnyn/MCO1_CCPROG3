@@ -56,7 +56,6 @@ public class ChangePrice extends javax.swing.JFrame {
         WarningLbl.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
         WarningLbl.setForeground(new java.awt.Color(255, 255, 255));
         WarningLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        WarningLbl.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -96,7 +95,7 @@ public class ChangePrice extends javax.swing.JFrame {
                 .addComponent(WarningLbl)
                 .addGap(18, 18, 18)
                 .addComponent(ChangeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

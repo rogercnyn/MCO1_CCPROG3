@@ -40,93 +40,91 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         itemNameTextArea1 = new javax.swing.JTextArea();
         itemQuantity1 = new javax.swing.JLabel();
         availableLbl1 = new javax.swing.JLabel();
-        itemCalories1 = new javax.swing.JLabel();
         priceLbl1 = new javax.swing.JLabel();
         itemPrice1 = new javax.swing.JLabel();
-        PickSlot1 = new javax.swing.JButton();
+        reStock1 = new javax.swing.JButton();
+        price1 = new javax.swing.JButton();
         Slot2 = new javax.swing.JPanel();
         itemPicture2 = new javax.swing.JLabel();
-        itemName2 = new javax.swing.JScrollPane();
-        itemNameTextArea2 = new javax.swing.JTextArea();
+        itemName10 = new javax.swing.JScrollPane();
+        itemNameTextArea10 = new javax.swing.JTextArea();
         itemQuantity2 = new javax.swing.JLabel();
-        availableLbl2 = new javax.swing.JLabel();
-        itemCalories2 = new javax.swing.JLabel();
-        priceLbl2 = new javax.swing.JLabel();
+        availableLbl10 = new javax.swing.JLabel();
+        priceLbl10 = new javax.swing.JLabel();
         itemPrice2 = new javax.swing.JLabel();
-        PickSlot2 = new javax.swing.JButton();
+        reStock2 = new javax.swing.JButton();
+        price2 = new javax.swing.JButton();
         Slot3 = new javax.swing.JPanel();
         itemPicture3 = new javax.swing.JLabel();
-        itemName3 = new javax.swing.JScrollPane();
-        itemNameTextArea3 = new javax.swing.JTextArea();
+        itemName11 = new javax.swing.JScrollPane();
+        itemNameTextArea11 = new javax.swing.JTextArea();
         itemQuantity3 = new javax.swing.JLabel();
-        availableLbl3 = new javax.swing.JLabel();
-        itemCalories3 = new javax.swing.JLabel();
-        priceLbl3 = new javax.swing.JLabel();
+        availableLbl11 = new javax.swing.JLabel();
+        priceLbl11 = new javax.swing.JLabel();
         itemPrice3 = new javax.swing.JLabel();
-        PickSlot3 = new javax.swing.JButton();
+        reStock3 = new javax.swing.JButton();
+        price3 = new javax.swing.JButton();
         Slot4 = new javax.swing.JPanel();
         itemPicture4 = new javax.swing.JLabel();
-        itemName4 = new javax.swing.JScrollPane();
-        itemNameTextArea4 = new javax.swing.JTextArea();
+        itemName12 = new javax.swing.JScrollPane();
+        itemNameTextArea12 = new javax.swing.JTextArea();
         itemQuantity4 = new javax.swing.JLabel();
-        availableLbl4 = new javax.swing.JLabel();
-        itemCalories4 = new javax.swing.JLabel();
-        priceLbl4 = new javax.swing.JLabel();
+        availableLbl12 = new javax.swing.JLabel();
+        priceLbl12 = new javax.swing.JLabel();
         itemPrice4 = new javax.swing.JLabel();
-        PickSlot4 = new javax.swing.JButton();
+        reStock4 = new javax.swing.JButton();
+        price4 = new javax.swing.JButton();
         Slot5 = new javax.swing.JPanel();
         itemPicture5 = new javax.swing.JLabel();
-        itemName5 = new javax.swing.JScrollPane();
-        itemNameTextArea5 = new javax.swing.JTextArea();
+        itemName13 = new javax.swing.JScrollPane();
+        itemNameTextArea13 = new javax.swing.JTextArea();
         itemQuantity5 = new javax.swing.JLabel();
-        availableLbl5 = new javax.swing.JLabel();
-        itemCalories5 = new javax.swing.JLabel();
-        priceLbl5 = new javax.swing.JLabel();
+        availableLbl13 = new javax.swing.JLabel();
+        priceLbl13 = new javax.swing.JLabel();
         itemPrice5 = new javax.swing.JLabel();
-        PickSlot5 = new javax.swing.JButton();
+        reStock5 = new javax.swing.JButton();
+        price5 = new javax.swing.JButton();
         Slot6 = new javax.swing.JPanel();
         itemPicture6 = new javax.swing.JLabel();
-        itemName6 = new javax.swing.JScrollPane();
-        itemNameTextArea6 = new javax.swing.JTextArea();
+        itemName14 = new javax.swing.JScrollPane();
+        itemNameTextArea14 = new javax.swing.JTextArea();
         itemQuantity6 = new javax.swing.JLabel();
-        availableLbl6 = new javax.swing.JLabel();
-        itemCalories6 = new javax.swing.JLabel();
-        priceLbl6 = new javax.swing.JLabel();
+        availableLbl14 = new javax.swing.JLabel();
+        priceLbl14 = new javax.swing.JLabel();
         itemPrice6 = new javax.swing.JLabel();
-        PickSlot6 = new javax.swing.JButton();
+        reStock6 = new javax.swing.JButton();
+        price6 = new javax.swing.JButton();
         Slot7 = new javax.swing.JPanel();
         itemPicture7 = new javax.swing.JLabel();
-        itemName7 = new javax.swing.JScrollPane();
-        itemNameTextArea7 = new javax.swing.JTextArea();
+        itemName15 = new javax.swing.JScrollPane();
+        itemNameTextArea15 = new javax.swing.JTextArea();
         itemQuantity7 = new javax.swing.JLabel();
-        availableLbl7 = new javax.swing.JLabel();
-        itemCalories7 = new javax.swing.JLabel();
-        priceLbl7 = new javax.swing.JLabel();
+        availableLbl15 = new javax.swing.JLabel();
+        priceLbl15 = new javax.swing.JLabel();
         itemPrice7 = new javax.swing.JLabel();
-        PickSlot7 = new javax.swing.JButton();
+        reStock7 = new javax.swing.JButton();
+        price7 = new javax.swing.JButton();
         Slot8 = new javax.swing.JPanel();
         itemPicture8 = new javax.swing.JLabel();
-        itemName8 = new javax.swing.JScrollPane();
-        itemNameTextArea8 = new javax.swing.JTextArea();
+        itemName16 = new javax.swing.JScrollPane();
+        itemNameTextArea16 = new javax.swing.JTextArea();
         itemQuantity8 = new javax.swing.JLabel();
-        availableLbl8 = new javax.swing.JLabel();
-        itemCalories8 = new javax.swing.JLabel();
-        priceLbl8 = new javax.swing.JLabel();
+        availableLbl16 = new javax.swing.JLabel();
+        priceLbl16 = new javax.swing.JLabel();
         itemPrice8 = new javax.swing.JLabel();
-        PickSlot8 = new javax.swing.JButton();
+        reStock8 = new javax.swing.JButton();
+        price8 = new javax.swing.JButton();
         Slot9 = new javax.swing.JPanel();
         itemPicture9 = new javax.swing.JLabel();
-        itemName9 = new javax.swing.JScrollPane();
-        itemNameTextArea9 = new javax.swing.JTextArea();
+        itemName17 = new javax.swing.JScrollPane();
+        itemNameTextArea17 = new javax.swing.JTextArea();
         itemQuantity9 = new javax.swing.JLabel();
-        availableLbl9 = new javax.swing.JLabel();
-        itemCalories9 = new javax.swing.JLabel();
-        priceLbl9 = new javax.swing.JLabel();
+        availableLbl17 = new javax.swing.JLabel();
+        priceLbl17 = new javax.swing.JLabel();
         itemPrice9 = new javax.swing.JLabel();
-        PickSlot9 = new javax.swing.JButton();
+        reStock9 = new javax.swing.JButton();
+        price9 = new javax.swing.JButton();
         restockbalbtn = new javax.swing.JButton();
-        restockBtn = new javax.swing.JButton();
-        changeBtn = new javax.swing.JButton();
         inventoryBtn = new javax.swing.JButton();
         salesBtn = new javax.swing.JButton();
         collectBalBtn = new javax.swing.JButton();
@@ -175,9 +173,6 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         availableLbl1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         availableLbl1.setText("Available:");
 
-        itemCalories1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        itemCalories1.setText("320 kCal");
-
         priceLbl1.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
         priceLbl1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         priceLbl1.setText("Price:");
@@ -187,8 +182,11 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         itemPrice1.setText("0");
         itemPrice1.setToolTipText("");
 
-        PickSlot1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        PickSlot1.setText("PICK");
+        reStock1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        reStock1.setText("RESTOCK");
+
+        price1.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        price1.setText("CHANGE PRICE");
 
         javax.swing.GroupLayout Slot1Layout = new javax.swing.GroupLayout(Slot1);
         Slot1.setLayout(Slot1Layout);
@@ -211,12 +209,10 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                                 .addComponent(priceLbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(Slot1Layout.createSequentialGroup()
-                        .addGroup(Slot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(itemName1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(Slot1Layout.createSequentialGroup()
-                                .addComponent(itemCalories1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PickSlot1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(Slot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(price1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(reStock1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(itemName1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         Slot1Layout.setVerticalGroup(
@@ -235,10 +231,10 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                         .addComponent(itemQuantity1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(itemName1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(reStock1)
                 .addGap(3, 3, 3)
-                .addGroup(Slot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PickSlot1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemCalories1))
+                .addComponent(price1)
                 .addContainerGap())
         );
 
@@ -248,41 +244,41 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         itemPicture2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         itemPicture2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/hokkaido w_ pearls.png"))); // NOI18N
 
-        itemName2.setBorder(null);
+        itemName10.setBorder(null);
 
-        itemNameTextArea2.setEditable(false);
-        itemNameTextArea2.setColumns(7);
-        itemNameTextArea2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        itemNameTextArea2.setLineWrap(true);
-        itemNameTextArea2.setRows(1);
-        itemNameTextArea2.setText("Item Name");
-        itemNameTextArea2.setWrapStyleWord(true);
-        itemNameTextArea2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        itemName2.setViewportView(itemNameTextArea2);
+        itemNameTextArea10.setEditable(false);
+        itemNameTextArea10.setColumns(7);
+        itemNameTextArea10.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        itemNameTextArea10.setLineWrap(true);
+        itemNameTextArea10.setRows(1);
+        itemNameTextArea10.setText("Item Name");
+        itemNameTextArea10.setWrapStyleWord(true);
+        itemNameTextArea10.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        itemName10.setViewportView(itemNameTextArea10);
 
         itemQuantity2.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemQuantity2.setText("0");
         itemQuantity2.setToolTipText("");
 
-        availableLbl2.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        availableLbl2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        availableLbl2.setText("Available:");
+        availableLbl10.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        availableLbl10.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        availableLbl10.setText("Available:");
 
-        itemCalories2.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        itemCalories2.setText("320 kCal");
-
-        priceLbl2.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        priceLbl2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        priceLbl2.setText("Price:");
+        priceLbl10.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        priceLbl10.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        priceLbl10.setText("Price:");
 
         itemPrice2.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemPrice2.setText("0");
         itemPrice2.setToolTipText("");
 
-        PickSlot2.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        PickSlot2.setText("PICK");
+        reStock2.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        reStock2.setText("RESTOCK");
+
+        price2.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        price2.setText("CHANGE PRICE");
 
         javax.swing.GroupLayout Slot2Layout = new javax.swing.GroupLayout(Slot2);
         Slot2.setLayout(Slot2Layout);
@@ -297,20 +293,18 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                             .addGroup(Slot2Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(Slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(availableLbl2)
+                                    .addComponent(availableLbl10)
                                     .addComponent(itemQuantity2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(itemPrice2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Slot2Layout.createSequentialGroup()
                                 .addGap(7, 7, 7)
-                                .addComponent(priceLbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(priceLbl10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(Slot2Layout.createSequentialGroup()
-                        .addGroup(Slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(itemName2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(Slot2Layout.createSequentialGroup()
-                                .addComponent(itemCalories2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PickSlot2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(Slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(price2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(reStock2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(itemName10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         Slot2Layout.setVerticalGroup(
@@ -320,19 +314,19 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                 .addGroup(Slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(itemPicture2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(Slot2Layout.createSequentialGroup()
-                        .addComponent(priceLbl2)
+                        .addComponent(priceLbl10)
                         .addGap(2, 2, 2)
                         .addComponent(itemPrice2)
                         .addGap(6, 6, 6)
-                        .addComponent(availableLbl2)
+                        .addComponent(availableLbl10)
                         .addGap(2, 2, 2)
                         .addComponent(itemQuantity2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemName2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(itemName10, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(reStock2)
                 .addGap(3, 3, 3)
-                .addGroup(Slot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PickSlot2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemCalories2))
+                .addComponent(price2)
                 .addContainerGap())
         );
 
@@ -342,41 +336,41 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         itemPicture3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         itemPicture3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/hokkaido w_ pearls.png"))); // NOI18N
 
-        itemName3.setBorder(null);
+        itemName11.setBorder(null);
 
-        itemNameTextArea3.setEditable(false);
-        itemNameTextArea3.setColumns(7);
-        itemNameTextArea3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        itemNameTextArea3.setLineWrap(true);
-        itemNameTextArea3.setRows(1);
-        itemNameTextArea3.setText("Item Name");
-        itemNameTextArea3.setWrapStyleWord(true);
-        itemNameTextArea3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        itemName3.setViewportView(itemNameTextArea3);
+        itemNameTextArea11.setEditable(false);
+        itemNameTextArea11.setColumns(7);
+        itemNameTextArea11.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        itemNameTextArea11.setLineWrap(true);
+        itemNameTextArea11.setRows(1);
+        itemNameTextArea11.setText("Item Name");
+        itemNameTextArea11.setWrapStyleWord(true);
+        itemNameTextArea11.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        itemName11.setViewportView(itemNameTextArea11);
 
         itemQuantity3.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemQuantity3.setText("0");
         itemQuantity3.setToolTipText("");
 
-        availableLbl3.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        availableLbl3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        availableLbl3.setText("Available:");
+        availableLbl11.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        availableLbl11.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        availableLbl11.setText("Available:");
 
-        itemCalories3.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        itemCalories3.setText("320 kCal");
-
-        priceLbl3.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        priceLbl3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        priceLbl3.setText("Price:");
+        priceLbl11.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        priceLbl11.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        priceLbl11.setText("Price:");
 
         itemPrice3.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemPrice3.setText("0");
         itemPrice3.setToolTipText("");
 
-        PickSlot3.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        PickSlot3.setText("PICK");
+        reStock3.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        reStock3.setText("RESTOCK");
+
+        price3.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        price3.setText("CHANGE PRICE");
 
         javax.swing.GroupLayout Slot3Layout = new javax.swing.GroupLayout(Slot3);
         Slot3.setLayout(Slot3Layout);
@@ -391,20 +385,18 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                             .addGroup(Slot3Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(Slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(availableLbl3)
+                                    .addComponent(availableLbl11)
                                     .addComponent(itemQuantity3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(itemPrice3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Slot3Layout.createSequentialGroup()
                                 .addGap(7, 7, 7)
-                                .addComponent(priceLbl3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(priceLbl11, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(Slot3Layout.createSequentialGroup()
-                        .addGroup(Slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(itemName3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(Slot3Layout.createSequentialGroup()
-                                .addComponent(itemCalories3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PickSlot3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(Slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(price3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(reStock3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(itemName11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         Slot3Layout.setVerticalGroup(
@@ -414,19 +406,19 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                 .addGroup(Slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(itemPicture3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(Slot3Layout.createSequentialGroup()
-                        .addComponent(priceLbl3)
+                        .addComponent(priceLbl11)
                         .addGap(2, 2, 2)
                         .addComponent(itemPrice3)
                         .addGap(6, 6, 6)
-                        .addComponent(availableLbl3)
+                        .addComponent(availableLbl11)
                         .addGap(2, 2, 2)
                         .addComponent(itemQuantity3)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemName3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(itemName11, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(reStock3)
                 .addGap(3, 3, 3)
-                .addGroup(Slot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PickSlot3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemCalories3))
+                .addComponent(price3)
                 .addContainerGap())
         );
 
@@ -436,41 +428,41 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         itemPicture4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         itemPicture4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/hokkaido w_ pearls.png"))); // NOI18N
 
-        itemName4.setBorder(null);
+        itemName12.setBorder(null);
 
-        itemNameTextArea4.setEditable(false);
-        itemNameTextArea4.setColumns(7);
-        itemNameTextArea4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        itemNameTextArea4.setLineWrap(true);
-        itemNameTextArea4.setRows(1);
-        itemNameTextArea4.setText("Item Name");
-        itemNameTextArea4.setWrapStyleWord(true);
-        itemNameTextArea4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        itemName4.setViewportView(itemNameTextArea4);
+        itemNameTextArea12.setEditable(false);
+        itemNameTextArea12.setColumns(7);
+        itemNameTextArea12.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        itemNameTextArea12.setLineWrap(true);
+        itemNameTextArea12.setRows(1);
+        itemNameTextArea12.setText("Item Name");
+        itemNameTextArea12.setWrapStyleWord(true);
+        itemNameTextArea12.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        itemName12.setViewportView(itemNameTextArea12);
 
         itemQuantity4.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemQuantity4.setText("0");
         itemQuantity4.setToolTipText("");
 
-        availableLbl4.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        availableLbl4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        availableLbl4.setText("Available:");
+        availableLbl12.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        availableLbl12.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        availableLbl12.setText("Available:");
 
-        itemCalories4.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        itemCalories4.setText("320 kCal");
-
-        priceLbl4.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        priceLbl4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        priceLbl4.setText("Price:");
+        priceLbl12.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        priceLbl12.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        priceLbl12.setText("Price:");
 
         itemPrice4.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemPrice4.setText("0");
         itemPrice4.setToolTipText("");
 
-        PickSlot4.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        PickSlot4.setText("PICK");
+        reStock4.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        reStock4.setText("RESTOCK");
+
+        price4.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        price4.setText("CHANGE PRICE");
 
         javax.swing.GroupLayout Slot4Layout = new javax.swing.GroupLayout(Slot4);
         Slot4.setLayout(Slot4Layout);
@@ -485,20 +477,18 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                             .addGroup(Slot4Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(Slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(availableLbl4)
+                                    .addComponent(availableLbl12)
                                     .addComponent(itemQuantity4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(itemPrice4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Slot4Layout.createSequentialGroup()
                                 .addGap(7, 7, 7)
-                                .addComponent(priceLbl4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(priceLbl12, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(Slot4Layout.createSequentialGroup()
-                        .addGroup(Slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(itemName4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(Slot4Layout.createSequentialGroup()
-                                .addComponent(itemCalories4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PickSlot4, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(Slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(price4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(reStock4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(itemName12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         Slot4Layout.setVerticalGroup(
@@ -508,19 +498,19 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                 .addGroup(Slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(itemPicture4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(Slot4Layout.createSequentialGroup()
-                        .addComponent(priceLbl4)
+                        .addComponent(priceLbl12)
                         .addGap(2, 2, 2)
                         .addComponent(itemPrice4)
                         .addGap(6, 6, 6)
-                        .addComponent(availableLbl4)
+                        .addComponent(availableLbl12)
                         .addGap(2, 2, 2)
                         .addComponent(itemQuantity4)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemName4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(itemName12, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(reStock4)
                 .addGap(3, 3, 3)
-                .addGroup(Slot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PickSlot4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemCalories4))
+                .addComponent(price4)
                 .addContainerGap())
         );
 
@@ -530,41 +520,41 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         itemPicture5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         itemPicture5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/hokkaido w_ pearls.png"))); // NOI18N
 
-        itemName5.setBorder(null);
+        itemName13.setBorder(null);
 
-        itemNameTextArea5.setEditable(false);
-        itemNameTextArea5.setColumns(7);
-        itemNameTextArea5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        itemNameTextArea5.setLineWrap(true);
-        itemNameTextArea5.setRows(1);
-        itemNameTextArea5.setText("Item Name");
-        itemNameTextArea5.setWrapStyleWord(true);
-        itemNameTextArea5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        itemName5.setViewportView(itemNameTextArea5);
+        itemNameTextArea13.setEditable(false);
+        itemNameTextArea13.setColumns(7);
+        itemNameTextArea13.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        itemNameTextArea13.setLineWrap(true);
+        itemNameTextArea13.setRows(1);
+        itemNameTextArea13.setText("Item Name");
+        itemNameTextArea13.setWrapStyleWord(true);
+        itemNameTextArea13.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        itemName13.setViewportView(itemNameTextArea13);
 
         itemQuantity5.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemQuantity5.setText("0");
         itemQuantity5.setToolTipText("");
 
-        availableLbl5.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        availableLbl5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        availableLbl5.setText("Available:");
+        availableLbl13.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        availableLbl13.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        availableLbl13.setText("Available:");
 
-        itemCalories5.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        itemCalories5.setText("320 kCal");
-
-        priceLbl5.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        priceLbl5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        priceLbl5.setText("Price:");
+        priceLbl13.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        priceLbl13.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        priceLbl13.setText("Price:");
 
         itemPrice5.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemPrice5.setText("0");
         itemPrice5.setToolTipText("");
 
-        PickSlot5.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        PickSlot5.setText("PICK");
+        reStock5.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        reStock5.setText("RESTOCK");
+
+        price5.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        price5.setText("CHANGE PRICE");
 
         javax.swing.GroupLayout Slot5Layout = new javax.swing.GroupLayout(Slot5);
         Slot5.setLayout(Slot5Layout);
@@ -579,20 +569,18 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                             .addGroup(Slot5Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(Slot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(availableLbl5)
+                                    .addComponent(availableLbl13)
                                     .addComponent(itemQuantity5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(itemPrice5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Slot5Layout.createSequentialGroup()
                                 .addGap(7, 7, 7)
-                                .addComponent(priceLbl5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(priceLbl13, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(Slot5Layout.createSequentialGroup()
-                        .addGroup(Slot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(itemName5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(Slot5Layout.createSequentialGroup()
-                                .addComponent(itemCalories5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PickSlot5, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(Slot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(price5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(reStock5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(itemName13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         Slot5Layout.setVerticalGroup(
@@ -602,19 +590,19 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                 .addGroup(Slot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(itemPicture5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(Slot5Layout.createSequentialGroup()
-                        .addComponent(priceLbl5)
+                        .addComponent(priceLbl13)
                         .addGap(2, 2, 2)
                         .addComponent(itemPrice5)
                         .addGap(6, 6, 6)
-                        .addComponent(availableLbl5)
+                        .addComponent(availableLbl13)
                         .addGap(2, 2, 2)
                         .addComponent(itemQuantity5)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemName5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(itemName13, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(reStock5)
                 .addGap(3, 3, 3)
-                .addGroup(Slot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PickSlot5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemCalories5))
+                .addComponent(price5)
                 .addContainerGap())
         );
 
@@ -624,41 +612,41 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         itemPicture6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         itemPicture6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/hokkaido w_ pearls.png"))); // NOI18N
 
-        itemName6.setBorder(null);
+        itemName14.setBorder(null);
 
-        itemNameTextArea6.setEditable(false);
-        itemNameTextArea6.setColumns(7);
-        itemNameTextArea6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        itemNameTextArea6.setLineWrap(true);
-        itemNameTextArea6.setRows(1);
-        itemNameTextArea6.setText("Item Name");
-        itemNameTextArea6.setWrapStyleWord(true);
-        itemNameTextArea6.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        itemName6.setViewportView(itemNameTextArea6);
+        itemNameTextArea14.setEditable(false);
+        itemNameTextArea14.setColumns(7);
+        itemNameTextArea14.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        itemNameTextArea14.setLineWrap(true);
+        itemNameTextArea14.setRows(1);
+        itemNameTextArea14.setText("Item Name");
+        itemNameTextArea14.setWrapStyleWord(true);
+        itemNameTextArea14.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        itemName14.setViewportView(itemNameTextArea14);
 
         itemQuantity6.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemQuantity6.setText("0");
         itemQuantity6.setToolTipText("");
 
-        availableLbl6.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        availableLbl6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        availableLbl6.setText("Available:");
+        availableLbl14.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        availableLbl14.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        availableLbl14.setText("Available:");
 
-        itemCalories6.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        itemCalories6.setText("320 kCal");
-
-        priceLbl6.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        priceLbl6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        priceLbl6.setText("Price:");
+        priceLbl14.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        priceLbl14.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        priceLbl14.setText("Price:");
 
         itemPrice6.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemPrice6.setText("0");
         itemPrice6.setToolTipText("");
 
-        PickSlot6.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        PickSlot6.setText("PICK");
+        reStock6.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        reStock6.setText("RESTOCK");
+
+        price6.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        price6.setText("CHANGE PRICE");
 
         javax.swing.GroupLayout Slot6Layout = new javax.swing.GroupLayout(Slot6);
         Slot6.setLayout(Slot6Layout);
@@ -673,20 +661,18 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                             .addGroup(Slot6Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(Slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(availableLbl6)
+                                    .addComponent(availableLbl14)
                                     .addComponent(itemQuantity6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(itemPrice6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Slot6Layout.createSequentialGroup()
                                 .addGap(7, 7, 7)
-                                .addComponent(priceLbl6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(priceLbl14, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(Slot6Layout.createSequentialGroup()
-                        .addGroup(Slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(itemName6, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(Slot6Layout.createSequentialGroup()
-                                .addComponent(itemCalories6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PickSlot6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(Slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(price6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(reStock6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(itemName14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         Slot6Layout.setVerticalGroup(
@@ -696,19 +682,19 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                 .addGroup(Slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(itemPicture6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(Slot6Layout.createSequentialGroup()
-                        .addComponent(priceLbl6)
+                        .addComponent(priceLbl14)
                         .addGap(2, 2, 2)
                         .addComponent(itemPrice6)
                         .addGap(6, 6, 6)
-                        .addComponent(availableLbl6)
+                        .addComponent(availableLbl14)
                         .addGap(2, 2, 2)
                         .addComponent(itemQuantity6)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemName6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(itemName14, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(reStock6)
                 .addGap(3, 3, 3)
-                .addGroup(Slot6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PickSlot6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemCalories6))
+                .addComponent(price6)
                 .addContainerGap())
         );
 
@@ -718,41 +704,41 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         itemPicture7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         itemPicture7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/hokkaido w_ pearls.png"))); // NOI18N
 
-        itemName7.setBorder(null);
+        itemName15.setBorder(null);
 
-        itemNameTextArea7.setEditable(false);
-        itemNameTextArea7.setColumns(7);
-        itemNameTextArea7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        itemNameTextArea7.setLineWrap(true);
-        itemNameTextArea7.setRows(1);
-        itemNameTextArea7.setText("Item Name");
-        itemNameTextArea7.setWrapStyleWord(true);
-        itemNameTextArea7.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        itemName7.setViewportView(itemNameTextArea7);
+        itemNameTextArea15.setEditable(false);
+        itemNameTextArea15.setColumns(7);
+        itemNameTextArea15.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        itemNameTextArea15.setLineWrap(true);
+        itemNameTextArea15.setRows(1);
+        itemNameTextArea15.setText("Item Name");
+        itemNameTextArea15.setWrapStyleWord(true);
+        itemNameTextArea15.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        itemName15.setViewportView(itemNameTextArea15);
 
         itemQuantity7.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemQuantity7.setText("0");
         itemQuantity7.setToolTipText("");
 
-        availableLbl7.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        availableLbl7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        availableLbl7.setText("Available:");
+        availableLbl15.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        availableLbl15.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        availableLbl15.setText("Available:");
 
-        itemCalories7.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        itemCalories7.setText("320 kCal");
-
-        priceLbl7.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        priceLbl7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        priceLbl7.setText("Price:");
+        priceLbl15.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        priceLbl15.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        priceLbl15.setText("Price:");
 
         itemPrice7.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemPrice7.setText("0");
         itemPrice7.setToolTipText("");
 
-        PickSlot7.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        PickSlot7.setText("PICK");
+        reStock7.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        reStock7.setText("RESTOCK");
+
+        price7.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        price7.setText("CHANGE PRICE");
 
         javax.swing.GroupLayout Slot7Layout = new javax.swing.GroupLayout(Slot7);
         Slot7.setLayout(Slot7Layout);
@@ -767,20 +753,18 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                             .addGroup(Slot7Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(Slot7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(availableLbl7)
+                                    .addComponent(availableLbl15)
                                     .addComponent(itemQuantity7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(itemPrice7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Slot7Layout.createSequentialGroup()
                                 .addGap(7, 7, 7)
-                                .addComponent(priceLbl7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(priceLbl15, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(Slot7Layout.createSequentialGroup()
-                        .addGroup(Slot7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(itemName7, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(Slot7Layout.createSequentialGroup()
-                                .addComponent(itemCalories7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PickSlot7, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(Slot7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(price7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(reStock7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(itemName15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         Slot7Layout.setVerticalGroup(
@@ -790,19 +774,19 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                 .addGroup(Slot7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(itemPicture7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(Slot7Layout.createSequentialGroup()
-                        .addComponent(priceLbl7)
+                        .addComponent(priceLbl15)
                         .addGap(2, 2, 2)
                         .addComponent(itemPrice7)
                         .addGap(6, 6, 6)
-                        .addComponent(availableLbl7)
+                        .addComponent(availableLbl15)
                         .addGap(2, 2, 2)
                         .addComponent(itemQuantity7)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemName7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(itemName15, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(reStock7)
                 .addGap(3, 3, 3)
-                .addGroup(Slot7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PickSlot7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemCalories7))
+                .addComponent(price7)
                 .addContainerGap())
         );
 
@@ -812,41 +796,41 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         itemPicture8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         itemPicture8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/hokkaido w_ pearls.png"))); // NOI18N
 
-        itemName8.setBorder(null);
+        itemName16.setBorder(null);
 
-        itemNameTextArea8.setEditable(false);
-        itemNameTextArea8.setColumns(7);
-        itemNameTextArea8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        itemNameTextArea8.setLineWrap(true);
-        itemNameTextArea8.setRows(1);
-        itemNameTextArea8.setText("Item Name");
-        itemNameTextArea8.setWrapStyleWord(true);
-        itemNameTextArea8.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        itemName8.setViewportView(itemNameTextArea8);
+        itemNameTextArea16.setEditable(false);
+        itemNameTextArea16.setColumns(7);
+        itemNameTextArea16.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        itemNameTextArea16.setLineWrap(true);
+        itemNameTextArea16.setRows(1);
+        itemNameTextArea16.setText("Item Name");
+        itemNameTextArea16.setWrapStyleWord(true);
+        itemNameTextArea16.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        itemName16.setViewportView(itemNameTextArea16);
 
         itemQuantity8.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemQuantity8.setText("0");
         itemQuantity8.setToolTipText("");
 
-        availableLbl8.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        availableLbl8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        availableLbl8.setText("Available:");
+        availableLbl16.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        availableLbl16.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        availableLbl16.setText("Available:");
 
-        itemCalories8.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        itemCalories8.setText("320 kCal");
-
-        priceLbl8.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        priceLbl8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        priceLbl8.setText("Price:");
+        priceLbl16.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        priceLbl16.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        priceLbl16.setText("Price:");
 
         itemPrice8.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemPrice8.setText("0");
         itemPrice8.setToolTipText("");
 
-        PickSlot8.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        PickSlot8.setText("PICK");
+        reStock8.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        reStock8.setText("RESTOCK");
+
+        price8.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        price8.setText("CHANGE PRICE");
 
         javax.swing.GroupLayout Slot8Layout = new javax.swing.GroupLayout(Slot8);
         Slot8.setLayout(Slot8Layout);
@@ -861,20 +845,18 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                             .addGroup(Slot8Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(Slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(availableLbl8)
+                                    .addComponent(availableLbl16)
                                     .addComponent(itemQuantity8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(itemPrice8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Slot8Layout.createSequentialGroup()
                                 .addGap(7, 7, 7)
-                                .addComponent(priceLbl8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(priceLbl16, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(Slot8Layout.createSequentialGroup()
-                        .addGroup(Slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(itemName8, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(Slot8Layout.createSequentialGroup()
-                                .addComponent(itemCalories8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PickSlot8, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(Slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(price8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(reStock8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(itemName16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         Slot8Layout.setVerticalGroup(
@@ -884,19 +866,19 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                 .addGroup(Slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(itemPicture8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(Slot8Layout.createSequentialGroup()
-                        .addComponent(priceLbl8)
+                        .addComponent(priceLbl16)
                         .addGap(2, 2, 2)
                         .addComponent(itemPrice8)
                         .addGap(6, 6, 6)
-                        .addComponent(availableLbl8)
+                        .addComponent(availableLbl16)
                         .addGap(2, 2, 2)
                         .addComponent(itemQuantity8)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemName8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(itemName16, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(reStock8)
                 .addGap(3, 3, 3)
-                .addGroup(Slot8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PickSlot8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemCalories8))
+                .addComponent(price8)
                 .addContainerGap())
         );
 
@@ -906,41 +888,41 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
         itemPicture9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         itemPicture9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Elements/ItemElements/hokkaido w_ pearls.png"))); // NOI18N
 
-        itemName9.setBorder(null);
+        itemName17.setBorder(null);
 
-        itemNameTextArea9.setEditable(false);
-        itemNameTextArea9.setColumns(7);
-        itemNameTextArea9.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        itemNameTextArea9.setLineWrap(true);
-        itemNameTextArea9.setRows(1);
-        itemNameTextArea9.setText("Item Name");
-        itemNameTextArea9.setWrapStyleWord(true);
-        itemNameTextArea9.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        itemName9.setViewportView(itemNameTextArea9);
+        itemNameTextArea17.setEditable(false);
+        itemNameTextArea17.setColumns(7);
+        itemNameTextArea17.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        itemNameTextArea17.setLineWrap(true);
+        itemNameTextArea17.setRows(1);
+        itemNameTextArea17.setText("Item Name");
+        itemNameTextArea17.setWrapStyleWord(true);
+        itemNameTextArea17.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        itemName17.setViewportView(itemNameTextArea17);
 
         itemQuantity9.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemQuantity9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemQuantity9.setText("0");
         itemQuantity9.setToolTipText("");
 
-        availableLbl9.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        availableLbl9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        availableLbl9.setText("Available:");
+        availableLbl17.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        availableLbl17.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        availableLbl17.setText("Available:");
 
-        itemCalories9.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        itemCalories9.setText("320 kCal");
-
-        priceLbl9.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
-        priceLbl9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        priceLbl9.setText("Price:");
+        priceLbl17.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
+        priceLbl17.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        priceLbl17.setText("Price:");
 
         itemPrice9.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         itemPrice9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         itemPrice9.setText("0");
         itemPrice9.setToolTipText("");
 
-        PickSlot9.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        PickSlot9.setText("PICK");
+        reStock9.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        reStock9.setText("RESTOCK");
+
+        price9.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        price9.setText("CHANGE PRICE");
 
         javax.swing.GroupLayout Slot9Layout = new javax.swing.GroupLayout(Slot9);
         Slot9.setLayout(Slot9Layout);
@@ -955,20 +937,18 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                             .addGroup(Slot9Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(Slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(availableLbl9)
+                                    .addComponent(availableLbl17)
                                     .addComponent(itemQuantity9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(itemPrice9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Slot9Layout.createSequentialGroup()
                                 .addGap(7, 7, 7)
-                                .addComponent(priceLbl9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(priceLbl17, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(Slot9Layout.createSequentialGroup()
-                        .addGroup(Slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(itemName9, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(Slot9Layout.createSequentialGroup()
-                                .addComponent(itemCalories9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PickSlot9, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(Slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(price9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(reStock9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(itemName17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         Slot9Layout.setVerticalGroup(
@@ -978,50 +958,42 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                 .addGroup(Slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(itemPicture9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(Slot9Layout.createSequentialGroup()
-                        .addComponent(priceLbl9)
+                        .addComponent(priceLbl17)
                         .addGap(2, 2, 2)
                         .addComponent(itemPrice9)
                         .addGap(6, 6, 6)
-                        .addComponent(availableLbl9)
+                        .addComponent(availableLbl17)
                         .addGap(2, 2, 2)
                         .addComponent(itemQuantity9)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(itemName9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(itemName17, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(reStock9)
                 .addGap(3, 3, 3)
-                .addGroup(Slot9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PickSlot9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(itemCalories9))
+                .addComponent(price9)
                 .addContainerGap())
         );
 
         SlotContainer.add(Slot9);
 
         jPanel2.add(SlotContainer);
-        SlotContainer.setBounds(0, 0, 370, 430);
+        SlotContainer.setBounds(0, 0, 370, 530);
 
         restockbalbtn.setText("Restock Balance");
         jPanel2.add(restockbalbtn);
-        restockbalbtn.setBounds(380, 120, 150, 23);
-
-        restockBtn.setText("Restock Item");
-        jPanel2.add(restockBtn);
-        restockBtn.setBounds(380, 40, 150, 23);
-
-        changeBtn.setText("Change Item Price");
-        jPanel2.add(changeBtn);
-        changeBtn.setBounds(380, 80, 150, 23);
+        restockbalbtn.setBounds(380, 120, 220, 23);
 
         inventoryBtn.setText("Inventory");
         jPanel2.add(inventoryBtn);
-        inventoryBtn.setBounds(380, 240, 150, 23);
+        inventoryBtn.setBounds(380, 240, 220, 23);
 
         salesBtn.setText("Print Sales");
         jPanel2.add(salesBtn);
-        salesBtn.setBounds(380, 200, 150, 23);
+        salesBtn.setBounds(380, 200, 220, 23);
 
         collectBalBtn.setText("Collect Balance");
         jPanel2.add(collectBalBtn);
-        collectBalBtn.setBounds(380, 160, 150, 23);
+        collectBalBtn.setBounds(380, 160, 220, 23);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1039,7 +1011,7 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                         .addGap(63, 63, 63))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(VendingFeaturesLbl)
-                        .addContainerGap(313, Short.MAX_VALUE))))
+                        .addContainerGap(383, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1047,66 +1019,54 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addComponent(VendingFeaturesLbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DoneBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     /**
-     * Disables all of the pick buttons
+     * Disables change btns for special
      */
-    public void disablePickBtn()
+    public void disableFlavorBtn()
     {
-        PickSlot1.setEnabled(false);
-        PickSlot2.setEnabled(false);
-        PickSlot3.setEnabled(false);
-        PickSlot4.setEnabled(false);
-        PickSlot5.setEnabled(false);
-        PickSlot6.setEnabled(false);
-        PickSlot7.setEnabled(false);
-        PickSlot8.setEnabled(false);
-        PickSlot9.setEnabled(false);
+        price2.setEnabled(false);
+        price3.setEnabled(false);
     }
     
-    /**
-     * Enables all of the pick buttons
-     */
-    public void enablePickBtn()
+    public void enableFlavorBtn()
     {
-        PickSlot1.setEnabled(true);
-        PickSlot2.setEnabled(true);
-        PickSlot3.setEnabled(true);
-        PickSlot4.setEnabled(true);
-        PickSlot5.setEnabled(true);
-        PickSlot6.setEnabled(true);
-        PickSlot7.setEnabled(true);
-        PickSlot8.setEnabled(true);
-        PickSlot9.setEnabled(true);
+        price2.setEnabled(true);
+        price3.setEnabled(true);
     }
+
     
     /**
      * Sets a button action listener
      * @param actn - an action listener
      */
-    public void setrestockBtnListener(ActionListener actn)
-    {
-        restockBtn.addActionListener(actn);
-    }
+//    public void setrestockBtnListener(ActionListener actn)
+//    {
+//        restockBtn.addActionListener(actn);
+//    }
 
     /**
      * Sets a button action listener
@@ -1121,10 +1081,10 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
      * Sets a button action listener
      * @param actn - an action listener
      */
-    public void setChangePrice(ActionListener actn)
-    {
-        changeBtn.addActionListener(actn);
-    }
+//    public void setChangePrice(ActionListener actn)
+//    {
+//        changeBtn.addActionListener(actn);
+//    }
     
     /**
      * Sets a button action listener
@@ -1166,162 +1126,162 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
      * Sets a button action listener
      * @param actn - an action listener
      */
-    public void setPickSlot1BtnListener(ActionListener actn)
+    public void setreStock1BtnListener(ActionListener actn)
     {
-        PickSlot1.addActionListener(actn);
+        reStock1.addActionListener(actn);
     }
 
     /**
      * Sets a button action listener
      * @param actn - an action listener
      */
-    public void setPickSlot2BtnListener(ActionListener actn)
+    public void setreStock2BtnListener(ActionListener actn)
     {
-        PickSlot2.addActionListener(actn);
+        reStock2.addActionListener(actn);
     }
     
     /**
      * Sets a button action listener
      * @param actn - an action listener
      */
-    public void setPickSlot3BtnListener(ActionListener actn)
+    public void setreStock3BtnListener(ActionListener actn)
     {
-        PickSlot3.addActionListener(actn);
+        reStock3.addActionListener(actn);
     }
 
     /**
      * Sets a button action listener
      * @param actn - an action listener
      */
-    public void setPickSlot4BtnListener(ActionListener actn)
+    public void setreStock4BtnListener(ActionListener actn)
     {
-        PickSlot4.addActionListener(actn);
+        reStock4.addActionListener(actn);
     }
 
     /**
      * Sets a button action listener
      * @param actn - an action listener
      */
-    public void setPickSlot5BtnListener(ActionListener actn)
+    public void setreStock5BtnListener(ActionListener actn)
     {
-        PickSlot5.addActionListener(actn);
+        reStock5.addActionListener(actn);
     }
     
     /**
      * Sets a button action listener
      * @param actn - an action listener
      */
-    public void setPickSlot6BtnListener(ActionListener actn)
+    public void setreStock6BtnListener(ActionListener actn)
     {
-        PickSlot6.addActionListener(actn);
+        reStock6.addActionListener(actn);
     }
 
     /**
      * Sets a button action listener
      * @param actn - an action listener
      */
-    public void setPickSlot7BtnListener(ActionListener actn)
+    public void setreStock7BtnListener(ActionListener actn)
     {
-        PickSlot7.addActionListener(actn);
+        reStock7.addActionListener(actn);
     }
 
     /**
      * Sets a button action listener
      * @param actn - an action listener
      */
-    public void setPickSlot8BtnListener(ActionListener actn)
+    public void setreStock8BtnListener(ActionListener actn)
     {
-        PickSlot8.addActionListener(actn);
+        reStock8.addActionListener(actn);
     }
     
     /**
      * Sets a button action listener
      * @param actn - an action listener
      */
-    public void setPickSlot9BtnListener(ActionListener actn)
+    public void setreStock9BtnListener(ActionListener actn)
     {
-        PickSlot9.addActionListener(actn);
+        reStock9.addActionListener(actn);
     }
 
     /**
      * Sets the 'enable' capability of the button
      * @param check - boolean value
      */
-    public void setPickSlot1Enable(boolean check)
+    public void setPrice1BtnListener(ActionListener actn)
     {
-        PickSlot1.setEnabled(check);
+        price1.addActionListener(actn);
     }
 
     /**
      * Sets the 'enable' capability of the button
      * @param check - boolean value
      */
-    public void setPickSlot2Enable(boolean check)
+    public void setPrice2BtnListener(ActionListener actn)
     {
-        PickSlot2.setEnabled(check);
+        price2.addActionListener(actn);
     }
 
     /**
      * Sets the 'enable' capability of the button
      * @param check - boolean value
      */
-    public void setPickSlot3Enable(boolean check)
+    public void setPrice3BtnListener(ActionListener actn)
     {
-        PickSlot3.setEnabled(check);
+        price3.addActionListener(actn);
     }
 
     /**
      * Sets the 'enable' capability of the button
      * @param check - boolean value
      */
-    public void setPickSlot4Enable(boolean check)
+    public void setPrice4BtnListener(ActionListener actn)
     {
-        PickSlot4.setEnabled(check);
+        price4.addActionListener(actn);
     }
 
     /**
      * Sets the 'enable' capability of the button
      * @param check - boolean value
      */
-    public void setPickSlot5Enable(boolean check)
+    public void setPrice5BtnListener(ActionListener actn)
     {
-        PickSlot5.setEnabled(check);
+        price5.addActionListener(actn);
     }
 
     /**
      * Sets the 'enable' capability of the button
      * @param check - boolean value
      */
-    public void setPickSlot6Enable(boolean check)
+    public void setPrice6BtnListener(ActionListener actn)
     {
-        PickSlot6.setEnabled(check);
+        price6.addActionListener(actn);
     }
 
     /**
      * Sets the 'enable' capability of the button
      * @param check - boolean value
      */
-    public void setPickSlot7Enable(boolean check)
+    public void setPrice7BtnListener(ActionListener actn)
     {
-        PickSlot7.setEnabled(check);
+        price7.addActionListener(actn);
     }
 
     /**
      * Sets the 'enable' capability of the button
      * @param check - boolean value
      */
-    public void setPickSlot8Enable(boolean check)
+    public void setPrice8BtnListener(ActionListener actn)
     {
-        PickSlot8.setEnabled(check);
+        price8.addActionListener(actn);
     }
 
     /**
      * Sets the 'enable' capability of the button
      * @param check - boolean value
      */
-    public void setPickSlot9Enable(boolean check)
+    public void setPrice9BtnListener(ActionListener actn)
     {
-        PickSlot9.setEnabled(check);
+        price9.addActionListener(actn);
     }
 
 
@@ -1341,7 +1301,7 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
      */
     public void setItemName2(String name)
     {
-        this.itemNameTextArea2.setText(name);
+        this.itemNameTextArea10.setText(name);
     }
 
     /**
@@ -1350,7 +1310,7 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
      */
     public void setItemName3(String name)
     {
-        this.itemNameTextArea3.setText(name);
+        this.itemNameTextArea11.setText(name);
     }
 
     /**
@@ -1359,7 +1319,7 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
      */
     public void setItemName4(String name)
     {
-        this.itemNameTextArea4.setText(name);
+        this.itemNameTextArea12.setText(name);
     }
 
     /**
@@ -1368,7 +1328,7 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
      */
     public void setItemName5(String name)
     {
-        this.itemNameTextArea5.setText(name);
+        this.itemNameTextArea13.setText(name);
     }
 
     /**
@@ -1377,7 +1337,7 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
      */
     public void setItemName6(String name)
     {
-        this.itemNameTextArea6.setText(name);
+        this.itemNameTextArea14.setText(name);
     }
 
     /**
@@ -1386,7 +1346,7 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
      */
     public void setItemName7(String name)
     {
-        this.itemNameTextArea7.setText(name);
+        this.itemNameTextArea15.setText(name);
     }
 
     /**
@@ -1395,7 +1355,7 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
      */
     public void setItemName8(String name)
     {
-        this.itemNameTextArea8.setText(name);
+        this.itemNameTextArea16.setText(name);
     }
 
     /**
@@ -1404,92 +1364,13 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
      */
     public void setItemName9(String name)
     {
-        this.itemNameTextArea9.setText(name);
+        this.itemNameTextArea17.setText(name);
     }
 
 
     // Setting calories
 
-    /**
-     * Sets the item calories
-     * @param calories - contains the calories
-     */
-    public void setItemCalories1(int calories)
-    {
-        this.itemCalories1.setText(calories + " kCal");
-    }
-
-    /**
-     * Sets the item calories
-     * @param calories - contains the calories
-     */
-    public void setItemCalories2(int calories)
-    {
-        this.itemCalories2.setText(calories + " kCal");
-    }
-
-    /**
-     * Sets the item calories
-     * @param calories - contains the calories
-     */
-    public void setItemCalories3(int calories)
-    {
-        this.itemCalories3.setText(calories + " kCal");
-    }
-
-    /**
-     * Sets the item calories
-     * @param calories - contains the calories
-     */
-    public void setItemCalories4(int calories)
-    {
-        this.itemCalories4.setText(calories + " kCal");
-    }
-
-    /**
-     * Sets the item calories
-     * @param calories - contains the calories
-     */
-    public void setItemCalories5(int calories)
-    {
-        this.itemCalories5.setText(calories + " kCal");
-    }
-
-    /**
-     * Sets the item calories
-     * @param calories - contains the calories
-     */
-    public void setItemCalories6(int calories)
-    {
-        this.itemCalories6.setText(calories + " kCal");
-    }
-
-    /**
-     * Sets the item calories
-     * @param calories - contains the calories
-     */
-    public void setItemCalories7(int calories)
-    {
-        this.itemCalories7.setText(calories + " kCal");
-    }
-
-    /**
-     * Sets the item calories
-     * @param calories - contains the calories
-     */
-    public void setItemCalories8(int calories)
-    {
-        this.itemCalories8.setText(calories + " kCal");
-    }
-
-    /**
-     * Sets the item calories
-     * @param calories - contains the calories
-     */
-    public void setItemCalories9(int calories)
-    {
-        this.itemCalories9.setText(calories + " kCal");
-    }
+    
     
     // Setting price
     /**
@@ -1776,15 +1657,6 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton DoneBtn;
-    private javax.swing.JButton PickSlot1;
-    private javax.swing.JButton PickSlot2;
-    private javax.swing.JButton PickSlot3;
-    private javax.swing.JButton PickSlot4;
-    private javax.swing.JButton PickSlot5;
-    private javax.swing.JButton PickSlot6;
-    private javax.swing.JButton PickSlot7;
-    private javax.swing.JButton PickSlot8;
-    private javax.swing.JButton PickSlot9;
     private javax.swing.JPanel Slot1;
     private javax.swing.JPanel Slot2;
     private javax.swing.JPanel Slot3;
@@ -1797,44 +1669,34 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
     private javax.swing.JPanel SlotContainer;
     private javax.swing.JLabel VendingFeaturesLbl;
     private javax.swing.JLabel availableLbl1;
-    private javax.swing.JLabel availableLbl2;
-    private javax.swing.JLabel availableLbl3;
-    private javax.swing.JLabel availableLbl4;
-    private javax.swing.JLabel availableLbl5;
-    private javax.swing.JLabel availableLbl6;
-    private javax.swing.JLabel availableLbl7;
-    private javax.swing.JLabel availableLbl8;
-    private javax.swing.JLabel availableLbl9;
-    private javax.swing.JButton changeBtn;
+    private javax.swing.JLabel availableLbl10;
+    private javax.swing.JLabel availableLbl11;
+    private javax.swing.JLabel availableLbl12;
+    private javax.swing.JLabel availableLbl13;
+    private javax.swing.JLabel availableLbl14;
+    private javax.swing.JLabel availableLbl15;
+    private javax.swing.JLabel availableLbl16;
+    private javax.swing.JLabel availableLbl17;
     private javax.swing.JButton collectBalBtn;
     private javax.swing.JButton inventoryBtn;
-    private javax.swing.JLabel itemCalories1;
-    private javax.swing.JLabel itemCalories2;
-    private javax.swing.JLabel itemCalories3;
-    private javax.swing.JLabel itemCalories4;
-    private javax.swing.JLabel itemCalories5;
-    private javax.swing.JLabel itemCalories6;
-    private javax.swing.JLabel itemCalories7;
-    private javax.swing.JLabel itemCalories8;
-    private javax.swing.JLabel itemCalories9;
     private javax.swing.JScrollPane itemName1;
-    private javax.swing.JScrollPane itemName2;
-    private javax.swing.JScrollPane itemName3;
-    private javax.swing.JScrollPane itemName4;
-    private javax.swing.JScrollPane itemName5;
-    private javax.swing.JScrollPane itemName6;
-    private javax.swing.JScrollPane itemName7;
-    private javax.swing.JScrollPane itemName8;
-    private javax.swing.JScrollPane itemName9;
+    private javax.swing.JScrollPane itemName10;
+    private javax.swing.JScrollPane itemName11;
+    private javax.swing.JScrollPane itemName12;
+    private javax.swing.JScrollPane itemName13;
+    private javax.swing.JScrollPane itemName14;
+    private javax.swing.JScrollPane itemName15;
+    private javax.swing.JScrollPane itemName16;
+    private javax.swing.JScrollPane itemName17;
     private javax.swing.JTextArea itemNameTextArea1;
-    private javax.swing.JTextArea itemNameTextArea2;
-    private javax.swing.JTextArea itemNameTextArea3;
-    private javax.swing.JTextArea itemNameTextArea4;
-    private javax.swing.JTextArea itemNameTextArea5;
-    private javax.swing.JTextArea itemNameTextArea6;
-    private javax.swing.JTextArea itemNameTextArea7;
-    private javax.swing.JTextArea itemNameTextArea8;
-    private javax.swing.JTextArea itemNameTextArea9;
+    private javax.swing.JTextArea itemNameTextArea10;
+    private javax.swing.JTextArea itemNameTextArea11;
+    private javax.swing.JTextArea itemNameTextArea12;
+    private javax.swing.JTextArea itemNameTextArea13;
+    private javax.swing.JTextArea itemNameTextArea14;
+    private javax.swing.JTextArea itemNameTextArea15;
+    private javax.swing.JTextArea itemNameTextArea16;
+    private javax.swing.JTextArea itemNameTextArea17;
     private javax.swing.JLabel itemPicture1;
     private javax.swing.JLabel itemPicture2;
     private javax.swing.JLabel itemPicture3;
@@ -1864,16 +1726,33 @@ public class TestMaintenanceFeatures extends javax.swing.JFrame {
     private javax.swing.JLabel itemQuantity9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton price1;
+    private javax.swing.JButton price2;
+    private javax.swing.JButton price3;
+    private javax.swing.JButton price4;
+    private javax.swing.JButton price5;
+    private javax.swing.JButton price6;
+    private javax.swing.JButton price7;
+    private javax.swing.JButton price8;
+    private javax.swing.JButton price9;
     private javax.swing.JLabel priceLbl1;
-    private javax.swing.JLabel priceLbl2;
-    private javax.swing.JLabel priceLbl3;
-    private javax.swing.JLabel priceLbl4;
-    private javax.swing.JLabel priceLbl5;
-    private javax.swing.JLabel priceLbl6;
-    private javax.swing.JLabel priceLbl7;
-    private javax.swing.JLabel priceLbl8;
-    private javax.swing.JLabel priceLbl9;
-    private javax.swing.JButton restockBtn;
+    private javax.swing.JLabel priceLbl10;
+    private javax.swing.JLabel priceLbl11;
+    private javax.swing.JLabel priceLbl12;
+    private javax.swing.JLabel priceLbl13;
+    private javax.swing.JLabel priceLbl14;
+    private javax.swing.JLabel priceLbl15;
+    private javax.swing.JLabel priceLbl16;
+    private javax.swing.JLabel priceLbl17;
+    private javax.swing.JButton reStock1;
+    private javax.swing.JButton reStock2;
+    private javax.swing.JButton reStock3;
+    private javax.swing.JButton reStock4;
+    private javax.swing.JButton reStock5;
+    private javax.swing.JButton reStock6;
+    private javax.swing.JButton reStock7;
+    private javax.swing.JButton reStock8;
+    private javax.swing.JButton reStock9;
     private javax.swing.JButton restockbalbtn;
     private javax.swing.JButton salesBtn;
     // End of variables declaration//GEN-END:variables
