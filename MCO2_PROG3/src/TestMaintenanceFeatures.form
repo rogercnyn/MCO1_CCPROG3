@@ -25,12 +25,18 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -60,7 +66,7 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <Component id="VendingFeaturesLbl" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="313" max="32767" attributes="0"/>
+                          <EmptySpace pref="383" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -72,10 +78,10 @@
                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Component id="VendingFeaturesLbl" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel2" pref="429" max="32767" attributes="0"/>
+                  <Component id="jPanel2" pref="530" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="DoneBtn" min="-2" pref="41" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -119,7 +125,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="0" width="370" height="430"/>
+                  <AbsoluteConstraints x="0" y="0" width="370" height="530"/>
                 </Constraint>
               </Constraints>
 
@@ -156,14 +162,11 @@
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="itemName1" min="-2" pref="108" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="itemCalories1" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="PickSlot1" min="-2" pref="61" max="-2" attributes="0"/>
-                                          </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="PickSlot11" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="PickSlot1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="itemName1" alignment="0" pref="108" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
@@ -189,11 +192,10 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="itemName1" min="-2" pref="33" max="-2" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                              <Component id="PickSlot1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="PickSlot1" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="itemCalories1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="PickSlot11" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -262,14 +264,6 @@
                         <Property name="text" type="java.lang.String" value="Available:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemCalories1">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="10" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="320 kCal"/>
-                      </Properties>
-                    </Component>
                     <Component class="javax.swing.JLabel" name="priceLbl1">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -294,7 +288,15 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="10" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="PICK"/>
+                        <Property name="text" type="java.lang.String" value="RESTOCK"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="PickSlot11">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="10" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="CHANGE PRICE"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -308,31 +310,28 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="itemPicture2" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="itemPicture10" min="-2" pref="70" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="availableLbl2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="itemQuantity2" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="itemPrice2" alignment="1" pref="34" max="32767" attributes="0"/>
+                                                  <Component id="availableLbl10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="itemQuantity10" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="itemPrice10" alignment="1" pref="34" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                                              <Component id="priceLbl2" min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="priceLbl10" min="-2" pref="32" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="itemName2" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="itemCalories2" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="PickSlot2" min="-2" pref="61" max="-2" attributes="0"/>
-                                          </Group>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="PickSlot13" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="PickSlot12" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="itemName10" alignment="0" pref="108" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
@@ -345,31 +344,30 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="itemPicture2" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Component id="itemPicture10" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="priceLbl2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="priceLbl10" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemPrice2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemPrice10" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                      <Component id="availableLbl2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="availableLbl10" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemQuantity2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemQuantity10" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="itemName2" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="itemName10" min="-2" pref="33" max="-2" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                              <Component id="PickSlot12" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="PickSlot2" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="itemCalories2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="PickSlot13" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="itemPicture2">
+                    <Component class="javax.swing.JLabel" name="itemPicture10">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -380,7 +378,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Container class="javax.swing.JScrollPane" name="itemName2">
+                    <Container class="javax.swing.JScrollPane" name="itemName10">
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="null"/>
@@ -392,7 +390,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTextArea" name="itemNameTextArea2">
+                        <Component class="javax.swing.JTextArea" name="itemNameTextArea10">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="7"/>
@@ -412,7 +410,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="itemQuantity2">
+                    <Component class="javax.swing.JLabel" name="itemQuantity10">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -422,7 +420,7 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="availableLbl2">
+                    <Component class="javax.swing.JLabel" name="availableLbl10">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -431,15 +429,7 @@
                         <Property name="text" type="java.lang.String" value="Available:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemCalories2">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="10" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="320 kCal"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="priceLbl2">
+                    <Component class="javax.swing.JLabel" name="priceLbl10">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -448,7 +438,7 @@
                         <Property name="text" type="java.lang.String" value="Price:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemPrice2">
+                    <Component class="javax.swing.JLabel" name="itemPrice10">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -458,12 +448,20 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="PickSlot2">
+                    <Component class="javax.swing.JButton" name="PickSlot12">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="10" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="PICK"/>
+                        <Property name="text" type="java.lang.String" value="RESTOCK"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="PickSlot13">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="10" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="CHANGE PRICE"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -477,31 +475,28 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="itemPicture3" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="itemPicture11" min="-2" pref="70" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="availableLbl3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="itemQuantity3" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="itemPrice3" alignment="1" pref="34" max="32767" attributes="0"/>
+                                                  <Component id="availableLbl11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="itemQuantity11" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="itemPrice11" alignment="1" pref="34" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                                              <Component id="priceLbl3" min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="priceLbl11" min="-2" pref="32" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="itemName3" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="itemCalories3" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="PickSlot3" min="-2" pref="61" max="-2" attributes="0"/>
-                                          </Group>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="PickSlot15" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="PickSlot14" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="itemName11" alignment="0" pref="108" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
@@ -514,31 +509,30 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="itemPicture3" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Component id="itemPicture11" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="priceLbl3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="priceLbl11" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemPrice3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemPrice11" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                      <Component id="availableLbl3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="availableLbl11" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemQuantity3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemQuantity11" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="itemName3" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="itemName11" min="-2" pref="33" max="-2" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                              <Component id="PickSlot14" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="PickSlot3" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="itemCalories3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="PickSlot15" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="itemPicture3">
+                    <Component class="javax.swing.JLabel" name="itemPicture11">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -549,7 +543,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Container class="javax.swing.JScrollPane" name="itemName3">
+                    <Container class="javax.swing.JScrollPane" name="itemName11">
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="null"/>
@@ -561,7 +555,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTextArea" name="itemNameTextArea3">
+                        <Component class="javax.swing.JTextArea" name="itemNameTextArea11">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="7"/>
@@ -581,7 +575,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="itemQuantity3">
+                    <Component class="javax.swing.JLabel" name="itemQuantity11">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -591,7 +585,7 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="availableLbl3">
+                    <Component class="javax.swing.JLabel" name="availableLbl11">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -600,15 +594,7 @@
                         <Property name="text" type="java.lang.String" value="Available:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemCalories3">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="10" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="320 kCal"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="priceLbl3">
+                    <Component class="javax.swing.JLabel" name="priceLbl11">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -617,7 +603,7 @@
                         <Property name="text" type="java.lang.String" value="Price:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemPrice3">
+                    <Component class="javax.swing.JLabel" name="itemPrice11">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -627,12 +613,20 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="PickSlot3">
+                    <Component class="javax.swing.JButton" name="PickSlot14">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="10" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="PICK"/>
+                        <Property name="text" type="java.lang.String" value="RESTOCK"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="PickSlot15">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="10" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="CHANGE PRICE"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -646,31 +640,28 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="itemPicture4" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="itemPicture12" min="-2" pref="70" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="availableLbl4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="itemQuantity4" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="itemPrice4" alignment="1" pref="34" max="32767" attributes="0"/>
+                                                  <Component id="availableLbl12" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="itemQuantity12" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="itemPrice12" alignment="1" pref="34" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                                              <Component id="priceLbl4" min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="priceLbl12" min="-2" pref="32" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="itemName4" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="itemCalories4" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="PickSlot4" min="-2" pref="61" max="-2" attributes="0"/>
-                                          </Group>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="PickSlot17" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="PickSlot16" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="itemName12" alignment="0" pref="108" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
@@ -683,31 +674,30 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="itemPicture4" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Component id="itemPicture12" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="priceLbl4" min="-2" max="-2" attributes="0"/>
+                                      <Component id="priceLbl12" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemPrice4" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemPrice12" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                      <Component id="availableLbl4" min="-2" max="-2" attributes="0"/>
+                                      <Component id="availableLbl12" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemQuantity4" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemQuantity12" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="itemName4" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="itemName12" min="-2" pref="33" max="-2" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                              <Component id="PickSlot16" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="PickSlot4" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="itemCalories4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="PickSlot17" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="itemPicture4">
+                    <Component class="javax.swing.JLabel" name="itemPicture12">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -718,7 +708,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Container class="javax.swing.JScrollPane" name="itemName4">
+                    <Container class="javax.swing.JScrollPane" name="itemName12">
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="null"/>
@@ -730,7 +720,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTextArea" name="itemNameTextArea4">
+                        <Component class="javax.swing.JTextArea" name="itemNameTextArea12">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="7"/>
@@ -750,7 +740,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="itemQuantity4">
+                    <Component class="javax.swing.JLabel" name="itemQuantity12">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -760,7 +750,7 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="availableLbl4">
+                    <Component class="javax.swing.JLabel" name="availableLbl12">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -769,15 +759,7 @@
                         <Property name="text" type="java.lang.String" value="Available:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemCalories4">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="10" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="320 kCal"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="priceLbl4">
+                    <Component class="javax.swing.JLabel" name="priceLbl12">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -786,7 +768,7 @@
                         <Property name="text" type="java.lang.String" value="Price:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemPrice4">
+                    <Component class="javax.swing.JLabel" name="itemPrice12">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -796,12 +778,20 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="PickSlot4">
+                    <Component class="javax.swing.JButton" name="PickSlot16">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="10" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="PICK"/>
+                        <Property name="text" type="java.lang.String" value="RESTOCK"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="PickSlot17">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="10" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="CHANGE PRICE"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -815,31 +805,28 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="itemPicture5" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="itemPicture13" min="-2" pref="70" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="availableLbl5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="itemQuantity5" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="itemPrice5" alignment="1" pref="34" max="32767" attributes="0"/>
+                                                  <Component id="availableLbl13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="itemQuantity13" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="itemPrice13" alignment="1" pref="34" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                                              <Component id="priceLbl5" min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="priceLbl13" min="-2" pref="32" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="itemName5" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="itemCalories5" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="PickSlot5" min="-2" pref="61" max="-2" attributes="0"/>
-                                          </Group>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="PickSlot19" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="PickSlot18" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="itemName13" alignment="0" pref="108" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
@@ -852,31 +839,30 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="itemPicture5" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Component id="itemPicture13" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="priceLbl5" min="-2" max="-2" attributes="0"/>
+                                      <Component id="priceLbl13" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemPrice5" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemPrice13" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                      <Component id="availableLbl5" min="-2" max="-2" attributes="0"/>
+                                      <Component id="availableLbl13" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemQuantity5" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemQuantity13" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="itemName5" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="itemName13" min="-2" pref="33" max="-2" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                              <Component id="PickSlot18" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="PickSlot5" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="itemCalories5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="PickSlot19" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="itemPicture5">
+                    <Component class="javax.swing.JLabel" name="itemPicture13">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -887,7 +873,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Container class="javax.swing.JScrollPane" name="itemName5">
+                    <Container class="javax.swing.JScrollPane" name="itemName13">
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="null"/>
@@ -899,7 +885,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTextArea" name="itemNameTextArea5">
+                        <Component class="javax.swing.JTextArea" name="itemNameTextArea13">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="7"/>
@@ -919,7 +905,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="itemQuantity5">
+                    <Component class="javax.swing.JLabel" name="itemQuantity13">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -929,7 +915,7 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="availableLbl5">
+                    <Component class="javax.swing.JLabel" name="availableLbl13">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -938,15 +924,7 @@
                         <Property name="text" type="java.lang.String" value="Available:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemCalories5">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="10" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="320 kCal"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="priceLbl5">
+                    <Component class="javax.swing.JLabel" name="priceLbl13">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -955,7 +933,7 @@
                         <Property name="text" type="java.lang.String" value="Price:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemPrice5">
+                    <Component class="javax.swing.JLabel" name="itemPrice13">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -965,12 +943,20 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="PickSlot5">
+                    <Component class="javax.swing.JButton" name="PickSlot18">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="10" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="PICK"/>
+                        <Property name="text" type="java.lang.String" value="RESTOCK"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="PickSlot19">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="10" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="CHANGE PRICE"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -984,31 +970,28 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="itemPicture6" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="itemPicture14" min="-2" pref="70" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="availableLbl6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="itemQuantity6" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="itemPrice6" alignment="1" pref="34" max="32767" attributes="0"/>
+                                                  <Component id="availableLbl14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="itemQuantity14" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="itemPrice14" alignment="1" pref="34" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                                              <Component id="priceLbl6" min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="priceLbl14" min="-2" pref="32" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="itemName6" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="itemCalories6" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="PickSlot6" min="-2" pref="61" max="-2" attributes="0"/>
-                                          </Group>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="PickSlot21" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="PickSlot20" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="itemName14" alignment="0" pref="108" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
@@ -1021,31 +1004,30 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="itemPicture6" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Component id="itemPicture14" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="priceLbl6" min="-2" max="-2" attributes="0"/>
+                                      <Component id="priceLbl14" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemPrice6" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemPrice14" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                      <Component id="availableLbl6" min="-2" max="-2" attributes="0"/>
+                                      <Component id="availableLbl14" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemQuantity6" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemQuantity14" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="itemName6" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="itemName14" min="-2" pref="33" max="-2" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                              <Component id="PickSlot20" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="PickSlot6" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="itemCalories6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="PickSlot21" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="itemPicture6">
+                    <Component class="javax.swing.JLabel" name="itemPicture14">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -1056,7 +1038,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Container class="javax.swing.JScrollPane" name="itemName6">
+                    <Container class="javax.swing.JScrollPane" name="itemName14">
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="null"/>
@@ -1068,7 +1050,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTextArea" name="itemNameTextArea6">
+                        <Component class="javax.swing.JTextArea" name="itemNameTextArea14">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="7"/>
@@ -1088,7 +1070,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="itemQuantity6">
+                    <Component class="javax.swing.JLabel" name="itemQuantity14">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -1098,7 +1080,7 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="availableLbl6">
+                    <Component class="javax.swing.JLabel" name="availableLbl14">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -1107,15 +1089,7 @@
                         <Property name="text" type="java.lang.String" value="Available:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemCalories6">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="10" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="320 kCal"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="priceLbl6">
+                    <Component class="javax.swing.JLabel" name="priceLbl14">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -1124,7 +1098,7 @@
                         <Property name="text" type="java.lang.String" value="Price:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemPrice6">
+                    <Component class="javax.swing.JLabel" name="itemPrice14">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -1134,12 +1108,20 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="PickSlot6">
+                    <Component class="javax.swing.JButton" name="PickSlot20">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="10" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="PICK"/>
+                        <Property name="text" type="java.lang.String" value="RESTOCK"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="PickSlot21">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="10" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="CHANGE PRICE"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -1153,31 +1135,28 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="itemPicture7" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="itemPicture15" min="-2" pref="70" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="availableLbl7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="itemQuantity7" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="itemPrice7" alignment="1" pref="34" max="32767" attributes="0"/>
+                                                  <Component id="availableLbl15" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="itemQuantity15" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="itemPrice15" alignment="1" pref="34" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                                              <Component id="priceLbl7" min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="priceLbl15" min="-2" pref="32" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="itemName7" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="itemCalories7" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="PickSlot7" min="-2" pref="61" max="-2" attributes="0"/>
-                                          </Group>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="PickSlot23" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="PickSlot22" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="itemName15" alignment="0" pref="108" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
@@ -1190,31 +1169,30 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="itemPicture7" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Component id="itemPicture15" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="priceLbl7" min="-2" max="-2" attributes="0"/>
+                                      <Component id="priceLbl15" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemPrice7" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemPrice15" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                      <Component id="availableLbl7" min="-2" max="-2" attributes="0"/>
+                                      <Component id="availableLbl15" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemQuantity7" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemQuantity15" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="itemName7" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="itemName15" min="-2" pref="33" max="-2" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                              <Component id="PickSlot22" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="PickSlot7" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="itemCalories7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="PickSlot23" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="itemPicture7">
+                    <Component class="javax.swing.JLabel" name="itemPicture15">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -1225,7 +1203,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Container class="javax.swing.JScrollPane" name="itemName7">
+                    <Container class="javax.swing.JScrollPane" name="itemName15">
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="null"/>
@@ -1237,7 +1215,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTextArea" name="itemNameTextArea7">
+                        <Component class="javax.swing.JTextArea" name="itemNameTextArea15">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="7"/>
@@ -1257,7 +1235,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="itemQuantity7">
+                    <Component class="javax.swing.JLabel" name="itemQuantity15">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -1267,7 +1245,7 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="availableLbl7">
+                    <Component class="javax.swing.JLabel" name="availableLbl15">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -1276,15 +1254,7 @@
                         <Property name="text" type="java.lang.String" value="Available:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemCalories7">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="10" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="320 kCal"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="priceLbl7">
+                    <Component class="javax.swing.JLabel" name="priceLbl15">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -1293,7 +1263,7 @@
                         <Property name="text" type="java.lang.String" value="Price:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemPrice7">
+                    <Component class="javax.swing.JLabel" name="itemPrice15">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -1303,12 +1273,20 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="PickSlot7">
+                    <Component class="javax.swing.JButton" name="PickSlot22">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="10" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="PICK"/>
+                        <Property name="text" type="java.lang.String" value="RESTOCK"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="PickSlot23">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="10" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="CHANGE PRICE"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -1322,31 +1300,28 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="itemPicture8" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="itemPicture16" min="-2" pref="70" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="availableLbl8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="itemQuantity8" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="itemPrice8" alignment="1" pref="34" max="32767" attributes="0"/>
+                                                  <Component id="availableLbl16" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="itemQuantity16" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="itemPrice16" alignment="1" pref="34" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                                              <Component id="priceLbl8" min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="priceLbl16" min="-2" pref="32" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="itemName8" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="itemCalories8" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="PickSlot8" min="-2" pref="61" max="-2" attributes="0"/>
-                                          </Group>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="PickSlot25" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="PickSlot24" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="itemName16" alignment="0" pref="108" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
@@ -1359,31 +1334,30 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="itemPicture8" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Component id="itemPicture16" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="priceLbl8" min="-2" max="-2" attributes="0"/>
+                                      <Component id="priceLbl16" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemPrice8" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemPrice16" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                      <Component id="availableLbl8" min="-2" max="-2" attributes="0"/>
+                                      <Component id="availableLbl16" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemQuantity8" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemQuantity16" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="itemName8" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="itemName16" min="-2" pref="33" max="-2" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                              <Component id="PickSlot24" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="PickSlot8" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="itemCalories8" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="PickSlot25" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="itemPicture8">
+                    <Component class="javax.swing.JLabel" name="itemPicture16">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -1394,7 +1368,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Container class="javax.swing.JScrollPane" name="itemName8">
+                    <Container class="javax.swing.JScrollPane" name="itemName16">
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="null"/>
@@ -1406,7 +1380,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTextArea" name="itemNameTextArea8">
+                        <Component class="javax.swing.JTextArea" name="itemNameTextArea16">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="7"/>
@@ -1426,7 +1400,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="itemQuantity8">
+                    <Component class="javax.swing.JLabel" name="itemQuantity16">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -1436,7 +1410,7 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="availableLbl8">
+                    <Component class="javax.swing.JLabel" name="availableLbl16">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -1445,15 +1419,7 @@
                         <Property name="text" type="java.lang.String" value="Available:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemCalories8">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="10" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="320 kCal"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="priceLbl8">
+                    <Component class="javax.swing.JLabel" name="priceLbl16">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -1462,7 +1428,7 @@
                         <Property name="text" type="java.lang.String" value="Price:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemPrice8">
+                    <Component class="javax.swing.JLabel" name="itemPrice16">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -1472,12 +1438,20 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="PickSlot8">
+                    <Component class="javax.swing.JButton" name="PickSlot24">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="10" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="PICK"/>
+                        <Property name="text" type="java.lang.String" value="RESTOCK"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="PickSlot25">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="10" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="CHANGE PRICE"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -1491,31 +1465,28 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="itemPicture9" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="itemPicture17" min="-2" pref="70" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="availableLbl9" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="itemQuantity9" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="itemPrice9" alignment="1" pref="34" max="32767" attributes="0"/>
+                                                  <Component id="availableLbl17" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="itemQuantity17" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="itemPrice17" alignment="1" pref="34" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                                              <Component id="priceLbl9" min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="priceLbl17" min="-2" pref="32" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="itemName9" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="itemCalories9" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="PickSlot9" min="-2" pref="61" max="-2" attributes="0"/>
-                                          </Group>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="PickSlot27" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="PickSlot26" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="itemName17" alignment="0" pref="108" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
@@ -1528,31 +1499,30 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="itemPicture9" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Component id="itemPicture17" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="priceLbl9" min="-2" max="-2" attributes="0"/>
+                                      <Component id="priceLbl17" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemPrice9" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemPrice17" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                      <Component id="availableLbl9" min="-2" max="-2" attributes="0"/>
+                                      <Component id="availableLbl17" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="itemQuantity9" min="-2" max="-2" attributes="0"/>
+                                      <Component id="itemQuantity17" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="itemName9" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="itemName17" min="-2" pref="33" max="-2" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                              <Component id="PickSlot26" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="PickSlot9" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="itemCalories9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="PickSlot27" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="itemPicture9">
+                    <Component class="javax.swing.JLabel" name="itemPicture17">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -1563,7 +1533,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Container class="javax.swing.JScrollPane" name="itemName9">
+                    <Container class="javax.swing.JScrollPane" name="itemName17">
                       <Properties>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="null"/>
@@ -1575,7 +1545,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTextArea" name="itemNameTextArea9">
+                        <Component class="javax.swing.JTextArea" name="itemNameTextArea17">
                           <Properties>
                             <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="7"/>
@@ -1595,7 +1565,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="itemQuantity9">
+                    <Component class="javax.swing.JLabel" name="itemQuantity17">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -1605,7 +1575,7 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="availableLbl9">
+                    <Component class="javax.swing.JLabel" name="availableLbl17">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -1614,15 +1584,7 @@
                         <Property name="text" type="java.lang.String" value="Available:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemCalories9">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="10" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="320 kCal"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="priceLbl9">
+                    <Component class="javax.swing.JLabel" name="priceLbl17">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="8" style="0"/>
@@ -1631,7 +1593,7 @@
                         <Property name="text" type="java.lang.String" value="Price:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="itemPrice9">
+                    <Component class="javax.swing.JLabel" name="itemPrice17">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="13" style="0"/>
@@ -1641,12 +1603,20 @@
                         <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="PickSlot9">
+                    <Component class="javax.swing.JButton" name="PickSlot26">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="10" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="PICK"/>
+                        <Property name="text" type="java.lang.String" value="RESTOCK"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="PickSlot27">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="10" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="CHANGE PRICE"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -1659,27 +1629,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="380" y="120" width="150" height="-1"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JButton" name="restockBtn">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Restock Item"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="380" y="40" width="150" height="-1"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JButton" name="changeBtn">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Change Item Price"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="380" y="80" width="150" height="-1"/>
+                  <AbsoluteConstraints x="380" y="120" width="220" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -1689,7 +1639,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="380" y="240" width="150" height="-1"/>
+                  <AbsoluteConstraints x="380" y="240" width="220" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -1699,7 +1649,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="380" y="200" width="150" height="-1"/>
+                  <AbsoluteConstraints x="380" y="200" width="220" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -1709,7 +1659,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="380" y="160" width="150" height="-1"/>
+                  <AbsoluteConstraints x="380" y="160" width="220" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
