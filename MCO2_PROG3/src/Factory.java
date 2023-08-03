@@ -826,7 +826,8 @@ public class Factory implements ActionListener{
                         {
                             machine.getArraySlots().get(0).addItem(item1, addStock);
                             machine.updateLastRestockDate();
-                            machine.setInventory(machine.getArraySlots());
+                            ArrayList<Slot> currentInventory = machine.getArraySlots();
+                            machine.setInventory(currentInventory);
                             if (machine instanceof SpecialMachine)
                             {
                                 loadSpecialVendingmaintenance();
@@ -871,7 +872,8 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(1).addItem(item2, addStock);
                                 machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
+                                ArrayList<Slot> currentInventory = machine.getArraySlots();
+                                machine.setInventory(currentInventory);
                                 if (machine instanceof SpecialMachine)
                                 {
                                     loadSpecialVendingmaintenance();
@@ -916,7 +918,8 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(2).addItem(item3, addStock);
                                 machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
+                                ArrayList<Slot> currentInventory = machine.getArraySlots();
+                                machine.setInventory(currentInventory);
                                 if (machine instanceof SpecialMachine)
                                 {
                                     loadSpecialVendingmaintenance();
@@ -961,7 +964,8 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(3).addItem(item4, addStock);
                                 machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
+                                ArrayList<Slot> currentInventory = machine.getArraySlots();
+                                machine.setInventory(currentInventory);
                                 if (machine instanceof SpecialMachine)
                                 {
                                     loadSpecialVendingmaintenance();
@@ -1006,7 +1010,8 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(4).addItem(item5, addStock);
                                 machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
+                                ArrayList<Slot> currentInventory = machine.getArraySlots();
+                                machine.setInventory(currentInventory);
                                 if (machine instanceof SpecialMachine)
                                 {
                                     loadSpecialVendingmaintenance();
@@ -1051,7 +1056,8 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(5).addItem(item6, addStock);
                                 machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
+                                ArrayList<Slot> currentInventory = machine.getArraySlots();
+                                machine.setInventory(currentInventory);
                                 if (machine instanceof SpecialMachine)
                                 {
                                     loadSpecialVendingmaintenance();
@@ -1096,7 +1102,8 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(6).addItem(item7, addStock);
                                 machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
+                                ArrayList<Slot> currentInventory = machine.getArraySlots();
+                                machine.setInventory(currentInventory);
                                 if (machine instanceof SpecialMachine)
                                 {
                                     loadSpecialVendingmaintenance();
@@ -1141,7 +1148,8 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(7).addItem(item8, addStock);
                                 machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
+                                ArrayList<Slot> currentInventory = machine.getArraySlots();
+                                machine.setInventory(currentInventory);
                                 if (machine instanceof SpecialMachine)
                                 {
                                     loadSpecialVendingmaintenance();
@@ -1186,7 +1194,8 @@ public class Factory implements ActionListener{
                             {
                                 machine.getArraySlots().get(8).addItem(item9, addStock);
                                 machine.updateLastRestockDate();
-                                machine.setInventory(machine.getArraySlots());
+                                ArrayList<Slot> currentInventory = machine.getArraySlots();
+                                machine.setInventory(currentInventory);
                                 if (machine instanceof SpecialMachine)
                                 {
                                     loadSpecialVendingmaintenance();
